@@ -9,8 +9,8 @@
 <h4 style="margin:0 10px 0;">Campus Employment</h4>
 
 <ul style="margin:0 0 5px;">
-  <li><a href="https://zaozzz.github.io/"><autocolor>Teddy Intelligent Studio Student Leadership</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Deep Studio AI Student Leadership</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Teddy Intelligent Studio Student Chairman Leader</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Deep Studio AI Student Chairman Leader</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>Director of the Publicity Department of the Library Volunteer Association</autocolor></a></li>
 </ul>
 
