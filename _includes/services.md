@@ -40,4 +40,3 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>......</autocolor></a></li>
 </ul>
 
-<h1 style="margin:0 0 20px;">The final interpretation right belongs to Wang Xu</h1>
