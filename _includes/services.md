@@ -32,6 +32,7 @@
 ## Scholarship
 
 <ul style="margin:0 0 5px;">
-  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>First class scholarship from the school 1200 RMB</autocolor></a></li>
-  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Shandong Jianzhu University Career Planning Bonus 1000 RMB</autocolor></a></li>
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>First class scholarship from the school</autocolor></a></li>
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Career Planning Bonus for College Students</autocolor></a></li>
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Undergraduate Entrepreneurship Support Program</autocolor></a></li>
 </ul>
