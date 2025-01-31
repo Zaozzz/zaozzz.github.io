@@ -24,17 +24,17 @@ I hope to obtain the position of Research Assistant in your laboratory for the f
 
 DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection
 - Weichao Pan, Jianmei Lei, **Xu Wang**, Chengze Lv, Gongrui Wang and Chong Li
-- Applied Sciences (SCI Q1) | Published
+- Applied Sciences (SCI Q1)  Published
 - https://www.mdpi.com/2076-3417/15/3/1470
 
 Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example
 - Weichao Pan, **Xu Wang** and Wenqing Huan
-- Journal of Real-Time Image Processing (SCI Q2) | Accepted
+- Journal of Real-Time Image Processing (SCI Q2)  Accepted
 - https://arxiv.org/abs/2409.02546
 
 Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl
 - Weichao Pan, Wenqing Huan, Xingbo Liu and **Xu Wang**
-- Software Guide (CCF C) | Accepted
+- Software Guide (CCF C)  Accepted
 
 ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis
 - Yubao Zhao, Tian Zhang, **Xu Wang**, Puyu Han, Tong Chen, Linlin Huang, Youzhu Jin and Jiaju Kang
