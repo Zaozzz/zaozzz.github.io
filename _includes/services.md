@@ -26,6 +26,12 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>Provincial Second Prize in the National College Student Mathematical Modeling Competition</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>Provincial Second Prize in the Blue Bridge Cup Python Competition</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition twice</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>......</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>and so on......</autocolor></a></li>
 </ul>
 
+## Scholarship
+
+<ul style="margin:0 0 5px;">
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>First class scholarship from the school 1200 RMB</autocolor></a></li>
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Shandong Jianzhu University Career Planning Competition Bonus 1000 RMB</autocolor></a></li>
+</ul>
