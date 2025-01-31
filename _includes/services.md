@@ -1,12 +1,12 @@
 ## Services
 
-<h4 style="margin:0 10px 0;">Conference Reviewers</h4>
+##Conference Reviewers
 
 <ul style="margin:0 0 5px;">
   <li><a href="http://cvpr2023.thecvf.com/"><autocolor>IEEE International Conference on Multimedia & Expo (ICME) 2025</autocolor></a></li>
 </ul>
 
-<h4 style="margin:0 10px 0;">Campus Employment</h4>
+## Campus Employment
 
 <ul style="margin:0 0 5px;">
   <li><a href="https://zaozzz.github.io/"><autocolor>Teddy Intelligent Studio Student Chairman Leader</autocolor></a></li>
@@ -14,7 +14,7 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>Director of the Publicity Department of the Library Volunteer Association</autocolor></a></li>
 </ul>
 
-<h4 style="margin:0 10px 0;">Competition Awards</h4>
+## Competition Awards
 
 <ul style="margin:0 0 20px;">
   <li><a href="https://zaozzz.github.io/"><autocolor>National First Prize in the Blue Bridge Cup Special Competition (Captain)</autocolor></a></li>
