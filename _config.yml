@@ -23,7 +23,7 @@ email_link: 202311102025@stu.sdjzu.edu.cn
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
 avatar: ./11.jpg
 favicon: ./assets/img/homepage_icon.png
-favicon_dark: ./assets/img/homepage_icon.png
+favicon_dark: ./assets/img/IMG_1011.jpg
 
 # Footnote
 # You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
