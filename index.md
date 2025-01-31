@@ -22,20 +22,24 @@ I hope to obtain the position of Research Assistant in your laboratory for the f
 
 ## Publications
 
-- **[DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection]**
+- **DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection**
 - Weichao Pan, Jianmei Lei, **Xu Wang**, Chengze Lv, Gongrui Wang and Chong Li
 - Applied Sciences (SCI Q1)  Published
-- **[Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example]**
+
+- **Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example**
 - Weichao Pan, **Xu Wang** and Wenqing Huan
 - Journal of Real-Time Image Processing (SCI Q2)  Accepted
-- **[Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl]**
+
+- **Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl**
 - Weichao Pan, Wenqing Huan, Xingbo Liu and **Xu Wang**
 - Software Guide (CCF C)  Accepted
-- **[ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis]**
+  
+- **ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis**
 - Yubao Zhao, Tian Zhang, **Xu Wang**, Puyu Han, Tong Chen, Linlin Huang, Youzhu Jin and Jiaju Kang
-- **[EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection]**
+  
+- **EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection**
 - Weichao Pan, **Xu Wang** and Wenqing Huan
-- 
+
 {% include_relative _includes/publications.md %}
 
 {% include_relative _includes/services.md %}
