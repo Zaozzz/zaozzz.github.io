@@ -33,5 +33,5 @@
 
 <ul style="margin:0 0 5px;">
   <li><a href="http://cvpr2023.thecvf.com/"><autocolor>First class scholarship from the school 1200 RMB</autocolor></a></li>
-  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Shandong Jianzhu University Career Planning Competition Bonus 1000 RMB</autocolor></a></li>
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Shandong Jianzhu University Career Planning Bonus 1000 RMB</autocolor></a></li>
 </ul>
