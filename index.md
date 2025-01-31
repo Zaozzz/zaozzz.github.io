@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the [School of Computer Science and Technology](https://www.sdjzu.edu.cn/jsjkx/index.htm), [Shandong Jianzhu University](https://www.sdjzu.edu.cn/) (entered in 2023). During my undergraduate studies, I have been fortunate to receive guidance from Associate Researcher [Guangshun Wei](https://faculty.sdu.edu.cn/weiguangshun/zh_CN/index.htm) at [Shandong University](https://www.sdu.edu.cn/index.htm) and Associate Professor [Ning Yang](https://www.sdjzu.edu.cn/jsjkx/xygk/szll2.htm) at Shandong Jianzhu University. 
+I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the [School of Computer Science and Technology](https://www.sdjzu.edu.cn/jsjkx/index.htm), [Shandong Jianzhu University](https://www.sdjzu.edu.cn/) (entered in 2023). During my undergraduate studies, I have been fortunate to receive guidance from Associate Researcher [Guangshun Wei](https://faculty.sdu.edu.cn/weiguangshun/zh_CN/index.htm) at [Shandong University](https://www.sdu.edu.cn/index.htm) and Associate Professor [Ning Yang](https://www.sdjzu.edu.cn/jsjkx/xygk/szll2.htm) at [Shandong Jianzhu University](https://www.sdjzu.edu.cn/). 
 
 I hope to obtain the position of Research Assistant in your laboratory for the fall of 2025.
 
@@ -22,28 +22,20 @@ I hope to obtain the position of Research Assistant in your laboratory for the f
 
 ## Publications
 
-DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection
+- **[DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection]**
 - Weichao Pan, Jianmei Lei, **Xu Wang**, Chengze Lv, Gongrui Wang and Chong Li
 - Applied Sciences (SCI Q1)  Published
-- https://www.mdpi.com/2076-3417/15/3/1470
-
-Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example
+- **[Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example]**
 - Weichao Pan, **Xu Wang** and Wenqing Huan
 - Journal of Real-Time Image Processing (SCI Q2)  Accepted
-- https://arxiv.org/abs/2409.02546
-
-Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl
+- **[Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl]**
 - Weichao Pan, Wenqing Huan, Xingbo Liu and **Xu Wang**
 - Software Guide (CCF C)  Accepted
-
-ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis
+- **[ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis]**
 - Yubao Zhao, Tian Zhang, **Xu Wang**, Puyu Han, Tong Chen, Linlin Huang, Youzhu Jin and Jiaju Kang
-- https://arxiv.org/abs/2408.08849
-
-EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection
+- **[EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection]**
 - Weichao Pan, **Xu Wang** and Wenqing Huan
-- https://arxiv.org/abs/2409.12635
-
+- 
 {% include_relative _includes/publications.md %}
 
 {% include_relative _includes/services.md %}
