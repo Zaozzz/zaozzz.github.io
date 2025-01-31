@@ -1,6 +1,4 @@
-## Services
-
-##Conference Reviewers
+## Conference Reviewers
 
 <ul style="margin:0 0 5px;">
   <li><a href="http://cvpr2023.thecvf.com/"><autocolor>IEEE International Conference on Multimedia & Expo (ICME) 2025</autocolor></a></li>
