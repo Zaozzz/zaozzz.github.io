@@ -4,19 +4,19 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the School of Computer Science and Technology, Shandong Jianzhu University (entered in 2023). During my undergraduate studies, I have been fortunate to receive guidance from Associate Researcher Guangshun Wei at Shandong University and Associate Professor Ning Yang at Shandong Jianzhu University. With this academic background and my keen interest in research, I hope to obtain the position of Research Assistant in your laboratory for the fall of 2025.
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Multimodal Large Model:** Physiological signals, Multimodal data
+- **Target Detection:** Industrial equipment, Lightweight, Obstruction issue
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Feb. 2025]** Our paper has been published in Applied Science (SCI Q1).
+- **[Feb. 2025]** Our paper has been accepted to Journal of Real-Time Image Processing (SCI Q2).
+- **[Feb. 2025]** We have obtained National First Prize in the Blue Bridge Cup Special Competition.
+- **[Feb. 2025]** We have obtained National Third Prize in the Global Campus Artificial Intelligence Algorithm Elite Competition.
 
 {% include_relative _includes/publications.md %}
 
