@@ -16,9 +16,9 @@ I hope to obtain the position of Research Assistant in your laboratory for the f
 ## News
 
 - **[Feb. 2025]** Our paper has been published in Applied Science (SCI Q1).
-- **[Feb. 2025]** Our paper has been accepted to Journal of Real-Time Image Processing (SCI Q2).
-- **[Feb. 2025]** We have obtained National First Prize in the Blue Bridge Cup Special Competition.
-- **[Feb. 2025]** We have obtained National Third Prize in the Global Campus Artificial Intelligence Algorithm Elite Competition.
+- **[Jan. 2025]** Our paper has been accepted to Journal of Real-Time Image Processing (SCI Q2).
+- **[Jan. 2025]** We have obtained National First Prize in the Blue Bridge Cup Special Competition.
+- **[Jan. 2025]** We have obtained National Third Prize in the Global Campus Artificial Intelligence Algorithm Elite Competition.
 
 ## Publications
 
