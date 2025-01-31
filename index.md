@@ -4,7 +4,8 @@ layout: homepage
 
 ## About Me
 
-I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the School of Computer Science and Technology, Shandong Jianzhu University (entered in 2023). During my undergraduate studies, I have been fortunate to receive guidance from Associate Researcher Guangshun Wei at Shandong University and Associate Professor Ning Yang at Shandong Jianzhu University. With this academic background and my keen interest in research, I hope to obtain the position of Research Assistant in your laboratory for the fall of 2025.
+I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the School of Computer Science and Technology, Shandong Jianzhu University (entered in 2023). During my undergraduate studies, I have been fortunate to receive guidance from Associate Researcher Guangshun Wei at Shandong University and Associate Professor Ning Yang at Shandong Jianzhu University. 
+I hope to obtain the position of Research Assistant in your laboratory for the fall of 2025.
 
 ## Research Interests
 
