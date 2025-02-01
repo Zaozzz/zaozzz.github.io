@@ -4,14 +4,11 @@ layout: homepage
 
 ## About Me
 
-I am currently pursuing a Bachelor’s degree in AI at the [School of Computer Science and Technology](https://www.sdjzu.edu.cn/jsjkx/index.htm), [Shandong Jianzhu University](https://www.sdjzu.edu.cn/) (entered in 2023).The major I have chosen is [artificial intelligence](https://www.gaokao.cn/school/528/specialtydetail/1800980). During my undergraduate studies, I have been fortunate to receive guidance from Associate Researcher [Guangshun Wei](https://faculty.sdu.edu.cn/weiguangshun/zh_CN/index.htm) at [Shandong University](https://www.sdu.edu.cn/index.htm) and Associate Professor [Ning Yang](https://www.sdjzu.edu.cn/jsjkx/xygk/szll2.htm) at [Shandong Jianzhu University](https://www.sdjzu.edu.cn/). 
+I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the [School of Computer Science and Technology](https://www.sdjzu.edu.cn/jsjkx/index.htm), [Shandong Jianzhu University](https://www.sdjzu.edu.cn/), which I began in 2023. My academic journey has been enriched under the mentorship of Associate Researcher [Guangshun Wei](https://faculty.sdu.edu.cn/weiguangshun/zh_CN/index.htm) from [Shandong University](https://www.sdu.edu.cn/index.htm) and Associate Professor [Ning Yang](https://www.sdjzu.edu.cn/jsjkx/xygk/szll2.htm) from [Shandong Jianzhu University](https://www.sdjzu.edu.cn/). Their guidance has been instrumental in shaping my research interests and academic pursuits.
 
-I hope to obtain the position of Research Assistant in your laboratory for the fall of 2025.
+My primary research focus lies in the areas of **multimodal large models**, **multimodal data processing**, and **knowledge distillation**. I am particularly fascinated by the challenges and opportunities presented by integrating diverse data types—such as text, images, and audio—into cohesive models that can enhance understanding and decision-making processes. Additionally, I am deeply interested in the techniques of knowledge distillation, which enable the transfer of knowledge from large, complex models to smaller, more efficient ones without significant loss of performance.
 
-## Research Interests
-
-- **Multimodal Large Model:** Physiological signals, Multimodal data
-- **Target Detection:** Industrial equipment, Lightweight, Obstruction issue
+I am eager to contribute to cutting-edge research in these domains and am keen to join your laboratory as a Research Assistant in the fall of 2025. I am confident that my background, combined with my passion for advancing AI technologies, will allow me to make meaningful contributions to your team. I look forward to the opportunity to collaborate and further develop my skills under your esteemed guidance.
 
 ## News
 
