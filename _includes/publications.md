@@ -14,7 +14,7 @@
             <a href="https://zaozzz.github.io/">Artificial Intelligence-Based Method for Diagnosing Heart Disease Through Observation, Hearing, Questioning, and Palpation</a>
           </div>
           <div class="author">
-            <strong>By leveraging image segmentation, object detection, multimodal large language models, and an integrated data management platform, we enable comprehensive patient diagnosis through "observation, hearing, questioning, and analysis. (2025,2)"</strong>
+            <strong>By leveraging image segmentation, object detection, multimodal large language models, and an integrated data management platform, we enable comprehensive patient diagnosis through "observation, hearing, questioning, and analysis." (2025,2)</strong>
           </div>
           <div class="links">
             <!-- Add links here if needed -->
