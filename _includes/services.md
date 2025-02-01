@@ -1,3 +1,25 @@
+## Conference Reviewers
+
+<ul style="margin:0 0 5px;">
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>IEEE International Conference on Multimedia & Expo (ICME) 2025</autocolor></a></li>
+</ul>
+
+## Campus Employment
+
+<ul style="margin:0 0 5px;">
+  <li><a href="https://zaozzz.github.io/"><autocolor>Teddy Intelligent Studio Student Chairman Leader</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Deep Studio AI Student Chairman Leader</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Director of the Publicity Department of the Library Volunteer Association</autocolor></a></li>
+</ul>
+
+## Academic Fund
+
+<ul style="margin:0 0 5px;">
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>First class scholarship from the school</autocolor></a></li>
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Career Planning Bonus for College Students</autocolor></a></li>
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Undergraduate Entrepreneurship Support Program</autocolor></a></li>
+</ul>
+
 ## Publications
 
 <h4 style="margin:0 10px 0;">DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection</h4>
@@ -14,20 +36,6 @@
 <h4 style="margin:0 10px 0;">EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection</h4>
 - Weichao Pan, **Xu Wang** and Wenqing Huan
 
-## Conference Reviewers
-
-<ul style="margin:0 0 5px;">
-  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>IEEE International Conference on Multimedia & Expo (ICME) 2025</autocolor></a></li>
-</ul>
-
-## Campus Employment
-
-<ul style="margin:0 0 5px;">
-  <li><a href="https://zaozzz.github.io/"><autocolor>Teddy Intelligent Studio Student Chairman Leader</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Deep Studio AI Student Chairman Leader</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Director of the Publicity Department of the Library Volunteer Association</autocolor></a></li>
-</ul>
-
 ## Competition Awards
 
 <ul style="margin:0 0 20px;">
@@ -43,12 +51,4 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>Provincial Second Prize in the Blue Bridge Cup Python Competition</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition twice</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>and so on......</autocolor></a></li>
-</ul>
-
-## Scholarship
-
-<ul style="margin:0 0 5px;">
-  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>First class scholarship from the school</autocolor></a></li>
-  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Career Planning Bonus for College Students</autocolor></a></li>
-  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Undergraduate Entrepreneurship Support Program</autocolor></a></li>
 </ul>
