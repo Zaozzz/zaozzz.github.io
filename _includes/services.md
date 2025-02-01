@@ -32,7 +32,7 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis</autocolor></a></li>
   - Yubao Zhao, Tian Zhang, Xu Wang, Puyu Han, Tong Chen, Linlin Huang, Youzhu Jin and Jiaju Kang
   <li><a href="https://zaozzz.github.io/"><autocolor>EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection</autocolor></a></li>
-  - Weichao Pan, **Xu Wang** and Wenqing Huan
+  - Weichao Pan, Xu Wang and Wenqing Huan
 </ul>
 
 ## Competition Awards
