@@ -9,7 +9,7 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>Student Members of the SDAAI</autocolor></a></li>
 </ul>
 
-## Academic Fund
+## Fund
 
 <ul style="margin:0 0 5px;">
   <li><a href="https://zaozzz.github.io/"><autocolor>First class scholarship from the school</autocolor></a></li>
