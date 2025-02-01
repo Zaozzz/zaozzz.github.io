@@ -12,9 +12,9 @@
 ## Fund
 
 <ul style="margin:0 0 5px;">
-  <li><a href="https://zaozzz.github.io/"><autocolor>First class scholarship from the school</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Career Planning Bonus for College Students</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Undergraduate Entrepreneurship Support Program</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>2023-2024 First class scholarship from the school</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>2024-2025 Career Planning Bonus for College Students</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>2024-2025 Undergraduate Entrepreneurship Support Program</autocolor></a></li>
 </ul>
 
 ## Publications
