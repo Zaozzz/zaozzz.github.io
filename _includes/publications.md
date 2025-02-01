@@ -14,7 +14,7 @@
             <a href="https://zaozzz.github.io/">By leveraging image segmentation, object detection, multimodal large language models, and an integrated data management platform, we enable comprehensive patient diagnosis through "observation, hearing, questioning, and analysis." (2025,1)</a>
           </div>
           <div class="author">
-            <strong>If you are interested in this idea, please feel free to contact us </strong>
+            <strong>If you are interested in this idea, please contact us </strong>
           </div>
           <div class="links">
             <!-- Add links here if needed -->
