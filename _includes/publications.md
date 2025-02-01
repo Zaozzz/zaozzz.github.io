@@ -1,4 +1,4 @@
-<h2 id="publications" style="margin: 2px 0px -15px;">Publications</h2>
+<h2 id="publications" style="margin: 2px 0px -15px;">Works</h2>
 
 <div class="publications">
 <ol class="bibliography">
@@ -7,16 +7,15 @@
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     <img src="assets/img/ijcai23_teaser.png" class="teaser img-fluid z-depth-1">
-    <abbr class="badge">IJCAI</abbr>
+    <abbr class="badge">Cardiac diagnosis</abbr>
   </div>
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-    <div class="title"><a href="https://arxiv.org/abs/2308.09910">Physics-Guided Human Motion Capture with Pose Probability Modeling</a></div>
-    <div class="author"> <strong>Jingyi Ju</strong>, Buzhen Huang, Chen Zhu, Zhihao Li and Yangang Wang</div>
-    <div class="periodical"><em>International Joint Conference on Artificial Intelligence <strong>(IJCAI)</strong>, 2023.</em></div>
+    <div class="title"><a href="https://arxiv.org/abs/2308.09910">Artificial intelligence based method for diagnosing heart disease through observation, hearing, questioning, and palpation</a></div>
+    <div class="author"> <strong>By using image segmentation, object detection, multimodal big language models, and a comprehensive data management platform, we can achieve a comprehensive diagnosis of patients through "observation, hearing, questioning, and cutting"</div>
     <div class="links">
-      <a href="http://Me-Ditto.github.io/files/ijcai23.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
-      <a href="https://github.com/Me-Ditto/Physics-Guided-Mocap" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
-      <a href="https://www.ijcai.org/proceedings/2023/bibtex/105" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Bibtex</a>
+      <a href="https://zaozzz.github.io/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      <a href="https://zaozzz.github.io/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
+      <a href="https://zaozzz.github.io/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Bibtex</a>
     </div>
   </div>
 </div>
