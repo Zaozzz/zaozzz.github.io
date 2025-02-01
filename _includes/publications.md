@@ -11,7 +11,8 @@
   </div>
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
     <div class="title"><a href="https://arxiv.org/abs/2308.09910">Artificial intelligence based method for diagnosing heart disease through observation, hearing, questioning, and palpation</a></div>
-    <div class="author"> <strong>By using image segmentation, object detection, multimodal big language models, and a comprehensive data management platform, we can achieve a comprehensive diagnosis of patients through "observation, hearing, questioning, and cutting"</div>
+    <div class="author"> <strong>By leveraging image segmentation, object detection, multimodal large language models, and an integrated data management platform, we can enable comprehensive patient diagnosis through "observation, hearing, questioning, and analysis."</div>
+    <div class="periodical"><em></strong>, 2023.</em></div>
     <div class="links">
       <a href="https://zaozzz.github.io/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
       <a href="https://zaozzz.github.io/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
