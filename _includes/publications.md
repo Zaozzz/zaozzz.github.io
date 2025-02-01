@@ -12,7 +12,6 @@
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
     <div class="title"><a href="https://arxiv.org/abs/2308.09910">Artificial intelligence based method for diagnosing heart disease through observation, hearing, questioning, and palpation</a></div>
     <div class="author"> <strong>By leveraging image segmentation, object detection, multimodal large language models, and an integrated data management platform, we can enable comprehensive patient diagnosis through "observation, hearing, questioning, and analysis."</div>
-    <div class="periodical"><em></strong>, 2023.</em></div>
     <div class="links">
     </div>
   </div>
