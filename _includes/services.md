@@ -22,19 +22,21 @@
 
 ## Publications
 
-<li><a href="http://cvpr2023.thecvf.com/"><autocolor>DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection</autocolor></a></li>
-- Weichao Pan, Jianmei Lei, **Xu Wang**, Chengze Lv, Gongrui Wang and Chong Li
-- Applied Sciences (SCI Q1)  Published
-<li><a href="http://cvpr2023.thecvf.com/"><autocolor>Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example</autocolor></a></li>
-- Weichao Pan, **Xu Wang** and Wenqing Huan
-- Journal of Real-Time Image Processing (SCI Q2)  Accepted
-<li><a href="http://cvpr2023.thecvf.com/"><autocolor>Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl</autocolor></a></li>
-- Weichao Pan, Wenqing Huan, Xingbo Liu and **Xu Wang**
-- Software Guide (CCF C)  Accepted
-<li><a href="http://cvpr2023.thecvf.com/"><autocolor>ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis</autocolor></a></li>
-- Yubao Zhao, Tian Zhang, **Xu Wang**, Puyu Han, Tong Chen, Linlin Huang, Youzhu Jin and Jiaju Kang
-<li><a href="http://cvpr2023.thecvf.com/"><autocolor>EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection</autocolor></a></li>
-- Weichao Pan, **Xu Wang** and Wenqing Huan
+<ul style="margin:0 0 5px;">
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection</autocolor></a></li>
+  - Weichao Pan, Jianmei Lei, **Xu Wang**, Chengze Lv, Gongrui Wang and Chong Li
+  - Applied Sciences (SCI Q1)  Published
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example</autocolor></a></li>
+  - Weichao Pan, **Xu Wang** and Wenqing Huan
+  - Journal of Real-Time Image Processing (SCI Q2)  Accepted
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl</autocolor></a></li>
+  - Weichao Pan, Wenqing Huan, Xingbo Liu and **Xu Wang**
+  - Software Guide (CCF C)  Accepted
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis</autocolor></a></li>
+  - Yubao Zhao, Tian Zhang, **Xu Wang**, Puyu Han, Tong Chen, Linlin Huang, Youzhu Jin and Jiaju Kang
+  <li><a href="http://cvpr2023.thecvf.com/"><autocolor>EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection</autocolor></a></li>
+  - Weichao Pan, **Xu Wang** and Wenqing Huan
+</ul>
 
 ## Competition Awards
 
