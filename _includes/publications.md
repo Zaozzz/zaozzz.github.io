@@ -1,4 +1,4 @@
-<h2 id="publications" style="margin: 2px 0px -15px;">Imagine Project</h2>
+<h2 id="publications" style="margin: 2px 0px -15px;">Project</h2>
 
 <div class="publications">
   <ol class="bibliography">
@@ -11,10 +11,10 @@
         </div>
         <div class="col-sm-9" style="position: relative; padding-right: 15px; padding-left: 20px;">
           <div class="title">
-            <a href="https://zaozzz.github.io/">Artificial Intelligence-Based Method for Diagnosing Heart Disease Through Observation, Hearing, Questioning, and Palpation</a>
+            <a href="https://zaozzz.github.io/">By leveraging image segmentation, object detection, multimodal large language models, and an integrated data management platform, we enable comprehensive patient diagnosis through "observation, hearing, questioning, and analysis." (2025,1)</a>
           </div>
           <div class="author">
-            <strong>By leveraging image segmentation, object detection, multimodal large language models, and an integrated data management platform, we enable comprehensive patient diagnosis through "observation, hearing, questioning, and analysis." (2025,2)</strong>
+            <strong>If you are interested in this idea, please feel free to contact us at any time </strong>
           </div>
           <div class="links">
             <!-- Add links here if needed -->
