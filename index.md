@@ -8,7 +8,7 @@ I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the 
 
 My primary research focus lies in the areas of **multimodal large models**, **multimodal data processing**, and **knowledge distillation**.
 
-<span style="color:red">I am eager to contribute to cutting-edge research in these domains and am keen to join your laboratory as a Research Assistant in the fall of 2025.</span>
+<span style="color:red">I am currently seeking opportunities to work as a Research Assistant starting in the fall of 2025, and I am also interested in pursuing a Master's or Ph.D. program beginning in the fall of 2027.</span>
 
 ## News
 
