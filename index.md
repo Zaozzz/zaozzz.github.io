@@ -12,9 +12,9 @@ My primary research focus lies in the areas of **multimodal large models**.
 
 ## News
 
-- **[Feb. 2025]** Our paper has been published in Applied Science (SCI Q1).
-- **[Jan. 2025]** Our paper has been accepted to Journal of Real-Time Image Processing (SCI Q2).
-- **[Jan. 2025]** We have obtained National First Prize in the Blue Bridge Cup Special Competition.
+- <span style="color:#2d9981">[Feb. 2025] Our paper has been published in Applied Science (SCI Q1).</span>
+- <span style="color:#2d9981">[Jan. 2025] Our paper has been accepted to Journal of Real-Time Image Processing (SCI Q2).</span>
+- <span style="color:#2d9981">[Jan. 2025] We have obtained National First Prize in the Blue Bridge Cup Special Competition.</span>
 
 
 {% include_relative _includes/publications.md %}
