@@ -51,3 +51,15 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition twice</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>and so on......</autocolor></a></li>
 </ul>
+
+## Hobbies
+
+I enjoy listening to music, and my favorite singers are Shan Yichun and Wang Sulong.  
+
+I love watching movies and TV dramas, and my favorite actors are Ju Jingyi, Chen Duling, Zhuang Dafei, and Li Gengxi.  
+
+I used to play games like *Teamfight Tactics*, *Honor of Kings*, and *Clash of Clans*, but I rarely play games now.  
+
+I can't resist new tech products, and I've recently been exploring devices like DJI drones and Huawei VR headsets.  
+
+I have an ultimate pursuit of music and display quality, constantly purchasing monitors, photography equipment, headphones, and speakers.
