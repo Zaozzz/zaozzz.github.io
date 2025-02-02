@@ -8,7 +8,7 @@ I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the 
 
 My primary research focus lies in the areas of **multimodal large models**.
 
-<span style="color:red">I am currently seeking an unpaid, remote Research Assistant opportunity starting in the fall of 2025, as well as exploring Master's or Ph.D. programs beginning in the fall of 2027.</span>
+<span style="color:#FF6666">I am currently seeking an unpaid, remote Research Assistant opportunity starting in the fall of 2025, as well as exploring Master's or Ph.D. programs beginning in the fall of 2027.</span>
 
 ## News
 
