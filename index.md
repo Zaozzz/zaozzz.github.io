@@ -8,7 +8,7 @@ I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the 
 
 My primary research focus lies in the areas of **multimodal large models**, **multimodal data processing**, and **knowledge distillation**.
 
-I am eager to contribute to cutting-edge research in these domains and am keen to join your laboratory as a Research Assistant in the fall of 2025. 
+<span style="color:red">I am eager to contribute to cutting-edge research in these domains and am keen to join your laboratory as a Research Assistant in the fall of 2025.</span>
 
 ## News
 
