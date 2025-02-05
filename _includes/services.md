@@ -25,7 +25,7 @@
   - Applied Sciences (SCI Q1)  Published
   <li><a href="https://zaozzz.github.io/"><autocolor>Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example</autocolor></a></li>
   - Weichao Pan, Xu Wang and Wenqing Huan
-  - Journal of Real-Time Image Processing (SCI Q2)  Accepted
+  - Journal of Real-Time Image Processing (SCI Q2)  Published
   <li><a href="https://zaozzz.github.io/"><autocolor>Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl</autocolor></a></li>
   - Weichao Pan, Wenqing Huan, Xingbo Liu and Xu Wang
   - Software Guide (CCF C)  Accepted
