@@ -33,6 +33,8 @@
   - Yubao Zhao, Tian Zhang, Xu Wang, Puyu Han, Tong Chen, Linlin Huang, Youzhu Jin and Jiaju Kang
   <li><a href="https://zaozzz.github.io/"><autocolor>EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection</autocolor></a></li>
   - Weichao Pan, Xu Wang and Wenqing Huan
+  <li><a href="https://zaozzz.github.io/"><autocolor>TransformDAS: Mapping Φ-OTDR Signals to Riemannian Manifold for Robust Classification</autocolor></a></li>
+  -Jiaju Kang, Puyu Han, Yang Chun, Xu Wang, Luqi Gong
 </ul>
 
 
