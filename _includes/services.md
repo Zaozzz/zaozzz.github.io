@@ -42,6 +42,18 @@
   - W. Pan, X. Wang and W. Huan
 </ul>
 
+##Awards
+
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>National First Prize in the Blue Bridge Cup Special Competition (Captain)</autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>National Second Prize in the Global Campus Artificial Intelligence Algorithm Elite Competition</autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>National Third Prize in the China University Student Computer Design Competition</autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>National Third Prize in the National College Student Digital Media Technology Works and Creativity Competition</autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>National Third Prize in the Teddy Cup Data Analysis Skills Competition</autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>First prize in the Shandong Province Software Design Competition</autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>112th place in the Astar Baidu Programming Competition across the province</autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>Provincial Second Prize in the National College Student Mathematical Modeling Competition</autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>Provincial Second Prize in the Blue Bridge Cup Python Competition</autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition</autocolor></a></li>
 
 ## Hobbies
 
