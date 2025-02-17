@@ -24,6 +24,9 @@
 <li><a href="https://arxiv.org/abs/2408.08849"><autocolor>ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis</autocolor></a></li>
   - Y. Zhao, T. Zhang, X. Wang, P. Han, T. Chen, L. Huang, Y. Jin and J. Kang
   - ICME 2025 (CCF B)
+<li><a href="https://arxiv.org/abs/2408.08849"><autocolor>PolicySimEval: A Benchmark for Evaluating Policy Outcomes through Agent-Based Simulation</autocolor></a></li>
+  - J. Kang, P. Han, X. Wang, T. Zhang and L. Gong
+  - ICME 2025 (CCF B)
 <li><a href="https://www.mdpi.com/2076-3417/15/3/1470"><autocolor>DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection</autocolor></a></li>
   - W. Pan, J. Lei, X. Wang, C. Lv, G. Wang and C. Li
   - Applied Sciences (SCI Q1)
