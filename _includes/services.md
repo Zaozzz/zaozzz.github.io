@@ -44,6 +44,7 @@
 
 ## Awards
 
+<ul style="margin:0 0 5px;">
 <li><a href="https://dasai.lanqiao.cn/"><autocolor>National First Prize in the Blue Bridge Cup Special Competition (Captain)</autocolor></a></li>
 <li><a href="https://www.saikr.com/vse/2024/DIGIX"><autocolor>National Second Prize in the Global Campus Artificial Intelligence Algorithm Elite Competition (Captain)</autocolor></a></li>
 <li><a href="https://jsjds.blcu.edu.cn/index.htm"><autocolor>National Third Prize in the China University Student Computer Design Competition</autocolor></a></li>
@@ -54,6 +55,7 @@
 <li><a href="https://www.mcm.edu.cn/"><autocolor>Provincial Second Prize in the National College Student Mathematical Modeling Competition</autocolor></a></li>
 <li><a href="https://dasai.lanqiao.cn/"><autocolor>Provincial Second Prize in the Blue Bridge Cup Python Competition</autocolor></a></li>
 <li><a href="https://www.raicom.com.cn/"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition</autocolor></a></li>
+</ul>
 
 ## Hobbies
 
