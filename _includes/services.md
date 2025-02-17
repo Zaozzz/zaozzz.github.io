@@ -42,7 +42,7 @@
   - W. Pan, X. Wang and W. Huan
 </ul>
 
-##Awards
+## Awards
 
 <li><a href="https://dasai.lanqiao.cn/"><autocolor>National First Prize in the Blue Bridge Cup Special Competition (Captain)</autocolor></a></li>
 <li><a href="https://www.saikr.com/vse/2024/DIGIX"><autocolor>National Second Prize in the Global Campus Artificial Intelligence Algorithm Elite Competition (Captain)</autocolor></a></li>
