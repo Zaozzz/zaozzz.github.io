@@ -20,6 +20,8 @@
 ## Publications
 
 <ul style="margin:0 0 5px;">
+<li><a href="https://arxiv.org/abs/2408.08849"><autocolor>ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis</autocolor></a></li>
+  - Y. Zhao, T. Zhang, X. Wang, P. Han, T. Chen, L. Huang, Y. Jin and J. Kang -ICME 2025 (CCF B)
   <li><a href="https://www.mdpi.com/2076-3417/15/3/1470"><autocolor>DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection</autocolor></a></li>
   - W. Pan, J. Lei, X. Wang, C. Lv, G. Wang and C. Li
   - Applied Sciences (SCI Q1)  Published
@@ -29,8 +31,6 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl</autocolor></a></li>
   - W. Pan, W. Huan, X. Liu and X. Wang
   - Software Guide (CCF C)  Accepted
-  <li><a href="https://arxiv.org/abs/2408.08849"><autocolor>ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis</autocolor></a></li>
-  - Y. Zhao, T. Zhang, X. Wang, P. Han, T. Chen, L. Huang, Y. Jin and J. Kang
   <li><a href="https://arxiv.org/abs/2502.02428"><autocolor>TransformDAS: Mapping Φ-OTDR Signals to Riemannian Manifold for Robust Classification</autocolor></a></li>
   -J. Kang, P. Han, Y. Chun, X. Wang, L. Gong
   <li><a href="https://arxiv.org/abs/2409.12635"><autocolor>EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection</autocolor></a></li>
