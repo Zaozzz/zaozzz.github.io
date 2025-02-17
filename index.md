@@ -8,14 +8,7 @@ I am currently pursuing a Bachelor’s degree in Artificial Intelligence at the 
 
 My primary research focus lies in the areas of **multimodal large models**.
 
-<span style="color:#FF6666">I am currently seeking an unpaid, remote Research Assistant opportunity starting in the fall of 2025, as well as exploring Master's or Ph.D. programs beginning in the fall of 2027.</span>
-
-## News
-
-- <span style="color:#a1a75a">[Feb. 2025] Our paper has been published in Journal of Real-Time Image Processing (SCI Q2).</span>
-- <span style="color:#a1a75a">[Feb. 2025] Our paper has been published in Applied Science (SCI Q1).</span>
-- <span style="color:#a1a75a">[Jan. 2025] Our paper has been accepted to Journal of Real-Time Image Processing (SCI Q2).</span>
-- <span style="color:#a1a75a">[Jan. 2025] We have obtained National First Prize in the Blue Bridge Cup Special Competition.</span>
+<span style="color:#FF6666">I am currently seeking a Master's or Ph.D. programs beginning in the fall of 2027.</span>
 
 
 {% include_relative _includes/publications.md %}
