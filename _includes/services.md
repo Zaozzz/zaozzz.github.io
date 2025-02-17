@@ -1,12 +1,11 @@
 ## Service 
 
 <ul style="margin:0 0 5px;">
-  <li><a href="https://zaozzz.github.io/"><autocolor>IEEE International Conference on Multimedia & Expo (ICME) 2025 Reviewers</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Teddy Intelligent Studio Student Chairman Leader</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Deep Studio AI Student Chairman Leader</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Director of the Publicity Department of the Library Volunteer Association</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>Student Members of the CCF</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>Student Members of the SDAAI</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Teddy Intelligent Studio Student Chairman</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Deep Studio AI Student Chairman</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>IEEE International Conference on Multimedia & Expo (ICME) 2025 Reviewers</autocolor></a></li>
 </ul>
 
 ## Fund
