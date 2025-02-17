@@ -22,7 +22,7 @@
 <ul style="margin:0 0 5px;">
 <li><a href="https://arxiv.org/abs/2408.08849"><autocolor>ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis</autocolor></a></li>
   - X. Wang, J. Kang and P. Han
-<li><a href="https://www.mdpi.com/2076-3417/15/3/1470"><autocolor>DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection</autocolor></a><li>
+<li><a href="https://www.mdpi.com/2076-3417/15/3/1470"><autocolor>DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection</autocolor></a></li>
   - W. Pan, J. Lei, X. Wang, C. Lv, G. Wang and C. Li
   - Applied Sciences (SCI Q1)
 <li><a href="https://arxiv.org/abs/2408.08849"><autocolor>ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis</autocolor></a></li>
