@@ -2,7 +2,6 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <title>{{ site.title }} | {{site.affiliation}}</title>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,23 +17,30 @@
     <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
     <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
 
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
-
+    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    {% if site.font == "Sans Serif" %}
+    <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
+    {% else %}
+    <link rel="stylesheet" href="./assets/css/font.css">
+    {% endif %}
+    {% if site.auto_dark_mode %}
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/publications.css">
+    {% else %}
+    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
+    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
+    {% endif %}
 
   </head>
   <body>
     <div class="wrapper">
       <header>
-        
         {% if site.avatar %}
         <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
         {% endif %}
-
         <h1>{{ site.title }}</h1>
-
         {% if site.position %}
         <position style="font-size:1.10rem;">{{ site.position }}</position>
         <br>
@@ -46,7 +52,6 @@
         {% if site.email %}
         <email>{{ site.email }}</email>
         {% endif %}
-
         <br>
         <br>
         <div class="social-icons">
@@ -55,55 +60,46 @@
           <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
         </a>  
         {% endif %}
-
         {% if site.cv_link %}
         <a style="margin: 0 5px 0 0" href="{{ site.cv_link }}">
           <i class="ai ai-cv" style="font-size:1.3rem;"></i>
         </a>
         {% endif %}
-
         {% if site.github_link %}
         <a style="margin: 0 5px 0 0" href="{{ site.github_link }}">
           <i class="fab fa-github"></i>
         </a>
         {% endif %}
-
-        {% if site.email_link %}
-        <a style="margin: 0 5px 0 0" href="{{ site.email_link }}">
-          <i class="fas fa-fw fa-envelope"></i>
-        </a>
-        {% endif %}
-
         {% if site.linkedin %}
         <a style="margin: 0 5px 0 0" href="{{ site.linkedin }}">
           <i class="fab fa-linkedin"></i>
         </a>
         {% endif %}
-
         {% if site.twitter %}
         <a style="margin: 0 0 0 0" href="{{ site.twitter }}">
-          <i class="fab fa-twitter"></i>
+          <i class="fab fa-x-twitter"></i>
         </a>
         {% endif %}
         </div>
         <br>
-
       </header>
       <section>
-
       {{ content }}
-
       <br>
-
       {% if site.enable_footnote %}
       <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
       {% endif %}
-
       </section>
       <footer>
-        
+        <!-- 其他页脚内容 -->
       </footer>
     </div>
+
+    <!-- 将 ClustrMaps 小组件添加到页面右下角 -->
+    <div id="clustrmaps-widget" style="position: fixed; bottom: 0; right: 0; z-index: 1000;">
+      <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=dcdcdc&w=a&t=tt&d=_yuzvyUUqeuU1Q9KXqZXHpQo47iC_B6CZf-gZMc7Fg8&co=ffffff&cmo=a5ca8f&cmn=3acc6d&ct=ffffff"></script>
+    </div>
+
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
@@ -115,10 +111,5 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
-
-    <!-- 新增：ClustrMaps 小组件（固定在页面右下角） -->
-    <div style="position: fixed; bottom: 0; right: 0; z-index: 9999;">
-      <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=dcdcdc&w=a&t=tt&d=_yuzvyUUqeuU1Q9KXqZXHpQo47iC_B6CZf-gZMc7Fg8&co=ffffff&cmo=a5ca8f&cmn=3acc6d&ct=ffffff"></script>
-    </div>
   </body>
 </html>
