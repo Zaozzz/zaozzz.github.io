@@ -1,11 +1,9 @@
 ## Service 
 
 <ul style="margin:0 0 5px;">
-  <li><a href="https://zaozzz.github.io/"><autocolor>Student Members of the CCF</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Student Members of the SDAAI</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Teddy Intelligent Studio Student Chairman</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Deep Studio AI Student Chairman</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>IEEE International Conference on Multimedia & Expo (ICME) 2025 Reviewers</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Student Members of the CCF and the SDAAI</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Student Chairman of Teddy Intelligent Studio and Deep Studio AI Department</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>IEEE International Conference on Multimedia & Expo (ICME) Reviewers</autocolor></a></li>
 </ul>
 
 ## Fund
