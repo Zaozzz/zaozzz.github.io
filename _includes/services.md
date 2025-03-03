@@ -52,7 +52,7 @@
 <li><a href="https://www.tipdm.org:10010/#/competition/1694981063413243904/introduce"><autocolor>National Third Prize in the Teddy Cup Data Analysis Skills Competition (Unranked)</autocolor></a></li>
 <li><a href="http://sw.sdusc.cn/"><autocolor>First prize in the Shandong Province Software Design Competition</autocolor></a></li>
 <li><a href="https://www.matiji.net/exam/contest/contestdetail/145"><autocolor>112th place in the Astar Baidu Programming Competition across the province (individual)</autocolor></a></li>
-<li><a href="https://www.mcm.edu.cn/"><autocolor>Provincial Second Prize in the National College Student Mathematical Modeling Competition (Unranked)</autocolor></a></li>
+<li><a href="https://www.mcm.edu.cn/"><autocolor>Provincial Second Prize in the CUMCM (Unranked)</autocolor></a></li>
 <li><a href="https://dasai.lanqiao.cn/"><autocolor>Provincial Second Prize in the Blue Bridge Cup Python Competition (individual)</autocolor></a></li>
 <li><a href="https://www.raicom.com.cn/"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition</autocolor></a></li>
 </ul>
