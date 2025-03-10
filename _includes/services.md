@@ -53,6 +53,7 @@
 <li><a href="https://www.mcm.edu.cn/"><autocolor>Provincial Second Prize in the CUMCM (Unranked)</autocolor></a></li>
 <li><a href="https://dasai.lanqiao.cn/"><autocolor>Provincial Second Prize in the Blue Bridge Cup Python Competition (individual)</autocolor></a></li>
 <li><a href="https://www.raicom.com.cn/"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition</autocolor></a></li>
+<li><a href="https://zgs.chsi.com.cn/home"><autocolor> Provincial Bronze Award in the National College Student Career Planning Competition</autocolor></a></li>
 </ul>
 
 ## Hobbies
