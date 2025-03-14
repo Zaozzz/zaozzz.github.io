@@ -17,6 +17,8 @@
 ## Publications
 
 <ul style="margin:0 0 5px;">
+<li><a href="https://arxiv.org/abs/2502.02428"><autocolor>TransformDAS: Mapping Φ-OTDR Signals to Riemannian Manifold for Robust Classification</autocolor></a></li>
+  - X. Wang, J. Kang, P. Han, Y. Chun, L. Gong
 <li><a href="https://export.arxiv.org/abs/2502.17475"><autocolor>ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis</autocolor></a></li>
   - X. Wang, J. Kang and P. Han
 <li><a href="https://arxiv.org/abs/2408.08849"><autocolor>ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis</autocolor></a></li>
@@ -34,8 +36,6 @@
 <li><a href="https://zaozzz.github.io/"><autocolor>Demand analysis and capability model construction of digital talents in the financial field based on recruitment big data and machine learningl</autocolor></a></li>
   - W. Pan, W. Huan, X. Liu and X. Wang
   - Software Guide (CCF C)
-<li><a href="https://arxiv.org/abs/2502.02428"><autocolor>TransformDAS: Mapping Φ-OTDR Signals to Riemannian Manifold for Robust Classification</autocolor></a></li>
-  -J. Kang, P. Han, Y. Chun, X. Wang, L. Gong
 <li><a href="https://arxiv.org/abs/2409.12635"><autocolor>EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection</autocolor></a></li>
   - W. Pan, X. Wang and W. Huan
 </ul>
