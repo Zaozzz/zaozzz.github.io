@@ -6,7 +6,7 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>IEEE International Conference on Multimedia & Expo (ICME) Reviewers</autocolor></a></li>
 </ul>
 
-## Fund
+## Honors
 
 <ul style="margin:0 0 5px;">
   <li><a href="https://zaozzz.github.io/"><autocolor>2023-2024 First class scholarship from the school</autocolor></a></li>
@@ -40,7 +40,7 @@
   - W. Pan, X. Wang and W. Huan
 </ul>
 
-## Awards
+## Competitions
 
 <ul style="margin:0 0 5px;">
 <li><a href="https://dasai.lanqiao.cn/"><autocolor>National First Prize in the Blue Bridge Cup Competition (Captain)</autocolor></a></li>
