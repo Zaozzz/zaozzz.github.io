@@ -53,7 +53,7 @@
 
 ## Hobbies
 
-I enjoy listening to music, and my favorite singers are [Yichun Shan](https://weibo.com/u/5598574734) and [Silence Wang](https://weibo.com/silencew).  
+I enjoy listening to music, and my favorite singers are [Xiaoyun Huang](https://m.weibo.cn/u/5043186742) and [Silence Wang](https://weibo.com/silencew).  
 
 I love watching movies and TV dramas, and my favorite actors are [Kiku](https://www.weibo.com/u/3669102477?eqid=e8af036900096f8200000004645b8833), [Duling Chen](https://weibo.com/u/5589792153), [Sabrina Zhuang](https://weibo.com/u/1314749965?tabtype=feed), and [Teresa
  Li](https://weibo.com/n/%E6%9D%8E%E5%BA%9A%E5%B8%8CTeresa).  
