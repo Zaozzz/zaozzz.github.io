@@ -19,9 +19,9 @@
 
 <ul style="margin:0 0 5px;">
 <li><a href="https://export.arxiv.org/abs/2502.17475"><autocolor>ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis</autocolor></a></li>
-  - X. Wang, J. Kang, P. Han, Y. Zhao, Q. Liu, L. He, L. Zhang, L. Dai, Y. Wang, J. Tao
+  - X. Wang, J. Kang, P. Han, Y. Zhao, Q. Liu, L. He, L. Zhang, L. Dai, Y. Wang and J. Tao
 <li><a href="https://arxiv.org/abs/2502.02428"><autocolor>TransformDAS: Mapping Φ-OTDR Signals to Riemannian Manifold for Robust Classification</autocolor></a></li>
-  - J. Kang, P. Han, Y. Chun, X. Wang, L. Gong
+  - J. Kang, P. Han, Y. Chun, X. Wang and L. Gong
 <li><a href="https://www.mdpi.com/2076-3417/15/3/1470"><autocolor>DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection</autocolor></a></li>
   - W. Pan, J. Lei, X. Wang, C. Lv, G. Wang and C. Li
 <li><a href="https://link.springer.com/article/10.1007/s11554-025-01634-w"><autocolor>Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example</autocolor></a></li>
