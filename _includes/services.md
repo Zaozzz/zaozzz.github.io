@@ -31,7 +31,7 @@
 ## Competitions
 
 <ul style="margin:0 0 5px;">
-<li><a href="https://zgs.chsi.com.cn/home"><autocolor>Bronze Award in the National College Student Career Planning Competition 0.015% </autocolor></a></li>
+<li><a href="https://zgs.chsi.com.cn/home"><autocolor>Bronze Award in the Provincial College Student Career Planning Competition 0.015% </autocolor></a></li>
 <li><a href="https://dasai.lanqiao.cn/"><autocolor>National First Prize in the Blue Bridge Cup Competition (Captain) 0.13% rank8 </autocolor></a></li>
 <li><a href="https://www.saikr.com/vse/2024/DIGIX"><autocolor>National Second Prize in the Global Campus AI Algorithm Elite Competition (Captain)</autocolor></a></li>
 <li><a href="https://jsjds.blcu.edu.cn/index.htm"><autocolor>National Third Prize in the China University Student Computer Design Competition</autocolor></a></li>
