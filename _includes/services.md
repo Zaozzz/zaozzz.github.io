@@ -31,7 +31,8 @@
 ## Competitions
 
 <ul style="margin:0 0 5px;">
-<li><a href="https://dasai.lanqiao.cn/"><autocolor>National First Prize in the Blue Bridge Cup Competition (Captain)</autocolor></a></li>
+<li><a href="https://zgs.chsi.com.cn/home"><autocolor>Bronze Award in the National College Student Career Planning Competition 0.015% </autocolor></a></li>
+<li><a href="https://dasai.lanqiao.cn/"><autocolor>National First Prize in the Blue Bridge Cup Competition (Captain) 0.13% rank8 </autocolor></a></li>
 <li><a href="https://www.saikr.com/vse/2024/DIGIX"><autocolor>National Second Prize in the Global Campus AI Algorithm Elite Competition (Captain)</autocolor></a></li>
 <li><a href="https://jsjds.blcu.edu.cn/index.htm"><autocolor>National Third Prize in the China University Student Computer Design Competition</autocolor></a></li>
 <li><a href="http://cmit.cn/"><autocolor>National Third Prize in the National College Student Digital Media Technology Works and Creativity Competition</autocolor></a></li>
@@ -41,7 +42,6 @@
 <li><a href="https://www.mcm.edu.cn/"><autocolor>Provincial Second Prize in the CUMCM (Unranked)</autocolor></a></li>
 <li><a href="https://dasai.lanqiao.cn/"><autocolor>Provincial Second Prize in the Blue Bridge Cup Python Competition (individual)</autocolor></a></li>
 <li><a href="https://www.raicom.com.cn/"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition</autocolor></a></li>
-<li><a href="https://zgs.chsi.com.cn/home"><autocolor> Provincial Bronze Award in the National College Student Career Planning Competition</autocolor></a></li>
 </ul>
 
 ## Honors
