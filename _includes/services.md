@@ -12,9 +12,9 @@
 <ul style="margin:0 0 5px;">
 <li><a href="https://zaozzz.github.io/"><autocolor>SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM Integration (ICIC, CCF-C, Oral) 2025 </autocolor></a></li>
   - X. Wang, W. Pan, R. Liu, K. Jin and Z. Tian
-<li><a href="https://export.arxiv.org/abs/2502.17475"><autocolor>ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis 2025 </autocolor></a></li>
+<li><a href="https://export.arxiv.org/abs/2502.17475"><autocolor>ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis, 2025 </autocolor></a></li>
   - X. Wang, J. Kang, P. Han, Y. Zhao, Q. Liu, L. He, L. Zhang, L. Dai, Y. Wang and J. Tao
-<li><a href="https://arxiv.org/abs/2502.02428"><autocolor>TransformDAS: Mapping Φ-OTDR Signals to Riemannian Manifold for Robust Classification 2025 </autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2502.02428"><autocolor>TransformDAS: Mapping Φ-OTDR Signals to Riemannian Manifold for Robust Classification, 2025 </autocolor></a></li>
   - J. Kang, P. Han, Y. Chun, X. Wang and L. Gong
 <li><a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/"><autocolor>Construction of Digital Talent Demand and Ability Model Based on Recruitment Big Data and Machine Learning (Software Guide, CCF-T3) 2025 </autocolor></a></li>
   - W. Pan, W. Huan, X. Liu and X. Wang  
@@ -24,7 +24,7 @@
   - W. Pan, J. Lei, X. Wang, C. Lv, G. Wang and C. Li
 <li><a href="https://zaozzz.github.io/"><autocolor>YOLO-FireAD: Efficient Fire Detection via Attention-Guided Inverted Residual Learning and Dual-Pooling Feature Preservation (CCF-C, ICIC, Poster) 2025 </autocolor></a></li>
   - W. Pan, B. Xu, X. Wang, C. Lv, S. Wang, Z. Duan and Z. Tian
-<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection 2024 </autocolor></a></li>
+<li><a href="https://arxiv.org/abs/2409.12635"><autocolor>EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection, 2024 </autocolor></a></li>
   - W. Pan, X. Wang and W. Huan
 </ul>
 
