@@ -7,14 +7,6 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>IEEE International Conference on Advanced Visual and Signal-Based Systems (AVSS) Reviewer</autocolor></a></li>
 </ul>
 
-## Honors
-
-<ul style="margin:0 0 5px;">
-  <li><a href="https://zaozzz.github.io/"><autocolor>2023-2024 First class scholarship from the school</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>2024-2025 Career Planning Bonus for College Students</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>2024-2025 Undergraduate Entrepreneurship Support Program</autocolor></a></li>
-</ul>
-
 ## Publications
 
 <ul style="margin:0 0 5px;">
@@ -50,6 +42,14 @@
 <li><a href="https://dasai.lanqiao.cn/"><autocolor>Provincial Second Prize in the Blue Bridge Cup Python Competition (individual)</autocolor></a></li>
 <li><a href="https://www.raicom.com.cn/"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition</autocolor></a></li>
 <li><a href="https://zgs.chsi.com.cn/home"><autocolor> Provincial Bronze Award in the National College Student Career Planning Competition</autocolor></a></li>
+</ul>
+
+## Honors
+
+<ul style="margin:0 0 5px;">
+  <li><a href="https://zaozzz.github.io/"><autocolor>2023-2024 First class scholarship from the school</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>2024-2025 Career Planning Bonus for College Students</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>2024-2025 Undergraduate Entrepreneurship Support Program</autocolor></a></li>
 </ul>
 
 ## Hobbies
