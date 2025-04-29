@@ -2,11 +2,11 @@
 layout: homepage
 ---
 
-## 📖 About Me
+## About Me
 
-I am a undergraduate student (Class of 2023) majoring in ​​Artificial Intelligence​​ at the [School of Computer Science and Technology](https://www.sdjzu.edu.cn/jsjkx/index.htm), [Shandong Jianzhu University](https://www.sdjzu.edu.cn/). 
+🌟 I am a undergraduate student (Class of 2023) majoring in ​​Artificial Intelligence​​ at the [School of Computer Science and Technology](https://www.sdjzu.edu.cn/jsjkx/index.htm), [Shandong Jianzhu University](https://www.sdjzu.edu.cn/). 
 
-My primary research focus lies in the areas of **multimodal large models**.
+🌟 My primary research focus lies in the areas of **multimodal large models**.
 
 <span style="color:#FF6666">I am currently seeking a Master's or Ph.D. programs beginning in the fall of 2027.</span>
 
