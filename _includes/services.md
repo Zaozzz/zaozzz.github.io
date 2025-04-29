@@ -1,4 +1,4 @@
-## Service💻
+## 💻Service
 
 <ul style="margin:0 0 5px;">
   <li><a href="https://zaozzz.github.io/"><autocolor>Student Members of the CCF and the SDAAI</autocolor></a></li>
@@ -7,7 +7,7 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>IEEE International Conference on Advanced Visual and Signal-Based Systems Reviewer</autocolor></a></li>
 </ul>
 
-## Publications📝
+## 📝Publications
 
 <ul style="margin:0 0 5px;">
 <li><a href="https://zaozzz.github.io/"><autocolor>SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM Integration (ICIC, CCF-C, Oral) 2025 </autocolor></a></li>
@@ -28,7 +28,7 @@
   - W. Pan, X. Wang and W. Huan
 </ul>
 
-## Competitions🎉
+## 🎉Competitions
 
 <ul style="margin:0 0 5px;">
 <li><a href="https://zgs.chsi.com.cn/home"><autocolor>Bronze Award in the Provincial College Student Career Planning Competition 0.015% </autocolor></a></li>
@@ -44,7 +44,7 @@
 <li><a href="https://www.raicom.com.cn/"><autocolor>Provincial Third Prize in the Raicom Robot Developer Competition</autocolor></a></li>
 </ul>
 
-## Honors🏅
+## 🏅Honors
 
 <ul style="margin:0 0 5px;">
   <li><a href="https://zaozzz.github.io/"><autocolor>2023-2024 First class scholarship from the school</autocolor></a></li>
@@ -52,7 +52,7 @@
   <li><a href="https://zaozzz.github.io/"><autocolor>2024-2025 Undergraduate Entrepreneurship Support Program</autocolor></a></li>
 </ul>
 
-## Hobbies🔥
+## 🔥Hobbies
 
 I enjoy listening to music, and my favorite singers are [Xiaoyun Huang](https://m.weibo.cn/u/5043186742) and [Silence Wang](https://weibo.com/silencew).  
 
