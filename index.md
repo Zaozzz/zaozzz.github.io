@@ -8,7 +8,7 @@ layout: homepage
 
 🌟 My primary research focus lies in the areas of **multimodal large models**.
 
-<span style="color:#FF6666">I am currently seeking a Master's or Ph.D. programs beginning in the fall of 2027.</span>
+<span style="color:#FF6666">🔍 I am currently seeking a Master's or Ph.D. programs beginning in the fall of 2027.</span>
 
 
 {% include_relative _includes/publications.md %}
