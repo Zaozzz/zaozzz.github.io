@@ -11,21 +11,21 @@
 
 <ul style="margin:0 0 5px;">
 <li><a href="https://zaozzz.github.io/"><autocolor>SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM Integration (ICIC, CCF-C, Oral) 2025 </autocolor></a></li>
-  - X. Wang, W. Pan, R. Liu, K. Jin and Z. Tian
+  - <span style="color:##000000">X. Wang</span>, W. Pan, R. Liu, K. Jin and Z. Tian
 <li><a href="https://export.arxiv.org/abs/2502.17475"><autocolor>ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis, 2025 </autocolor></a></li>
-  - X. Wang, J. Kang, P. Han, Y. Zhao, Q. Liu, L. He, L. Zhang, L. Dai, Y. Wang and J. Tao
+  - <span style="color:##000000">X. Wang</span>, J. Kang, P. Han, Y. Zhao, Q. Liu, L. He, L. Zhang, L. Dai, Y. Wang and J. Tao
 <li><a href="https://arxiv.org/abs/2502.02428"><autocolor>TransformDAS: Mapping Φ-OTDR Signals to Riemannian Manifold for Robust Classification, 2025 </autocolor></a></li>
-  - J. Kang, P. Han, Y. Chun, X. Wang and L. Gong
+  - J. Kang, P. Han, Y. Chun, <span style="color:##000000">X. Wang</span> and L. Gong
 <li><a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/"><autocolor>Construction of Digital Talent Demand and Ability Model Based on Recruitment Big Data and Machine Learning (Software Guide, CCF-T3) 2025 </autocolor></a></li>
-  - W. Pan, W. Huan, X. Liu and X. Wang  
+  - W. Pan, W. Huan, X. Liu and <span style="color:##000000">X. Wang</span>  
 <li><a href="https://link.springer.com/article/10.1007/s11554-025-01634-w"><autocolor>Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example (Journal of Real-Time Image Processing, JCR-Q2, CAAI-C) 2025 </autocolor></a></li>
-  - W. Pan, X. Wang and W. Huan
+  - W. Pan, <span style="color:##000000">X. Wang</span> and W. Huan
 <li><a href="https://www.mdpi.com/2076-3417/15/3/1470"><autocolor>DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection (Applied Sciences, JCR-Q1) 2025 </autocolor></a></li>
-  - W. Pan, J. Lei, X. Wang, C. Lv, G. Wang and C. Li
+  - W. Pan, J. Lei, <span style="color:##000000">X. Wang</span>, C. Lv, G. Wang and C. Li
 <li><a href="https://zaozzz.github.io/"><autocolor>YOLO-FireAD: Efficient Fire Detection via Attention-Guided Inverted Residual Learning and Dual-Pooling Feature Preservation (CCF-C, ICIC, Poster) 2025 </autocolor></a></li>
-  - W. Pan, B. Xu, X. Wang, C. Lv, S. Wang, Z. Duan and Z. Tian
+  - W. Pan, B. Xu, <span style="color:##000000">X. Wang</span>, C. Lv, S. Wang, Z. Duan and Z. Tian
 <li><a href="https://arxiv.org/abs/2409.12635"><autocolor>EFA-YOLO: An Efficient Feature Attention Model for Fire and Flame Detection, 2024 </autocolor></a></li>
-  - W. Pan, X. Wang and W. Huan
+  - W. Pan, <span style="color:##000000">X. Wang</span> and W. Huan
 </ul>
 
 ## Competitions
