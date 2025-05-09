@@ -14,8 +14,8 @@
   - X. Wang, W. Pan, R. Liu, K. Jin and Z. Tian
 <li><a href="https://export.arxiv.org/abs/2502.17475"><autocolor>ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis, 2025 </autocolor></a></li>
   - X. Wang, J. Kang, P. Han, Y. Zhao, Q. Liu, L. He, L. Zhang, L. Dai, Y. Wang and J. Tao
-<li><a href="https://arxiv.org/abs/2502.02428"><autocolor>TransformDAS: Mapping Φ-OTDR Signals to Riemannian Manifold for Robust Classification, 2025 </autocolor></a></li>
-  - J. Kang, P. Han, Y. Chun, X. Wang and L. Gong
+<li><a href="https://arxiv.org/abs/2502.02428"><autocolor>RIE-SenseNet: Riemannian Manifold Embedding of Multi-Source Industrial Sensor Signals for Robust Pattern Recognition, 2025 </autocolor></a></li>
+  - X. Wang,  P. Han, J. Kang, W. Pan and L. Gong
 <li><a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/"><autocolor>Construction of Digital Talent Demand and Ability Model Based on Recruitment Big Data and Machine Learning (Software Guide, CCF-T3) 2025 </autocolor></a></li>
   - W. Pan, W. Huan, X. Liu and X. Wang  
 <li><a href="https://link.springer.com/article/10.1007/s11554-025-01634-w"><autocolor>Real-Time Dynamic Scale-Aware Fusion Detection Network: Take Road Damage Detection as an example (Journal of Real-Time Image Processing, JCR-Q2, CAAI-C) 2025 </autocolor></a></li>
