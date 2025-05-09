@@ -11,7 +11,7 @@
 
 <ul style="margin:0 0 5px;">
 <li><a href="https://zaozzz.github.io/"><autocolor>SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM Integration (ICIC, CCF-C, Oral) 2025 </autocolor></a></li>
-  - X. Wang, W. Pan, R. Liu, K. Jin and Z. Tian
+  - X. Wang, W. Pan, R. Liu, Z. Tian and K. Jin
 <li><a href="https://export.arxiv.org/abs/2502.17475"><autocolor>ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis, 2025 </autocolor></a></li>
   - X. Wang, J. Kang, P. Han, Y. Zhao, Q. Liu, L. He, L. Zhang, L. Dai, Y. Wang and J. Tao
 <li><a href="https://arxiv.org/abs/2502.02428"><autocolor>RIE-SenseNet: Riemannian Manifold Embedding of Multi-Source Industrial Sensor Signals for Robust Pattern Recognition, 2025 </autocolor></a></li>
