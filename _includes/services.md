@@ -1,8 +1,9 @@
 ## Service
 
 <ul style="margin:0 0 5px;">
-  <li><a href="https://zaozzz.github.io/"><autocolor>Student Members of the CCF and the SDAAI</autocolor></a></li>
-  <li><a href="https://zaozzz.github.io/"><autocolor>Student Chairman of Teddy Intelligent Studio and Deep Studio AI Department</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Psychological members and Teacher's assistant</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>CCF and SDAAI Student Members</autocolor></a></li>
+  <li><a href="https://zaozzz.github.io/"><autocolor>Teddy Intelligent Studio and Deep Studio AI Department Student Chairman</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>IEEE International Conference on Multimedia & Expo Reviewer</autocolor></a></li>
   <li><a href="https://zaozzz.github.io/"><autocolor>IEEE International Conference on Advanced Visual and Signal-Based Systems Reviewer</autocolor></a></li>
 </ul>
