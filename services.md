@@ -153,5 +153,3 @@ layout: homepage
 🎧 I'm also a quality fanatic for music and visuals—owning devices like Xiaomi monitors, Leica C, DJI Pocket, and Harman Kardon SoundSticks.
 
 我对音画质有执念，拥有小米显示器、徕卡C、大疆 Pocket、哈曼卡顿音响等设备。
-
----
