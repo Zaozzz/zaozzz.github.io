@@ -46,28 +46,27 @@ layout: homepage
 
 <ul style="margin:0 0 5px;">
 <li>🧠 <a href="https://zaozzz.github.io/">SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM (ICIC, CCF-C, Oral), 2025</a></li>
-<li>SM-CBNet：基于语音的帕金森病诊断模型（ICIC会议，CCF-C，口头报告），2025年</li>
+
 
 <li>🫀 <a href="https://export.arxiv.org/abs/2502.17475">ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis, 2025</a></li>
-<li>ECG-Expert-QA：用于心脏病诊断的医学大语言模型评估基准，2025年</li>
+
 
 <li>📡 <a href="https://arxiv.org/abs/2502.02428">RIE-SenseNet: Riemannian Manifold Embedding for Industrial Sensor Signals, 2025</a></li>
-<li>RIE-SenseNet：工业传感信号的黎曼流形嵌入方法，2025年</li>
 
 <li>📊 <a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/">Digital Talent Demand Model via Big Data & ML (Software Guide, CCF-T3), 2025</a></li>
-<li>基于大数据与机器学习的人才需求模型（《软件导刊》，CCF-T3），2025年</li>
+
 
 <li>🛣️ <a href="https://link.springer.com/article/10.1007/s11554-025-01634-w">Real-Time Dynamic Scale-Aware Fusion for Road Damage Detection (JRTIP, JCR-Q2), 2025</a></li>
-<li>面向道路损伤检测的动态多尺度融合方法（JRTIP期刊，JCR-Q2），2025年</li>
+
 
 <li>🚗 <a href="https://www.mdpi.com/2076-3417/15/3/1470">DAPONet: Real-Time Road Damage Detection (Applied Sciences, JCR-Q1), 2025</a></li>
-<li>DAPONet：实时道路损伤检测（Applied Sciences，JCR-Q1），2025年</li>
+
 
 <li>🔥 <a href="https://zaozzz.github.io/">YOLO-FireAD: Efficient Fire Detection (ICIC, CCF-C, Poster), 2025</a></li>
-<li>YOLO-FireAD：高效火灾检测模型（ICIC会议，CCF-C，海报展示），2025年</li>
+
 
 <li>🔥 <a href="https://arxiv.org/abs/2409.12635">EFA-YOLO: Feature Attention for Fire Detection, 2024</a></li>
-<li>EFA-YOLO：基于特征注意力的火灾检测模型，2024年</li>
+
 </ul>
 
 ---
