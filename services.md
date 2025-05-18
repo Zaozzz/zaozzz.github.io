@@ -23,19 +23,22 @@ layout: homepage
 
 ## 🛠️ Service 社会与学术服务
 
-<ul style="margin:0 0 5px;">
-  <li>🧠 Psychological Committee Member & Teaching Assistant</li>
-  <li>班级心理委员 & 教师助理</li>
 
-  <li>👨‍💻 Student Member of CCF and SDAAI</li>
-  <li>中国计算机学会（CCF）和山东省人工智能学会学生会员</li>
+  🧠 Psychological Committee Member & Teaching Assistant
+  
+  班级心理委员 & 教师助理
 
-  <li>🤖 Chair of Teddy Intelligent Studio & Deep Studio AI Department</li>
-  <li>泰迪智能工作室 & 深度工作室AI方向主席</li>
+  👨‍💻 Student Member of CCF and SDAAI
+  
+  中国计算机学会（CCF）和山东省人工智能学会学生会员
 
-  <li>📝 Reviewer at ICME, EMNLP, AVSS and BMVC</li>
-  <li>ICME、EMNLP、AVSS 与 BMVC 审稿人</li>
-</ul>
+  🤖 Chair of Teddy Intelligent Studio & Deep Studio AI Department
+  
+  泰迪智能工作室 & 深度工作室AI方向主席
+
+  📝 Reviewer at ICME, EMNLP, AVSS and BMVC
+  
+  ICME、EMNLP、AVSS 与 BMVC 审稿人
 
 ---
 
@@ -71,54 +74,65 @@ layout: homepage
 
 ## 🏆 Competitions 比赛奖项
 
-<ul style="margin:0 0 5px;">
-<li>🥉 Bronze - Provincial Career Planning Competition (Top 0.015%)</li>
-<li>山东省职业规划大赛铜奖（前0.015%）</li>
+🥉 Bronze - Provincial Career Planning Competition (Top 0.015%)
 
-<li>🥇 First Prize - Blue Bridge Cup (National, Captain, Top 0.13%, Rank 8)</li>
-<li>蓝桥杯全国一等奖（队长，前0.13%，全国第8名）</li>
+山东省职业规划大赛铜奖（前0.015%）
 
-<li>🥈 Second Prize - Global Campus AI Algorithm Elite Competition (Captain)</li>
-<li>全球高校AI算法精英赛二等奖（队长）</li>
+🥇 First Prize - Blue Bridge Cup (National, Captain, Top 0.13%, Rank 8)
 
-<li>🥉 Third Prize - China University Student Computer Design Competition</li>
-<li>中国大学生计算机设计大赛三等奖</li>
+蓝桥杯全国一等奖（队长，前0.13%，全国第8名）
 
-<li>🥉 Third Prize - National Digital Media Creativity Competition</li>
-<li>全国数字媒体创意大赛三等奖</li>
+🥈 Second Prize - Global Campus AI Algorithm Elite Competition (Captain)
 
-<li>🥉 Third Prize - Teddy Cup Data Analysis Competition</li>
-<li>泰迪杯数据分析大赛三等奖</li>
+全球高校AI算法精英赛二等奖（队长）
 
-<li>🥇 First Prize - Shandong Province Software Design Competition</li>
-<li>山东省软件设计大赛一等奖</li>
+🥉 Third Prize - China University Student Computer Design Competition
 
-<li>🎯 Top 112 - Astar Baidu Programming Competition (Individual)</li>
-<li>百度之星程序设计大赛前112名</li>
+中国大学生计算机设计大赛三等奖
 
-<li>🥈 Second Prize - CUMCM Mathematical Modeling (Provincial)</li>
-<li>全国大学生数学建模大赛二等奖</li>
+🥉 Third Prize - National Digital Media Creativity Competition
 
-<li>🥈 Second Prize - Blue Bridge Cup Python Competition (Provincial)</li>
-<li>蓝桥杯Python编程大赛二等奖</li>
+全国数字媒体创意大赛三等奖
 
-<li>🥉 Third Prize - Raicom Robot Developer Competition (Provincial)</li>
-<li>睿抗机器人开发大赛三等奖</li>
-</ul>
+🥉 Third Prize - Teddy Cup Data Analysis Competition
+
+泰迪杯数据分析大赛三等奖
+
+🥇 First Prize - Shandong Province Software Design Competition
+
+山东省软件设计大赛一等奖
+
+🎯 Top 112 - Astar Baidu Programming Competition (Individual)
+
+百度之星程序设计大赛前112名
+
+🥈 Second Prize - CUMCM Mathematical Modeling (Provincial)
+
+全国大学生数学建模大赛二等奖
+
+🥈 Second Prize - Blue Bridge Cup Python Competition (Provincial)
+
+蓝桥杯Python编程大赛二等奖
+
+🥉 Third Prize - Raicom Robot Developer Competition (Provincial)
+
+睿抗机器人开发大赛三等奖
 
 ---
 
 ## 🏅 Honors 荣誉奖项
 
-<ul style="margin:0 0 5px;">
-<li>🏆 First-Class Scholarship (2023–2024)</li>
-<li>一等奖学金（2023–2024学年）</li>
+🏆 First-Class Scholarship (2023–2024)
 
-<li>💼 Career Planning Bonus (2024–2025)</li>
-<li>职业规划专项奖励（2024–2025学年）</li>
+一等奖学金（2023–2024学年）
 
-<li>🚀 Undergraduate Entrepreneurship Support Program (2024–2025)</li>
-<li>本科生创业扶持项目资助（2024–2025学年）</li>
+💼 Career Planning Bonus (2024–2025)
+
+职业规划专项奖励（2024–2025学年）
+
+🚀 Undergraduate Entrepreneurship Support Program (2024–2025)
+
+本科生创业扶持项目资助（2024–2025学年）
 </ul>
 
 ---
@@ -142,7 +156,3 @@ layout: homepage
 我对音画质有执念，拥有小米显示器、徕卡C、大疆 Pocket、哈曼卡顿音响等设备。
 
 ---
-
-Thanks for visiting! 🚀
-
-感谢你的到来！
