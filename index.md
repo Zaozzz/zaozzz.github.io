@@ -38,7 +38,7 @@ layout: homepage
 <li>📊 <a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/">Digital Talent Demand Model via Big Data & ML (Software Guide, CCF-T3), 2025</a></li>
 <li>🛣️ <a href="https://link.springer.com/article/10.1007/s11554-025-01634-w">Real-Time Dynamic Scale-Aware Fusion for Road Damage Detection (JRTIP, JCR-Q2), 2025</a></li>
 <li>🚗 <a href="https://www.mdpi.com/2076-3417/15/3/1470">DAPONet: Real-Time Road Damage Detection (Applied Sciences, JCR-Q1), 2025</a></li>
-<li>🔥 <a href="https://zaozzz.github.io/">YOLO-FireAD: Efficient Fire Detection (CCF-C, ICIC, Poster), 2025</a></li>
+<li>🔥 <a href="https://zaozzz.github.io/">YOLO-FireAD: Efficient Fire Detection (ICIC, CCF-C, Poster), 2025</a></li>
 <li>🔥 <a href="https://arxiv.org/abs/2409.12635">EFA-YOLO: Feature Attention for Fire Detection, 2024</a></li>
 </ul>
 
