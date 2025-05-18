@@ -16,9 +16,6 @@ layout: homepage
 
 <span style="color:#FF6666">我正在寻找从2027年秋季开始的硕士或博士学习机会。</span>
 
-{% include_relative _includes/publications.md %}
-{% include_relative _includes/services.md %}
-
 ---
 
 ## 🛠️ Service 社会与学术服务
@@ -46,27 +43,13 @@ layout: homepage
 
 <ul style="margin:0 0 5px;">
 <li>🧠 <a href="https://zaozzz.github.io/">SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM (ICIC, CCF-C, Oral), 2025</a></li>
-
-
 <li>🫀 <a href="https://export.arxiv.org/abs/2502.17475">ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis, 2025</a></li>
-
-
 <li>📡 <a href="https://arxiv.org/abs/2502.02428">RIE-SenseNet: Riemannian Manifold Embedding for Industrial Sensor Signals, 2025</a></li>
-
 <li>📊 <a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/">Digital Talent Demand Model via Big Data & ML (Software Guide, CCF-T3), 2025</a></li>
-
-
 <li>🛣️ <a href="https://link.springer.com/article/10.1007/s11554-025-01634-w">Real-Time Dynamic Scale-Aware Fusion for Road Damage Detection (JRTIP, JCR-Q2), 2025</a></li>
-
-
 <li>🚗 <a href="https://www.mdpi.com/2076-3417/15/3/1470">DAPONet: Real-Time Road Damage Detection (Applied Sciences, JCR-Q1), 2025</a></li>
-
-
 <li>🔥 <a href="https://zaozzz.github.io/">YOLO-FireAD: Efficient Fire Detection (ICIC, CCF-C, Poster), 2025</a></li>
-
-
 <li>🔥 <a href="https://arxiv.org/abs/2409.12635">EFA-YOLO: Feature Attention for Fire Detection, 2024</a></li>
-
 </ul>
 
 ---
