@@ -132,7 +132,6 @@ layout: homepage
 🚀 Undergraduate Entrepreneurship Support Program (2024–2025)
 
 本科生创业扶持项目资助（2024–2025学年）
-</ul>
 
 ---
 
