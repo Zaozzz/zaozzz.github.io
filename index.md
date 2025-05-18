@@ -24,8 +24,7 @@ layout: homepage
   <li>🧠 Psychological Committee Member & Teaching Assistant</li>
   <li>👨‍💻 Student Member of CCF and SDAAI</li>
   <li>🤖 Chair of Teddy Intelligent Studio & Deep Studio AI Department</li>
-  <li>📝 Reviewer at IEEE International Conference on Multimedia & Expo</li>
-  <li>📷 Reviewer at IEEE International Conference on Advanced Visual and Signal-Based Systems</li>
+  <li>📝 Reviewer at ICME, EMNLP, AVSS and BMVC</li>
 </ul>
 
 ---
