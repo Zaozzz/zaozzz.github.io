@@ -44,6 +44,7 @@ layout: homepage
 <li>🥈 Second Prize - CUMCM Mathematical Modeling</li>
 <li>🥈 Second Prize - National College Student Olympiad Mathematics Competition</li>
 <li>🥈 Second Prize - Blue Bridge Cup</li>
+<li>🥈 Second Prize - China University Student Computer Design Competition</li>
 <li>🥈 Second Prize - National Digital Media Creativity Competition</li>
 <li>🥈 Second Prize - Shandong Province Software Design Competition</li>
 <li>🥉 Third Prize - Career Planning Competition</li>
