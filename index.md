@@ -37,20 +37,26 @@ layout: homepage
 
 ## 🏆 Competitions 
 
-<li>🥇 First Prize - Blue Bridge Cup (Captain, Top 0.13%, Rank 8)</li>
+<li>🥇 First Prize - Blue Bridge Cup</li>
 <li>🥇 First Prize - Shandong Province Software Design Competition</li>
-<li>🥈 Second Prize - Global Campus AI Algorithm Elite Competition (Captain)</li>
+<li>🥇 First Prize - China University Student Computer Design Competition</li>
+<li>🥈 Second Prize - Global Campus AI Algorithm Elite Competition</li>
 <li>🥈 Second Prize - CUMCM Mathematical Modeling</li>
-<li>🥈 Second Prize - Blue Bridge Cup Python Competition</li>
-<li>🥉 Bronze - Career Planning Competition (Top 0.015%, rank56)</li>
+<li>🥈 Second Prize - National College Student Olympiad Mathematics Competition</li>
+<li>🥈 Second Prize - Blue Bridge Cup</li>
+<li>🥈 Second Prize - National Digital Media Creativity Competition</li>
+<li>🥈 Second Prize - Shandong Province Software Design Competition</li>
+<li>🥉 Third Prize - Career Planning Competition</li>
 <li>🥉 Third Prize - China University Student Computer Design Competition</li>
-<li>🥉 Third Prize - National Digital Media Creativity Competition</li>
-<li>🥉 Third Prize - Teddy Cup Data Analysis Competition</li>
 <li>🥉 Third Prize - Raicom Robot Developer Competition</li>
+<li>🥉 Third Prize - National Digital Media Creativity Competition</li>
+<li>🥉 Third Prize - Global Campus AI Algorithm Elite Competition</li>
+<li>🥉 Third Prize - Teddy Cup Data Analysis Competition</li>
+<li>🥉 Third Prize - Shandong Province Software Design Competition</li>
 <li>🏆 Top 1 - Major 2023-2024 Academic Year</li>
 <li>🏆 Top 1 - Shandong Jianzhu University Transportation Technology Competition</li>
-<li>🏆 Top 112 - Astar Baidu Programming Competition</li>
 <li>🏆 First Class - Shandong Jianzhu University Scholarship</li>
+<li>🏆 Top 112 - Astar Baidu Programming Competition</li>
 
 ---
 
