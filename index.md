@@ -15,13 +15,10 @@ layout: homepage
 ## 🛠️ Service 
 
 
-  🧠 Psychological Committee Member & Teaching Assistant
-
-  👨‍💻 Student Member of CCF and SDAAI
-
-  🤖 Chair of Teddy Intelligent Studio & Deep Studio AI Department
-
-  📝 Reviewer at ICME, EMNLP, AVSS and BMVC
+<li> 🧠 Psychological Committee Member & Teaching Assistant</li>
+<li> 👨‍💻 Student Member of CCF and SDAAI</li>
+<li> 🤖 Chair of Teddy Intelligent Studio & Deep Studio AI Department</li>
+<li> 📝 Reviewer at ICME, EMNLP, AVSS and BMVC</li>
 
 ---
 
@@ -40,44 +37,32 @@ layout: homepage
 
 ---
 
-## 🏆 Competitions 比赛奖项
+## 🏆 Competitions 
 
-🥉 Bronze - Career Planning Competition (Top 0.015%)
-
-🥇 First Prize - Blue Bridge Cup (Captain, Top 0.13%, Rank 8)
-
-🥈 Second Prize - Global Campus AI Algorithm Elite Competition (Captain)
-
-🥉 Third Prize - China University Student Computer Design Competition
-
-🥉 Third Prize - National Digital Media Creativity Competition
-
-🥉 Third Prize - Teddy Cup Data Analysis Competition
-
-🥇 First Prize - Shandong Province Software Design Competition
-
-🎯 Top 112 - Astar Baidu Programming Competition (Individual)
-
-🥈 Second Prize - CUMCM Mathematical Modeling
-
-🥈 Second Prize - Blue Bridge Cup Python Competition
-
-🥉 Third Prize - Raicom Robot Developer Competition
+<li>🥉 Bronze - Career Planning Competition (Top 0.015%)</li>
+<li>🥇 First Prize - Blue Bridge Cup (Captain, Top 0.13%, Rank 8)</li>
+<li>🥈 Second Prize - Global Campus AI Algorithm Elite Competition (Captain)</li>
+<li>🥉 Third Prize - China University Student Computer Design Competition</li>
+<li>🥉 Third Prize - National Digital Media Creativity Competition</li>
+<li>🥉 Third Prize - Teddy Cup Data Analysis Competition</li>
+<li>🥇 First Prize - Shandong Province Software Design Competition</li>
+<li>🎯 Top 112 - Astar Baidu Programming Competition (Individual)</li>
+<li>🥈 Second Prize - CUMCM Mathematical Modeling</li>
+<li>🥈 Second Prize - Blue Bridge Cup Python Competition</li>
+<li>🥉 Third Prize - Raicom Robot Developer Competition</li>
 
 ---
 
-## 🏅 Honors 荣誉奖项
+## 🏅 Honors
 
-🏆 First-Class Scholarship (2023–2024)
-
-💼 Career Planning Bonus (2024–2025)
-
-🚀 Undergraduate Entrepreneurship Support Program (2024–2025)
+<li>🏆 First-Class Scholarship (2023–2024)</li>
+<li>💼 Career Planning Bonus (2024–2025)</li>
+<li>🚀 Undergraduate Entrepreneurship Support Program (2024–2025)</li>
 
 ---
 
-## 🎵 Hobbies & Interests 兴趣爱好
+## 🎵 Hobbies & Interests
 
-🎶 Music lover! I enjoy songs by [Xiaoyun Huang](https://m.weibo.cn/u/5043186742) and [Silence Wang](https://weibo.com/silencew).
+🎶 Music lover! I enjoy songs by [Xiaoyun Huang](https://m.weibo.cn/u/5043186742).
 
 🎬 Avid fan of movies & dramas—especially those starring [Kiku](https://www.weibo.com/u/3669102477?eqid=e8af036900096f8200000004645b8833).
