@@ -24,7 +24,6 @@ layout: homepage
 
 ## 📄 Publications 
 
-<ul style="margin:0 0 5px;">
 <li>🧠 <a href="https://zaozzz.github.io/">SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM (ICIC, CCF-C, Oral), 2025</a></li>
 <li>🫀 <a href="https://export.arxiv.org/abs/2502.17475">ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis, 2025</a></li>
 <li>📡 <a href="https://arxiv.org/abs/2502.02428">RIE-SenseNet: Riemannian Manifold Embedding for Industrial Sensor Signals, 2025</a></li>
@@ -33,7 +32,6 @@ layout: homepage
 <li>🚗 <a href="https://www.mdpi.com/2076-3417/15/3/1470">DAPONet: Real-Time Road Damage Detection (Applied Sciences, JCR-Q1), 2025</a></li>
 <li>🔥 <a href="https://zaozzz.github.io/">YOLO-FireAD: Efficient Fire Detection (ICIC, CCF-C, Poster), 2025</a></li>
 <li>🔥 <a href="https://arxiv.org/abs/2409.12635">EFA-YOLO: Feature Attention for Fire Detection, 2024</a></li>
-</ul>
 
 ---
 
@@ -50,14 +48,6 @@ layout: homepage
 <li>🥈 Second Prize - CUMCM Mathematical Modeling</li>
 <li>🥈 Second Prize - Blue Bridge Cup Python Competition</li>
 <li>🥉 Third Prize - Raicom Robot Developer Competition</li>
-
----
-
-## 🏅 Honors
-
-<li>🏆 First-Class Scholarship (2023–2024)</li>
-<li>💼 Career Planning Bonus (2024–2025)</li>
-<li>🚀 Undergraduate Entrepreneurship Support Program (2024–2025)</li>
 
 ---
 
