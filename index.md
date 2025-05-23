@@ -75,19 +75,19 @@ layout: homepage
 
 ## 📚 Software Copyrights
 
-**📄 Granted**
-- Deep Learning-Based Agricultural Pest and Disease Detection System
-- Urban Hazard Real-Time Monitoring and Early Warning System
-- Advanced Brain Tumor Medical Image Segmentation Platform Based on U-Net
-- Intelligent Image Recognition and Processing Software
-- CityEye: Integrated Intelligent Urban Monitoring System
-- Pneumonia Detection System Based on Deep Learning
-- Tooth Image Segmentation System Based on Deep Learning
+### ✅ Granted
+- 🌾 **Deep Learning-Based Agricultural Pest and Disease Detection System**  
+- 🏙️ **Urban Hazard Real-Time Monitoring and Early Warning System**  
+- 🧠 **Advanced Brain Tumor Segmentation Platform Based on U-Net**  
+- 🖼️ **Intelligent Image Recognition and Processing Software**  
+- 👁️‍🗨️ **CityEye: Integrated Smart Urban Monitoring System**  
+- 🫁 **Pneumonia Detection System Powered by Deep Learning**  
+- 😬 **Tooth Image Segmentation System Based on Deep Learning**
 
-**⏳ Pending Approval**
-- Hospital CT Image Data Management System 
-- Fundus Image-Based Disease Classification System
-- Intelligent Cardiac Diagnosis and Segmentation System
+### ⏳ Pending Approval
+- 🏥 **Hospital CT Image Data Management System**  
+- 👁️ **Fundus Image-Based Disease Classification System**  
+- ❤️ **Intelligent Cardiac Diagnosis and Segmentation System**
 
 ---
 
