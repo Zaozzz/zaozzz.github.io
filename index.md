@@ -91,6 +91,22 @@ layout: homepage
 
 ---
 
+## 🌍 Social Practice & Volunteering
+
+**🔧 Social Practic**e
+
+- 📌 Oct 2023 – Huawei HAG Project Practice  
+- 🛠️ Dec 2023 – Fault Diagnosis Practice on Dynamometer Cards at Jicheng Electronics  
+- 📊 Jun 2024 – Data Analysis Internship at Linyi Sports Bureau  
+- 🧪 Jan 2025 – Data Research & Analysis Practice at Shandong University  
+
+**❤️ Volunteering**
+
+- ⏱️ Total Volunteer Hours: 196 hours  
+- 🏅 Outstanding Volunteer Award: Received 14 times  
+
+---
+
 ## 🎵 Hobbies & Interests
 
 🎶 Music lover! I enjoy songs by [Xiaoyun Huang](https://m.weibo.cn/u/5043186742).
