@@ -14,11 +14,11 @@ layout: homepage
 
 ## 🛠️ Service 
 
-
 - 🧠 Psychological Committee Member & Teaching Assistant  
 - 👨‍💻 Student Member of CCF and SDAAI  
 - 🤖 Chair of Teddy Intelligent Studio & Deep Studio AI Department  
-- 📝 Reviewer at ICME, EMNLP, AVSS and BMVC  
+- 📝 Reviewer at ICME, EMNLP, AVSS and BMVC
+- ✅ Core Developer at Huawei Ascend Community
 
 ---
 
@@ -61,21 +61,33 @@ layout: homepage
 
 ---
 
+## 📛 Certifications & Skills  
+
+- 🏭 Ministry of Industry and Information Technology – Certified Engineer in Industrial Internet Platform Development
+- 📐 Ministry of Industry and Information Technology – Certified Competence in Mathematical Modeling
+- 🔧 Huawei Ascend Community – Intermediate Developer in Ascend C Programming
+- 🧩 Huawei Ascend Community – Certified CANN Application Development Engineer (Work Level)
+- 🧰 Huawei Ascend Community – Developer Kit: Atlas 200I DK A2
+- 🚗 Huawei Ascend Community – Smart Car Design Based on Atlas 200I DK A2
+-	🧠 Huawei Ascend Community – Introduction to Ascend AI
+
+---
+
 ## 📚 Software Copyrights
 
-**Granted:**
-- 基于深度学习的农业病虫害检测系统
-- 城市隐患实时监测预警系统  
-- 基于UNet的高级脑肿瘤医疗图像分割平台
-- 智能图像识别与处理软件
-- 城市之眼综合智慧监测系统
-- 基于深度学习的肺炎检测系统
-- 基于深度学习的牙齿影像分割系统
+**📄 Granted:**
+- Deep Learning-Based Agricultural Pest and Disease Detection System
+- Urban Hazard Real-Time Monitoring and Early Warning System
+- Advanced Brain Tumor Medical Image Segmentation Platform Based on U-Net
+- Intelligent Image Recognition and Processing Software
+- CityEye: Integrated Intelligent Urban Monitoring System
+- Pneumonia Detection System Based on Deep Learning
+- Tooth Image Segmentation System Based on Deep Learning
 
-**Pending:**
-- 一种医院CT影像数据的管理系统
-- 一种基于眼底图像的分类系统  
-- 一种心脏智能诊断分割系统
+**⏳ Pending Approval:**
+- Hospital CT Image Data Management System 
+- Fundus Image-Based Disease Classification System
+- Intelligent Cardiac Diagnosis and Segmentation System
 
 ---
 
