@@ -75,7 +75,7 @@ layout: homepage
 
 ## 📚 Software Copyrights
 
-**📄 Granted:**
+**📄 Granted**
 - Deep Learning-Based Agricultural Pest and Disease Detection System
 - Urban Hazard Real-Time Monitoring and Early Warning System
 - Advanced Brain Tumor Medical Image Segmentation Platform Based on U-Net
@@ -84,7 +84,7 @@ layout: homepage
 - Pneumonia Detection System Based on Deep Learning
 - Tooth Image Segmentation System Based on Deep Learning
 
-**⏳ Pending Approval:**
+**⏳ Pending Approval**
 - Hospital CT Image Data Management System 
 - Fundus Image-Based Disease Classification System
 - Intelligent Cardiac Diagnosis and Segmentation System
