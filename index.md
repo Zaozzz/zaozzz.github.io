@@ -666,7 +666,7 @@
                 <img class="head-img" src="11.jpg"> 
             </div>
             <h1>Xu Wang</h1>
-            <p class="subtitle">Artificial Intelligence Major · Multimodal Large Model Research · Shandong Jianzhu University</p>
+            <p class="subtitle">Artificial Intelligence Major · Multimodal Large Model · Shandong Jianzhu University</p>
             <div class="seeking-badge">
                 <i class="fas fa-search"></i> Seeking Master's/PhD Opportunities for Fall 2027
             </div>
