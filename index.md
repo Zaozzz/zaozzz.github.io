@@ -961,14 +961,266 @@
         }
     </style>
 </head>
+
+           <section class="section fade-in">
+                <h2><i class="fas fa-trophy"></i>Competition Awards</h2>
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <div class="award-icon">🏆</div>
+                        <div><strong>Top 1</strong> - Major 2023-2024 Academic Year</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🏆</div>
+                        <div><strong>Top 1</strong> - Shandong Jianzhu University Transportation Technology Competition</div>
+                    </div>
+                    <div class="award-item">
+                    <div class="award-icon">🥇</div>
+                    <div><strong>First Prize</strong> - Blue Bridge Cup</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>First Prize</strong> - Shandong Province Software Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>First Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>First Class</strong> - Shandong Jianzhu University Scholarship</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - CUMCM Mathematical Modeling</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - National College Student Olympiad Mathematics Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - Blue Bridge Cup</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - National Digital Media Creativity Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - Shandong Province Software Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Career Planning Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Raicom Robot Developer Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - National Digital Media Creativity Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Teddy Cup Data Analysis Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Shandong Province Software Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🔥</div>
+                        <div><strong>Top 112</strong> - Astar Baidu Programming Competition</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section fade-in">
+                <h2><i class="fas fa-certificate"></i>Certifications & Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Industrial Certifications</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i>Industrial Internet Platform Development Engineer</li>
+                            <li><i class="fas fa-check"></i>Mathematical Modeling Ability Certification</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Huawei Ascend Certifications</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i>Ascend C Programming Intermediate Developer</li>
+                            <li><i class="fas fa-check"></i>CANN Application Development Engineer</li>
+                            <li><i class="fas fa-check"></i>Atlas 200I DK A2 Developer</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+ <section class="section fade-in">
+    <div class="two-column-grid">
+        <div>
+            <h3><i class="fas fa-code"></i> Software Copyrights</h3>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h4>✅ Authorized Projects</h4>
+                    <ul>
+                        <li>🌾 Deep Learning-based Agricultural Pest Detection System</li>
+                        <li>🏙️ Urban Hazard Real-time Monitoring and Warning System</li>
+                        <li>🧠 U-Net-based Brain Tumor Segmentation Platform</li>
+                        <li>🖼️ Intelligent Image Recognition Processing Software</li>
+                        <li>👁️‍🗨️ CityEye Smart City Monitoring System</li>
+                        <li>🫁 Deep Learning Pneumonia Detection System</li>
+                        <li>😬 Deep Learning-based Dental Image Segmentation System</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3><i class="fas fa-hands-helping"></i> Social Practice & Volunteer Service</h3>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h4>🔧 Social Practice</h4>
+                    <ul>
+                        <li>🛠️ December 2023 - Jicheng Electronics</li>
+                        <li>📊 June 2024 - Linyi Sports Bureau Data Analysis</li>
+                        <li>🧪 January 2025 - Shandong University Data Research and Analysis Practice</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>❤️ Volunteer Service</h4>
+                    <li>Total Volunteer Hours: 196 hours and Outstanding Volunteer Awards: 14 times</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+    </div>
+
+    <script>
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Element fade-in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Publication item click interaction with luxury effect
+        document.querySelectorAll('.publication-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.style.background = 'linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(26, 26, 26, 0.9))';
+                item.style.borderColor = 'rgba(255, 215, 0, 0.8)';
+                item.style.boxShadow = '0 0 40px rgba(255, 215, 0, 0.4)';
+                
+                setTimeout(() => {
+                    item.style.background = '';
+                    item.style.borderColor = '';
+                    item.style.boxShadow = '';
+                }, 2500);
+            });
+        });
+
+        // Dynamic number animation
+        function animateNumbers() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.textContent.replace('+', ''));
+                let current = 0;
+                const increment = target / 60;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = stat.textContent.includes('+') ? target + '+' : target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
+                    }
+                }, 40);
+            });
+        }
+
+        // Add luxury shimmer effect to cards on scroll
+        function addShimmerEffect() {
+            const cards = document.querySelectorAll('.stat-card, .skill-category, .contact-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('shimmer');
+                    setTimeout(() => {
+                        card.classList.remove('shimmer');
+                    }, 3000);
+                }, index * 200);
+            });
+        }
+
+        // Start animations after page load
+        window.addEventListener('load', () => {
+            setTimeout(animateNumbers, 1000);
+            setTimeout(addShimmerEffect, 2000);
+        });
+
+        // Add luxury glow effect on hover for award items
+        document.querySelectorAll('.award-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.boxShadow = '';
+            });
+        });
+
+        // Enhanced floating elements animation
+        document.querySelectorAll('.floating-element').forEach((element, index) => {
+            element.addEventListener('animationiteration', () => {
+                const randomDelay = Math.random() * 2;
+                element.style.animationDelay = randomDelay + 's';
+            });
+        });
+    </script>
+</body>
+
 <body>
         <div class="publication-item">
             <h3>🧠 SM-CBNet: A Speech-Based Parkinson's Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM</h3>
             <div class="publication-venue">ICIC 2025, CCF-C Oral</div>
-            <div class="control-panel">
-                <button class="play-button" onclick="animateDataFlow()">▶️ Animate Data Flow</button>
-                <button class="play-button" onclick="resetAnimation()">🔄 Reset</button>
-            </div>
             <div class="model-container">
                 <!-- Input Section -->
                 <div class="input-section">
@@ -1700,259 +1952,4 @@
                 </div>
             </section>
 
-
-           <section class="section fade-in">
-                <h2><i class="fas fa-trophy"></i>Competition Awards</h2>
-                <div class="awards-grid">
-                    <div class="award-item">
-                        <div class="award-icon">🏆</div>
-                        <div><strong>Top 1</strong> - Major 2023-2024 Academic Year</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🏆</div>
-                        <div><strong>Top 1</strong> - Shandong Jianzhu University Transportation Technology Competition</div>
-                    </div>
-                    <div class="award-item">
-                    <div class="award-icon">🥇</div>
-                    <div><strong>First Prize</strong> - Blue Bridge Cup</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥇</div>
-                        <div><strong>First Prize</strong> - Shandong Province Software Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥇</div>
-                        <div><strong>First Prize</strong> - China University Student Computer Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥇</div>
-                        <div><strong>First Class</strong> - Shandong Jianzhu University Scholarship</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - CUMCM Mathematical Modeling</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - National College Student Olympiad Mathematics Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - Blue Bridge Cup</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - China University Student Computer Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - National Digital Media Creativity Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - Shandong Province Software Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Career Planning Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - China University Student Computer Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Raicom Robot Developer Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - National Digital Media Creativity Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Teddy Cup Data Analysis Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Shandong Province Software Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🔥</div>
-                        <div><strong>Top 112</strong> - Astar Baidu Programming Competition</div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="section fade-in">
-                <h2><i class="fas fa-certificate"></i>Certifications & Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Industrial Certifications</h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-check"></i>Industrial Internet Platform Development Engineer</li>
-                            <li><i class="fas fa-check"></i>Mathematical Modeling Ability Certification</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Huawei Ascend Certifications</h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-check"></i>Ascend C Programming Intermediate Developer</li>
-                            <li><i class="fas fa-check"></i>CANN Application Development Engineer</li>
-                            <li><i class="fas fa-check"></i>Atlas 200I DK A2 Developer</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
- <section class="section fade-in">
-    <div class="two-column-grid">
-        <div>
-            <h3><i class="fas fa-code"></i> Software Copyrights</h3>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <h4>✅ Authorized Projects</h4>
-                    <ul>
-                        <li>🌾 Deep Learning-based Agricultural Pest Detection System</li>
-                        <li>🏙️ Urban Hazard Real-time Monitoring and Warning System</li>
-                        <li>🧠 U-Net-based Brain Tumor Segmentation Platform</li>
-                        <li>🖼️ Intelligent Image Recognition Processing Software</li>
-                        <li>👁️‍🗨️ CityEye Smart City Monitoring System</li>
-                        <li>🫁 Deep Learning Pneumonia Detection System</li>
-                        <li>😬 Deep Learning-based Dental Image Segmentation System</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <h3><i class="fas fa-hands-helping"></i> Social Practice & Volunteer Service</h3>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <h4>🔧 Social Practice</h4>
-                    <ul>
-                        <li>🛠️ December 2023 - Jicheng Electronics</li>
-                        <li>📊 June 2024 - Linyi Sports Bureau Data Analysis</li>
-                        <li>🧪 January 2025 - Shandong University Data Research and Analysis Practice</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h4>❤️ Volunteer Service</h4>
-                    <li>Total Volunteer Hours: 196 hours and Outstanding Volunteer Awards: 14 times</li>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        </main>
-    </div>
-
-    <script>
-        // Scroll progress bar
-        window.addEventListener('scroll', () => {
-            const scrollProgress = document.getElementById('scrollProgress');
-            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            scrollProgress.style.width = scrollPercent + '%';
-        });
-
-        // Element fade-in animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Publication item click interaction with luxury effect
-        document.querySelectorAll('.publication-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.style.background = 'linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(26, 26, 26, 0.9))';
-                item.style.borderColor = 'rgba(255, 215, 0, 0.8)';
-                item.style.boxShadow = '0 0 40px rgba(255, 215, 0, 0.4)';
-                
-                setTimeout(() => {
-                    item.style.background = '';
-                    item.style.borderColor = '';
-                    item.style.boxShadow = '';
-                }, 2500);
-            });
-        });
-
-        // Dynamic number animation
-        function animateNumbers() {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.textContent.replace('+', ''));
-                let current = 0;
-                const increment = target / 60;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        stat.textContent = stat.textContent.includes('+') ? target + '+' : target;
-                        clearInterval(timer);
-                    } else {
-                        stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
-                    }
-                }, 40);
-            });
-        }
-
-        // Add luxury shimmer effect to cards on scroll
-        function addShimmerEffect() {
-            const cards = document.querySelectorAll('.stat-card, .skill-category, .contact-card');
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.classList.add('shimmer');
-                    setTimeout(() => {
-                        card.classList.remove('shimmer');
-                    }, 3000);
-                }, index * 200);
-            });
-        }
-
-        // Start animations after page load
-        window.addEventListener('load', () => {
-            setTimeout(animateNumbers, 1000);
-            setTimeout(addShimmerEffect, 2000);
-        });
-
-        // Add luxury glow effect on hover for award items
-        document.querySelectorAll('.award-item').forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                item.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3)';
-            });
-            
-            item.addEventListener('mouseleave', () => {
-                item.style.boxShadow = '';
-            });
-        });
-
-        // Enhanced floating elements animation
-        document.querySelectorAll('.floating-element').forEach((element, index) => {
-            element.addEventListener('animationiteration', () => {
-                const randomDelay = Math.random() * 2;
-                element.style.animationDelay = randomDelay + 's';
-            });
-        });
-    </script>
-</body>
 </html>
