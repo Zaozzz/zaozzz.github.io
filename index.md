@@ -1512,7 +1512,7 @@
     <div class="container">
         <div class="header">
             <h3>🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis</h3>
-            <div class="publication-venue">Interactive Evaluation Framework for Medical Large Language Models in Heart Disease Diagnosis</div>
+            <div class="publication-venue">2025(arXiv:2502.17475)</div>
         </div>
 
         <div class="model-section">
