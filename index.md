@@ -914,8 +914,8 @@
                 </div>
                 <div class="timeline-item">
                     <h4>❤️ Volunteer Service</h4>
-                    <p><strong>Total Volunteer Hours: 196 hours</strong></p>
-                    <p><strong>Outstanding Volunteer Awards: 14 times</strong></p>
+                    <li>Total Volunteer Hours: 196 hours</li>
+                    <li>Outstanding Volunteer Awards: 14 times</li>
                 </div>
             </div>
         </div>
