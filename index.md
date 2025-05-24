@@ -383,12 +383,12 @@
             transform: translateY(0);
         }
         .head-img{
-      width: 170px;
-    height: 145px;
-        border-radius: 50%;
-         border: 3px solid white;
+         width: 170px;
+          height: 145px;
+         border-radius: 50%;
+          border: 3px solid white;
             box-shadow: 0 0 0 3px #667eea;
-}
+          }
     </style>
 </head>
 <body>
@@ -407,7 +407,7 @@
         <header class="header fade-in">
             <div class="avatar">
               
-                <img   class=".head-img" src="11.jpg"> 
+                <img   class="head-img" src="11.jpg"> 
             </div>
             <h1>王旭</h1>
             <p class="subtitle">人工智能专业 · 多模态大模型研究 · 山东建筑大学</p>
