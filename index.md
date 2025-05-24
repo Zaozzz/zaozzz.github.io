@@ -881,47 +881,54 @@
             </section>
 
  <section class="section fade-in">
-     <h2></i></h2>
-                <div class="two-column-grid">
-                    <div>
-                        <h3><i class="fas fa-code"></i> Software Copyrights</h3>
-                        <div class="experience-timeline">
-                            <div class="timeline-item">
-                                <h4>✅ Authorized Projects</h4>
-                                <ul>
-                                    <li>🌾 Deep Learning-based Agricultural Pest Detection System</li>
-                                    <li>🏙️ Urban Hazard Real-time Monitoring and Warning System</li>
-                                    <li>🧠 U-Net-based Brain Tumor Segmentation Platform</li>
-                                    <li>🖼️ Intelligent Image Recognition Processing Software</li>
-                                    <li>👁️‍🗨️ CityEye Smart City Monitoring System</li>
-                                    <li>🫁 Deep Learning Pneumonia Detection System</li>
-                                    <li>😬 Deep Learning-based Dental Image Segmentation System</li>
-                                </ul>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3><i class="fas fa-hands-helping"></i> Social Practice & Volunteer Service</h3>
-                        <div class="experience-timeline">
-                            <div class="timeline-item">
-                                <h4>🔧 Social Practice</h4>
-                                <ul>
-                                    <li>📌 October 2023 - Huawei HAG Project Practice</li>
-                                    <li>🛠️ December 2023 - Jicheng Electronics Dynamometer Card Diagnosis Practice</li>
-                                    <li>📊 June 2024 - Linyi Sports Bureau Data Analysis Internship</li>
-                                    <li>🧪 January 2025 - Shandong University Data Research and Analysis Practice</li>
-                                </ul>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>❤️ Volunteer Service</h4>
-                                <p><strong>Total Volunteer Hours: 196 hours</strong></p>
-                                <p><strong>Outstanding Volunteer Awards: 14 times</strong></p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="two-column-grid">
+        <div>
+            <h3><i class="fas fa-code"></i> Software Copyrights</h3>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h4>✅ Authorized Projects</h4>
+                    <ul>
+                        <li>🌾 Deep Learning-based Agricultural Pest Detection System</li>
+                        <li>🏙️ Urban Hazard Real-time Monitoring and Warning System</li>
+                        <li>🧠 U-Net-based Brain Tumor Segmentation Platform</li>
+                        <li>🖼️ Intelligent Image Recognition Processing Software</li>
+                        <li>👁️‍🗨️ CityEye Smart City Monitoring System</li>
+                        <li>🫁 Deep Learning Pneumonia Detection System</li>
+                        <li>😬 Deep Learning-based Dental Image Segmentation System</li>
+                    </ul>
                 </div>
-            </section>
+                <div class="timeline-item">
+                    <h4>⏳ Pending Approval</h4>
+                    <ul>
+                        <li>🏥 Hospital CT Image Data Management System</li>
+                        <li>👁️ Fundus Image-based Disease Classification System</li>
+                        <li>❤️ Intelligent Cardiac Diagnosis Segmentation System</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <div>
+            <h3><i class="fas fa-hands-helping"></i> Social Practice & Volunteer Service</h3>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h4>🔧 Social Practice</h4>
+                    <ul>
+                        <li>📌 October 2023 - Huawei HAG Project Practice</li>
+                        <li>🛠️ December 2023 - Jicheng Electronics Dynamometer Card Diagnosis Practice</li>
+                        <li>📊 June 2024 - Linyi Sports Bureau Data Analysis Internship</li>
+                        <li>🧪 January 2025 - Shandong University Data Research and Analysis Practice</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>❤️ Volunteer Service</h4>
+                    <p><strong>Total Volunteer Hours: 196 hours</strong></p>
+                    <p><strong>Outstanding Volunteer Awards: 14 times</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
             <section class="section hobbies-section fade-in">
