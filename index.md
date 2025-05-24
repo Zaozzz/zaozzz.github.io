@@ -962,7 +962,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="publication-item">
         <div class="header">
             <h2>🧠 SM-CBNet: A Speech-Based Parkinson's Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM</h2>
             <p>ICIC 2025, CCF-C Oral</p>
