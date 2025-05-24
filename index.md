@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -401,8 +400,9 @@
         <header class="header fade-in">
             <div class="avatar">
                 <i class="fas fa-user-graduate"></i>
+                <img src="11.jpg"> 
             </div>
-            <h1>AI研究者</h1>
+            <h1>王旭</h1>
             <p class="subtitle">人工智能专业 · 多模态大模型研究 · 山东建筑大学</p>
             <div class="seeking-badge">
                 <i class="fas fa-search"></i> 寻求2027年秋季硕士/博士机会
