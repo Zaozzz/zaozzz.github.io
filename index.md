@@ -881,6 +881,7 @@
             </section>
 
  <section class="section fade-in">
+     <h2></i></h2>
                 <div class="two-column-grid">
                     <div>
                         <h3><i class="fas fa-code"></i> Software Copyrights</h3>
