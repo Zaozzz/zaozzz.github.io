@@ -666,7 +666,7 @@
                 <img class="head-img" src="11.jpg"> 
             </div>
             <h1>Xu Wang</h1>
-            <p class="subtitle">Artificial Intelligence Major · Multimodal Large Model · Shandong Jianzhu University</p>
+            <p class="subtitle">AI Major · Multimodal Large Model · Shandong Jianzhu University</p>
             <div class="seeking-badge">
                 <i class="fas fa-search"></i> Seeking Master's/PhD Opportunities for Fall 2027
             </div>
@@ -720,7 +720,7 @@
                         <div class="publication-title">
                             🧠 SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM
                         </div>
-                        <div class="publication-venue">ICIC 2025, CCF-C, Oral Presentation</div>
+                        <div class="publication-venue">ICIC 2025, CCF-C, Oral</div>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
