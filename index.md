@@ -964,7 +964,7 @@
 <body>
     <div class="publication-item">
         <div class="header">
-            <h2>🧠 SM-CBNet: A Speech-Based Parkinson's Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM</h2>
+            <h3>🧠 SM-CBNet: A Speech-Based Parkinson's Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM</h3>
             <p>ICIC 2025, CCF-C Oral</p>
         </div>
 
