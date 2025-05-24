@@ -881,7 +881,6 @@
             </section>
 
  <section class="section fade-in">
-                <h2><i class="fas fa-code"></i>Software Copyrights & Social Practice</h2>
                 <div class="two-column-grid">
                     <div>
                         <h3><i class="fas fa-code"></i> Software Copyrights</h3>
@@ -897,15 +896,6 @@
                                     <li>🫁 Deep Learning Pneumonia Detection System</li>
                                     <li>😬 Deep Learning-based Dental Image Segmentation System</li>
                                 </ul>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>⏳ Pending Approval</h4>
-                                <ul>
-                                    <li>🏥 Hospital CT Image Data Management System</li>
-                                    <li>👁️ Fundus Image-based Disease Classification System</li>
-                                    <li>❤️ Intelligent Cardiac Diagnosis Segmentation System</li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
 
