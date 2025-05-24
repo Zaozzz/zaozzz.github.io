@@ -969,7 +969,6 @@
                 <button class="play-button" onclick="animateDataFlow()">▶️ Animate Data Flow</button>
                 <button class="play-button" onclick="resetAnimation()">🔄 Reset</button>
             </div>
-        <div class="qa-examples">
             <div class="model-container">
                 <!-- Input Section -->
                 <div class="input-section">
@@ -1026,7 +1025,6 @@
                         </div>
                     </div>
                 </div>
-</div>
                 <div class="arrow">➡️</div>
 
                 <!-- Output Section -->
