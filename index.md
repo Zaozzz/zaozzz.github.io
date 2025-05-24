@@ -1,8 +1,8 @@
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>王旭 - 个人主页</title>
+    <title>Xu Wang - Personal Homepage</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -114,7 +114,6 @@
         }
 
         .about-grid {
-    
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
@@ -190,6 +189,17 @@
             color: #667eea;
             font-weight: bold;
             font-size: 0.9rem;
+        }
+
+        .publication-venue a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .publication-venue a:hover {
+            color: #4a59c7;
+            text-decoration: underline;
         }
 
         .awards-grid {
@@ -355,6 +365,13 @@
             transition: width 0.3s ease;
         }
 
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
         @media (max-width: 768px) {
             .about-grid {
                 grid-template-columns: 1fr;
@@ -371,6 +388,10 @@
             .stats-grid {
                 grid-template-columns: 1fr 1fr;
             }
+
+            .two-column-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .fade-in {
@@ -383,13 +404,14 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
         .head-img{
-         width: 170px;
-          height: 145px;
-         border-radius: 50%;
-          border: 3px solid white;
+            width: 170px;
+            height: 145px;
+            border-radius: 50%;
+            border: 3px solid white;
             box-shadow: 0 0 0 3px #667eea;
-          }
+        }
     </style>
 </head>
 <body>
@@ -407,209 +429,212 @@
     <div class="container">
         <header class="header fade-in">
             <div class="avatar">
-              
-                <img   class="head-img" src="11.jpg"> 
+                <img class="head-img" src="11.jpg"> 
             </div>
-            <h1>王旭</h1>
-            <p class="subtitle">人工智能专业 · 多模态大模型研究 · 山东建筑大学</p>
+            <h1>Xu Wang</h1>
+            <p class="subtitle">Artificial Intelligence Major · Multimodal Large Model Research · Shandong Jianzhu University</p>
             <div class="seeking-badge">
-                <i class="fas fa-search"></i> 寻求2027年秋季硕士/博士机会
+                <i class="fas fa-search"></i> Seeking Master's/PhD Opportunities for Fall 2027
             </div>
         </header>
 
         <main class="main-content">
             <section class="section fade-in">
-                <h2><i class="fas fa-user"></i>关于我</h2>
+                <h2><i class="fas fa-user"></i>About Me</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>我是一名热情的本科生（2023级），主修<strong>人工智能</strong>专业，就读于<strong>山东建筑大学计算机科学与技术学院</strong>。</p>
-                        <p>我的研究兴趣主要集中在<strong>多模态大模型</strong>及其在智能系统中的应用。致力于探索AI技术的前沿发展，并将理论研究与实际应用相结合。</p>
+                        <p>I am a passionate undergraduate student (Class of 2023) majoring in <strong>Artificial Intelligence</strong> at the <strong>School of Computer Science and Technology, Shandong Jianzhu University</strong>.</p>
+                        <p>My research interests primarily focus on <strong>Multimodal Large Models</strong> and their applications in intelligent systems. I am committed to exploring cutting-edge developments in AI technology and combining theoretical research with practical applications.</p>
                     </div>
-                  
                 </div>
             </section>
 
             <section class="section fade-in">
-                <h2><i class="fas fa-briefcase"></i>服务与职务</h2>
+                <h2><i class="fas fa-briefcase"></i>Services & Positions</h2>
                 <div class="awards-grid">
                     <div class="award-item">
                         <div class="award-icon">🧠</div>
-                        <div>心理委员 & 助教</div>
+                        <div>Mental Health Committee Member & Teaching Assistant</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">👨‍💻</div>
-                        <div>CCF和SDAAI学生会员</div>
+                        <div>CCF and SDAAI Student Member</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🤖</div>
-                        <div>泰迪智能工作室主席 & Deep Studio AI部门负责人</div>
+                        <div>Chairman of Teddy Intelligent Studio & Head of Deep Studio AI Department</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">📝</div>
-                        <div>ICME, EMNLP, AVSS, BMVC会议审稿人</div>
+                        <div>Reviewer for ICME, EMNLP, AVSS, BMVC Conferences</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">✅</div>
-                        <div>华为昇腾社区核心开发者</div>
+                        <div>Huawei Ascend Community Core Developer</div>
                     </div>
                 </div>
             </section>
 
             <section class="section fade-in">
-                <h2><i class="fas fa-file-alt"></i>学术发表</h2>
+                <h2><i class="fas fa-file-alt"></i>Academic Publications</h2>
                 <div class="publications-grid">
                     <div class="publication-item">
                         <div class="publication-title">
-                            🧠 SM-CBNet: 基于语音的帕金森病诊断模型
+                            🧠 SM-CBNet: Speech-based Parkinson's Disease Diagnosis Model
                         </div>
-                        <div class="publication-venue">ICIC 2025, CCF-C, 口头报告</div>
+                        <div class="publication-venue">ICIC 2025, CCF-C, Oral Presentation</div>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
-                            🫀 ECG-Expert-QA: 心脏病诊断医疗大语言模型评估基准
+                            🫀 ECG-Expert-QA: Cardiovascular Disease Diagnosis Medical Large Language Model Evaluation Benchmark
                         </div>
-                        <div class="publication-venue">2025 (arXiv:2502.17475)</div>
+                        <div class="publication-venue">2025 (<a href="https://arxiv.org/abs/2502.17475" target="_blank">arXiv:2502.17475</a>)</div>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
-                            📡 RIE-SenseNet: 工业传感器信号的黎曼流形嵌入
+                            📡 RIE-SenseNet: Riemannian Manifold Embedding for Industrial Sensor Signals
                         </div>
-                        <div class="publication-venue">2025 (arXiv:2502.02428)</div>
+                        <div class="publication-venue">2025 (<a href="https://arxiv.org/abs/2502.02428" target="_blank">arXiv:2502.02428</a>)</div>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
-                            🛣️ 道路损伤检测的实时动态尺度感知融合
+                            🛣️ Real-time Dynamic Scale-aware Fusion for Road Damage Detection
                         </div>
                         <div class="publication-venue">JRTIP 2025, JCR-Q2</div>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
-                            🚗 DAPONet: 实时道路损伤检测
+                            🚗 DAPONet: Real-time Road Damage Detection
                         </div>
                         <div class="publication-venue">Applied Sciences 2025, JCR-Q1</div>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
-                            🔥 EFA-YOLO: 火灾检测的特征注意力机制
+                            🔥 EFA-YOLO: Feature Attention Mechanism for Fire Detection
                         </div>
-                        <div class="publication-venue">2024 (arXiv:2409.12635)</div>
+                        <div class="publication-venue">2024 (<a href="https://arxiv.org/abs/2409.12635" target="_blank">arXiv:2409.12635</a>)</div>
                     </div>
                 </div>
             </section>
 
             <section class="section fade-in">
-                <h2><i class="fas fa-trophy"></i>竞赛获奖</h2>
+                <h2><i class="fas fa-trophy"></i>Competition Awards</h2>
                 <div class="awards-grid">
                     <div class="award-item">
                         <div class="award-icon">🏆</div>
-                        <div><strong>专业第一名</strong> - 2023-2024学年</div>
+                        <div><strong>First Place in Major</strong> - Academic Year 2023-2024</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🏆</div>
-                        <div><strong>第一名</strong> - 山东建筑大学交通科技大赛</div>
+                        <div><strong>First Place</strong> - Shandong Jianzhu University Transportation Technology Competition</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥇</div>
-                        <div><strong>一等奖</strong> - 蓝桥杯大赛</div>
+                        <div><strong>First Prize</strong> - Blue Bridge Cup Competition</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥇</div>
-                        <div><strong>一等奖</strong> - 山东省软件设计大赛</div>
+                        <div><strong>First Prize</strong> - Shandong Province Software Design Competition</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥇</div>
-                        <div><strong>一等奖</strong> - 中国大学生计算机设计大赛</div>
+                        <div><strong>First Prize</strong> - China Collegiate Computing Contest</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥈</div>
-                        <div><strong>二等奖</strong> - 全球校园AI算法精英大赛</div>
+                        <div><strong>Second Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥈</div>
-                        <div><strong>二等奖</strong> - 全国大学生数学建模竞赛</div>
+                        <div><strong>Second Prize</strong> - National College Student Mathematical Contest in Modeling</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥉</div>
-                        <div><strong>三等奖</strong> - 多项国家级竞赛</div>
+                        <div><strong>Third Prize</strong> - Multiple National-level Competitions</div>
                     </div>
                 </div>
             </section>
 
             <section class="section fade-in">
-                <h2><i class="fas fa-certificate"></i>认证与技能</h2>
+                <h2><i class="fas fa-certificate"></i>Certifications & Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>工业认证</h3>
+                        <h3>Industrial Certifications</h3>
                         <ul class="skill-list">
-                            <li><i class="fas fa-check"></i>工业互联网平台开发工程师</li>
-                            <li><i class="fas fa-check"></i>数学建模能力认证</li>
+                            <li><i class="fas fa-check"></i>Industrial Internet Platform Development Engineer</li>
+                            <li><i class="fas fa-check"></i>Mathematical Modeling Ability Certification</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3>华为昇腾认证</h3>
+                        <h3>Huawei Ascend Certifications</h3>
                         <ul class="skill-list">
-                            <li><i class="fas fa-check"></i>昇腾C编程中级开发者</li>
-                            <li><i class="fas fa-check"></i>CANN应用开发工程师</li>
-                            <li><i class="fas fa-check"></i>Atlas 200I DK A2开发者</li>
+                            <li><i class="fas fa-check"></i>Ascend C Programming Intermediate Developer</li>
+                            <li><i class="fas fa-check"></i>CANN Application Development Engineer</li>
+                            <li><i class="fas fa-check"></i>Atlas 200I DK A2 Developer</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <section class="section fade-in">
-                <h2><i class="fas fa-code"></i>软件著作权</h2>
-                <div class="experience-timeline">
-                    <div class="timeline-item">
-                        <h3>✅ 已授权项目</h3>
-                        <ul>
-                            <li>🌾 基于深度学习的农业病虫害检测系统</li>
-                            <li>🏙️ 城市危险实时监测预警系统</li>
-                            <li>🧠 基于U-Net的脑肿瘤分割平台</li>
-                            <li>🖼️ 智能图像识别处理软件</li>
-                            <li>👁️‍🗨️ CityEye智慧城市监控系统</li>
-                            <li>🫁 深度学习肺炎检测系统</li>
-                            <li>😬 基于深度学习的牙齿图像分割系统</li>
-                        </ul>
+                <h2><i class="fas fa-code"></i>Software Copyrights & Social Practice</h2>
+                <div class="two-column-grid">
+                    <div>
+                        <h3 style="color: #667eea; margin-bottom: 20px;"><i class="fas fa-code"></i> Software Copyrights</h3>
+                        <div class="experience-timeline">
+                            <div class="timeline-item">
+                                <h4>✅ Authorized Projects</h4>
+                                <ul>
+                                    <li>🌾 Deep Learning-based Agricultural Pest Detection System</li>
+                                    <li>🏙️ Urban Hazard Real-time Monitoring and Warning System</li>
+                                    <li>🧠 U-Net-based Brain Tumor Segmentation Platform</li>
+                                    <li>🖼️ Intelligent Image Recognition Processing Software</li>
+                                    <li>👁️‍🗨️ CityEye Smart City Monitoring System</li>
+                                    <li>🫁 Deep Learning Pneumonia Detection System</li>
+                                    <li>😬 Deep Learning-based Dental Image Segmentation System</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>⏳ Pending Approval</h4>
+                                <ul>
+                                    <li>🏥 Hospital CT Image Data Management System</li>
+                                    <li>👁️ Fundus Image-based Disease Classification System</li>
+                                    <li>❤️ Intelligent Cardiac Diagnosis Segmentation System</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="timeline-item">
-                        <h3>⏳ 待审批项目</h3>
-                        <ul>
-                            <li>🏥 医院CT图像数据管理系统</li>
-                            <li>👁️ 基于眼底图像的疾病分类系统</li>
-                            <li>❤️ 智能心脏诊断分割系统</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
 
-            <section class="section fade-in">
-                <h2><i class="fas fa-hands-helping"></i>社会实践与志愿服务</h2>
-                <div class="experience-timeline">
-                    <div class="timeline-item">
-                        <h3>🔧 社会实践</h3>
-                        <ul>
-                            <li>📌 2023年10月 - 华为HAG项目实践</li>
-                            <li>🛠️ 2023年12月 - 济成电子功图诊断实践</li>
-                            <li>📊 2024年6月 - 临沂体育局数据分析实习</li>
-                            <li>🧪 2025年1月 - 山东大学数据研究分析实践</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>❤️ 志愿服务</h3>
-                        <p><strong>总志愿时长：196小时</strong></p>
-                        <p><strong>优秀志愿者奖：14次</strong></p>
+                    <div>
+                        <h3 style="color: #667eea; margin-bottom: 20px;"><i class="fas fa-hands-helping"></i> Social Practice & Volunteer Service</h3>
+                        <div class="experience-timeline">
+                            <div class="timeline-item">
+                                <h4>🔧 Social Practice</h4>
+                                <ul>
+                                    <li>📌 October 2023 - Huawei HAG Project Practice</li>
+                                    <li>🛠️ December 2023 - Jicheng Electronics Dynamometer Card Diagnosis Practice</li>
+                                    <li>📊 June 2024 - Linyi Sports Bureau Data Analysis Internship</li>
+                                    <li>🧪 January 2025 - Shandong University Data Research and Analysis Practice</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>❤️ Volunteer Service</h4>
+                                <p><strong>Total Volunteer Hours: 196 hours</strong></p>
+                                <p><strong>Outstanding Volunteer Awards: 14 times</strong></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="section hobbies-section fade-in">
-                <h2><i class="fas fa-heart"></i>兴趣爱好</h2>
+                <h2><i class="fas fa-heart"></i>Hobbies & Interests</h2>
                 <div style="text-align: center; padding: 20px;">
                     <p style="font-size: 1.1rem; margin-bottom: 20px;">
-                        🎶 音乐爱好者！特别喜欢黄小云的歌曲
+                        🎶 Music enthusiast! Particularly enjoy songs by Huang Xiaoyun
                     </p>
                     <p style="font-size: 1.1rem;">
-                        🎬 影视剧迷，尤其喜欢鞠婧祎主演的作品
+                        🎬 Film and TV drama fan, especially works starring Ju Jingyi
                     </p>
                 </div>
             </section>
@@ -617,14 +642,14 @@
     </div>
 
     <script>
-        // 滚动进度条
+        // Scroll progress bar
         window.addEventListener('scroll', () => {
             const scrollProgress = document.getElementById('scrollProgress');
             const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
             scrollProgress.style.width = scrollPercent + '%';
         });
 
-        // 元素淡入动画
+        // Element fade-in animation
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -642,7 +667,7 @@
             observer.observe(el);
         });
 
-        // 点击发表论文项目的交互
+        // Publication item click interaction
         document.querySelectorAll('.publication-item').forEach(item => {
             item.addEventListener('click', () => {
                 item.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
@@ -654,7 +679,7 @@
             });
         });
 
-        // 动态统计数字动画
+        // Dynamic number animation
         function animateNumbers() {
             const statNumbers = document.querySelectorAll('.stat-number');
             statNumbers.forEach(stat => {
@@ -673,7 +698,7 @@
             });
         }
 
-        // 页面加载完成后启动数字动画
+        // Start number animation after page load
         window.addEventListener('load', () => {
             setTimeout(animateNumbers, 1000);
         });
