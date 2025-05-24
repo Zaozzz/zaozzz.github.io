@@ -764,7 +764,7 @@
                         </div>
                         <div class="publication-venue">2024 (<a href="https://arxiv.org/abs/2409.12635" target="_blank">arXiv:2409.12635</a>)</div>
                     </div>
-            </section>
+
 
             <section class="section fade-in">
                 <h2><i class="fas fa-trophy"></i>Competition Awards</h2>
