@@ -522,15 +522,15 @@
                 <div class="awards-grid">
                     <div class="award-item">
                         <div class="award-icon">🏆</div>
-                        <div><strong>First Place in Major</strong> - Academic Year 2023-2024</div>
+                        <div><strong>Top 1</strong> - Major 2023-2024 Academic Year</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🏆</div>
-                        <div><strong>First Place</strong> - Shandong Jianzhu University Transportation Technology Competition</div>
+                        <div><strong>Top 1</strong> - Shandong Jianzhu University Transportation Technology Competition</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥇</div>
-                        <div><strong>First Prize</strong> - Blue Bridge Cup Competition</div>
+                        <div><strong>First Prize</strong> - Blue Bridge Cup</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥇</div>
@@ -538,7 +538,11 @@
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥇</div>
-                        <div><strong>First Prize</strong> - China Collegiate Computing Contest</div>
+                        <div><strong>First Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>First Class</strong> - Shandong Jianzhu University Scholarship</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥈</div>
@@ -546,11 +550,59 @@
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - National College Student Mathematical Contest in Modeling</div>
+                        <div><strong>Second Prize</strong> - CUMCM Mathematical Modeling</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - National College Student Olympiad Mathematics Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - Blue Bridge Cup</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - National Digital Media Creativity Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - Shandong Province Software Design Competition</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Multiple National-level Competitions</div>
+                        <div><strong>Third Prize</strong> - Career Planning Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Raicom Robot Developer Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - National Digital Media Creativity Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Teddy Cup Data Analysis Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Shandong Province Software Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🔥</div>
+                        <div><strong>Top 112</strong> - Astar Baidu Programming Competition</div>
                     </div>
                 </div>
             </section>
