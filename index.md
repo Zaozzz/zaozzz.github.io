@@ -424,24 +424,7 @@
                         <p>我是一名热情的本科生（2023级），主修<strong>人工智能</strong>专业，就读于<strong>山东建筑大学计算机科学与技术学院</strong>。</p>
                         <p>我的研究兴趣主要集中在<strong>多模态大模型</strong>及其在智能系统中的应用。致力于探索AI技术的前沿发展，并将理论研究与实际应用相结合。</p>
                     </div>
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-number">8</div>
-                            <div>发表论文</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">20+</div>
-                            <div>获奖项目</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">10</div>
-                            <div>软件著作权</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">196</div>
-                            <div>志愿服务小时</div>
-                        </div>
-                    </div>
+                  
                 </div>
             </section>
 
