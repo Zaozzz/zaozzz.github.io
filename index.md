@@ -1,642 +1,691 @@
----
-layout: homepage
----
-
-## 👋 About Me 
-
-🎓 I’m an enthusiastic undergraduate student (Class of 2023) majoring in **Artificial Intelligence** at the [School of Computer Science and Technology](https://www.sdjzu.edu.cn/jsjkx/index.htm), [Shandong Jianzhu University](https://www.sdjzu.edu.cn/).
-
-💡 My research interest primarily focuses on **multimodal large models** and their applications in intelligent systems.
-
-📌 <span style="color:#FF6666">Currently seeking Master's or Ph.D. opportunities starting in Fall 2027.</span>  
-
----
-
-## 🛠️ Service 
-
-- 🧠 Psychological Committee Member & Teaching Assistant  
-- 👨‍💻 Student Member of CCF and SDAAI  
-- 🤖 Chair of Teddy Intelligent Studio & Deep Studio AI Department  
-- 📝 Reviewer at ICME, EMNLP, AVSS and BMVC
-- ✅ Core Developer at Huawei Ascend Community
-
----
-
-## 📄 Publications  
-
-- 🧠 [SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM (ICIC, CCF-C, Oral), 2025](https://zaozzz.github.io/)  
-- 🫀 [ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis, 2025](https://export.arxiv.org/abs/2502.17475)  
-- 📡 [RIE-SenseNet: Riemannian Manifold Embedding for Industrial Sensor Signals, 2025](https://arxiv.org/abs/2502.02428)  
-- 📊 [Digital Talent Demand Model via Big Data & ML (Software Guide, CCF-T3), 2025](https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/)  
-- 🛣️ [Real-Time Dynamic Scale-Aware Fusion for Road Damage Detection (JRTIP, JCR-Q2), 2025](https://link.springer.com/article/10.1007/s11554-025-01634-w)  
-- 🚗 [DAPONet: Real-Time Road Damage Detection (Applied Sciences, JCR-Q1), 2025](https://www.mdpi.com/2076-3417/15/3/1470)  
-- 🎈 [YOLO-FireAD: Efficient Fire Detection (ICIC, CCF-C, Poster), 2025](https://zaozzz.github.io/)  
-- 🔥 [EFA-YOLO: Feature Attention for Fire Detection, 2024](https://arxiv.org/abs/2409.12635)  
-
----
-
-## 🏆 Competitions  
-
-- 🏆 Top 1 - Major 2023-2024 Academic Year  
-- 🏆 Top 1 - Shandong Jianzhu University Transportation Technology Competition  
-- 🥇 First Prize - Blue Bridge Cup  
-- 🥇 First Prize - Shandong Province Software Design Competition  
-- 🥇 First Prize - China University Student Computer Design Competition
-- 🥇 First Class - Shandong Jianzhu University Scholarship  
-- 🥈 Second Prize - Global Campus AI Algorithm Elite Competition  
-- 🥈 Second Prize - CUMCM Mathematical Modeling  
-- 🥈 Second Prize - National College Student Olympiad Mathematics Competition  
-- 🥈 Second Prize - Blue Bridge Cup  
-- 🥈 Second Prize - China University Student Computer Design Competition  
-- 🥈 Second Prize - National Digital Media Creativity Competition  
-- 🥈 Second Prize - Shandong Province Software Design Competition  
-- 🥉 Third Prize - Career Planning Competition  
-- 🥉 Third Prize - China University Student Computer Design Competition  
-- 🥉 Third Prize - Raicom Robot Developer Competition  
-- 🥉 Third Prize - National Digital Media Creativity Competition  
-- 🥉 Third Prize - Global Campus AI Algorithm Elite Competition  
-- 🥉 Third Prize - Teddy Cup Data Analysis Competition  
-- 🥉 Third Prize - Shandong Province Software Design Competition
-- 🔥 Top 112 - Astar Baidu Programming Competition  
-
----
-
-## 📛 Certifications & Skills  
-
-- 🏭 Ministry of Industry and Information Technology – Certified Engineer in Industrial Internet Platform Development
-- 📐 Ministry of Industry and Information Technology – Certified Competence in Mathematical Modeling
-- 🔧 Huawei Ascend Community – Intermediate Developer in Ascend C Programming
-- 🧩 Huawei Ascend Community – Certified CANN Application Development Engineer (Work Level)
-- 🧰 Huawei Ascend Community – Developer Kit: Atlas 200I DK A2
-- 🚗 Huawei Ascend Community – Smart Car Design Based on Atlas 200I DK A2
--	🧠 Huawei Ascend Community – Introduction to Ascend AI
-
----
-
-## 📚 Software Copyrights
-
-### ✅ Granted
-- 🌾 Deep Learning-Based Agricultural Pest and Disease Detection System
-- 🏙️ Urban Hazard Real-Time Monitoring and Early Warning System
-- 🧠 Advanced Brain Tumor Segmentation Platform Based on U-Net
-- 🖼️ Intelligent Image Recognition and Processing Software
-- 👁️‍🗨️ CityEye: Integrated Smart Urban Monitoring System
-- 🫁 Pneumonia Detection System Powered by Deep Learning
-- 😬 Tooth Image Segmentation System Based on Deep Learning
-
-### ⏳ Pending Approval
-- 🏥 Hospital CT Image Data Management System
-- 👁️ Fundus Image-Based Disease Classification System
-- ❤️ Intelligent Cardiac Diagnosis and Segmentation System
-
----
-
-## 🌍 Social Practice & Volunteering
-
-**🔧 Social Practic**e
-
-- 📌 Oct 2023 – Huawei HAG Project Practice  
-- 🛠️ Dec 2023 – Fault Diagnosis Practice on Dynamometer Cards at Jicheng Electronics  
-- 📊 Jun 2024 – Data Analysis Internship at Linyi Sports Bureau  
-- 🧪 Jan 2025 – Data Research & Analysis Practice at Shandong University  
-
-**❤️ Volunteering**
-
-- ⏱️ Total Volunteer Hours: 196 hours  
-- 🏅 Outstanding Volunteer Award: Received 14 times  
-
----
-
-## 🎵 Hobbies & Interests
-
-🎶 Music lover! I enjoy songs by [Xiaoyun Huang](https://m.weibo.cn/u/5043186742).
-
-🎬 Avid fan of movies & dramas—especially those starring [Kiku](https://www.weibo.com/u/3669102477?eqid=e8af036900096f8200000004645b8833).
-
-
----
-
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KANLinear模块结构图</title>
+    <title>王旭 - 个人主页</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
-            padding: 20px;
-            font-family: 'Arial', sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
-        
+
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .title {
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .diagram-container {
-            position: relative;
-            width: 100%;
-            height: 800px;
-            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
-        }
-        
-        .svg-canvas {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .input-layer, .output-layer {
-            fill: none;
-            stroke-width: 2;
-        }
-        
-        .input-layer {
-            stroke: #3498db;
-        }
-        
-        .output-layer {
-            stroke: #e74c3c;
-        }
-        
-        .node {
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .node:hover {
-            transform: scale(1.1);
-        }
-        
-        .input-node {
-            fill: #3498db;
-            stroke: #2980b9;
-            stroke-width: 2;
-        }
-        
-        .output-node {
-            fill: #e74c3c;
-            stroke: #c0392b;
-            stroke-width: 2;
-        }
-        
-        .connection {
-            stroke-width: 2;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-        
-        .connection:hover {
-            stroke-width: 4;
-            opacity: 1;
-        }
-        
-        .spline-path {
-            fill: none;
-            stroke: #9b59b6;
-            stroke-width: 3;
-            filter: drop-shadow(2px 2px 4px rgba(155, 89, 182, 0.3));
-        }
-        
-        .base-weight {
-            fill: #34495e;
-            font-size: 10px;
-            text-anchor: middle;
-        }
-        
-        .grid-point {
-            fill: #f39c12;
-            stroke: #e67e22;
-            stroke-width: 1;
-        }
-        
-        .parameter-box {
-            fill: rgba(52, 73, 94, 0.1);
-            stroke: #34495e;
-            stroke-width: 1;
-            stroke-dasharray: 5,5;
-        }
-        
-        .parameter-text {
-            fill: #2c3e50;
-            font-size: 12px;
-            font-weight: bold;
-        }
-        
-        .legend {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255,255,255,0.95);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            font-size: 14px;
         }
-        
-        .legend-item {
+
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            color: white;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.2);
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             display: flex;
             align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .legend-color {
-            width: 20px;
-            height: 4px;
-            margin-right: 10px;
-            border-radius: 2px;
-        }
-        
-        .controls {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(255,255,255,0.95);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .control-button {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            justify-content: center;
+            font-size: 60px;
             color: white;
-            border: none;
-            padding: 8px 16px;
-            margin: 5px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        
-        .control-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-        
-        .info-panel {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(44, 62, 80, 0.95);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            max-width: 400px;
-            display: none;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
         }
-        
-        .animate {
+
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .seeking-badge {
+            display: inline-block;
+            background: rgba(255,102,102,0.9);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(255,102,102,0.4);
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
-            0% { opacity: 0.7; }
-            50% { opacity: 1; }
-            100% { opacity: 0.7; }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
-        
-        .flowing {
-            animation: flow 3s linear infinite;
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-top: -30px;
+            position: relative;
+            z-index: 1;
         }
-        
-        @keyframes flow {
-            0% { stroke-dashoffset: 0; }
-            100% { stroke-dashoffset: 20; }
+
+        .section {
+            padding: 40px;
+            border-bottom: 1px solid #f0f0f0;
         }
-        
-        .gradient-edge {
-            stroke: url(#connectionGradient);
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section h2 i {
+            color: #667eea;
+            font-size: 1.5rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text strong {
+            color: #667eea;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .publications-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .publication-item {
+            background: linear-gradient(135deg, #f8f9ff, #e8f4fd);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .publication-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .publication-venue {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .award-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .award-item:hover {
+            background: #e9ecef;
+            transform: scale(1.02);
+        }
+
+        .award-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #ff6b6b, #ffa500);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #667eea;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 25px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .hobbies-section {
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(102, 126, 234, 0.2);
+            z-index: 1000;
+        }
+
+        .scroll-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <div class="floating-elements">
+        <i class="fas fa-brain floating-element" style="top: 10%; left: 10%; font-size: 3rem; animation-delay: 0s;"></i>
+        <i class="fas fa-robot floating-element" style="top: 20%; right: 15%; font-size: 2.5rem; animation-delay: 1s;"></i>
+        <i class="fas fa-code floating-element" style="top: 60%; left: 5%; font-size: 2rem; animation-delay: 2s;"></i>
+        <i class="fas fa-graduation-cap floating-element" style="bottom: 20%; right: 10%; font-size: 2.5rem; animation-delay: 3s;"></i>
+    </div>
+
     <div class="container">
-        <h1 class="title">KANLinear模块架构图</h1>
-        
-        <div class="diagram-container">
-            <svg class="svg-canvas" viewBox="0 0 1200 700">
-                <!-- 定义渐变 -->
-                <defs>
-                    <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
-                        <stop offset="50%" style="stop-color:#9b59b6;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:1" />
-                    </linearGradient>
-                    
-                    <filter id="glow">
-                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                        <feMerge> 
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                    </filter>
-                </defs>
-                
-                <!-- 输入层标题 -->
-                <text x="150" y="40" class="parameter-text" font-size="16">输入层 (in_features=4)</text>
-                <text x="1050" y="40" class="parameter-text" font-size="16">输出层 (out_features=3)</text>
-                
-                <!-- 输入节点 -->
-                <g id="input-nodes">
-                    <circle cx="150" cy="120" r="20" class="input-node node" data-info="输入特征1"/>
-                    <text x="150" y="125" class="base-weight">x₁</text>
-                    
-                    <circle cx="150" cy="220" r="20" class="input-node node" data-info="输入特征2"/>
-                    <text x="150" y="225" class="base-weight">x₂</text>
-                    
-                    <circle cx="150" cy="320" r="20" class="input-node node" data-info="输入特征3"/>
-                    <text x="150" y="325" class="base-weight">x₃</text>
-                    
-                    <circle cx="150" cy="420" r="20" class="input-node node" data-info="输入特征4"/>
-                    <text x="150" y="425" class="base-weight">x₄</text>
-                </g>
-                
-                <!-- 输出节点 -->
-                <g id="output-nodes">
-                    <circle cx="1050" cy="150" r="20" class="output-node node" data-info="输出特征1"/>
-                    <text x="1050" y="155" class="base-weight">y₁</text>
-                    
-                    <circle cx="1050" cy="270" r="20" class="output-node node" data-info="输出特征2"/>
-                    <text x="1050" y="275" class="base-weight">y₂</text>
-                    
-                    <circle cx="1050" cy="390" r="20" class="output-node node" data-info="输出特征3"/>
-                    <text x="1050" y="395" class="base-weight">y₃</text>
-                </g>
-                
-                <!-- B样条连接路径 (示例几条主要连接) -->
-                <g id="spline-connections">
-                    <!-- x1 到 y1 的B样条路径 -->
-                    <path d="M 170 120 Q 300 100 450 130 T 600 140 T 750 145 T 900 148 Q 980 150 1030 150" 
-                          class="spline-path connection gradient-edge" 
-                          stroke-dasharray="5,5"
-                          data-connection="x1-y1"/>
-                    
-                    <!-- x1 到 y2 的B样条路径 -->
-                    <path d="M 170 120 Q 350 180 500 220 T 650 250 T 800 265 Q 920 270 1030 270" 
-                          class="spline-path connection" 
-                          stroke="#e67e22"
-                          data-connection="x1-y2"/>
-                    
-                    <!-- x2 到 y1 的B样条路径 -->
-                    <path d="M 170 220 Q 320 160 480 140 T 650 145 T 820 148 Q 950 150 1030 150" 
-                          class="spline-path connection" 
-                          stroke="#1abc9c"
-                          data-connection="x2-y1"/>
-                    
-                    <!-- x3 到 y3 的B样条路径 -->
-                    <path d="M 170 320 Q 400 350 550 370 T 700 385 T 850 388 Q 950 390 1030 390" 
-                          class="spline-path connection gradient-edge" 
-                          stroke-dasharray="3,3"
-                          data-connection="x3-y3"/>
-                    
-                    <!-- 更多连接... -->
-                    <path d="M 170 420 Q 450 300 600 280 T 750 275 T 900 272 Q 980 270 1030 270" 
-                          class="connection" 
-                          stroke="#f39c12" 
-                          stroke-width="2" 
-                          opacity="0.6"
-                          data-connection="x4-y2"/>
-                </g>
-                
-                <!-- 网格点可视化 -->
-                <g id="grid-points">
-                    <!-- 在连接路径上显示网格点 -->
-                    <circle cx="300" cy="100" r="4" class="grid-point"/>
-                    <circle cx="450" cy="130" r="4" class="grid-point"/>
-                    <circle cx="600" cy="140" r="4" class="grid-point"/>
-                    <circle cx="750" cy="145" r="4" class="grid-point"/>
-                    <circle cx="900" cy="148" r="4" class="grid-point"/>
-                    
-                    <!-- 网格标注 -->
-                    <text x="300" y="90" class="parameter-text" font-size="10">grid₁</text>
-                    <text x="600" y="130" class="parameter-text" font-size="10">grid₃</text>
-                    <text x="900" y="138" class="parameter-text" font-size="10">grid₅</text>
-                </g>
-                
-                <!-- 参数标注框 -->
-                <g id="parameter-annotations">
-                    <!-- 样条参数 -->
-                    <rect x="250" y="500" width="200" height="120" class="parameter-box"/>
-                    <text x="260" y="520" class="parameter-text">B-样条参数</text>
-                    <text x="260" y="540" class="parameter-text" font-size="11">• spline_order = 3</text>
-                    <text x="260" y="555" class="parameter-text" font-size="11">• grid_size = 5</text>
-                    <text x="260" y="570" class="parameter-text" font-size="11">• grid_range = [-1, 1]</text>
-                    <text x="260" y="585" class="parameter-text" font-size="11">• scale_spline = 1.0</text>
-                    <text x="260" y="600" class="parameter-text" font-size="11">• scale_base = 1.0</text>
-                    
-                    <!-- 训练参数 -->
-                    <rect x="500" y="500" width="200" height="120" class="parameter-box"/>
-                    <text x="510" y="520" class="parameter-text">训练参数</text>
-                    <text x="510" y="540" class="parameter-text" font-size="11">• base_activation = SiLU</text>
-                    <text x="510" y="555" class="parameter-text" font-size="11">• grid_eps = 0.02</text>
-                    <text x="510" y="570" class="parameter-text" font-size="11">• grid_range_eps = 0.1</text>
-                    <text x="510" y="585" class="parameter-text" font-size="11">• sb_trainable = True</text>
-                    <text x="510" y="600" class="parameter-text" font-size="11">• sp_trainable = True</text>
-                    
-                    <!-- 正则化 -->
-                    <rect x="750" y="500" width="200" height="120" class="parameter-box"/>
-                    <text x="760" y="520" class="parameter-text">正则化</text>
-                    <text x="760" y="540" class="parameter-text" font-size="11">• L1 正则化</text>
-                    <text x="760" y="555" class="parameter-text" font-size="11">• 样条权重稀疏化</text>
-                    <text x="760" y="570" class="parameter-text" font-size="11">• 网格自适应更新</text>
-                    <text x="760" y="585" class="parameter-text" font-size="11">• curve2coeff 线性求解</text>
-                </g>
-                
-                <!-- 激活函数可视化示例 -->
-                <g id="activation-demo">
-                    <rect x="50" y="500" width="150" height="120" class="parameter-box"/>
-                    <text x="60" y="520" class="parameter-text">B样条基函数</text>
-                    
-                    <!-- 简化的B样条曲线 -->
-                    <path d="M 60 580 Q 80 560 100 570 T 140 580 T 180 585" 
-                          stroke="#9b59b6" 
-                          stroke-width="2" 
-                          fill="none"/>
-                    <path d="M 70 585 Q 90 565 110 575 T 150 585 T 190 590" 
-                          stroke="#e74c3c" 
-                          stroke-width="2" 
-                          fill="none"/>
-                    <path d="M 80 590 Q 100 570 120 580 T 160 590 T 200 595" 
-                          stroke="#3498db" 
-                          stroke-width="2" 
-                          fill="none"/>
-                    
-                    <text x="60" y="610" class="parameter-text" font-size="10">基函数叠加</text>
-                </g>
-                
-                <!-- 数据流箭头 -->
-                <g id="flow-arrows">
-                    <!-- 前向传播箭头 -->
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
-                                refX="9" refY="3.5" orient="auto">
-                            <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
-                        </marker>
-                    </defs>
-                    
-                    <line x1="50" y1="270" x2="100" y2="270" 
-                          stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowhead)"/>
-                    <text x="30" y="265" class="parameter-text" font-size="12">输入</text>
-                    
-                    <line x1="1100" y1="270" x2="1150" y2="270" 
-                          stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowhead)"/>
-                    <text x="1160" y="275" class="parameter-text" font-size="12">输出</text>
-                </g>
-            </svg>
-            
-            <!-- 图例 -->
-            <div class="legend">
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #3498db;"></div>
-                    <span>输入节点</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #e74c3c;"></div>
-                    <span>输出节点</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #9b59b6;"></div>
-                    <span>B样条连接</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #f39c12;"></div>
-                    <span>网格点</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #1abc9c;"></div>
-                    <span>可学习参数</span>
-                </div>
+        <header class="header fade-in">
+            <div class="avatar">
+                <i class="fas fa-user-graduate"></i>
             </div>
-            
-            <!-- 控制面板 -->
-            <div class="controls">
-                <button class="control-button" onclick="animateConnections()">显示数据流</button>
-                <button class="control-button" onclick="highlightSplines()">高亮B样条</button>
-                <button class="control-button" onclick="showGridUpdate()">网格更新</button>
-                <button class="control-button" onclick="resetView()">重置视图</button>
+            <h1>AI研究者</h1>
+            <p class="subtitle">人工智能专业 · 多模态大模型研究 · 山东建筑大学</p>
+            <div class="seeking-badge">
+                <i class="fas fa-search"></i> 寻求2027年秋季硕士/博士机会
             </div>
-            
-            <!-- 信息面板 -->
-            <div class="info-panel" id="info-panel">
-                <h3>KANLinear核心特性</h3>
-                <p id="info-content">点击节点或连接查看详细信息</p>
-                <button onclick="closeInfo()" style="margin-top: 10px; padding: 5px 10px; background: #3498db; color: white; border: none; border-radius: 5px;">关闭</button>
-            </div>
-        </div>
+        </header>
+
+        <main class="main-content">
+            <section class="section fade-in">
+                <h2><i class="fas fa-user"></i>关于我</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>我是一名热情的本科生（2023级），主修<strong>人工智能</strong>专业，就读于<strong>山东建筑大学计算机科学与技术学院</strong>。</p>
+                        <p>我的研究兴趣主要集中在<strong>多模态大模型</strong>及其在智能系统中的应用。致力于探索AI技术的前沿发展，并将理论研究与实际应用相结合。</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">8</div>
+                            <div>发表论文</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">20+</div>
+                            <div>获奖项目</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">10</div>
+                            <div>软件著作权</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">196</div>
+                            <div>志愿服务小时</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section fade-in">
+                <h2><i class="fas fa-briefcase"></i>服务与职务</h2>
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <div class="award-icon">🧠</div>
+                        <div>心理委员 & 助教</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">👨‍💻</div>
+                        <div>CCF和SDAAI学生会员</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🤖</div>
+                        <div>泰迪智能工作室主席 & Deep Studio AI部门负责人</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">📝</div>
+                        <div>ICME, EMNLP, AVSS, BMVC会议审稿人</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">✅</div>
+                        <div>华为昇腾社区核心开发者</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section fade-in">
+                <h2><i class="fas fa-file-alt"></i>学术发表</h2>
+                <div class="publications-grid">
+                    <div class="publication-item">
+                        <div class="publication-title">
+                            🧠 SM-CBNet: 基于语音的帕金森病诊断模型
+                        </div>
+                        <div class="publication-venue">ICIC 2025, CCF-C, 口头报告</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">
+                            🫀 ECG-Expert-QA: 心脏病诊断医疗大语言模型评估基准
+                        </div>
+                        <div class="publication-venue">2025 (arXiv:2502.17475)</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">
+                            📡 RIE-SenseNet: 工业传感器信号的黎曼流形嵌入
+                        </div>
+                        <div class="publication-venue">2025 (arXiv:2502.02428)</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">
+                            🛣️ 道路损伤检测的实时动态尺度感知融合
+                        </div>
+                        <div class="publication-venue">JRTIP 2025, JCR-Q2</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">
+                            🚗 DAPONet: 实时道路损伤检测
+                        </div>
+                        <div class="publication-venue">Applied Sciences 2025, JCR-Q1</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">
+                            🔥 EFA-YOLO: 火灾检测的特征注意力机制
+                        </div>
+                        <div class="publication-venue">2024 (arXiv:2409.12635)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section fade-in">
+                <h2><i class="fas fa-trophy"></i>竞赛获奖</h2>
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <div class="award-icon">🏆</div>
+                        <div><strong>专业第一名</strong> - 2023-2024学年</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🏆</div>
+                        <div><strong>第一名</strong> - 山东建筑大学交通科技大赛</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>一等奖</strong> - 蓝桥杯大赛</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>一等奖</strong> - 山东省软件设计大赛</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>一等奖</strong> - 中国大学生计算机设计大赛</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>二等奖</strong> - 全球校园AI算法精英大赛</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>二等奖</strong> - 全国大学生数学建模竞赛</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>三等奖</strong> - 多项国家级竞赛</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section fade-in">
+                <h2><i class="fas fa-certificate"></i>认证与技能</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>工业认证</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i>工业互联网平台开发工程师</li>
+                            <li><i class="fas fa-check"></i>数学建模能力认证</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>华为昇腾认证</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i>昇腾C编程中级开发者</li>
+                            <li><i class="fas fa-check"></i>CANN应用开发工程师</li>
+                            <li><i class="fas fa-check"></i>Atlas 200I DK A2开发者</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section fade-in">
+                <h2><i class="fas fa-code"></i>软件著作权</h2>
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <h3>✅ 已授权项目</h3>
+                        <ul>
+                            <li>🌾 基于深度学习的农业病虫害检测系统</li>
+                            <li>🏙️ 城市危险实时监测预警系统</li>
+                            <li>🧠 基于U-Net的脑肿瘤分割平台</li>
+                            <li>🖼️ 智能图像识别处理软件</li>
+                            <li>👁️‍🗨️ CityEye智慧城市监控系统</li>
+                            <li>🫁 深度学习肺炎检测系统</li>
+                            <li>😬 基于深度学习的牙齿图像分割系统</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>⏳ 待审批项目</h3>
+                        <ul>
+                            <li>🏥 医院CT图像数据管理系统</li>
+                            <li>👁️ 基于眼底图像的疾病分类系统</li>
+                            <li>❤️ 智能心脏诊断分割系统</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section fade-in">
+                <h2><i class="fas fa-hands-helping"></i>社会实践与志愿服务</h2>
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <h3>🔧 社会实践</h3>
+                        <ul>
+                            <li>📌 2023年10月 - 华为HAG项目实践</li>
+                            <li>🛠️ 2023年12月 - 济成电子功图诊断实践</li>
+                            <li>📊 2024年6月 - 临沂体育局数据分析实习</li>
+                            <li>🧪 2025年1月 - 山东大学数据研究分析实践</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>❤️ 志愿服务</h3>
+                        <p><strong>总志愿时长：196小时</strong></p>
+                        <p><strong>优秀志愿者奖：14次</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section hobbies-section fade-in">
+                <h2><i class="fas fa-heart"></i>兴趣爱好</h2>
+                <div style="text-align: center; padding: 20px;">
+                    <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                        🎶 音乐爱好者！特别喜欢黄小云的歌曲
+                    </p>
+                    <p style="font-size: 1.1rem;">
+                        🎬 影视剧迷，尤其喜欢鞠婧祎主演的作品
+                    </p>
+                </div>
+            </section>
+        </main>
     </div>
 
     <script>
-        // 交互功能
-        let animationRunning = false;
-        
-        function animateConnections() {
-            const connections = document.querySelectorAll('.connection');
-            connections.forEach(conn => {
-                conn.style.strokeDasharray = '10,5';
-                conn.classList.add('flowing');
+        // 滚动进度条
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // 元素淡入动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
             });
-            
-            setTimeout(() => {
-                connections.forEach(conn => {
-                    conn.classList.remove('flowing');
-                });
-            }, 3000);
-        }
-        
-        function highlightSplines() {
-            const splines = document.querySelectorAll('.spline-path');
-            splines.forEach(spline => {
-                spline.classList.add('animate');
-                spline.style.filter = 'url(#glow)';
-            });
-            
-            setTimeout(() => {
-                splines.forEach(spline => {
-                    spline.classList.remove('animate');
-                    spline.style.filter = '';
-                });
-            }, 2000);
-        }
-        
-        function showGridUpdate() {
-            const gridPoints = document.querySelectorAll('.grid-point');
-            gridPoints.forEach((point, index) => {
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 点击发表论文项目的交互
+        document.querySelectorAll('.publication-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+                item.style.color = 'white';
                 setTimeout(() => {
-                    point.classList.add('animate');
-                    point.style.fill = '#e74c3c';
-                    setTimeout(() => {
-                        point.style.fill = '#f39c12';
-                        point.classList.remove('animate');
-                    }, 1000);
-                }, index * 200);
-            });
-        }
-        
-        function resetView() {
-            const elements = document.querySelectorAll('.animate, .flowing');
-            elements.forEach(el => {
-                el.classList.remove('animate', 'flowing');
-                el.style.filter = '';
-            });
-        }
-        
-        function showInfo(content) {
-            document.getElementById('info-content').innerHTML = content;
-            document.getElementById('info-panel').style.display = 'block';
-        }
-        
-        function closeInfo() {
-            document.getElementById('info-panel').style.display = 'none';
-        }
-        
-        // 节点点击事件
-        document.querySelectorAll('.node').forEach(node => {
-            node.addEventListener('click', function() {
-                const info = this.getAttribute('data-info');
-                showInfo(`<strong>${info}</strong><br>
-                    这是KANLinear网络中的一个节点。每个节点通过可学习的B样条函数与其他节点连接，
-                    实现了比传统线性层更强的表达能力和可解释性。`);
+                    item.style.background = 'linear-gradient(135deg, #f8f9ff, #e8f4fd)';
+                    item.style.color = '';
+                }, 2000);
             });
         });
-        
-        // 连接路径点击事件
-        document.querySelectorAll('.connection').forEach(conn => {
-            conn.addEventListener('click', function() {
-                const connection = this.getAttribute('data-connection');
-                showInfo(`<strong>连接: ${connection}</strong><br>
-                    这条路径使用B样条函数进行激活，具有以下特点：<br>
-                    • 可学习的激活函数形状<br>
-                    • 自适应网格点调整<br>
-                    • L1正则化约束<br>
-                    • 支持梯度反向传播`);
+
+        // 动态统计数字动画
+        function animateNumbers() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.textContent.replace('+', ''));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = stat.textContent.includes('+') ? target + '+' : target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
+                    }
+                }, 50);
             });
+        }
+
+        // 页面加载完成后启动数字动画
+        window.addEventListener('load', () => {
+            setTimeout(animateNumbers, 1000);
         });
-        
-        // 初始化动画效果
-        setTimeout(() => {
-            animateConnections();
-        }, 1000);
     </script>
 </body>
 </html>
