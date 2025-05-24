@@ -114,7 +114,7 @@
         }
 
         .about-grid {
-            display: grid;
+    
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
@@ -123,6 +123,7 @@
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
+            text-align: center;
         }
 
         .about-text strong {
