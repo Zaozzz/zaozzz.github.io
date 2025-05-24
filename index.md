@@ -738,7 +738,7 @@
                         <div class="publication-title">
                             📊 Digital Talent Demand Model via Big Data & ML
                         </div>
-                        <div class="publication-venue">Software Guide 2025, CCF-T3 (<a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/" target="_blank">arXiv:2502.02428</a>)</div>
+                        <div class="publication-venue">Software Guide 2025, CCF-T3</div>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
