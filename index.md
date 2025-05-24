@@ -763,6 +763,18 @@
                         <div><strong>Top 1</strong> - Shandong Jianzhu University Transportation Technology Competition</div>
                     </div>
                     <div class="award-item">
+                    <div class="award-icon">🥇</div>
+                    <div><strong>First Prize</strong> - Blue Bridge Cup</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>First Prize</strong> - Shandong Province Software Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>First Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
                         <div class="award-icon">🥇</div>
                         <div><strong>First Class</strong> - Shandong Jianzhu University Scholarship</div>
                     </div>
@@ -1015,15 +1027,3 @@
     </script>
 </body>
 </html>
-                        <div><strong>First Prize</strong> - Blue Bridge Cup</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥇</div>
-                        <div><strong>First Prize</strong> - Shandong Province Software Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥇</div>
-                        <div><strong>First Prize</strong> - China University Student Computer Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥇</div>
