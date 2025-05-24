@@ -766,7 +766,7 @@
                     </div>
 
 
-            <section class="section fade-in">
+           <section class="section fade-in">
                 <h2><i class="fas fa-trophy"></i>Competition Awards</h2>
                 <div class="awards-grid">
                     <div class="award-item">
@@ -856,6 +856,7 @@
                 </div>
             </section>
 
+
             <section class="section fade-in">
                 <h2><i class="fas fa-certificate"></i>Certifications & Skills</h2>
                 <div class="skills-grid">
@@ -877,7 +878,8 @@
                 </div>
             </section>
 
-            <section class="section fade-in">
+ <section class="section fade-in">
+                <h2><i class="fas fa-code"></i>Software Copyrights & Social Practice</h2>
                 <div class="two-column-grid">
                     <div>
                         <h3><i class="fas fa-code"></i> Software Copyrights</h3>
@@ -906,6 +908,9 @@
                     </div>
 
                     <div>
+                        <h3><i class="fas fa-hands-helping"></i> Social Practice & Volunteer Service</h3>
+                        <div class="experience-timeline">
+                            <div class="timeline-item">
                                 <h4>🔧 Social Practice</h4>
                                 <ul>
                                     <li>📌 October 2023 - Huawei HAG Project Practice</li>
@@ -923,6 +928,8 @@
                     </div>
                 </div>
             </section>
+
+
 
             <section class="section hobbies-section fade-in">
                 <h2><i class="fas fa-heart"></i>Hobbies & Interests</h2>
