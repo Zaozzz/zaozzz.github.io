@@ -1163,6 +1163,591 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .benchmark-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .knowledge-domains {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .domain-box {
+            flex: 1;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .domain-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .cardiology-knowledge { 
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+        }
+
+        .cross-modal { 
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+        }
+
+        .complex-diagnosis { 
+            background: linear-gradient(135deg, #e91e63, #ad1457);
+            color: white;
+        }
+
+        .domain-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .domain-subtitle {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .evaluation-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 200px;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .flow-step:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .ecg-data { 
+            background: linear-gradient(135deg, #16a085, #1abc9c);
+            color: white;
+        }
+
+        .llm-models { 
+            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+            color: white;
+        }
+
+        .evaluation { 
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+        }
+
+        .benchmark-results { 
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+        }
+
+        .step-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .step-content {
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+
+        .arrow {
+            font-size: 24px;
+            color: #e74c3c;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .control-panel {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        .qa-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .qa-card {
+            background: white;
+            border: 2px solid #ecf0f1;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .qa-card:hover {
+            border-color: #e74c3c;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .qa-question {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .qa-answer {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .ecg-visual {
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(90deg, #e74c3c, #c0392b, #e74c3c);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ecg-wave {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: white;
+            transform: translateY(-50%);
+        }
+
+        .ecg-wave::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            animation: ecgPulse 2s infinite;
+        }
+
+        @keyframes ecgPulse {
+            0% { left: 0; opacity: 1; }
+            100% { left: calc(100% - 20px); opacity: 0.3; }
+        }
+
+        .publications-section {
+            padding: 40px;
+            background: white;
+        }
+
+        .publication-item {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 25px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .publication-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .publication-venue {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .publication-venue a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .publication-venue a:hover {
+            text-decoration: underline;
+        }
+
+        .active-flow {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
+        }
+
+        .info-tooltip {
+            position: absolute;
+            background: #2d3748;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .flow-step:hover .info-tooltip {
+            opacity: 1;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-box {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .metric-box:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .metric-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .knowledge-domains {
+                flex-direction: column;
+            }
+            
+            .evaluation-flow {
+                flex-direction: column;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis</h3>
+            <div class="publication-venue">Interactive Evaluation Framework for Medical Large Language Models in Heart Disease Diagnosis</div>
+        </div>
+
+        <div class="model-section">
+            <h3 class="section-title">Evaluation Pipeline</h3>
+            
+            <div class="evaluation-flow">
+                <div class="flow-step ecg-data" onclick="highlightStep(this)">
+                    <div class="step-title">📊 ECG Data</div>
+                    <div class="ecg-visual">
+                        <div class="ecg-wave"></div>
+                    </div>
+                    <div class="step-content">MIMIC-IV-ECG dataset with clinical reports and diagnostic annotations</div>
+                    <div class="info-tooltip">Multi-modal ECG data with expert annotations</div>
+                </div>
+
+                <div class="arrow">➡️</div>
+
+                <div class="flow-step llm-models" onclick="highlightStep(this)">
+                    <div class="step-title">🤖 LLM Models</div>
+                    <div class="step-content">GPT-4, Claude, Gemini, and specialized medical LLMs evaluation</div>
+                    <div class="info-tooltip">Comprehensive evaluation across multiple LLM architectures</div>
+                </div>
+
+                <div class="arrow">➡️</div>
+
+                <div class="flow-step evaluation" onclick="highlightStep(this)">
+                    <div class="step-title">🔍 Evaluation</div>
+                    <div class="step-content">Multi-dimensional assessment: accuracy, clinical reasoning, safety</div>
+                    <div class="info-tooltip">Holistic evaluation framework for medical AI</div>
+                </div>
+
+                <div class="arrow">➡️</div>
+
+                <div class="flow-step benchmark-results" onclick="highlightStep(this)">
+                    <div class="step-title">📈 Results</div>
+                    <div class="step-content">Comprehensive benchmarking scores and performance analysis</div>
+                    <div class="info-tooltip">Detailed performance metrics and clinical insights</div>
+                </div>
+            </div>
+
+            <h3 class="section-title">Performance Metrics</h3>
+            
+            <div class="metrics-grid">
+                <div class="metric-box" onclick="animateMetric(this)">
+                    <div class="metric-value">87.3%</div>
+                    <div class="metric-label">Diagnostic Accuracy</div>
+                </div>
+                <div class="metric-box" onclick="animateMetric(this)">
+                    <div class="metric-value">92.1%</div>
+                    <div class="metric-label">Knowledge Recall</div>
+                </div>
+                <div class="metric-box" onclick="animateMetric(this)">
+                    <div class="metric-value">84.6%</div>
+                    <div class="metric-label">Clinical Reasoning</div>
+                </div>
+                <div class="metric-box" onclick="animateMetric(this)">
+                    <div class="metric-value">95.8%</div>
+                    <div class="metric-label">Safety Score</div>
+                </div>
+            </div>
+
+            <h3 class="section-title">Sample Q&A Examples</h3>
+            
+            <div class="qa-examples">
+                <div class="qa-card" onclick="highlightCard(this)">
+                    <div class="qa-question">Q: What are the typical ECG changes in typhoid fever-induced myocarditis?</div>
+                    <div class="qa-answer">A: Typical ECG changes include low voltage QRS complexes, ST-segment depression, and T-wave inversions, indicative of myocardial inflammation and injury.</div>
+                </div>
+                <div class="qa-card" onclick="highlightCard(this)">
+                    <div class="qa-question">Q: How does management of hypertrophic obstructive cardiomyopathy differ from non-obstructive?</div>
+                    <div class="qa-answer">A: HOCM management focuses on relieving left ventricular outflow tract obstruction with medications like beta-blockers, while non-obstructive focuses more on symptom relief and preventing sudden cardiac death.</div>
+                </div>
+                <div class="qa-card" onclick="highlightCard(this)">
+                    <div class="qa-question">Q: What is the significance of a family history in Short QT Syndrome diagnosis?</div>
+                    <div class="qa-answer">A: Family history of sudden cardiac death is a significant risk factor and suggests a higher likelihood of inheriting the condition, necessitating genetic screening and early intervention.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let animationTimeout;
+        
+        function highlightDomain(element) {
+            // Remove previous highlights
+            document.querySelectorAll('.domain-box').forEach(el => {
+                el.classList.remove('active-flow');
+            });
+            
+            // Add highlight to clicked element
+            element.classList.add('active-flow');
+            
+            // Remove highlight after 3 seconds
+            setTimeout(() => {
+                element.classList.remove('active-flow');
+            }, 3000);
+        }
+        
+        function highlightStep(element) {
+            // Remove previous highlights
+            document.querySelectorAll('.flow-step').forEach(el => {
+                el.classList.remove('active-flow');
+            });
+            
+            // Add highlight to clicked element
+            element.classList.add('active-flow');
+            
+            // Remove highlight after 2 seconds
+            setTimeout(() => {
+                element.classList.remove('active-flow');
+            }, 2000);
+        }
+        
+        function highlightCard(element) {
+            element.style.transform = 'translateY(-10px) scale(1.02)';
+            element.style.boxShadow = '0 15px 35px rgba(231, 76, 60, 0.3)';
+            element.style.borderColor = '#e74c3c';
+            
+            setTimeout(() => {
+                element.style.transform = 'translateY(0) scale(1)';
+                element.style.boxShadow = '0 8px 25px rgba(0,0,0,0.1)';
+                element.style.borderColor = '#ecf0f1';
+            }, 1500);
+        }
+        
+        function animateMetric(element) {
+            element.style.transform = 'scale(1.2) rotate(5deg)';
+            element.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+            
+            setTimeout(() => {
+                element.style.transform = 'scale(1)';
+                element.style.background = 'linear-gradient(135deg, #95a5a6, #7f8c8d)';
+            }, 800);
+        }
+        
+        function animateEvaluation() {
+            resetAnimation();
+            
+            // First animate domains
+            const domains = document.querySelectorAll('.domain-box');
+            domains.forEach((domain, index) => {
+                setTimeout(() => {
+                    domain.classList.add('active-flow');
+                    setTimeout(() => {
+                        domain.classList.remove('active-flow');
+                    }, 1000);
+                }, index * 500);
+            });
+            
+            // Then animate evaluation flow
+            setTimeout(() => {
+                const steps = document.querySelectorAll('.flow-step');
+                let delay = 0;
+                steps.forEach((step, index) => {
+                    setTimeout(() => {
+                        step.classList.add('active-flow');
+                        setTimeout(() => {
+                            step.classList.remove('active-flow');
+                        }, 1200);
+                    }, delay);
+                    delay += 800;
+                });
+            }, 2000);
+            
+            // Finally animate metrics
+            setTimeout(() => {
+                const metrics = document.querySelectorAll('.metric-box');
+                metrics.forEach((metric, index) => {
+                    setTimeout(() => {
+                        animateMetric(metric);
+                    }, index * 200);
+                });
+            }, 6000);
+            
+            // Animate QA cards
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.qa-card');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        highlightCard(card);
+                    }, index * 300);
+                });
+            }, 7000);
+        }
+        
+        function resetAnimation() {
+            clearTimeout(animationTimeout);
+            
+            document.querySelectorAll('.domain-box, .flow-step').forEach(el => {
+                el.classList.remove('active-flow');
+            });
+            
+            document.querySelectorAll('.metric-box').forEach(metric => {
+                metric.style.transform = 'scale(1)';
+                metric.style.background = 'linear-gradient(135deg, #95a5a6, #7f8c8d)';
+            });
+            
+            document.querySelectorAll('.qa-card').forEach(card => {
+                card.style.transform = 'translateY(0) scale(1)';
+                card.style.boxShadow = '0 8px 25px rgba(0,0,0,0.1)';
+                card.style.borderColor = '#ecf0f1';
+            });
+        }
+        
+        // Add ECG wave animation enhancement
+        document.querySelectorAll('.ecg-visual').forEach(visual => {
+            visual.addEventListener('click', function() {
+                const wave = this.querySelector('.ecg-wave::before');
+                this.style.background = 'linear-gradient(90deg, #27ae60, #2ecc71, #27ae60)';
+                setTimeout(() => {
+                    this.style.background = 'linear-gradient(90deg, #e74c3c, #c0392b, #e74c3c)';
+                }, 1000);
+            });
+        });
+        
+        // Add heartbeat effect to ECG sections
+        setInterval(() => {
+            document.querySelectorAll('.ecg-visual').forEach(visual => {
+                visual.style.opacity = '0.8';
+                setTimeout(() => {
+                    visual.style.opacity = '1';
+                }, 100);
+            });
+        }, 2000);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
                     <div class="publication-item">
                         <div class="publication-title">
                             🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis
