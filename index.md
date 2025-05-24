@@ -1247,7 +1247,6 @@
     <div class="publication-item">
             <h3>🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis</h3>
             <div class="publication-venue">2025 (arXiv:2502.17475)</div>
-            <h4>Sample Q&A Examples</h4>
             <div class="qa-examples">
                 <div class="qa-card" onclick="highlightCard(this)">
                     <div class="qa-question">Q: What are the typical ECG changes in typhoid fever-induced myocarditis?</div>
