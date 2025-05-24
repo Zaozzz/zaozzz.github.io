@@ -399,8 +399,8 @@
     <div class="container">
         <header class="header fade-in">
             <div class="avatar">
-                <i class="fas fa-user-graduate"></i>
-                <img src="11.jpg"> 
+              
+                <img   class="fas fa-user-graduate" src="11.jpg"> 
             </div>
             <h1>王旭</h1>
             <p class="subtitle">人工智能专业 · 多模态大模型研究 · 山东建筑大学</p>
