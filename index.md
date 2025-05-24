@@ -696,7 +696,7 @@
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🤖</div>
-                        <div>Chairman of Teddy Intelligent Studio & Head of Deep Studio AI Department</div>
+                        <div>Chairman of Teddy Intelligent Studio</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">🔥</div>
@@ -878,7 +878,6 @@
             </section>
 
             <section class="section fade-in">
-                <h2><i class="fas fa-code"></i>Software Copyrights & Social Practice</h2>
                 <div class="two-column-grid">
                     <div>
                         <h3><i class="fas fa-code"></i> Software Copyrights</h3>
