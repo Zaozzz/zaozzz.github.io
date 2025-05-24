@@ -897,14 +897,6 @@
                         <li>😬 Deep Learning-based Dental Image Segmentation System</li>
                     </ul>
                 </div>
-                <div class="timeline-item">
-                    <h4>⏳ Pending Approval</h4>
-                    <ul>
-                        <li>🏥 Hospital CT Image Data Management System</li>
-                        <li>👁️ Fundus Image-based Disease Classification System</li>
-                        <li>❤️ Intelligent Cardiac Diagnosis Segmentation System</li>
-                    </ul>
-                </div>
             </div>
         </div>
 
