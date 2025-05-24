@@ -920,18 +920,6 @@
     </div>
 </section>
 
-
-            <section class="section hobbies-section fade-in">
-                <h2><i class="fas fa-heart"></i>Hobbies & Interests</h2>
-                <div style="text-align: center; padding: 20px;">
-                    <p style="font-size: 1.1rem; margin-bottom: 20px;">
-                        🎶 Music enthusiast! Particularly enjoy songs by Huang Xiaoyun
-                    </p>
-                    <p style="font-size: 1.1rem;">
-                        🎬 Film and TV drama fan, especially works starring Ju Jingyi
-                    </p>
-                </div>
-            </section>
         </main>
     </div>
 
