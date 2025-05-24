@@ -965,6 +965,7 @@
         <div class="publication-item">
             <h3>🧠 SM-CBNet: A Speech-Based Parkinson's Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM</h3>
             <div class="publication-venue">ICIC 2025, CCF-C Oral</div>
+        <div class="qa-examples">
             <div class="control-panel">
                 <button class="play-button" onclick="animateDataFlow()">▶️ Animate Data Flow</button>
                 <button class="play-button" onclick="resetAnimation()">🔄 Reset</button>
@@ -1026,7 +1027,7 @@
                         </div>
                     </div>
                 </div>
-
+</div>
                 <div class="arrow">➡️</div>
 
                 <!-- Output Section -->
@@ -1497,7 +1498,7 @@
 <body>
     <div class="publication-item">
             <h3>🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis</h3>
-            <div class="publication-venue">2025(arXiv:2502.17475)</div>
+            <div class="publication-venue">2025 (arXiv:2502.17475)</div>
             <h4>Sample Q&A Examples</h4>
             <div class="qa-examples">
                 <div class="qa-card" onclick="highlightCard(this)">
