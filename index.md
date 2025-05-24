@@ -688,7 +688,7 @@
                 <div class="awards-grid">
                     <div class="award-item">
                         <div class="award-icon">🧠</div>
-                        <div>Mental Health Committee Member & Teaching Assistant</div>
+                        <div>Mental Health Committee Member & Teacher Assistant</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">👨‍💻</div>
@@ -697,6 +697,10 @@
                     <div class="award-item">
                         <div class="award-icon">🤖</div>
                         <div>Chairman of Teddy Intelligent Studio & Head of Deep Studio AI Department</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🔥</div>
+                        <div>Chairman of Deep Studio AI Department</div>
                     </div>
                     <div class="award-item">
                         <div class="award-icon">📝</div>
@@ -714,13 +718,13 @@
                 <div class="publications-grid">
                     <div class="publication-item">
                         <div class="publication-title">
-                            🧠 SM-CBNet: Speech-based Parkinson's Disease Diagnosis Model
+                            🧠 SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM
                         </div>
                         <div class="publication-venue">ICIC 2025, CCF-C, Oral Presentation</div>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
-                            🫀 ECG-Expert-QA: Cardiovascular Disease Diagnosis Medical Large Language Model Evaluation Benchmark
+                            🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis
                         </div>
                         <div class="publication-venue">2025 (<a href="https://arxiv.org/abs/2502.17475" target="_blank">arXiv:2502.17475</a>)</div>
                     </div>
@@ -731,6 +735,13 @@
                         <div class="publication-venue">2025 (<a href="https://arxiv.org/abs/2502.02428" target="_blank">arXiv:2502.02428</a>)</div>
                     </div>
                     <div class="publication-item">
+                    <div class="publication-item">
+                        <div class="publication-title">
+                            📊 Digital Talent Demand Model via Big Data & ML
+                        </div>
+                        <div class="publication-venue">Software Guide 2025, CCF-T3 (<a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/" target="_blank">arXiv:2502.02428</a>)</div>
+                    </div>
+                    <div class="publication-item">
                         <div class="publication-title">
                             🛣️ Real-time Dynamic Scale-aware Fusion for Road Damage Detection
                         </div>
@@ -738,9 +749,15 @@
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
-                            🚗 DAPONet: Real-time Road Damage Detection
+                            🚗 DAPONet: Real-Time Road Damage Detection
                         </div>
                         <div class="publication-venue">Applied Sciences 2025, JCR-Q1</div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-title">
+                            🚗 YOLO-FireAD: Efficient Fire Detection 
+                        </div>
+                        <div class="publication-venue">ICIC 2025, CCF-C</div>
                     </div>
                     <div class="publication-item">
                         <div class="publication-title">
@@ -892,9 +909,6 @@
                     </div>
 
                     <div>
-                        <h3><i class="fas fa-hands-helping"></i> Social Practice & Volunteer Service</h3>
-                        <div class="experience-timeline">
-                            <div class="timeline-item">
                                 <h4>🔧 Social Practice</h4>
                                 <ul>
                                     <li>📌 October 2023 - Huawei HAG Project Practice</li>
