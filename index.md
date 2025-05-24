@@ -1500,68 +1500,7 @@
             <h3>🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis</h3>
             <div class="publication-venue">2025(arXiv:2502.17475)</div>
         </div>
-
-        <div class="model-section">
-            <h3 class="section-title">Evaluation Pipeline</h3>
-            
-            <div class="evaluation-flow">
-                <div class="flow-step ecg-data" onclick="highlightStep(this)">
-                    <div class="step-title">📊 ECG Data</div>
-                    <div class="ecg-visual">
-                        <div class="ecg-wave"></div>
-                    </div>
-                    <div class="step-content">MIMIC-IV-ECG dataset with clinical reports and diagnostic annotations</div>
-                    <div class="info-tooltip">Multi-modal ECG data with expert annotations</div>
-                </div>
-
-                <div class="arrow">➡️</div>
-
-                <div class="flow-step llm-models" onclick="highlightStep(this)">
-                    <div class="step-title">🤖 LLM Models</div>
-                    <div class="step-content">GPT-4, Claude, Gemini, and specialized medical LLMs evaluation</div>
-                    <div class="info-tooltip">Comprehensive evaluation across multiple LLM architectures</div>
-                </div>
-
-                <div class="arrow">➡️</div>
-
-                <div class="flow-step evaluation" onclick="highlightStep(this)">
-                    <div class="step-title">🔍 Evaluation</div>
-                    <div class="step-content">Multi-dimensional assessment: accuracy, clinical reasoning, safety</div>
-                    <div class="info-tooltip">Holistic evaluation framework for medical AI</div>
-                </div>
-
-                <div class="arrow">➡️</div>
-
-                <div class="flow-step benchmark-results" onclick="highlightStep(this)">
-                    <div class="step-title">📈 Results</div>
-                    <div class="step-content">Comprehensive benchmarking scores and performance analysis</div>
-                    <div class="info-tooltip">Detailed performance metrics and clinical insights</div>
-                </div>
-            </div>
-
-            <h3 class="section-title">Performance Metrics</h3>
-            
-            <div class="metrics-grid">
-                <div class="metric-box" onclick="animateMetric(this)">
-                    <div class="metric-value">87.3%</div>
-                    <div class="metric-label">Diagnostic Accuracy</div>
-                </div>
-                <div class="metric-box" onclick="animateMetric(this)">
-                    <div class="metric-value">92.1%</div>
-                    <div class="metric-label">Knowledge Recall</div>
-                </div>
-                <div class="metric-box" onclick="animateMetric(this)">
-                    <div class="metric-value">84.6%</div>
-                    <div class="metric-label">Clinical Reasoning</div>
-                </div>
-                <div class="metric-box" onclick="animateMetric(this)">
-                    <div class="metric-value">95.8%</div>
-                    <div class="metric-label">Safety Score</div>
-                </div>
-            </div>
-
             <h3 class="section-title">Sample Q&A Examples</h3>
-            
             <div class="qa-examples">
                 <div class="qa-card" onclick="highlightCard(this)">
                     <div class="qa-question">Q: What are the typical ECG changes in typhoid fever-induced myocarditis?</div>
@@ -1576,7 +1515,6 @@
                     <div class="qa-answer">A: Family history of sudden cardiac death is a significant risk factor and suggests a higher likelihood of inheriting the condition, necessitating genetic screening and early intervention.</div>
                 </div>
             </div>
-        </div>
     </div>
 
     <script>
