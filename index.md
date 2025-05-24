@@ -906,7 +906,7 @@
                 <div class="timeline-item">
                     <h4>🔧 Social Practice</h4>
                     <ul>
-                        <li>🛠️ December 2023 - Jicheng Electronics Dynamometer Card Diagnosis Practice</li>
+                        <li>🛠️ December 2023 - Jicheng Electronics Diagnosis Practice</li>
                         <li>📊 June 2024 - Linyi Sports Bureau Data Analysis</li>
                         <li>🧪 January 2025 - Shandong University Data Research and Analysis Practice</li>
                     </ul>
