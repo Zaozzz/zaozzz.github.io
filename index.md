@@ -716,507 +716,6 @@
             <section class="section fade-in">
                 <h2><i class="fas fa-file-alt"></i>Academic Publications</h2>
                 <div class="publications-grid">
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Neural Network Model</title>
-    <style>
-        .model-section {
-            padding: 40px;
-            background: #f8fafc;
-        }
-
-        .section-title {
-            font-size: 1.8em;
-            color: #2d3748;
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .model-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            margin: 40px 0;
-            position: relative;
-        }
-
-        .input-section, .cnn-section, .bilstm-section, .output-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .layer-box {
-            padding: 15px 25px;
-            border-radius: 12px;
-            font-weight: 600;
-            text-align: center;
-            min-width: 100px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .layer-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .conv-layer { background: #fed7d7; color: #c53030; }
-        .batchnorm-layer { background: #c6f6d5; color: #2f855a; }
-        .maxpool-layer { background: #bee3f8; color: #2b6cb0; }
-        .lstm-layer { background: #fbb6ce; color: #b83280; }
-        .dense-layer { background: #faf089; color: #744210; }
-        .sigmoid-layer { background: #c3dafe; color: #3182ce; }
-
-        .input-signal {
-            width: 100px;
-            height: 60px;
-            background: linear-gradient(45deg, #ffd89b 0%, #19547b 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .input-signal:hover {
-            transform: scale(1.1);
-        }
-
-        .feature-maps {
-            display: flex;
-            gap: 10px;
-        }
-
-        .feature-map {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .feature-map:hover {
-            transform: scale(1.1);
-        }
-
-        .map1 { background: linear-gradient(45deg, #00c6ff, #0072ff); }
-        .map2 { background: linear-gradient(45deg, #a8edea, #fed6e3); }
-        .map3 { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
-
-        .arrow {
-            font-size: 24px;
-            color: #4a5568;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.5; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.1); }
-        }
-
-        .bilstm-complex {
-            border: 2px dashed #b83280;
-            padding: 20px;
-            border-radius: 15px;
-            background: rgba(251, 182, 206, 0.1);
-            position: relative;
-        }
-
-        .bilstm-title {
-            position: absolute;
-            top: -12px;
-            left: 20px;
-            background: white;
-            padding: 0 10px;
-            font-weight: bold;
-            color: #b83280;
-        }
-
-        .lstm-flow {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .lstm-outputs {
-            display: flex;
-            gap: 8px;
-        }
-
-        .lstm-output {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .lstm-output:hover {
-            transform: scale(1.2);
-        }
-
-        .control-panel {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .play-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 0 10px;
-        }
-
-        .play-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .publications-section {
-            padding: 40px;
-            background: white;
-        }
-        .publication-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .publication-title {
-            font-size: 1.1em;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .publication-venue {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        .publication-venue a {
-            color: #ffd700;
-            text-decoration: none;
-        }
-
-        .publication-venue a:hover {
-            text-decoration: underline;
-        }
-
-        .active-flow {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 107, 107, 0.6);
-        }
-
-        .info-tooltip {
-            position: absolute;
-            background: #2d3748;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            top: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-            white-space: nowrap;
-        }
-
-        .layer-box:hover .info-tooltip {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .model-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .arrow {
-                transform: rotate(90deg);
-            }
-        }
-    </style>
-</head>
-
-           <section class="section fade-in">
-                <h2><i class="fas fa-trophy"></i>Competition Awards</h2>
-                <div class="awards-grid">
-                    <div class="award-item">
-                        <div class="award-icon">🏆</div>
-                        <div><strong>Top 1</strong> - Major 2023-2024 Academic Year</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🏆</div>
-                        <div><strong>Top 1</strong> - Shandong Jianzhu University Transportation Technology Competition</div>
-                    </div>
-                    <div class="award-item">
-                    <div class="award-icon">🥇</div>
-                    <div><strong>First Prize</strong> - Blue Bridge Cup</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥇</div>
-                        <div><strong>First Prize</strong> - Shandong Province Software Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥇</div>
-                        <div><strong>First Prize</strong> - China University Student Computer Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥇</div>
-                        <div><strong>First Class</strong> - Shandong Jianzhu University Scholarship</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - CUMCM Mathematical Modeling</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - National College Student Olympiad Mathematics Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - Blue Bridge Cup</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - China University Student Computer Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - National Digital Media Creativity Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥈</div>
-                        <div><strong>Second Prize</strong> - Shandong Province Software Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Career Planning Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - China University Student Computer Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Raicom Robot Developer Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - National Digital Media Creativity Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Teddy Cup Data Analysis Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🥉</div>
-                        <div><strong>Third Prize</strong> - Shandong Province Software Design Competition</div>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">🔥</div>
-                        <div><strong>Top 112</strong> - Astar Baidu Programming Competition</div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="section fade-in">
-                <h2><i class="fas fa-certificate"></i>Certifications & Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Industrial Certifications</h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-check"></i>Industrial Internet Platform Development Engineer</li>
-                            <li><i class="fas fa-check"></i>Mathematical Modeling Ability Certification</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Huawei Ascend Certifications</h3>
-                        <ul class="skill-list">
-                            <li><i class="fas fa-check"></i>Ascend C Programming Intermediate Developer</li>
-                            <li><i class="fas fa-check"></i>CANN Application Development Engineer</li>
-                            <li><i class="fas fa-check"></i>Atlas 200I DK A2 Developer</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
- <section class="section fade-in">
-    <div class="two-column-grid">
-        <div>
-            <h3><i class="fas fa-code"></i> Software Copyrights</h3>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <h4>✅ Authorized Projects</h4>
-                    <ul>
-                        <li>🌾 Deep Learning-based Agricultural Pest Detection System</li>
-                        <li>🏙️ Urban Hazard Real-time Monitoring and Warning System</li>
-                        <li>🧠 U-Net-based Brain Tumor Segmentation Platform</li>
-                        <li>🖼️ Intelligent Image Recognition Processing Software</li>
-                        <li>👁️‍🗨️ CityEye Smart City Monitoring System</li>
-                        <li>🫁 Deep Learning Pneumonia Detection System</li>
-                        <li>😬 Deep Learning-based Dental Image Segmentation System</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <h3><i class="fas fa-hands-helping"></i> Social Practice & Volunteer Service</h3>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <h4>🔧 Social Practice</h4>
-                    <ul>
-                        <li>🛠️ December 2023 - Jicheng Electronics</li>
-                        <li>📊 June 2024 - Linyi Sports Bureau Data Analysis</li>
-                        <li>🧪 January 2025 - Shandong University Data Research and Analysis Practice</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h4>❤️ Volunteer Service</h4>
-                    <li>Total Volunteer Hours: 196 hours and Outstanding Volunteer Awards: 14 times</li>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        </main>
-    </div>
-
-    <script>
-        // Scroll progress bar
-        window.addEventListener('scroll', () => {
-            const scrollProgress = document.getElementById('scrollProgress');
-            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            scrollProgress.style.width = scrollPercent + '%';
-        });
-
-        // Element fade-in animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Publication item click interaction with luxury effect
-        document.querySelectorAll('.publication-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.style.background = 'linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(26, 26, 26, 0.9))';
-                item.style.borderColor = 'rgba(255, 215, 0, 0.8)';
-                item.style.boxShadow = '0 0 40px rgba(255, 215, 0, 0.4)';
-                
-                setTimeout(() => {
-                    item.style.background = '';
-                    item.style.borderColor = '';
-                    item.style.boxShadow = '';
-                }, 2500);
-            });
-        });
-
-        // Dynamic number animation
-        function animateNumbers() {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.textContent.replace('+', ''));
-                let current = 0;
-                const increment = target / 60;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        stat.textContent = stat.textContent.includes('+') ? target + '+' : target;
-                        clearInterval(timer);
-                    } else {
-                        stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
-                    }
-                }, 40);
-            });
-        }
-
-        // Add luxury shimmer effect to cards on scroll
-        function addShimmerEffect() {
-            const cards = document.querySelectorAll('.stat-card, .skill-category, .contact-card');
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.classList.add('shimmer');
-                    setTimeout(() => {
-                        card.classList.remove('shimmer');
-                    }, 3000);
-                }, index * 200);
-            });
-        }
-
-        // Start animations after page load
-        window.addEventListener('load', () => {
-            setTimeout(animateNumbers, 1000);
-            setTimeout(addShimmerEffect, 2000);
-        });
-
-        // Add luxury glow effect on hover for award items
-        document.querySelectorAll('.award-item').forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                item.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3)';
-            });
-            
-            item.addEventListener('mouseleave', () => {
-                item.style.boxShadow = '';
-            });
-        });
-
-        // Enhanced floating elements animation
-        document.querySelectorAll('.floating-element').forEach((element, index) => {
-            element.addEventListener('animationiteration', () => {
-                const randomDelay = Math.random() * 2;
-                element.style.animationDelay = randomDelay + 's';
-            });
-        });
-    </script>
-</body>
-
 <body>
         <div class="publication-item">
             <h3>🧠 SM-CBNet: A Speech-Based Parkinson's Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM</h3>
@@ -1952,4 +1451,505 @@
                 </div>
             </section>
 
+                
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Neural Network Model</title>
+    <style>
+        .model-section {
+            padding: 40px;
+            background: #f8fafc;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .model-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .input-section, .cnn-section, .bilstm-section, .output-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .layer-box {
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-align: center;
+            min-width: 100px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .layer-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .conv-layer { background: #fed7d7; color: #c53030; }
+        .batchnorm-layer { background: #c6f6d5; color: #2f855a; }
+        .maxpool-layer { background: #bee3f8; color: #2b6cb0; }
+        .lstm-layer { background: #fbb6ce; color: #b83280; }
+        .dense-layer { background: #faf089; color: #744210; }
+        .sigmoid-layer { background: #c3dafe; color: #3182ce; }
+
+        .input-signal {
+            width: 100px;
+            height: 60px;
+            background: linear-gradient(45deg, #ffd89b 0%, #19547b 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .input-signal:hover {
+            transform: scale(1.1);
+        }
+
+        .feature-maps {
+            display: flex;
+            gap: 10px;
+        }
+
+        .feature-map {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-map:hover {
+            transform: scale(1.1);
+        }
+
+        .map1 { background: linear-gradient(45deg, #00c6ff, #0072ff); }
+        .map2 { background: linear-gradient(45deg, #a8edea, #fed6e3); }
+        .map3 { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
+
+        .arrow {
+            font-size: 24px;
+            color: #4a5568;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .bilstm-complex {
+            border: 2px dashed #b83280;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(251, 182, 206, 0.1);
+            position: relative;
+        }
+
+        .bilstm-title {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-weight: bold;
+            color: #b83280;
+        }
+
+        .lstm-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .lstm-outputs {
+            display: flex;
+            gap: 8px;
+        }
+
+        .lstm-output {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lstm-output:hover {
+            transform: scale(1.2);
+        }
+
+        .control-panel {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .publications-section {
+            padding: 40px;
+            background: white;
+        }
+        .publication-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .publication-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .publication-venue {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .publication-venue a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .publication-venue a:hover {
+            text-decoration: underline;
+        }
+
+        .active-flow {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.6);
+        }
+
+        .info-tooltip {
+            position: absolute;
+            background: #2d3748;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .layer-box:hover .info-tooltip {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .model-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+           <section class="section fade-in">
+                <h2><i class="fas fa-trophy"></i>Competition Awards</h2>
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <div class="award-icon">🏆</div>
+                        <div><strong>Top 1</strong> - Major 2023-2024 Academic Year</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🏆</div>
+                        <div><strong>Top 1</strong> - Shandong Jianzhu University Transportation Technology Competition</div>
+                    </div>
+                    <div class="award-item">
+                    <div class="award-icon">🥇</div>
+                    <div><strong>First Prize</strong> - Blue Bridge Cup</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>First Prize</strong> - Shandong Province Software Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>First Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥇</div>
+                        <div><strong>First Class</strong> - Shandong Jianzhu University Scholarship</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - CUMCM Mathematical Modeling</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - National College Student Olympiad Mathematics Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - Blue Bridge Cup</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - National Digital Media Creativity Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥈</div>
+                        <div><strong>Second Prize</strong> - Shandong Province Software Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Career Planning Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - China University Student Computer Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Raicom Robot Developer Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - National Digital Media Creativity Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Global Campus AI Algorithm Elite Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Teddy Cup Data Analysis Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🥉</div>
+                        <div><strong>Third Prize</strong> - Shandong Province Software Design Competition</div>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">🔥</div>
+                        <div><strong>Top 112</strong> - Astar Baidu Programming Competition</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section fade-in">
+                <h2><i class="fas fa-certificate"></i>Certifications & Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Industrial Certifications</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i>Industrial Internet Platform Development Engineer</li>
+                            <li><i class="fas fa-check"></i>Mathematical Modeling Ability Certification</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Huawei Ascend Certifications</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i>Ascend C Programming Intermediate Developer</li>
+                            <li><i class="fas fa-check"></i>CANN Application Development Engineer</li>
+                            <li><i class="fas fa-check"></i>Atlas 200I DK A2 Developer</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+ <section class="section fade-in">
+    <div class="two-column-grid">
+        <div>
+            <h3><i class="fas fa-code"></i> Software Copyrights</h3>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h4>✅ Authorized Projects</h4>
+                    <ul>
+                        <li>🌾 Deep Learning-based Agricultural Pest Detection System</li>
+                        <li>🏙️ Urban Hazard Real-time Monitoring and Warning System</li>
+                        <li>🧠 U-Net-based Brain Tumor Segmentation Platform</li>
+                        <li>🖼️ Intelligent Image Recognition Processing Software</li>
+                        <li>👁️‍🗨️ CityEye Smart City Monitoring System</li>
+                        <li>🫁 Deep Learning Pneumonia Detection System</li>
+                        <li>😬 Deep Learning-based Dental Image Segmentation System</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3><i class="fas fa-hands-helping"></i> Social Practice & Volunteer Service</h3>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h4>🔧 Social Practice</h4>
+                    <ul>
+                        <li>🛠️ December 2023 - Jicheng Electronics</li>
+                        <li>📊 June 2024 - Linyi Sports Bureau Data Analysis</li>
+                        <li>🧪 January 2025 - Shandong University Data Research and Analysis Practice</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>❤️ Volunteer Service</h4>
+                    <li>Total Volunteer Hours: 196 hours and Outstanding Volunteer Awards: 14 times</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+    </div>
+
+    <script>
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Element fade-in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Publication item click interaction with luxury effect
+        document.querySelectorAll('.publication-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.style.background = 'linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(26, 26, 26, 0.9))';
+                item.style.borderColor = 'rgba(255, 215, 0, 0.8)';
+                item.style.boxShadow = '0 0 40px rgba(255, 215, 0, 0.4)';
+                
+                setTimeout(() => {
+                    item.style.background = '';
+                    item.style.borderColor = '';
+                    item.style.boxShadow = '';
+                }, 2500);
+            });
+        });
+
+        // Dynamic number animation
+        function animateNumbers() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.textContent.replace('+', ''));
+                let current = 0;
+                const increment = target / 60;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = stat.textContent.includes('+') ? target + '+' : target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
+                    }
+                }, 40);
+            });
+        }
+
+        // Add luxury shimmer effect to cards on scroll
+        function addShimmerEffect() {
+            const cards = document.querySelectorAll('.stat-card, .skill-category, .contact-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('shimmer');
+                    setTimeout(() => {
+                        card.classList.remove('shimmer');
+                    }, 3000);
+                }, index * 200);
+            });
+        }
+
+        // Start animations after page load
+        window.addEventListener('load', () => {
+            setTimeout(animateNumbers, 1000);
+            setTimeout(addShimmerEffect, 2000);
+        });
+
+        // Add luxury glow effect on hover for award items
+        document.querySelectorAll('.award-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.boxShadow = '';
+            });
+        });
+
+        // Enhanced floating elements animation
+        document.querySelectorAll('.floating-element').forEach((element, index) => {
+            element.addEventListener('animationiteration', () => {
+                const randomDelay = Math.random() * 2;
+                element.style.animationDelay = randomDelay + 's';
+            });
+        });
+    </script>
+</body>
 </html>
