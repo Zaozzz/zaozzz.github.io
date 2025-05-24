@@ -906,7 +906,6 @@
                 <div class="timeline-item">
                     <h4>🔧 Social Practice</h4>
                     <ul>
-                        <li>📌 October 2023 - Huawei HAG Project Practice</li>
                         <li>🛠️ December 2023 - Jicheng Electronics Dynamometer Card Diagnosis Practice</li>
                         <li>📊 June 2024 - Linyi Sports Bureau Data Analysis</li>
                         <li>🧪 January 2025 - Shandong University Data Research and Analysis Practice</li>
