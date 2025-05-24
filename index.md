@@ -911,7 +911,6 @@
         });
     </script>
 </body>
-</html>
 
 
 
@@ -1849,8 +1848,8 @@
     </div>
 </section>
 
-        </main>
-    </div>
+  
+
 
     <script>
         // Scroll progress bar
@@ -1950,5 +1949,5 @@
             });
         });
     </script>
-</body>
+
 </html>
