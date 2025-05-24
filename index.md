@@ -1166,9 +1166,6 @@
 
 
 
-
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1397,17 +1394,6 @@
             padding: 40px;
             background: white;
         }
-
-        .publication-item {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            padding: 25px;
-            margin: 15px 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
         .publication-item:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
@@ -1509,7 +1495,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="publication-item">
         <div class="header">
             <h3>🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis</h3>
             <div class="publication-venue">2025(arXiv:2502.17475)</div>
@@ -1741,19 +1727,6 @@
 </body>
 </html>
 
-
-
-
-
-
-
-
-                    <div class="publication-item">
-                        <div class="publication-title">
-                            🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis
-                        </div>
-                        <div class="publication-venue">2025 (<a href="https://arxiv.org/abs/2502.17475" target="_blank">arXiv:2502.17475</a>)</div>
-                    </div>
                     <div class="publication-item">
                         <div class="publication-title">
                             📡 RIE-SenseNet: Riemannian Manifold Embedding for Industrial Sensor Signals
