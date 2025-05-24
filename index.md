@@ -735,7 +735,6 @@
                         <div class="publication-venue">2025 (<a href="https://arxiv.org/abs/2502.02428" target="_blank">arXiv:2502.02428</a>)</div>
                     </div>
                     <div class="publication-item">
-                    <div class="publication-item">
                         <div class="publication-title">
                             📊 Digital Talent Demand Model via Big Data & ML
                         </div>
