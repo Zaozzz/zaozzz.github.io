@@ -716,7 +716,6 @@
             <section class="section fade-in">
                 <h2><i class="fas fa-file-alt"></i>Academic Publications</h2>
                 <div class="publications-grid">
-                   <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1006,8 +1005,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🧠 Interactive Neural Network Model</h1>
-            <p>Speech-Based Parkinson's Disease Diagnosis with CNN+BiLSTM</p>
+            <h1>🧠 SM-CBNet: A Speech-Based Parkinson's Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM</h1>
+            <p>ICIC 2025, CCF-C Oral</p>
         </div>
 
         <div class="model-section">
@@ -1091,24 +1090,6 @@
                         <span>Output</span>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="publications-section">
-            <h2 class="section-title">📚 Related Publications</h2>
-            
-            <div class="publication-item">
-                <div class="publication-title">
-                    🧠 SM-CBNet: A Speech-Based Parkinson's Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM
-                </div>
-                <div class="publication-venue">ICIC 2025, CCF-C, Oral</div>
-            </div>
-            
-            <div class="publication-item">
-                <div class="publication-title">
-                    🫀 ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in Heart Disease Diagnosis
-                </div>
-                <div class="publication-venue">2025 (<a href="https://arxiv.org/abs/2502.17475" target="_blank">arXiv:2502.17475</a>)</div>
             </div>
         </div>
     </div>
