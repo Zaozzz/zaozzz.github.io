@@ -37,7 +37,7 @@ layout: homepage
 
 ## 🏆 Competitions  
 
-- 🏆 Top 2 - China International Collegiate Innovation Competition - Shandong Provincial Division 
+- 🏆 Top 2 - China International Collegiate Innovation Competition - Shandong Provincial
 - 🏆 Top 1 - Major 2023-2024 Academic Year  
 - 🏆 Top 1 - Shandong Jianzhu University Transportation Technology Competition
 - 🥇 First Prize - China International Collegiate Innovation Competition
