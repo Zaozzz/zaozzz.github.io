@@ -14,10 +14,10 @@ layout: homepage
 
 ## 🛠️ Service 
 
-- 🧠 Psychological Committee Member & Teaching Assistant  
-- 👨‍💻 Student Member of CCF and SDAAI  
-- 🤖 Chair of Teddy Intelligent Studio & Deep Studio AI Department  
-- 📝 Reviewer at ICME, EMNLP, AVSS and BMVC
+- 🧠 Psychological Committee Member & Teaching Assistant
+- 👨‍💻 Student Member of CCF and SDAAI
+- 🤖 Chair of Teddy Intelligent Studio & Deep Studio AI Department
+- 📝 Reviewer at ICME, AVSS
 - ✅ Core Developer at Huawei Ascend Community
 
 ---
@@ -37,8 +37,10 @@ layout: homepage
 
 ## 🏆 Competitions  
 
+- 🏆 Top 2 - China International Collegiate Innovation Competition - Shandong Provincial Division 
 - 🏆 Top 1 - Major 2023-2024 Academic Year  
-- 🏆 Top 1 - Shandong Jianzhu University Transportation Technology Competition  
+- 🏆 Top 1 - Shandong Jianzhu University Transportation Technology Competition
+- 🥇 First Prize - China International Collegiate Innovation Competition
 - 🥇 First Prize - Blue Bridge Cup  
 - 🥇 First Prize - Shandong Province Software Design Competition  
 - 🥇 First Prize - China University Student Computer Design Competition
@@ -102,7 +104,7 @@ layout: homepage
 
 **❤️ Volunteering**
 
-- ⏱️ Total Volunteer Hours: 196 hours  
+- ⏱️ Total Volunteer Hours: 197 hours  
 - 🏅 Outstanding Volunteer Award: Received 14 times  
 
 ---
