@@ -112,6 +112,6 @@ layout: homepage
 
 ## 🎵 Hobbies & Interests
 
-🎶 Music lover! I enjoy songs by [Xiaoyun Huang](https://m.weibo.cn/u/5043186742).
+🎶 Music lover! I enjoy songs by [Chost Huang](https://m.weibo.cn/u/5043186742).
 
 🎬 Avid fan of movies & dramas—especially those starring [Kiku](https://www.weibo.com/u/3669102477?eqid=e8af036900096f8200000004645b8833).
