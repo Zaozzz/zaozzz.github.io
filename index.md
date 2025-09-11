@@ -12,7 +12,7 @@ I’m an enthusiastic undergraduate student (Class of 2023) majoring in **Artifi
 
 ## Publications  
 
-- [SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM (ICIC, CCF-C, Oral), 2025](https://link.springer.com/chapter/10.1007/978-981-95-0030-7_4)  
+- [SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN+BiLSTM (ICIC, LNBI, CCF-C, Oral), 2025](https://link.springer.com/chapter/10.1007/978-981-95-0030-7_4)  
 - [HVLO-YOLO: An Ultra-Lightweight Detection Model for High-voltage Line Obstacles (BMVC, CORE-A, CCF-C, Poster), 2025](https://openreview.net/forum?id=2FnI6Pmx4J#discussion)
 - [Real-Time Dynamic Scale-Aware Fusion for Road Damage Detection (JRTIP, JCR-Q2, IF=3.0), 2025](https://link.springer.com/article/10.1007/s11554-025-01634-w)  
 - [DAPONet: Real-Time Road Damage Detection (Applied Sciences, JCR-Q1, IF=2.5), 2025](https://www.mdpi.com/2076-3417/15/3/1470)  
