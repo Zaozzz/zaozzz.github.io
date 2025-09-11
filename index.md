@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me 
 
-I’m an enthusiastic undergraduate student (Class of 2023) majoring in **Artificial Intelligence** at the [School of Computer Science and Artificial Intelligence](https://www.sdjzu.edu.cn/jsjkx/index.htm), [Shandong Jianzhu University](https://www.sdjzu.edu.cn/).
+I’m an enthusiastic undergraduate student (Class of 2023) majoring in **Artificial Intelligence** at the [School of Computer and Artificial Intelligence](https://www.sdjzu.edu.cn/jsjkx/index.htm), [Shandong Jianzhu University](https://www.sdjzu.edu.cn/).
 
 <span style="color:#FF6666">Currently seeking Master's or Ph.D. opportunities starting in Fall 2027.</span>  
 
