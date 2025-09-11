@@ -17,7 +17,7 @@ I’m an enthusiastic undergraduate student (Class of 2023) majoring in **Artifi
 - [Real-Time Dynamic Scale-Aware Fusion for Road Damage Detection (JRTIP, JCR-Q2, IF=3.0), 2025](https://link.springer.com/article/10.1007/s11554-025-01634-w)  
 - [DAPONet: Real-Time Road Damage Detection (Applied Sciences, JCR-Q1, IF=2.5), 2025](https://www.mdpi.com/2076-3417/15/3/1470)  
 - [YOLO-FireAD: Efficient Fire Detection (ICIC, CCF-C, Poster), 2025](http://poster-openaccess.com)
-- [Digital Talent Demand Model via Big Data & ML (Software Guide, CCF-T3), 2025](https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/)  
+- [Digital Talent Demand Model via Big Data & ML (Software Guide, CACJ, CCF-T3), 2025](https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/)  
 
 ---
 
