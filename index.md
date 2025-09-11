@@ -25,5 +25,5 @@ layout: homepage
 
 ## Hobbies & Interests
 
-- 🎶 Music lover! I enjoy songs by [Chost Huang](https://m.weibo.cn/u/5043186742).
-- 🎬 Avid fan of movies & dramas—especially those starring [Kiku](https://m.weibo.cn/u/3669102477).
+- Music lover! I enjoy songs by [Chost Huang](https://m.weibo.cn/u/5043186742).
+- Fan of movies & dramas—especially those starring [Kiku](https://m.weibo.cn/u/3669102477).
