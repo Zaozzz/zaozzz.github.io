@@ -23,6 +23,4 @@ I’m an enthusiastic undergraduate student (Class of 2023) majoring in **Artifi
 
 ## Hobbies
 
-Music lover! I enjoy songs by [Chost Huang](https://m.weibo.cn/u/5043186742).
-
-Fan of movies & dramas—especially those starring [Kiku](https://m.weibo.cn/u/3669102477).
+Music lover! I enjoy songs by [Chost Huang](https://m.weibo.cn/u/5043186742). Fan of movies & dramas—especially those starring [Kiku](https://m.weibo.cn/u/3669102477).
