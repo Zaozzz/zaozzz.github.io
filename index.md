@@ -23,15 +23,15 @@ I’m an enthusiastic undergraduate student (Class of 2023) majoring in **Artifi
 
 ---
 
-## Hobbies
-
-Music lover! I enjoy songs by [Chost Huang](https://m.weibo.cn/u/5043186742). Fan of movies & dramas—especially those starring [Kiku](https://m.weibo.cn/u/3669102477).
-
----
-
-## 🛠️ Service 
+## Service 
 
 - Psychological Committee Member & Teaching Assistant
 - Student Member of CCF and SDAAI
 - Reviewer at Transactions on Knowledge and Data Engineering（CCF-A, Q1, TOP, IF10+）、ICME 2025 (CCF-B, CORE-A)、AVSS 2025 (CORE-B)
 - Core Developer at Huawei Ascend Community
+
+---
+
+## Hobbies
+
+Music lover! I enjoy songs by [Chost Huang](https://m.weibo.cn/u/5043186742). Fan of movies & dramas—especially those starring [Kiku](https://m.weibo.cn/u/3669102477).
