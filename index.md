@@ -28,7 +28,7 @@ I’m an enthusiastic undergraduate student (Class of 2023) majoring in **Artifi
 ## Service 
 
 - Student Member of CCF and SDAAI
-- Reviewer of Transactions on Knowledge and Data Engineering（CCF-A, JCR-Q1, TOP, IF=10.4）、ICME 2025 (CCF-B, CORE-A)、AVSS 2025 (CORE-B)
+- Reviewer of Transactions on Knowledge and Data Engineering (CCF-A, JCR-Q1, TOP, IF=10.4), IEEE International Conference on Multimedia & Expo 2025 (CCF-B, CORE-A), IEEE Conference on Advanced Video and Signal Based Surveillance 2025 (CORE-B)
 - Core Developer of Huawei Ascend Community
 
 ---
