@@ -18,7 +18,7 @@ I’m an enthusiastic undergraduate student (Class of 2023) majoring in **Artifi
 - [ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis(IEEE International Conference on Multimedia & Expo, CCF-B, Oral), 2025.6](https://arxiv.org/abs/2408.08849v1)
 - [SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN + BiLSTM Integration (International Conference on Intelligent Computing, CCF-C, Oral), 2025.7](https://link.springer.com/chapter/10.1007/978-981-95-0030-7_4)
 - [YOLO-FireAD: Efficient Fire Detection (International Conference on Intelligent Computing, CCF-C, Poster), 2025.7](http://poster-openaccess.com)
-- [MiT Loss: Medical Image-aware Transfer-calibrated Loss for Enhanced Classification(Measurement Science and Technology, JCR-Q1, CAST-T1, IF=3.4), 2025.10](https://github.com/JEFfersusu/MiT_loss)
+- [MiT Loss: Medical Image-aware Transfer-calibrated Loss for Enhanced Classification(Measurement Science and Technology, JCR-Q1, CAST-T1, IF=3.4), 2025.10](https://iopscience.iop.org/article/10.1088/1361-6501/ae08d8)
 - [HVLO-YOLO: An Ultra-Lightweight Detection Model for High-voltage Line Obstacles (British Machine Vision Conference, CCF-C, CORE-A, Poster), 2025.11](https://openreview.net/forum?id=2FnI6Pmx4J#discussion)
 
 
