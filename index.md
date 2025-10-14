@@ -29,9 +29,8 @@ I come form Shandong Jianzhu University, Jinan, China and FUXI AI Lab, Changsha,
 
 ## Service 
 
-- Student Member of CCF and SDAAI
+- Student Member of AAAI, CCF and SDAAI
 - Reviewer of Transactions on Knowledge and Data Engineering (CCF-A, JCR-Q1, TOP, IF=10.4), IEEE International Conference on Multimedia & Expo 2025 (CCF-B, CORE-A), IEEE Conference on Advanced Video and Signal Based Surveillance 2025 (CORE-B)
-- Core Developer of Huawei Ascend Community
 
 ---
 
