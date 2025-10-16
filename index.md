@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me 
 
-I come form Shandong Jianzhu University, Jinan, China and FUXI AI Lab, Changsha, China.
+I come form Shandong Jianzhu University, Jinan, China.
 
 <span style="color:#FF6666">Currently seeking M.Phil or Ph.D. opportunities starting in Fall 2027.</span>  
 
