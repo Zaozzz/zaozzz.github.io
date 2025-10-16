@@ -21,7 +21,7 @@ I come form Shandong Jianzhu University, Jinan, China and FUXI AI Lab, Changsha,
 - [MiT Loss: Medical Image-aware Transfer-calibrated Loss for Enhanced Classification (Measurement Science and Technology, JCR-Q1, CAST-T1, IF=3.4), 2025.9](https://iopscience.iop.org/article/10.1088/1361-6501/ae08d8)
 - [An Ultra-Efficient Dual-Domain Network for Pumping Units Fault Diagnosis (Measurement Science and Technology, JCR-Q1, CAST-T1, IF=3.4), 2025.10](https://iopscience.iop.org/article/10.1088/1361-6501/ae08d8)
 - [HVLO-YOLO: An Ultra-Lightweight Detection Model for High-voltage Line Obstacles (British Machine Vision Conference, CCF-C, CORE-A, Poster), 2025.11](https://openreview.net/forum?id=2FnI6Pmx4J#discussion)
-- [AIRhealth: An AIoT AR-Glasses Framework for Multimodal Dietary Recognition and Personalized Nutrition Management (IEEE CloudCom 2025, CORE-A, Poster), 2025.12](https://openreview.net/forum?id=2FnI6Pmx4J#discussion)
+- [AIRhealth: An AIoT AR-Glasses Framework for Multimodal Dietary Recognition and Personalized Nutrition Management (IEEE CloudCom 2025, CORE-C, Poster), 2025.12](https://openreview.net/forum?id=2FnI6Pmx4J#discussion)
 - [Octopus: Entropy-Controlled Science Fiction Literature Generation with Persistent Memory-Context (Association for the Advancement of Artificial Intelligence, CCF-A, Oral), 2026.1](https://openreview.net/forum?id=q7FTAFKUxj&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DAAAI.org%2F2026%2FInnovative_Applications_of_AI%2FAuthors%23your-submissions))
 
 
