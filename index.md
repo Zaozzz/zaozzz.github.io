@@ -13,11 +13,13 @@ layout: homepage
 - [SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN + BiLSTM Integration (International Conference on Intelligent Computing, CCF-C, Oral), 2025.7](https://link.springer.com/chapter/10.1007/978-981-95-0030-7_4)
 - [YOLO-FireAD: Efficient Fire Detection (International Conference on Intelligent Computing, CCF-C, Poster), 2025.7](http://poster-openaccess.com)
 - [MiT Loss: Medical Image-aware Transfer-calibrated Loss for Enhanced Classification (Measurement Science and Technology, JCR-Q1, CAST-T1, IF=3.4), 2025.9](https://iopscience.iop.org/article/10.1088/1361-6501/ae08d8)
-- [An Ultra-Efficient Dual-Domain Network for Pumping Units Fault Diagnosis (Measurement Science and Technology, JCR-Q1, CAST-T1, IF=3.4), 2025.10](https://iopscience.iop.org/article/10.1088/1361-6501/ae08d8)
+- [An Ultra-Efficient Dual-Domain Network for Pumping Units Fault Diagnosis (Measurement Science and Technology, JCR-Q1, CAST-T1, IF=3.4), 2025.10](https://iopscience.iop.org/article/10.1088/1361-6501/ae1318)
 - [HVLO-YOLO: An Ultra-Lightweight Detection Model for High-voltage Line Obstacles (British Machine Vision Conference, CCF-C, CORE-A, Poster), 2025.11](https://openreview.net/forum?id=2FnI6Pmx4J#discussion)
+- [TPVG-YOLO: Twined-Path Convolution and Vision-Gated Fusion for Efficient PCB Defect Detection（Signal, Image and Video Processing, JCR-Q3, IF=2.1）], 2025.11](https://openreview.net/forum?id=q7FTAFKUxj&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DAAAI.org%2F2026%2FInnovative_Applications_of_AI%2FAuthors%23your-submissions))
 - [AIRhealth: An AIoT AR-Glasses Framework for Multimodal Dietary Recognition and Personalized Nutrition Management (IEEE CloudCom, CORE-C, Poster), 2025.12](https://openreview.net/forum?id=2FnI6Pmx4J#discussion)
 - [ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in ECG (Machine Learning for Biological and Medical Image Big Data Workshop on 2025 IEEE International Conference on Bioinformatics and Biomedicine), 2025.12](https://github.com/Zaozzz/ECG-Expert-QA)
 - [Octopus: Entropy-Controlled Science Fiction Literature Generation with Persistent Memory-Context (Association for the Advancement of Artificial Intelligence, CCF-A, Oral), 2026.1](https://openreview.net/forum?id=q7FTAFKUxj&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DAAAI.org%2F2026%2FInnovative_Applications_of_AI%2FAuthors%23your-submissions))
+
 
 
 
