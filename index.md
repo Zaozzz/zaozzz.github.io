@@ -18,7 +18,7 @@ layout: homepage
 - [TPVG-YOLO: Twined-Path Convolution and Vision-Gated Fusion for Efficient PCB Defect Detection（Signal, Image and Video Processing, JCR-Q3, IF=2.1), 2025.11](https://link.springer.com/article/10.1007/s11760-025-04952-5))
 - [AIRhealth: An AIoT AR-Glasses Framework for Multimodal Dietary Recognition and Personalized Nutrition Management (IEEE CloudCom, CORE-C, Poster), 2025.12](https://www.bing.com)
 - [ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in ECG (Machine Learning for Biological and Medical Image Big Data Workshop on 2025 IEEE International Conference on Bioinformatics and Biomedicine), 2025.12](https://github.com/Zaozzz/ECG-Expert-QA)
-- [Octopus: Entropy-Controlled Science Fiction Literature Generation with Persistent Memory-Context (Association for the Advancement of Artificial Intelligence, CCF-A, Oral), 2026.1](https://openreview.net/forum?id=q7FTAFKUxj&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DAAAI.org%2F2026%2FInnovative_Applications_of_AI%2FAuthors%23your-submissions))
+- [Octopus: Entropy-Controlled Science Fiction Literature Generation with Persistent Memory-Context (Association for the Advancement of Artificial Intelligence, CCF-A, Oral), 2026.1](https://www.bing.com))
 
 
 
@@ -28,7 +28,7 @@ layout: homepage
 ## Service 
 
 - Student Member of AAAI, CCF and SDAAI
-- Reviewer of Transactions on Knowledge and Data Engineering (CCF-A, JCR-Q1, TOP, IF=10.4), IEEE International Conference on Multimedia & Expo 2025 (CCF-B, CORE-A), IEEE Conference on Advanced Video and Signal Based Surveillance 2025 (CORE-B)
+- Reviewer of Transactions on Knowledge and Data Engineering (CCF-A, JCR-Q1, TOP, IF=10.4), IEEE International Conference on Multimedia & Expo 2025 & 2026 (CCF-B, CORE-A), IEEE Conference on Advanced Video and Signal Based Surveillance 2025 (CORE-B)
 
 ---
 
