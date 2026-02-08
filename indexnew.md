@@ -9,15 +9,14 @@ layout: homepage
 - [DAPONet: A Dual Attention and Partially Overparameterized Network for Real-Time Road Damage Detection (Applied Sciences, JCR-Q1, IF=2.5), 2025.1](https://www.mdpi.com/2076-3417/15/3/1470)
 - [Real-time dynamic scale-aware fusion detection network: take road damage detection as an example (Journal of Real-Time Image Processing, JCR-Q2, IF=3.0), 2025.2](https://link.springer.com/article/10.1007/s11554-025-01634-w)  
 - [Construction of Digital Talent Demand and Ability Model Based on Recruitment Big Data and Machine Learning (Software Guide, CACJ, CCF-T3), 2025.4](https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/)  
-- [ECG-Chat: A Large ECG-Language Model for Cardiac Disease Diagnosis (IEEE International Conference on Multimedia & Expo, CCF-B, Oral), 2025.6](https://arxiv.org/abs/2408.08849v1)
 - [SM-CBNet: A Speech-Based Parkinson’s Disease Diagnosis Model with SMOTE–ENN and CNN + BiLSTM Integration (International Conference on Intelligent Computing, CCF-C, Oral), 2025.7](https://link.springer.com/chapter/10.1007/978-981-95-0030-7_4)
 - [YOLO-FireAD: Efficient Fire Detection (International Conference on Intelligent Computing, CCF-C, Poster), 2025.7](http://poster-openaccess.com)
 - [MiT Loss: Medical Image-aware Transfer-calibrated Loss for Enhanced Classification (Measurement Science and Technology, JCR-Q1, CAST-T1, IF=3.4), 2025.9](https://iopscience.iop.org/article/10.1088/1361-6501/ae08d8)
 - [An Ultra-Efficient Dual-Domain Network for Pumping Units Fault Diagnosis (Measurement Science and Technology, JCR-Q1, CAST-T1, IF=3.4), 2025.10](https://iopscience.iop.org/article/10.1088/1361-6501/ae1318)
 - [HVLO-YOLO: An Ultra-Lightweight Detection Model for High-voltage Line Obstacles (British Machine Vision Conference, CCF-C, CORE-A, Poster), 2025.11](https://github.com/JEFfersusu/HVLO-YOLO)
 - [TPVG-YOLO: Twined-Path Convolution and Vision-Gated Fusion for Efficient PCB Defect Detection（Signal, Image and Video Processing, JCR-Q3, IF=2.1), 2025.11](https://link.springer.com/article/10.1007/s11760-025-04952-5))
-- [AIRhealth: An AIoT AR-Glasses Framework for Multimodal Dietary Recognition and Personalized Nutrition Management (IEEE CloudCom, CORE-C, Poster), 2025.12](https://www.bing.com)
-- [ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in ECG (Machine Learning for Biological and Medical Image Big Data Workshop on 2025 IEEE International Conference on Bioinformatics and Biomedicine), 2025.12](https://github.com/Zaozzz/ECG-Expert-QA)
+- [AIRhealth: An AIoT AR-Glasses Framework for Multimodal Dietary Recognition and Personalized Nutrition Management (IEEE CloudCom, CORE-C, Poster), 2025.12](https://ieeexplore.ieee.org/abstract/document/11331402)
+- [ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in ECG (Machine Learning for Biological and Medical Image Big Data Workshop on 2025 IEEE International Conference on Bioinformatics and Biomedicine), 2025.12](https://ieeexplore.ieee.org/document/11356744)
 - [Octopus: Entropy-Controlled Science Fiction Literature Generation with Persistent Memory-Context (Association for the Advancement of Artificial Intelligence, CCF-A, Oral), 2026.1](https://www.bing.com))
 
 
