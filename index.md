@@ -24,7 +24,7 @@ layout: homepage
 
 ## 核心研究与代表成果
 
-### 自然语言处理（NLP）
+### 自然语言处理
 - **Octopus: Entropy-Controlled Science Fiction Literature Generation with Persistent Memory-Context**  
   AAAI 2026（CCF-A，Oral）｜第一作者｜2026.01  
   会议分类为Oral，被吴岩、三丰、骑桶人、楚惜刀、北星和骆灵左等知名科幻小说家公开表扬。  
@@ -53,7 +53,7 @@ layout: homepage
   Paper: https://iopscience.iop.org/article/10.1088/1361-6501/ae08d8  
   Code: https://github.com/JEFfersusu/MiT_loss
 
-### 信号处理与医学智能
+### 信号处理
 - **ECG-Expert-QA: A Benchmark for Evaluating Medical Large Language Models in ECG**  
   BIBM 2025（CCF-B，Poster）｜第一作者｜2025.12  
   Github Stars 30+, awesome-mmps (CMU) 收录  
@@ -70,7 +70,7 @@ layout: homepage
   Paper: https://link.springer.com/chapter/10.1007/978-981-95-0030-7_4  
   Code: https://github.com/Zaozzz/SM-CBNet
 
-### 目标检测与工业视觉
+### 目标检测
 - **Real-time dynamic scale-aware fusion detection network: take road damage detection as an example**  
   Journal of Real-Time Image Processing（JCR-Q2）｜第二作者｜2025.02  
   单篇被引用10+  
