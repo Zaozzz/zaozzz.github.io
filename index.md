@@ -8,10 +8,9 @@ layout: homepage
 
 ## 教育经历
 - **2023.09 - 至今**｜山东建筑大学｜人工智能（本科）
+- [软科世界一流学科排名151位](https://www.shanghairanking.cn/rankings/gras/2025/AS0229)
 - 平均学分绩点：**85.9/100**，专业前 **20%**
 - 获一等奖学金、优秀学生等荣誉
-- 学科参考：软科世界一流学科排名（Artificial Intelligence）
-  - https://www.shanghairanking.cn/rankings/gras/2025/AS0229
 
 ## 工作与科研经历
 - **2024.06 - 2024.09**｜中铁十九局集团第五工程有限公司｜实习生  
