@@ -48,7 +48,7 @@ layout: homepage
   提出一种仅 0.2 GFLOPs / 3.8M 参数 的轻量医学图像分类主干，把 Ghost 卷积（省算力的局部纹理）+ Mobile Mamba（线性时间的全局依赖）+ KAN（可学习非线性校准） 以及 MSFCP/PMB/SMG/DKF 四个协同模块融合起来，在数据集上取得很强的精度–效率权衡。
 
 - **MiT Loss: Medical Image-aware Transfer-calibrated Loss for Enhanced Classification**  
-  Measurement Science and Technology（JCR-Q1）｜共同作者（Weichao Pan; Xu Wang）｜2025.09  
+  Measurement Science and Technology（JCR-Q1）｜第二作者｜2025.09  
   面向小样本医学迁移学习的校准型损失 MiT Loss：把温度缩放 + 熵正则揉进训练过程，专门抑制“医学任务常见的过度自信”，在多类 CNN/Transformer/混合骨干上整体提升 F1/AUC/Kappa（平均 F1 提升约 3.5%–6.8%），并且 Grad-CAM 显示关注区域更合理。  
   Paper: https://iopscience.iop.org/article/10.1088/1361-6501/ae08d8  
   Code: https://github.com/JEFfersusu/MiT_loss
