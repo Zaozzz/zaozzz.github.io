@@ -75,7 +75,7 @@ const Home = ({ posts, session, onSignIn, onSignOut, onOpenPost, onCompose, onAd
           }}>
             <Hero session={session} onSignIn={onSignIn} onSignOut={onSignOut} onCompose={onCompose} onAdmin={onAdmin}/>
           </div>
-          <div style={{ height: 400 }}/>{/* hero spacer */}
+          <div style={{ height: 470 }}/>{/* hero spacer */}
         </>
       )}
 
@@ -118,11 +118,11 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
   <section style={{
     padding: isMobile ? "28px 18px 36px" : "44px 48px 60px",
     maxWidth: 1200, margin: "0 auto",
-    textAlign: "center",
+    textAlign: isMobile ? "center" : "left",
   }}>
     <div style={{
-      display: "flex", flexDirection: "column",
-      alignItems: "center", gap: isMobile ? 20 : 28, marginBottom: 40,
+      display: "flex", flexDirection: isMobile ? "column" : "row",
+      alignItems: isMobile ? "center" : "flex-start", gap: isMobile ? 20 : 32, marginBottom: 40,
     }}>
       <div style={{ position: "relative", flexShrink: 0 }}>
         <div style={{
@@ -135,17 +135,17 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.style.background = 'var(--rust)'; e.target.parentElement.style.color = 'var(--paper)'; e.target.parentElement.style.fontFamily = 'var(--font-cn-display)'; e.target.parentElement.style.fontSize = isMobile ? '32px' : '48px'; e.target.parentElement.style.fontWeight = '600'; e.target.parentElement.textContent = '旭'; }}/>
         </div>
-        <div style={{
+        {isMobile && <div style={{
           position: "absolute", bottom: -4, right: -4,
-          width: isMobile ? 28 : 36, height: isMobile ? 28 : 36, borderRadius: 999,
+          width: 28, height: 28, borderRadius: 999,
           background: "var(--gold-soft)", color: "var(--ink)",
           border: "3px solid var(--paper)",
           display: "flex", alignItems: "center", justifyContent: "center",
-          fontFamily: "var(--font-display)", fontSize: isMobile ? 12 : 16, fontWeight: 600,
-        }}>!</div>
+          fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 600,
+        }}>!</div>}
       </div>
 
-      <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", alignItems: isMobile ? "center" : "flex-start" }}>
         <div style={{
           display: "inline-flex", alignItems: "center", gap: 8,
           padding: "4px 10px", borderRadius: 999,
@@ -167,17 +167,21 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
         <div style={{
           fontFamily: "var(--font-cn-display)", fontSize: isMobile ? 16 : 22, fontWeight: 500,
           color: "var(--ink-soft)", marginBottom: 14,
-        }}>王旭的博客 · engineering · research · life</div>
+        }}>{isMobile ? "王旭的博客 · engineering · research · life" : "王旭 · engineering · research · life"}</div>
         <div style={{
-          fontFamily: "var(--font-serif)", fontSize: 17, lineHeight: 1.6,
+          fontFamily: "var(--font-serif)", fontSize: isMobile ? 15 : 16, lineHeight: 1.6,
           color: "var(--ink-soft)", maxWidth: "60ch", marginBottom: 12,
-        }}>{BIO.blurb}</div>
+        }}>
+          {isMobile
+            ? BIO.blurb
+            : "An undergraduate student at Shandong Jianzhu University, working on Natural Language Processing and Computer Vision — controllable generation, object detection, and medical image classification."}
+        </div>
         <div style={{
-          fontFamily: "var(--font-cn-display)", fontSize: 15,
+          fontFamily: "var(--font-cn-display)", fontSize: isMobile ? 14 : 15,
           color: "var(--ink-mute)", marginBottom: 22,
         }}>{BIO.blurbCn}</div>
 
-        <div style={{ display: "flex", gap: 22, flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ display: "flex", gap: 22, flexWrap: "wrap", alignItems: "center", justifyContent: isMobile ? "center" : "flex-start" }}>
           {BIO.links.map((l) => (
             <a key={l.label} href={l.url} target="_blank" rel="noopener noreferrer" style={{
               fontFamily: "var(--font-sans)", fontSize: 13, color: "var(--ink)",
@@ -200,7 +204,7 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
       </div>
 
       {!isMobile && <div style={{ width: 240, flexShrink: 0, paddingTop: 18 }}>
-        <Eyebrow>Recent</Eyebrow>
+        <Eyebrow>Highlights</Eyebrow>
         <ul style={{
           listStyle: "none", padding: 0, margin: "10px 0 0",
           display: "flex", flexDirection: "column", gap: 6,
