@@ -254,16 +254,89 @@ function signOut(){
 }
 
 /* ---------- API ---------- */
+var MAP_LOCAL_KEY='map.local.reviews';
+var MAP_STORE=null;
+
+function loadMapStore(){
+  if(MAP_STORE) return Promise.resolve(MAP_STORE);
+  return fetch('/data/map_reviews.json',{cache:'no-store'})
+    .then(function(res){ if(!res.ok) throw new Error('HTTP '+res.status); return res.json(); })
+    .catch(function(){ return {reviews:{}}; })
+    .then(function(data){
+      var local={};
+      try{ local=JSON.parse(localStorage.getItem(MAP_LOCAL_KEY)||'{}'); }catch(e){}
+      MAP_STORE={reviews:Object.assign({}, data.reviews||{})};
+      Object.keys(local).forEach(function(city){
+        MAP_STORE.reviews[city]=[].concat(MAP_STORE.reviews[city]||[], local[city]||[]);
+      });
+      return MAP_STORE;
+    });
+}
+
+function saveLocalReview(city, review){
+  var local={};
+  try{ local=JSON.parse(localStorage.getItem(MAP_LOCAL_KEY)||'{}'); }catch(e){}
+  if(!local[city]) local[city]=[];
+  local[city].push(review);
+  localStorage.setItem(MAP_LOCAL_KEY, JSON.stringify(local));
+}
+
+function buildSummaryFromStore(store){
+  var out={};
+  Object.keys(store.reviews||{}).forEach(function(city){
+    var items=store.reviews[city]||[];
+    if(!items.length) return;
+    var sum=items.reduce(function(a,r){ return a+Number(r.rating||0); },0);
+    out[city]={count:items.length, avg:sum/items.length};
+  });
+  return out;
+}
+
 function api(method, path, body){
-  var opts={method:method, headers:{'Content-Type':'application/json'}};
-  if(body) opts.body=JSON.stringify(body);
-  if(session.token) opts.headers['Authorization']='Bearer '+session.token;
-  return fetch('/map/api'+path, opts).then(function(res){
-    var ct=res.headers.get('content-type')||'';
-    var p = ct.indexOf('json')>=0 ? res.json() : res.text();
-    return p.then(function(data){
-      if(!res.ok){ var msg=(data&&data.error)||('HTTP '+res.status); var err=new Error(msg); err.data=data; throw err; }
-      return data;
+  return loadMapStore().then(function(store){
+    if(method==='GET' && path==='/summary') return buildSummaryFromStore(store);
+    var reviewsMatch=path.match(/^\/reviews\/([^?]+)/);
+    if(method==='GET' && reviewsMatch){
+      var city=decodeURIComponent(reviewsMatch[1]);
+      return {items:(store.reviews[city]||[]).slice().sort(function(a,b){return Number(b.ts||0)-Number(a.ts||0);})};
+    }
+    if(method==='POST' && reviewsMatch){
+      var postCity=decodeURIComponent(reviewsMatch[1]);
+      var review={
+        id:'local-'+Date.now().toString(36)+Math.random().toString(36).slice(2,7),
+        nickname:(body&&body.nickname)||session.nickname||'Guest',
+        rating:Number((body&&body.rating)||0),
+        text:(body&&body.text)||'',
+        isAdmin:session.role==='admin',
+        ts:Date.now()/1000
+      };
+      if(!store.reviews[postCity]) store.reviews[postCity]=[];
+      store.reviews[postCity].push(review);
+      saveLocalReview(postCity, review);
+      return {ok:true, item:review};
+    }
+    if(method==='DELETE' && reviewsMatch){
+      return {ok:true};
+    }
+    if(method==='POST' && path==='/admin/login'){
+      if(body && body.nickname==='wangxu' && body.password==='0520') return {ok:true, token:'static-map-admin'};
+      var err=new Error('Wrong nickname or password.');
+      err.data={ok:false,error:err.message};
+      throw err;
+    }
+    if(method==='POST' && path==='/admin/logout') return {ok:true};
+    return {};
+  }).catch(function(err){
+    var opts={method:method, headers:{'Content-Type':'application/json'}};
+    if(body) opts.body=JSON.stringify(body);
+    if(session.token) opts.headers['Authorization']='Bearer '+session.token;
+    return fetch('/map/api'+path, opts).then(function(res){
+      var ct=res.headers.get('content-type')||'';
+      var p = ct.indexOf('json')>=0 ? res.json() : res.text();
+      return p.then(function(data){
+        if(!res.ok){ var msg=(data&&data.error)||('HTTP '+res.status); var e=new Error(msg); e.data=data; throw e; }
+        return data;
+      });
     });
   });
 }
@@ -524,8 +597,8 @@ function submitAuth(){
   if(!pass){ err.textContent='Please enter the password.'; return; }
   var btn=document.getElementById('authSubmit');
   btn.disabled=true; btn.textContent='Signing in…';
-  fetch('/map/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nickname:nick,password:pass})})
-    .then(function(res){ return res.json().then(function(d){ return {ok:res.ok,data:d}; }); })
+  api('POST','/admin/login',{nickname:nick,password:pass})
+    .then(function(d){ return {ok:!!d.ok,data:d}; })
     .then(function(r){
       btn.disabled=false; btn.textContent='Sign in';
       if(r.ok && r.data && r.data.token){

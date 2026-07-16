@@ -1,8 +1,11 @@
-// App.jsx — top-level router with History API
+// App.jsx — top-level router. GitHub Pages cannot serve arbitrary
+// /blog/<post> paths, so the static build uses hash routes.
 
 // Parse current URL path into { view, postId, editId }
 const parseUrl = () => {
-  const path = window.location.pathname.replace(/^\/blog\/?/, "");
+  var path = window.location.hash.replace(/^#\/?/, "");
+  if (!path) path = window.location.pathname.replace(/^\/blog\/?/, "");
+  path = path.replace(/^static\/index\.html\/?/, "");
   if (!path || path === "") return { view: "home", postId: null, editId: null };
   if (path === "write") return { view: "editor", postId: null, editId: null };
   if (path === "admin") return { view: "admin", postId: null, editId: null };
@@ -67,38 +70,42 @@ const App = () => {
       setEditId(e);
     };
     window.addEventListener("popstate", onPop);
-    return () => window.removeEventListener("popstate", onPop);
+    window.addEventListener("hashchange", onPop);
+    return () => {
+      window.removeEventListener("popstate", onPop);
+      window.removeEventListener("hashchange", onPop);
+    };
   }, []);
 
   const openPost = (id) => {
-    history.pushState(null, "", `/blog/${id}`);
+    window.location.hash = `/${id}`;
     setPostId(id);
     setView("article");
     window.scrollTo(0, 0);
   };
 
   const goHome = () => {
-    history.pushState(null, "", "/blog/");
+    window.location.hash = "/";
     setView("home");
     setPostId(null);
     setEditId(null);
   };
 
   const openCompose = () => {
-    history.pushState(null, "", "/blog/write");
+    window.location.hash = "/write";
     setEditId(null);
     setView("editor");
   };
 
   const openEdit = (id) => {
-    history.pushState(null, "", `/blog/edit/${id}`);
+    window.location.hash = `/edit/${id}`;
     setEditId(id);
     setView("editor");
     window.scrollTo(0, 0);
   };
 
   const openAdmin = () => {
-    history.pushState(null, "", "/blog/admin");
+    window.location.hash = "/admin";
     setView("admin");
     window.scrollTo(0, 0);
   };

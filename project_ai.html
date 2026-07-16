@@ -384,44 +384,49 @@
 
   <script>
     let currentRole = null;
+    let projectTasks = null;
+    const PROJECT_LOCAL_KEY = 'project.tasks.local';
+
+    async function loadProjectTasks() {
+      if (projectTasks) return projectTasks;
+      let base = [];
+      try {
+        const res = await fetch('/data/project_tasks.json', { cache: 'no-store' });
+        const data = await res.json();
+        base = Array.isArray(data) ? data : (data.tasks || []);
+      } catch (err) {
+        base = [];
+      }
+      let local = [];
+      try { local = JSON.parse(localStorage.getItem(PROJECT_LOCAL_KEY) || '[]'); } catch (err) {}
+      projectTasks = base.concat(local);
+      return projectTasks;
+    }
+
+    function saveLocalProjectTasks() {
+      const local = (projectTasks || []).filter(t => String(t.id || '').startsWith('local-'));
+      localStorage.setItem(PROJECT_LOCAL_KEY, JSON.stringify(local));
+    }
 
     async function init() {
-      try {
-        const res = await fetch('/api/project/auth/status');
-        const data = await res.json();
-        if (data.ok && data.role) {
-          currentRole = data.role;
-          showDashboard();
-        } else {
-          showAuth();
-        }
-      } catch (err) {
+      const savedRole = localStorage.getItem('project.role');
+      if (savedRole) {
+        currentRole = savedRole;
+        showDashboard();
+      } else {
         showAuth();
       }
     }
 
     async function login(role) {
-      try {
-        const res = await fetch('/api/project/login', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({role: role})
-        });
-        const data = await res.json();
-        if (data.ok) {
-          currentRole = role;
-          showDashboard();
-        } else {
-          alert('Login failed: ' + data.error);
-        }
-      } catch (err) {
-        alert('Connection error');
-      }
+      currentRole = role;
+      localStorage.setItem('project.role', role);
+      showDashboard();
     }
 
     async function logout() {
-      await fetch('/api/project/logout', { method: 'POST' });
       currentRole = null;
+      localStorage.removeItem('project.role');
       showAuth();
     }
 
@@ -452,30 +457,29 @@
       const title = document.getElementById('txtTitle').value;
       const desc = document.getElementById('txtDesc').value;
 
-      const res = await fetch('/api/project/task/create', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({title, desc})
+      await loadProjectTasks();
+      projectTasks.unshift({
+        id: 'local-' + Date.now().toString(36),
+        title,
+        desc,
+        status: 'pending',
+        report: '',
+        created_at: new Date().toISOString()
       });
-      const data = await res.json();
-      if (data.ok) {
-        document.getElementById('formCreateTask').reset();
-        fetchTasks();
-      } else {
-        alert('Failed to deploy task: ' + data.error);
-      }
+      saveLocalProjectTasks();
+      document.getElementById('formCreateTask').reset();
+      fetchTasks();
     }
 
     async function fetchTasks() {
-      const res = await fetch('/api/project/tasks');
-      const data = await res.json();
+      const tasks = await loadProjectTasks();
       const list = document.getElementById('taskList');
-      if (!data.ok || !data.tasks || data.tasks.length === 0) {
+      if (!tasks || tasks.length === 0) {
         list.innerHTML = '<div class="empty" style="color:var(--muted)">No tasks found in stream.</div>';
         return;
       }
 
-      list.innerHTML = data.tasks.map(t => {
+      list.innerHTML = tasks.map(t => {
         const date = new Date(t.created_at).toLocaleString();
         const status = t.status === 'completed' ? 'completed' : 'pending';
         let reportHtml = '';
@@ -540,17 +544,14 @@
         alert("Report cannot be empty");
         return;
       }
-      const res = await fetch('/api/project/task/update', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({id: id, status: 'completed', report: report})
-      });
-      const data = await res.json();
-      if (data.ok) {
-        fetchTasks();
-      } else {
-        alert('Failed to submit report: ' + data.error);
+      await loadProjectTasks();
+      const task = projectTasks.find(t => t.id === id);
+      if (task) {
+        task.status = 'completed';
+        task.report = report;
+        saveLocalProjectTasks();
       }
+      fetchTasks();
     }
 
     function escapeHtml(unsafe) {

@@ -175,30 +175,176 @@ const SEED_THREAD = {};
 
 Object.assign(window, { BIO, CATEGORIES, GIFTS, POSTS, SEED_COMMENTS, SEED_THREAD });
 
+const staticStore = {
+  data: null,
+  async load() {
+    if (this.data) return this.data;
+    const res = await fetch("/blog/data/blog.json", { cache: "no-store" });
+    const data = await res.json();
+    const localPosts = JSON.parse(localStorage.getItem("blog.local.posts") || "{}");
+    const localComments = JSON.parse(localStorage.getItem("blog.local.comments") || "{}");
+    data.posts = Object.assign({}, data.posts || {}, localPosts);
+    data.comments = Object.assign({}, data.comments || {}, localComments);
+    this.data = data;
+    return data;
+  },
+  saveLocalPosts(posts) {
+    localStorage.setItem("blog.local.posts", JSON.stringify(posts));
+  },
+  saveLocalComments(comments) {
+    localStorage.setItem("blog.local.comments", JSON.stringify(comments));
+  },
+};
+
+function sortPosts(posts) {
+  return posts.sort((a, b) => {
+    const ta = Date.parse(a.publishedAt || a.date || "") || 0;
+    const tb = Date.parse(b.publishedAt || b.date || "") || 0;
+    return tb - ta;
+  });
+}
+
+function readTimeFor(blocks) {
+  const text = (blocks || []).map(b => b.text || "").join(" ");
+  return Math.max(1, Math.ceil(text.length / 500)) + " min";
+}
+
+function makeLocalPost(payload, id) {
+  const now = new Date();
+  return Object.assign({}, payload, {
+    id: id || ("local-" + now.getTime().toString(36)),
+    no: payload.no || "Local",
+    date: payload.date || now.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }),
+    publishedAt: payload.publishedAt || now.toISOString(),
+    readTime: payload.readTime || readTimeFor(payload.body),
+    excerpt: payload.excerpt || ((payload.body || []).find(b => b.text)?.text || "").slice(0, 80),
+    gifts: payload.gifts || { flower: 0, coffee: 0, bookmark: 0, bulb: 0, applause: 0 },
+    status: payload.status || "published",
+  });
+}
+
+const staticAPI = {
+  async get(path) {
+    const data = await staticStore.load();
+    if (path.startsWith("/posts?")) {
+      const params = new URLSearchParams(path.split("?")[1] || "");
+      const status = params.get("status") || "published";
+      const limit = Number(params.get("limit") || 50);
+      let items = Object.values(data.posts || {});
+      if (status !== "all") items = items.filter(p => (p.status || "published") === status);
+      return { items: sortPosts(items).slice(0, limit) };
+    }
+    const postMatch = path.match(/^\/posts\/([^/?#]+)$/);
+    if (postMatch) return (data.posts || {})[decodeURIComponent(postMatch[1])] || {};
+    const commentsMatch = path.match(/^\/comments\/([^/?#]+)$/);
+    if (commentsMatch) {
+      const postId = decodeURIComponent(commentsMatch[1]);
+      return { items: (data.comments && data.comments[postId]) || [] };
+    }
+    if (path === "/config") {
+      return { bio: window.BIO || {}, categories: window.CATEGORIES || {} };
+    }
+    return {};
+  },
+  async post(path, body, { nickname } = {}) {
+    const data = await staticStore.load();
+    if (path === "/admin/login") return { ok: true, token: "static-local-admin" };
+    if (path === "/posts") {
+      const post = makeLocalPost(body);
+      const localPosts = JSON.parse(localStorage.getItem("blog.local.posts") || "{}");
+      localPosts[post.id] = post;
+      staticStore.saveLocalPosts(localPosts);
+      data.posts[post.id] = post;
+      return post;
+    }
+    const commentsMatch = path.match(/^\/comments\/([^/?#]+)$/);
+    if (commentsMatch) {
+      const postId = decodeURIComponent(commentsMatch[1]);
+      const comment = {
+        id: "c-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+        user: nickname || "Reader",
+        text: body.text || "",
+        replyTo: body.replyTo || null,
+        time: "now",
+        avatarColor: "pine",
+      };
+      const localComments = JSON.parse(localStorage.getItem("blog.local.comments") || "{}");
+      localComments[postId] = [...(localComments[postId] || []), comment];
+      staticStore.saveLocalComments(localComments);
+      if (!data.comments) data.comments = {};
+      data.comments[postId] = [...(data.comments[postId] || []), comment];
+      return comment;
+    }
+    return { ok: true };
+  },
+  async patch(path, body) {
+    return Object.assign({ ok: true }, body || {});
+  },
+  async put(path, body) {
+    const data = await staticStore.load();
+    const postMatch = path.match(/^\/posts\/([^/?#]+)$/);
+    if (!postMatch) return { ok: true };
+    const id = decodeURIComponent(postMatch[1]);
+    const post = makeLocalPost(body, id);
+    const localPosts = JSON.parse(localStorage.getItem("blog.local.posts") || "{}");
+    localPosts[id] = post;
+    staticStore.saveLocalPosts(localPosts);
+    data.posts[id] = post;
+    return post;
+  },
+  async del(path) {
+    const data = await staticStore.load();
+    const postMatch = path.match(/^\/posts\/([^/?#]+)$/);
+    if (postMatch) {
+      const id = decodeURIComponent(postMatch[1]);
+      const localPosts = JSON.parse(localStorage.getItem("blog.local.posts") || "{}");
+      localPosts[id] = Object.assign({}, data.posts[id] || {}, { status: "deleted" });
+      staticStore.saveLocalPosts(localPosts);
+      if (data.posts[id]) data.posts[id].status = "deleted";
+    }
+    return { json: async () => ({ ok: true }) };
+  },
+};
+
 const API = {
-  get: (path) => fetch(window.API_BASE + path).then(r => r.json()),
-  post: (path, body, { token, nickname } = {}) => {
+  get: (path) => window.STATIC_SITE ? staticAPI.get(path) : fetch(window.API_BASE + path).then(r => {
+    if (!r.ok) throw new Error("API unavailable");
+    return r.json();
+  }).catch(() => staticAPI.get(path)),
+  post: (path, body, opts = {}) => {
+    if (window.STATIC_SITE) return staticAPI.post(path, body, opts);
     const h = { 'Content-Type': 'application/json' };
-    if (token) h['Authorization'] = 'Bearer ' + token;
-    if (nickname) h['X-Nickname'] = nickname;
-    return fetch(window.API_BASE + path, { method: 'POST', headers: h, body: JSON.stringify(body) }).then(r => r.json());
+    if (opts.token) h['Authorization'] = 'Bearer ' + opts.token;
+    if (opts.nickname) h['X-Nickname'] = opts.nickname;
+    return fetch(window.API_BASE + path, { method: 'POST', headers: h, body: JSON.stringify(body) })
+      .then(r => { if (!r.ok) throw new Error("API unavailable"); return r.json(); })
+      .catch(() => staticAPI.post(path, body, opts));
   },
-  patch: (path, body, { token, nickname } = {}) => {
+  patch: (path, body, opts = {}) => {
+    if (window.STATIC_SITE) return staticAPI.patch(path, body, opts);
     const h = { 'Content-Type': 'application/json' };
-    if (token) h['Authorization'] = 'Bearer ' + token;
-    if (nickname) h['X-Nickname'] = nickname;
-    return fetch(window.API_BASE + path, { method: 'PATCH', headers: h, body: JSON.stringify(body) }).then(r => r.json());
+    if (opts.token) h['Authorization'] = 'Bearer ' + opts.token;
+    if (opts.nickname) h['X-Nickname'] = opts.nickname;
+    return fetch(window.API_BASE + path, { method: 'PATCH', headers: h, body: JSON.stringify(body) })
+      .then(r => { if (!r.ok) throw new Error("API unavailable"); return r.json(); })
+      .catch(() => staticAPI.patch(path, body, opts));
   },
-  put: (path, body, { token, nickname } = {}) => {
+  put: (path, body, opts = {}) => {
+    if (window.STATIC_SITE) return staticAPI.put(path, body, opts);
     const h = { 'Content-Type': 'application/json' };
-    if (token) h['Authorization'] = 'Bearer ' + token;
-    if (nickname) h['X-Nickname'] = nickname;
-    return fetch(window.API_BASE + path, { method: 'PUT', headers: h, body: JSON.stringify(body) }).then(r => r.json());
+    if (opts.token) h['Authorization'] = 'Bearer ' + opts.token;
+    if (opts.nickname) h['X-Nickname'] = opts.nickname;
+    return fetch(window.API_BASE + path, { method: 'PUT', headers: h, body: JSON.stringify(body) })
+      .then(r => { if (!r.ok) throw new Error("API unavailable"); return r.json(); })
+      .catch(() => staticAPI.put(path, body, opts));
   },
-  del: (path, { token } = {}) => {
+  del: (path, opts = {}) => {
+    if (window.STATIC_SITE) return staticAPI.del(path, opts);
     const h = {};
-    if (token) h['Authorization'] = 'Bearer ' + token;
-    return fetch(window.API_BASE + path, { method: 'DELETE', headers: h });
+    if (opts.token) h['Authorization'] = 'Bearer ' + opts.token;
+    return fetch(window.API_BASE + path, { method: 'DELETE', headers: h })
+      .then(r => { if (!r.ok) throw new Error("API unavailable"); return r; })
+      .catch(() => staticAPI.del(path, opts));
   },
 };
 Object.assign(window, { API });

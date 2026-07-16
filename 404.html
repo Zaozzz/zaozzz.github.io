@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting</title>
+  <script>
+    (function(){
+      var path = location.pathname;
+      if (path.indexOf('/blog/') === 0) {
+        var rest = path.replace(/^\/blog\/?/, '');
+        location.replace('/blog/' + (rest ? '#/' + rest : ''));
+        return;
+      }
+      var routes = {
+        '/love': '/love.html',
+        '/map': '/map.html',
+        '/analytics': '/analytics/analytics.html',
+        '/project-ai': '/project_ai.html',
+        '/project_ai': '/project_ai.html'
+      };
+      if (routes[path]) {
+        location.replace(routes[path]);
+        return;
+      }
+      location.replace('/');
+    })();
+  </script>
+</head>
+<body><a href="/">Back to home</a></body>
+</html>

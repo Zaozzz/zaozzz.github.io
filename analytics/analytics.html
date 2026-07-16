@@ -737,11 +737,60 @@ function buildLiveFeed(recent) {
 
 let fullData = null;
 
+function analyticsFromStatic(raw) {
+  const daily = raw.daily || {};
+  const days = Object.keys(daily).sort();
+  const countries = {};
+  let totalVisits = 0;
+  let totalUnique = 0;
+  const dailyStats = days.map(date => {
+    const row = daily[date] || {};
+    let visits = 0;
+    let unique = 0;
+    Object.keys(row).forEach(country => {
+      const v = Number(row[country].pv || 0);
+      const u = Number(row[country].uv || 0);
+      visits += v;
+      unique += u;
+      if (!countries[country]) countries[country] = { country, country_display: country, visits: 0, unique_visitors: 0 };
+      countries[country].visits += v;
+      countries[country].unique_visitors += u;
+    });
+    totalVisits += visits;
+    totalUnique += unique;
+    return { date, visits, unique_visitors: unique };
+  });
+  const geoStats = Object.values(countries).sort((a, b) => b.visits - a.visits);
+  const today = days[days.length - 1];
+  const todayVisits = today ? dailyStats[dailyStats.length - 1].visits : 0;
+  return {
+    summary: {
+      total_visits: totalVisits,
+      unique_visitors: Object.keys(raw.visitors || {}).length || totalUnique,
+      today_visits: todayVisits,
+      avg_daily_visits: days.length ? Math.round(totalVisits / days.length) : 0,
+      avg_session_duration_ms: 0,
+    },
+    daily_stats: dailyStats,
+    geo_display_stats: geoStats,
+    geo_stats: geoStats,
+    hourly_stats: [],
+    device_stats: [{ device_type: 'unknown', visits: totalVisits }],
+    region_stats: geoStats.map(g => ({ ...g, region: 'Unknown', subdivision_2: 'Unknown', subdivision_3: 'Unknown', city: 'Unknown' })),
+    page_stats: [{ path: '/', visits: totalVisits, unique_visitors: Object.keys(raw.visitors || {}).length || totalUnique }],
+    referrer_stats: [],
+    ip_stats: [],
+    isp_stats: [],
+    recent_visits: [],
+    last_updated: new Date().toISOString(),
+  };
+}
+
 async function loadFull() {
   try {
-    const res = await fetch('/api/stats');
+    let res = await fetch('/analytics.json', { cache: 'no-store' });
     if (!res.ok) throw new Error(res.status);
-    fullData = await res.json();
+    fullData = analyticsFromStatic(await res.json());
 
     buildKPI(fullData.summary || {});
     buildDailyChart(fullData.daily_stats || []);
@@ -768,15 +817,11 @@ async function loadFull() {
 
 async function loadLive() {
   try {
-    const res = await fetch('/api/live');
-    if (!res.ok) throw new Error(res.status);
-    const data = await res.json();
-    document.getElementById('onlineNow').textContent = data.online_now ?? '–';
-    buildLiveFeed(data.recent || []);
-    if (data.server_time_bj) {
-      document.getElementById('headerMeta').textContent = `服务器：${data.server_time_bj} 北京时间`;
-    }
+    document.getElementById('onlineNow').textContent = '–';
+    buildLiveFeed([]);
   } catch(e) {
+    document.getElementById('onlineNow').textContent = '–';
+    buildLiveFeed([]);
     console.error('loadLive error:', e);
   }
 }

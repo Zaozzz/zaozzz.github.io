@@ -1377,10 +1377,16 @@
     function updateVisitorCount(){
       var el = document.getElementById("visitorCount");
       if (!el) return;
-      fetch("/api/analytics?days=all", { cache: "no-store" })
-        .then(function(r){ if (!r.ok) throw new Error("Analytics unavailable"); return r.json(); })
+      fetch("/analytics.json", { cache: "no-store" })
+        .then(function(r){ if (!r.ok) throw new Error("Static analytics unavailable"); return r.json(); })
         .then(function(payload){
-          var pv = Number((payload && payload.total && payload.total.pv) || 0);
+          var daily = payload.daily || {};
+          var pv = Object.keys(daily).reduce(function(total, date){
+            var row = daily[date] || {};
+            return total + Object.keys(row).reduce(function(sum, country){
+              return sum + Number((row[country] && row[country].pv) || 0);
+            }, 0);
+          }, 0);
           el.textContent = pv > 0 ? pv.toLocaleString() : "—";
         })
         .catch(function(){ el.textContent = "—"; });

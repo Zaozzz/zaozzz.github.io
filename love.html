@@ -609,51 +609,33 @@
   var START = new Date(2026, 4, 4); // 2026-05-04  (month 4 = May) — Wang Xu & Wang Zhaojin
 
   var ENTRIES = [];
+  var LOCAL_KEY = 'love.entries.local';
 
   function loadEntries(callback){
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', '/api/love/entries', true);
-    xhr.onload = function(){
-      if (xhr.status === 200){
-        try {
-          var res = JSON.parse(xhr.responseText);
-          ENTRIES = res.entries || [];
-        } catch (err) {
-          console.error('Failed to parse entries:', err);
-        }
+    try {
+      var local = localStorage.getItem(LOCAL_KEY);
+      if (local) {
+        ENTRIES = JSON.parse(local) || [];
+        if (callback) callback();
+        return;
       }
-      if (callback) callback();
-    };
-    xhr.onerror = function(){
-      if (callback) callback();
-    };
-    xhr.send();
+    } catch (err) {}
+
+    fetch('/data/love_data.json', { cache: 'no-store' })
+      .then(function(res){ if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+      .then(function(data){ ENTRIES = Array.isArray(data) ? data : (data.entries || []); })
+      .catch(function(err){ console.error('Failed to load static entries:', err); ENTRIES = []; })
+      .finally(function(){ if (callback) callback(); });
   }
 
   function saveEntries(callback){
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/api/love/save', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onload = function(){
-      if (xhr.status === 200){
-        try {
-          var res = JSON.parse(xhr.responseText);
-          if (!res.ok){
-            showError('Save failed: ' + (res.error || 'unknown error'));
-          }
-        } catch (err) {
-          showError('Save failed: invalid response');
-        }
-      } else {
-        showError('Save failed: ' + xhr.status);
-      }
+    try {
+      localStorage.setItem(LOCAL_KEY, JSON.stringify(ENTRIES));
+    } catch (err) {
+      showError('Save failed: browser storage is unavailable');
+    } finally {
       if (callback) callback();
-    };
-    xhr.onerror = function(){
-      showError('Save failed: network error');
-      if (callback) callback();
-    };
-    xhr.send(JSON.stringify({ entries: ENTRIES }));
+    }
   }
 
   /* ---- rendering ---- */
@@ -826,45 +808,27 @@
 
       for (var i = 0; i < files.length; i++){
         (function(file){
-          var formData = new FormData();
-          formData.append('file', file);
-
-          var xhr = new XMLHttpRequest();
-          xhr.open('POST', '/api/love/upload', true);
-          xhr.onload = function(){
+          var reader = new FileReader();
+          reader.onload = function(){
             uploadedCount++;
-            if (xhr.status === 200){
-              try {
-                var res = JSON.parse(xhr.responseText);
-                if (res.ok && res.url){
-                  if (!ENTRIES[idx].photos) ENTRIES[idx].photos = [];
-                  ENTRIES[idx].photos.push(res.url);
-                } else {
-                  showError(res.error || 'Upload failed');
-                }
-              } catch (err) {
-                showError('Invalid response');
-              }
-            } else {
-              showError('Upload failed: ' + xhr.status);
-            }
-
+            if (!ENTRIES[idx].photos) ENTRIES[idx].photos = [];
+            ENTRIES[idx].photos.push(reader.result);
             if (uploadedCount === totalCount){
               uploading.style.display = 'none';
               saveEntries();
               renderModal(ENTRIES[idx], idx);
             }
           };
-          xhr.onerror = function(){
+          reader.onerror = function(){
             uploadedCount++;
-            showError('Network error');
+            showError('Could not read image');
             if (uploadedCount === totalCount){
               uploading.style.display = 'none';
               saveEntries();
               renderModal(ENTRIES[idx], idx);
             }
           };
-          xhr.send(formData);
+          reader.readAsDataURL(file);
         })(files[i]);
       }
     }
