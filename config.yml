@@ -1,0 +1,18 @@
+tunnel: 8926c558-859a-44be-8a4f-3dd5b9fcba43
+credentials-file: /home/liuruida/.cloudflared/8926c558-859a-44be-8a4f-3dd5b9fcba43.json
+
+# 强制使用 HTTP2 协议，避免 UDP/QUIC 连接问题
+protocol: http2
+retries: 5
+grace-period: 30s
+no-autoupdate: true
+
+dns:
+  upstream:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+
+ingress:
+  - hostname: wangxu.life
+    service: http://localhost:18080
+  - service: http_status:404

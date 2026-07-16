@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Travel Map · Xu Wang</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Cities I have visited across Asia and Europe — explore the map and leave a review." />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230d9488' d='M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z'/%3E%3C/svg%3E" />
+<style>
+  :root{
+    --paper:#faf7f2; --ink:#1f2937; --ink-mute:#6b7280; --ink-faint:#9ca3af;
+    --hairline:#e7e2da; --teal:#0d9488; --teal-dark:#0f766e; --teal-wash:#e6f3f2;
+    --gold:#f59e0b; --rust:#b91c1c; --card:#ffffff;
+    --shadow:0 6px 24px rgba(31,41,55,.10), 0 2px 6px rgba(31,41,55,.06);
+    --radius:14px;
+    --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    --font-serif:Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+  a{color:var(--teal-dark);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ---------- error banner ---------- */
+  #errBanner{display:none;position:fixed;top:0;left:0;right:0;z-index:2000;background:var(--rust);color:#fff;font-size:13px;padding:10px 16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+  #errBanner button{float:right;color:#fff;background:none;border:0;font-size:16px;cursor:pointer;line-height:1}
+
+  /* ---------- header ---------- */
+  header.topbar{position:sticky;top:0;z-index:800;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
+  .topbar-inner{max-width:1280px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:18px}
+  .brand{display:flex;flex-direction:column;line-height:1.15}
+  .brand .t{font-family:var(--font-serif);font-size:22px;font-weight:600;letter-spacing:.2px}
+  .brand .s{font-size:12px;color:var(--ink-mute);margin-top:2px}
+  .spacer{flex:1}
+  .home-link{font-size:13px;color:var(--ink-mute);display:inline-flex;align-items:center;gap:6px}
+  .home-link:hover{color:var(--teal-dark);text-decoration:none}
+  .signin-btn{appearance:none;border:1px solid var(--hairline);background:#fff;color:var(--ink);font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:7px}
+  .signin-btn:hover{border-color:var(--teal);color:var(--teal-dark)}
+  .signin-btn.admin{border-color:var(--teal);background:var(--teal-wash);color:var(--teal-dark)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+
+  /* ---------- layout ---------- */
+  main.wrap{max-width:1280px;margin:0 auto;padding:20px 22px 40px}
+  .intro{margin:6px 0 16px;color:var(--ink-mute);font-size:14px;max-width:760px}
+  .intro b{color:var(--ink)}
+  .map-card{background:var(--card);border:1px solid var(--hairline);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative}
+  #map{height:calc(100vh - 230px);min-height:440px;width:100%;background:#e8ecef}
+  .map-failed{height:200px;display:grid;place-items:center;color:var(--ink-mute);font-size:14px;padding:24px;text-align:center}
+  .map-loading{height:100%;display:grid;place-items:center;color:var(--ink-faint);font-size:13px}
+
+  /* leaflet pin */
+  .leaflet-container{font-family:var(--font-sans)}
+  .photo-pin{background:transparent;border:0}
+  .photo-pin img{width:52px;height:36px;object-fit:cover;border-radius:6px;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35)}
+  .photo-pin .badge{position:absolute;top:-7px;right:-7px;background:var(--teal);color:#fff;font-size:10px;font-weight:700;min-width:18px;height:18px;padding:0 4px;border-radius:9px;display:grid;place-items:center;border:2px solid #fff}
+  .travel-popup img{width:100%;height:150px;object-fit:cover;border-radius:8px;display:block}
+  .travel-popup .pname{font-family:var(--font-serif);font-size:16px;font-weight:600;margin:8px 0 2px}
+  .travel-popup .pcn{font-size:12px;color:var(--ink-mute);margin-bottom:6px}
+  .travel-popup .prate{font-size:12px;color:var(--ink);margin-bottom:8px}
+  .travel-popup .prate b{color:var(--gold)}
+  .travel-popup button.pp{appearance:none;border:0;background:var(--teal);color:#fff;font-size:12px;font-weight:600;padding:7px 12px;border-radius:8px;cursor:pointer;width:100%}
+  .travel-popup button.pp:hover{background:var(--teal-dark)}
+  .leaflet-control-attribution{font-size:10px}
+
+  /* ---------- reviews panel ---------- */
+  #panel{position:fixed;top:0;right:0;height:100vh;width:400px;max-width:92vw;background:#fff;z-index:1100;box-shadow:-12px 0 32px rgba(0,0,0,.14);transform:translateX(105%);transition:transform .28s cubic-bezier(.22,.61,.36,1);display:flex;flex-direction:column}
+  #panel.open{transform:translateX(0)}
+  .panel-head{padding:18px 18px 14px;border-bottom:1px solid var(--hairline);display:flex;align-items:flex-start;gap:10px}
+  .panel-head .ptitle{font-family:var(--font-serif);font-size:19px;font-weight:600;line-height:1.2}
+  .panel-head .pcn{font-size:12px;color:var(--ink-mute);margin-top:2px}
+  .panel-head .pavg{font-size:12px;color:var(--ink);margin-top:6px}
+  .panel-head .pavg b{color:var(--gold)}
+  .panel-head .x{margin-left:auto;flex:0 0 auto;border:0;background:transparent;font-size:22px;line-height:1;color:var(--ink-mute);cursor:pointer;padding:2px 6px;border-radius:6px}
+  .panel-head .x:hover{background:var(--paper);color:var(--ink)}
+  .panel-body{flex:1;overflow-y:auto;padding:14px 18px}
+  .review{padding:12px 0;border-bottom:1px solid var(--hairline)}
+  .review:last-child{border-bottom:0}
+  .review .rrow{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+  .review .rnick{font-weight:600;font-size:13px}
+  .review .rbadge{font-size:10px;font-weight:700;color:#fff;background:var(--teal);padding:1px 6px;border-radius:999px;letter-spacing:.04em}
+  .review .rstars{font-size:13px;color:var(--gold);letter-spacing:1px}
+  .review .rtime{margin-left:auto;font-size:11px;color:var(--ink-faint)}
+  .review .rtext{font-size:13.5px;line-height:1.55;color:var(--ink);white-space:pre-wrap;word-wrap:break-word}
+  .review .rdel{margin-top:6px;font-size:11px;color:var(--rust);background:none;border:0;cursor:pointer;padding:0}
+  .review .rdel:hover{text-decoration:underline}
+  .empty{padding:30px 6px;text-align:center;color:var(--ink-faint);font-size:13px}
+
+  .panel-foot{border-top:1px solid var(--hairline);padding:14px 18px 18px;background:var(--paper)}
+  .panel-foot .flabel{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px}
+  .star-input{display:flex;gap:4px;font-size:26px;color:var(--ink-faint);cursor:pointer;margin-bottom:10px;user-select:none}
+  .star-input span{transition:color .1s}
+  .star-input span.on{color:var(--gold)}
+  .star-input span:hover{color:var(--gold)}
+  .panel-foot textarea{width:100%;min-height:78px;resize:vertical;border:1px solid var(--hairline);border-radius:8px;padding:10px 12px;font-family:var(--font-sans);font-size:13.5px;color:var(--ink);background:#fff;outline:none}
+  .panel-foot textarea:focus{border-color:var(--teal)}
+  .panel-foot .frow{display:flex;align-items:center;gap:10px;margin-top:10px}
+  .panel-foot .who{font-size:12px;color:var(--ink-mute)}
+  .panel-foot .who b{color:var(--ink)}
+  .panel-foot .submit{margin-left:auto;appearance:none;border:0;background:var(--teal);color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:8px;cursor:pointer}
+  .panel-foot .submit:hover{background:var(--teal-dark)}
+  .panel-foot .submit:disabled{opacity:.5;cursor:not-allowed}
+  .panel-foot .must{font-size:12px;color:var(--ink-mute)}
+  .panel-foot .must a{font-weight:600;cursor:pointer}
+
+  /* ---------- auth modal ---------- */
+  #auth{position:fixed;inset:0;z-index:1300;background:rgba(26,22,18,.34);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center}
+  #auth.open{display:flex}
+  .auth-card{width:420px;max-width:94vw;background:#fff;border-radius:12px;box-shadow:var(--shadow);overflow:hidden;animation:pop .22s ease-out}
+  @keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+  .auth-top{padding:24px 28px 16px;display:flex;justify-content:space-between;align-items:flex-start}
+  .auth-top h3{margin:0;font-family:var(--font-serif);font-size:22px;font-weight:600}
+  .auth-top p{margin:4px 0 0;font-size:12.5px;color:var(--ink-mute)}
+  .auth-top .x{border:0;background:transparent;font-size:20px;color:var(--ink-mute);cursor:pointer;line-height:1}
+  .auth-tabs{display:flex;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+  .auth-tabs button{flex:1;padding:11px 0;border:0;background:transparent;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;color:var(--ink-faint);border-bottom:2px solid transparent}
+  .auth-tabs button.active{color:var(--ink);border-bottom-color:var(--teal)}
+  .auth-body{padding:20px 28px 26px}
+  .auth-body label{display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:6px}
+  .auth-body input{width:100%;padding:9px 0;border:0;border-bottom:1px solid var(--hairline);background:transparent;font-family:var(--font-serif);font-size:17px;color:var(--ink);outline:none}
+  .auth-body input:focus{border-bottom-color:var(--ink)}
+  .auth-body .field+.field{margin-top:18px}
+  .auth-err{font-size:12px;color:var(--rust);margin-top:12px;min-height:14px}
+  .auth-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}
+  .btn-ghost{appearance:none;border:1px solid var(--hairline);background:#fff;color:var(--ink);font-size:13px;font-weight:600;padding:9px 14px;border-radius:8px;cursor:pointer}
+  .btn-primary{appearance:none;border:0;background:var(--teal);color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:8px;cursor:pointer}
+  .btn-primary:hover{background:var(--teal-dark)}
+
+  @media (max-width:640px){
+    .topbar-inner{padding:12px 14px;gap:10px}
+    .brand .t{font-size:18px}
+    main.wrap{padding:14px}
+    #map{height:calc(100vh - 200px);min-height:360px}
+    #panel{width:100vw}
+    .home-link span{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div id="errBanner" role="alert"><span id="errText"></span><button onclick="document.getElementById('errBanner').style.display='none'">×</button></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="t">Travel Map</span>
+      <span class="s">Cities I've visited · Asia & Europe</span>
+    </div>
+    <div class="spacer"></div>
+    <a class="home-link" href="/">← <span>Back to </span>Home</a>
+    <button class="signin-btn" id="signinBtn" onclick="openAuth()">
+      <span class="dot" id="signinDot" style="display:none"></span>
+      <span id="signinLabel">Sign in</span>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="intro">
+    A living map of places I've been. Tap any pin to see a photo and <b>leave a star rating & review</b> — sign in with just a nickname, or log in as admin to post as the author. Reviews are open to everyone.
+  </p>
+  <div class="map-card">
+    <div id="map"><div class="map-loading">Loading map…</div></div>
+  </div>
+</main>
+
+<!-- Reviews panel -->
+<aside id="panel" aria-hidden="true">
+  <div class="panel-head">
+    <div>
+      <div class="ptitle" id="pTitle">—</div>
+      <div class="pcn" id="pCn"></div>
+      <div class="pavg" id="pAvg"></div>
+    </div>
+    <button class="x" onclick="closePanel()" aria-label="Close">×</button>
+  </div>
+  <div class="panel-body" id="pBody"></div>
+  <div class="panel-foot" id="pFoot"></div>
+</aside>
+
+<!-- Auth modal -->
+<div id="auth" aria-hidden="true">
+  <div class="auth-card">
+    <div class="auth-top">
+      <div>
+        <h3 id="authTitle">Welcome</h3>
+        <p id="authSub">Just a nickname — no signup, no email.</p>
+      </div>
+      <button class="x" onclick="closeAuth()" aria-label="Close">×</button>
+    </div>
+    <div class="auth-tabs">
+      <button id="tabReader" class="active" onclick="setAuthTab('reader')">Reader</button>
+      <button id="tabAdmin" onclick="setAuthTab('admin')">Admin</button>
+    </div>
+    <div class="auth-body">
+      <div class="field">
+        <label>Nickname</label>
+        <input id="authNick" type="text" placeholder="what should I call you?" autocomplete="off" />
+      </div>
+      <div class="field" id="authPassField" style="display:none">
+        <label>Password</label>
+        <input id="authPass" type="password" placeholder="••••" autocomplete="off" />
+      </div>
+      <div class="auth-err" id="authErr"></div>
+      <div class="auth-actions">
+        <button class="btn-ghost" onclick="closeAuth()">Cancel</button>
+        <button class="btn-primary" id="authSubmit" onclick="submitAuth()">Enter</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* ---------- error handling ---------- */
+function showError(msg){
+  var b=document.getElementById('errBanner');
+  document.getElementById('errText').textContent=''+(msg||'Something went wrong');
+  b.style.display='block';
+}
+window.addEventListener('error',function(e){ showError((e&&e.message)||'Script error'); });
+window.addEventListener('unhandledrejection',function(e){
+  var r=e&&e.reason; showError((r&&(r.message||r))||'Network error');
+});
+
+/* ---------- session ---------- */
+var SESSION_KEY='map.session';
+function loadSession(){ try{ return JSON.parse(localStorage.getItem(SESSION_KEY)||'{}'); }catch(e){ return {}; } }
+function saveSession(s){ try{ localStorage.setItem(SESSION_KEY, JSON.stringify(s||{})); }catch(e){} }
+var session=loadSession();
+var summary={};
+
+function updateSigninUI(){
+  var btn=document.getElementById('signinBtn');
+  var lbl=document.getElementById('signinLabel');
+  var dot=document.getElementById('signinDot');
+  if(session.nickname){
+    lbl.textContent = session.role==='admin' ? ('Xu Wang · Admin') : ('Hi, '+session.nickname);
+    dot.style.display='inline-block';
+    btn.classList.add('admin');
+    btn.onclick=function(){ if(confirm('Sign out as '+session.nickname+'?')){ signOut(); } };
+  }else{
+    lbl.textContent='Sign in';
+    dot.style.display='none';
+    btn.classList.remove('admin');
+    btn.onclick=function(){ openAuth(); };
+  }
+}
+function signOut(){
+  if(session.token){
+    api('POST','/admin/logout').catch(function(){});
+  }
+  session={}; saveSession(session); updateSigninUI(); refreshPanelIfOpen();
+}
+
+/* ---------- API ---------- */
+function api(method, path, body){
+  var opts={method:method, headers:{'Content-Type':'application/json'}};
+  if(body) opts.body=JSON.stringify(body);
+  if(session.token) opts.headers['Authorization']='Bearer '+session.token;
+  return fetch('/map/api'+path, opts).then(function(res){
+    var ct=res.headers.get('content-type')||'';
+    var p = ct.indexOf('json')>=0 ? res.json() : res.text();
+    return p.then(function(data){
+      if(!res.ok){ var msg=(data&&data.error)||('HTTP '+res.status); var err=new Error(msg); err.data=data; throw err; }
+      return data;
+    });
+  });
+}
+
+/* ---------- city data ---------- */
+var CITIES=[
+  {en:"Beijing",zh:"北京",lat:39.9042,lon:116.4074},
+  {en:"Tianjin",zh:"天津",lat:39.0842,lon:117.2},
+  {en:"Shanghai",zh:"上海",lat:31.2304,lon:121.4737},
+  {en:"Guangzhou",zh:"广州",lat:23.1291,lon:113.2644},
+  {en:"Shenzhen",zh:"深圳",lat:22.5431,lon:114.0579},
+  {en:"Hong Kong",zh:"香港",lat:22.3193,lon:114.1694},
+  {en:"Xi'an",zh:"西安",lat:34.3416,lon:108.9398},
+  {en:"Changsha",zh:"长沙",lat:28.2278,lon:112.9389},
+  {en:"Qingdao",zh:"青岛",lat:36.0671,lon:120.3826},
+  {en:"Yantai",zh:"烟台",lat:37.4638,lon:121.448},
+  {en:"Weihai",zh:"威海",lat:37.5097,lon:122.1138},
+  {en:"Weifang",zh:"潍坊",lat:36.7069,lon:119.1618},
+  {en:"Rizhao",zh:"日照",lat:35.4164,lon:119.5272},
+  {en:"Jinan",zh:"济南",lat:36.6512,lon:117.1201},
+  {en:"Jining",zh:"济宁",lat:35.4146,lon:116.5872},
+  {en:"Linyi",zh:"临沂",lat:35.1047,lon:118.3564},
+  {en:"Xuzhou",zh:"徐州",lat:34.2058,lon:117.2841},
+  {en:"Hangzhou",zh:"杭州",lat:30.2741,lon:120.1551},
+  {en:"Ningbo",zh:"宁波",lat:29.8683,lon:121.544},
+  {en:"Jiaxing",zh:"嘉兴",lat:30.7461,lon:120.7555},
+  {en:"Huzhou",zh:"湖州",lat:30.8944,lon:120.0868},
+  {en:"Xiamen",zh:"厦门",lat:24.4798,lon:118.0894},
+  {en:"Kaifeng",zh:"开封",lat:34.7973,lon:114.3076},
+  {en:"Luoyang",zh:"洛阳",lat:34.6197,lon:112.454},
+  {en:"Anyang",zh:"安阳",lat:36.0976,lon:114.3924},
+  {en:"Zhangjiajie",zh:"张家界",lat:29.1171,lon:110.4792},
+  {en:"Singapore",zh:"新加坡",lat:1.3521,lon:103.8198},
+  {en:"Kuala Lumpur",zh:"吉隆坡",lat:3.139,lon:101.6869},
+  {en:"Dali",zh:"大理",lat:25.6075,lon:100.2676},
+  {en:"Barcelona",zh:"巴塞罗那",lat:41.3874,lon:2.1686}
+];
+CITIES.forEach(function(c){
+  c.img='/assets/cities/'+c.zh+'.jpg';
+  c.thumb='/assets/cities/thumbs/'+c.zh+'.webp';
+});
+
+/* ---------- helpers ---------- */
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];}); }
+function starsHtml(r){ var s=''; for(var i=1;i<=5;i++){ s+='<span class="'+(i<=r?'on':'off')+'">★</span>'; } return s; }
+function timeAgo(ts){
+  var d=Math.max(1,Math.floor(Date.now()/1000-ts));
+  if(d<60) return d+'s ago';
+  if(d<3600) return Math.floor(d/60)+'m ago';
+  if(d<86400) return Math.floor(d/3600)+'h ago';
+  if(d<2592000) return Math.floor(d/86400)+'d ago';
+  return Math.floor(d/2592000)+'mo ago';
+}
+function fmtAvg(a){ return a==null?'—':(Math.round(a*10)/10).toFixed(1); }
+
+/* ---------- leaflet ---------- */
+var leafletReady=false;
+function loadLeaflet(){
+  return new Promise(function(resolve,reject){
+    if(window.L){ resolve(); return; }
+    var css=document.createElement('link'); css.rel='stylesheet';
+    css.href='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css'; document.head.appendChild(css);
+    var js=document.createElement('script');
+    js.src='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js';
+    js.onload=function(){ leafletReady=true; resolve(); };
+    js.onerror=function(){ reject(new Error('Leaflet failed to load')); };
+    document.head.appendChild(js);
+  });
+}
+
+var map=null, markers=[];
+function initMap(){
+  var el=document.getElementById('map');
+  var gaode=L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?style=7&x={x}&y={y}&z={z}',{subdomains:'1234',maxZoom:18,attribution:'Gaode'});
+  var osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'});
+  map=L.map(el,{scrollWheelZoom:false});
+  osm.addTo(map);
+  L.control.layers({'OpenStreetMap':osm,'Gaode':gaode},undefined,{collapsed:true}).addTo(map);
+
+  var bounds=[], focusBounds=[], hasWide=false;
+  CITIES.forEach(function(c){
+    var icon=L.divIcon({
+      className:'photo-pin',
+      html:'<img src="'+c.thumb+'" alt="'+esc(c.en)+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\';this.parentNode.style.background=\'#e5e7eb\';this.parentNode.style.width=\'52px\';this.parentNode.style.height=\'36px\';" />',
+      iconSize:[52,36], iconAnchor:[26,36]
+    });
+    var m=L.marker([c.lat,c.lon],{icon:icon,riseOnHover:true});
+    m.bindTooltip(c.en,{direction:'top',offset:[0,-36],opacity:.95});
+    m.bindPopup(function(){ return popupHtml(c); });
+    m.on('click',function(){ openPanel(c); });
+    m.addTo(map);
+    markers.push({city:c,marker:m});
+    bounds.push([c.lat,c.lon]);
+    if(c.lat>=1 && c.lat<=41 && c.lon>=100 && c.lon<=122.5){ focusBounds.push([c.lat,c.lon]); } else { hasWide=true; }
+  });
+  map.fitBounds(!hasWide && focusBounds.length ? focusBounds : bounds, {paddingTopLeft:[18,18],paddingBottomRight:[18,120],maxZoom:6});
+  map.panBy([0,-40],{animate:false});
+  setTimeout(function(){ map.invalidateSize(); },60);
+
+  map.on('popupopen',function(e){
+    var elp=e.popup.getElement();
+    if(!elp) return;
+    var btn=elp.querySelector('.pp');
+    if(btn){ btn.onclick=function(){ var en=btn.getAttribute('data-city'); var c=cityByEn(en); if(c) openPanel(c); }; }
+  });
+}
+function cityByEn(en){ for(var i=0;i<CITIES.length;i++){ if(CITIES[i].en===en) return CITIES[i]; } return null; }
+
+function popupHtml(c){
+  var s=summary[c.en]||{};
+  var rateTxt = s.count ? ('★ <b>'+fmtAvg(s.avg)+'</b> · '+s.count+' review'+(s.count>1?'s':'')) : 'No reviews yet';
+  return '<div class="travel-popup">'+
+    '<img src="'+c.img+'" alt="'+esc(c.en)+'" loading="lazy" onerror="this.src=\'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22150%22%3E%3Crect fill=%22%23e5e7eb%22 width=%22280%22 height=%22150%22/%3E%3Ctext fill=%22%239ca3af%22 x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2220%22%3E'+esc(c.en)+'%3C/text%3E%3C/svg%3E\'" />'+
+    '<div class="pname">'+esc(c.en)+'</div>'+
+    '<div class="pcn">'+esc(c.zh)+'</div>'+
+    '<div class="prate">'+rateTxt+'</div>'+
+    '<button class="pp" data-city="'+esc(c.en)+'">View & add reviews →</button>'+
+  '</div>';
+}
+
+/* ---------- reviews panel ---------- */
+var activeCity=null, selectedRating=0;
+function openPanel(c){
+  activeCity=c;
+  document.getElementById('pTitle').textContent=c.en;
+  document.getElementById('pCn').textContent=c.zh;
+  var s=summary[c.en]||{};
+  document.getElementById('pAvg').innerHTML = s.count ? ('Rating: ★ <b>'+fmtAvg(s.avg)+'</b> · '+s.count+' review'+(s.count>1?'s':'')) : 'No ratings yet';
+  document.getElementById('panel').classList.add('open');
+  document.getElementById('panel').setAttribute('aria-hidden','false');
+  loadReviews(c);
+  renderFoot();
+}
+function closePanel(){
+  document.getElementById('panel').classList.remove('open');
+  document.getElementById('panel').setAttribute('aria-hidden','true');
+}
+function refreshPanelIfOpen(){ if(activeCity && document.getElementById('panel').classList.contains('open')){ openPanel(activeCity); } }
+
+function loadReviews(c){
+  var body=document.getElementById('pBody');
+  body.innerHTML='<div class="empty">Loading…</div>';
+  api('GET','/reviews/'+encodeURIComponent(c.en)).then(function(res){
+    renderReviews(res.items||[]);
+  }).catch(function(e){
+    body.innerHTML='<div class="empty">Failed to load reviews.</div>';
+  });
+}
+function renderReviews(items){
+  var body=document.getElementById('pBody');
+  if(!items.length){ body.innerHTML='<div class="empty">No reviews yet — be the first to share your thoughts.</div>'; return; }
+  var html='';
+  items.forEach(function(r){
+    html+='<div class="review">'+
+      '<div class="rrow">'+
+        '<span class="rnick">'+esc(r.nickname)+'</span>'+
+        (r.isAdmin?'<span class="rbadge">Author</span>':'')+
+        '<span class="rstars">'+starsHtml(r.rating)+'</span>'+
+        '<span class="rtime">'+timeAgo(r.ts)+'</span>'+
+      '</div>'+
+      (r.text?'<div class="rtext">'+esc(r.text)+'</div>':'')+
+      (session.role==='admin'?'<button class="rdel" onclick="delReview(\''+r.id+'\')">Delete</button>':'')+
+    '</div>';
+  });
+  body.innerHTML=html;
+}
+function renderFoot(){
+  var foot=document.getElementById('pFoot');
+  if(!session.nickname){
+    foot.innerHTML='<div class="must"><a onclick="openAuth()">Sign in</a> with a nickname to leave a review.</div>';
+    return;
+  }
+  selectedRating=0;
+  var stars='';
+  for(var i=1;i<=5;i++){ stars+='<span data-v="'+i+'" onclick="pickStar('+i+')">★</span>'; }
+  foot.innerHTML=
+    '<div class="flabel">Your rating</div>'+
+    '<div class="star-input" id="starInput">'+stars+'</div>'+
+    '<textarea id="revText" placeholder="Share your experience in this city (optional)…"></textarea>'+
+    '<div class="frow">'+
+      '<span class="who">Posting as <b>'+esc(session.nickname)+'</b>'+(session.role==='admin'?' · Author':'')+'</span>'+
+      '<button class="submit" id="revSubmit" onclick="submitReview()">Post review</button>'+
+    '</div>';
+}
+function pickStar(v){
+  selectedRating=v;
+  var spans=document.getElementById('starInput').children;
+  for(var i=0;i<spans.length;i++){ if(i<v) spans[i].classList.add('on'); else spans[i].classList.remove('on'); }
+}
+function submitReview(){
+  if(!activeCity || !session.nickname) return;
+  var text=document.getElementById('revText').value;
+  if(!selectedRating){ showError('Please pick a star rating (1–5).'); return; }
+  var btn=document.getElementById('revSubmit');
+  btn.disabled=true; btn.textContent='Posting…';
+  api('POST','/reviews/'+encodeURIComponent(activeCity.en),{nickname:session.nickname,rating:selectedRating,text:text}).then(function(){
+    return api('GET','/summary');
+  }).then(function(s){
+    summary=s||{};
+    loadReviews(activeCity);
+    var sv=summary[activeCity.en]||{};
+    document.getElementById('pAvg').innerHTML = sv.count ? ('Rating: ★ <b>'+fmtAvg(sv.avg)+'</b> · '+sv.count+' review'+(sv.count>1?'s':'')) : 'No ratings yet';
+    renderFoot();
+  }).catch(function(e){
+    showError(e.message||'Failed to post review');
+    btn.disabled=false; btn.textContent='Post review';
+  });
+}
+function delReview(id){
+  if(!activeCity || session.role!=='admin') return;
+  if(!confirm('Delete this review?')) return;
+  api('DELETE','/reviews/'+encodeURIComponent(activeCity.en)+'?id='+encodeURIComponent(id)).then(function(){
+    return api('GET','/summary');
+  }).then(function(s){
+    summary=s||{};
+    loadReviews(activeCity);
+    var sv=summary[activeCity.en]||{};
+    document.getElementById('pAvg').innerHTML = sv.count ? ('Rating: ★ <b>'+fmtAvg(sv.avg)+'</b> · '+sv.count+' review'+(sv.count>1?'s':'')) : 'No ratings yet';
+  }).catch(function(e){ showError(e.message||'Failed to delete'); });
+}
+
+/* ---------- auth modal ---------- */
+var authTab='reader';
+function openAuth(){
+  document.getElementById('authNick').value=session.role==='admin'?'':(session.nickname||'');
+  document.getElementById('authPass').value='';
+  document.getElementById('authErr').textContent='';
+  setAuthTab(session.role==='admin'?'admin':'reader');
+  document.getElementById('auth').classList.add('open');
+  document.getElementById('auth').setAttribute('aria-hidden','false');
+  setTimeout(function(){ document.getElementById('authNick').focus(); },50);
+}
+function closeAuth(){
+  document.getElementById('auth').classList.remove('open');
+  document.getElementById('auth').setAttribute('aria-hidden','true');
+}
+function setAuthTab(t){
+  authTab=t;
+  document.getElementById('tabReader').className = t==='reader'?'active':'';
+  document.getElementById('tabAdmin').className = t==='admin'?'active':'';
+  document.getElementById('authPassField').style.display = t==='admin'?'block':'none';
+  document.getElementById('authTitle').textContent = t==='admin'?'Admin sign-in':'Welcome';
+  document.getElementById('authSub').textContent = t==='admin'?'Author only — password required.':'Just a nickname — no signup, no email.';
+  document.getElementById('authSubmit').textContent = t==='admin'?'Sign in':'Enter';
+  document.getElementById('authNick').placeholder = t==='admin'?'wangxu':'what should I call you?';
+}
+function submitAuth(){
+  var nick=document.getElementById('authNick').value.trim();
+  var err=document.getElementById('authErr');
+  err.textContent='';
+  if(!nick){ err.textContent='Please enter a nickname.'; return; }
+  if(authTab==='reader'){
+    session={nickname:nick,role:'reader'}; saveSession(session); updateSigninUI(); closeAuth(); refreshPanelIfOpen();
+    return;
+  }
+  // admin
+  var pass=document.getElementById('authPass').value;
+  if(!pass){ err.textContent='Please enter the password.'; return; }
+  var btn=document.getElementById('authSubmit');
+  btn.disabled=true; btn.textContent='Signing in…';
+  fetch('/map/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nickname:nick,password:pass})})
+    .then(function(res){ return res.json().then(function(d){ return {ok:res.ok,data:d}; }); })
+    .then(function(r){
+      btn.disabled=false; btn.textContent='Sign in';
+      if(r.ok && r.data && r.data.token){
+        session={nickname:'Xu Wang',role:'admin',token:r.data.token}; saveSession(session); updateSigninUI(); closeAuth(); refreshPanelIfOpen();
+      }else{
+        err.textContent=(r.data&&r.data.error)||'Wrong nickname or password.';
+      }
+    }).catch(function(){
+      btn.disabled=false; btn.textContent='Sign in';
+      err.textContent='Network error — please retry.';
+    });
+}
+
+/* ---------- boot ---------- */
+function boot(){
+  updateSigninUI();
+  // load summary first
+  api('GET','/summary').then(function(s){ summary=s||{}; }).catch(function(){});
+  // load leaflet then init map
+  loadLeaflet().then(function(){
+    try{ initMap(); }
+    catch(e){ document.getElementById('map').innerHTML='<div class="map-failed">Map failed to initialise. Please refresh.</div>'; showError(e.message); }
+  }).catch(function(){
+    document.getElementById('map').innerHTML='<div class="map-failed">The map library could not be loaded (network blocked). Please refresh or try another network.</div>';
+  });
+  // close panel on Escape
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closePanel(); closeAuth(); } });
+}
+boot();
+</script>
+</body>
+</html>

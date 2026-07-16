@@ -1,0 +1,151 @@
+[
+  {
+    "id": "7b4c8fbd52f6f040",
+    "title": "check",
+    "desc": "check",
+    "status": "pending",
+    "report": "",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-12T06:44:54+00:00"
+  },
+  {
+    "id": "cef5594e4af52b27",
+    "title": "检查在线情况",
+    "desc": "检查在线情况",
+    "status": "completed",
+    "report": "Executor run at 2026-06-11T14:24:37\ntask_id=cef5594e4af52b27, title='??????'\nactions=1\n---\n-- action 1/1: type=check\n[check] ????????: True\n????: 2026-06-11 14:24:37\n??: wangxu.life\n??????\n---\noverall_ok=True",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-11T00:33:54+00:00",
+    "updated_at": "2026-06-11T06:25:25+00:00"
+  },
+  {
+    "id": "83739655d63fc730",
+    "title": "[TOP-AI-PAPER] RLHF — Training language models to follow instructions",
+    "desc": "[OPEN] https://arxiv.org/abs/2203.02155\n[NOTE] Title  : Training language models to follow instructions with human feedback\nVenue  : NeurIPS 2022\nAuthors: Long Ouyang, Jeff Wu, Xu Jiang, et al.\nTopics : Reinforcement Learning from Human Feedback, InstructGPT, GPT alignment\n\n[TASK] 请阅读并分析该论文的核心贡献、方法论与实验结果，输出一份结构化摘要(500-800字) + 3条可落地的技术启发。",
+    "status": "completed",
+    "report": "test",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-10T05:20:49+00:00",
+    "updated_at": "2026-06-10T05:25:32+00:00"
+  },
+  {
+    "id": "f95e888ad8d6518e",
+    "title": "[TOP-AI-PAPER] RLHF — Training language models to follow instructions",
+    "desc": "[OPEN] https://arxiv.org/abs/2203.02155\n[NOTE] Title  : Training language models to follow instructions with human feedback (InstructGPT)\nAuthors: Long Ouyang, Jeff Wu, Xu Jiang, et al. (OpenAI)\nVenue  : NeurIPS 2022\nLink   : https://arxiv.org/abs/2203.02155\n摘要: 提出 InstructGPT 并确立 RLHF 范式, 展示如何让大模型真正『听懂人类指令』, 是 ChatGPT 能力的核心技术之一。\n",
+    "status": "completed",
+    "report": "Executor run at 2026-06-10T00:57:11\ntask_id=f95e888ad8d6518e, title='[TOP-AI-PAPER] RLHF — Training language models to follow instructions'\nactions=2\n---\n-- action 1/2: type=open\n[open] browser opened: https://arxiv.org/abs/2203.02155\n-- action 2/2: type=note\n[note] displayed (len=90 chars):\nTitle  : Training language models to follow instructions with human feedback (InstructGPT)\n---\noverall_ok=True",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T16:56:47+00:00",
+    "updated_at": "2026-06-09T16:57:12+00:00"
+  },
+  {
+    "id": "1d6d410de32ef0d8",
+    "title": "[TOP-AI-PAPER] Diffusion Models — DDPM 开山之作",
+    "desc": "[OPEN] https://arxiv.org/abs/2006.11239\n[NOTE] Title  : Denoising Diffusion Probabilistic Models (DDPM)\nAuthors: Jonathan Ho, Ajay Jain, Pieter Abbeel (UC Berkeley)\nVenue  : NeurIPS 2020\nLink   : https://arxiv.org/abs/2006.11239\n摘要: 扩散模型的奠基性工作, 后续 Stable Diffusion / DALL·E / Midjourney 等所有主流文生图模型均以此框架为基础。\n",
+    "status": "completed",
+    "report": "Executor run at 2026-06-10T00:57:13\ntask_id=1d6d410de32ef0d8, title='[TOP-AI-PAPER] Diffusion Models — DDPM 开山之作'\nactions=2\n---\n-- action 1/2: type=open\n[open] browser opened: https://arxiv.org/abs/2006.11239\n-- action 2/2: type=note\n[note] displayed (len=56 chars):\nTitle  : Denoising Diffusion Probabilistic Models (DDPM)\n---\noverall_ok=True",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T16:56:46+00:00",
+    "updated_at": "2026-06-09T16:57:14+00:00"
+  },
+  {
+    "id": "c0e60683ac308f8e",
+    "title": "[TOP-AI-PAPER] GPT-3 风格论文 — Language Models are Few-Shot Learners",
+    "desc": "[OPEN] https://arxiv.org/abs/2005.14165\n[NOTE] Title  : Language Models are Few-Shot Learners (GPT-3)\nAuthors: Tom B. Brown et al. (OpenAI)\nVenue  : NeurIPS 2020\nLink   : https://arxiv.org/abs/2005.14165\n摘要: 证明了超大模型 + few-shot 学习即可在不微调的情况下完成复杂任务, 确立了 Scaling Law 范式并开启 LLM 时代。\n",
+    "status": "completed",
+    "report": "Executor run at 2026-06-10T00:57:15\ntask_id=c0e60683ac308f8e, title='[TOP-AI-PAPER] GPT-3 风格论文 — Language Models are Few-Shot Learners'\nactions=2\n---\n-- action 1/2: type=open\n[open] browser opened: https://arxiv.org/abs/2005.14165\n-- action 2/2: type=note\n[note] displayed (len=54 chars):\nTitle  : Language Models are Few-Shot Learners (GPT-3)\n---\noverall_ok=True",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T16:56:45+00:00",
+    "updated_at": "2026-06-09T16:57:16+00:00"
+  },
+  {
+    "id": "614d9d357b6e3eed",
+    "title": "[TOP-AI-PAPER] BERT (NAACL 2019) — 双向预训练",
+    "desc": "[OPEN] https://arxiv.org/abs/1810.04805\n[NOTE] Title  : BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\nAuthors: Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova (Google AI)\nVenue  : NAACL 2019\nLink   : https://arxiv.org/abs/1810.04805\n摘要: BERT 首次证明大规模双向 Transformer 预训练 + 微调范式, 在 11 项 NLP 任务上刷新 SOTA, 是现代编码器模型的基石。\n",
+    "status": "completed",
+    "report": "Executor run at 2026-06-10T00:57:17\ntask_id=614d9d357b6e3eed, title='[TOP-AI-PAPER] BERT (NAACL 2019) — 双向预训练'\nactions=2\n---\n-- action 1/2: type=open\n[open] browser opened: https://arxiv.org/abs/1810.04805\n-- action 2/2: type=note\n[note] displayed (len=89 chars):\nTitle  : BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\n---\noverall_ok=True",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T16:56:44+00:00",
+    "updated_at": "2026-06-09T16:57:18+00:00"
+  },
+  {
+    "id": "bb042353a1d33d18",
+    "title": "[TOP-AI-PAPER] Attention Is All You Need (Transformer, NeurIPS 2017)",
+    "desc": "[OPEN] https://arxiv.org/abs/1706.03762\n[NOTE] ==== 顶级 AI 论文 ====\nTitle   : Attention Is All You Need\nAuthors : Vaswani et al. (Google Brain / Google Research)\nVenue   : NeurIPS 2017\nLink    : https://arxiv.org/abs/1706.03762\n摘要: 首次提出纯注意力机制的 Transformer 架构, 弃用 RNN/CNN, 奠定了后续 GPT / BERT / Llama 等所有现代大语言模型的基础。\n[SHELL] echo 'Transformer paper published by Executor Node via Publisher Node task flow.'",
+    "status": "completed",
+    "report": "Executor run at 2026-06-10T00:57:19\ntask_id=bb042353a1d33d18, title='[TOP-AI-PAPER] Attention Is All You Need (Transformer, NeurIPS 2017)'\nactions=3\n---\n-- action 1/3: type=open\n[open] browser opened: https://arxiv.org/abs/1706.03762\n-- action 2/3: type=note\n[note] displayed (len=18 chars):\n==== 顶级 AI 论文 ====\n-- action 3/3: type=shell\n[shell] returncode=0\n---\n'Transformer paper published by Executor Node via Publisher Node task flow.'\n---\noverall_ok=True",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T16:56:41+00:00",
+    "updated_at": "2026-06-09T16:57:20+00:00"
+  },
+  {
+    "id": "02f8d5fcf7b484ec",
+    "title": "Reminder: 发布顶级 AI 论文的提醒",
+    "desc": "本次任务目标: 在交互节点中『发布』一篇人工智能领域的顶级论文, 由 Executor Node 完成执行。",
+    "status": "completed",
+    "report": "Executor run at 2026-06-10T00:57:21\ntask_id=02f8d5fcf7b484ec, title='Reminder: 发布顶级 AI 论文的提醒'\nactions=1\n---\n-- action 1/1: type=note\n[note] displayed (len=54 chars):\n本次任务目标: 在交互节点中『发布』一篇人工智能领域的顶级论文, 由 Executor Node 完成执行。\n---\noverall_ok=True",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T16:52:48+00:00",
+    "updated_at": "2026-06-09T16:57:22+00:00"
+  },
+  {
+    "id": "2bad01020f4197a9",
+    "title": "Top-AI-Paper #2: BERT",
+    "desc": "打开 BERT 论文《Pre-training of Deep Bidirectional Transformers for Language Understanding》",
+    "status": "completed",
+    "report": "Executor run at 2026-06-10T00:53:02\ntask_id=2bad01020f4197a9, type=shell, ok=False\n---\n[shell] returncode=1\n---\n'打开' is not recognized as an internal or external command,\noperable program or batch file.",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T16:52:48+00:00",
+    "updated_at": "2026-06-09T16:53:02+00:00"
+  },
+  {
+    "id": "86a46aa982986446",
+    "title": "Top-AI-Paper #1: Attention Is All You Need",
+    "desc": "打开 Transformer 开山之作《Attention Is All You Need》, 同时在本地显示论文基本信息(作者、年份、链接)。",
+    "status": "completed",
+    "report": "Executor run at 2026-06-10T00:53:12\ntask_id=86a46aa982986446, type=shell, ok=False\n---\n[shell] returncode=1\n---\n'打开' is not recognized as an internal or external command,\noperable program or batch file.",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T16:52:46+00:00",
+    "updated_at": "2026-06-09T16:53:13+00:00"
+  },
+  {
+    "id": "b40a3cae57810d59",
+    "title": "Probe",
+    "desc": "test",
+    "status": "completed",
+    "report": "Executor run at 2026-06-10T00:53:14\ntask_id=b40a3cae57810d59, type=shell, ok=False\n---\n[shell] returncode=1\n---\n'test' is not recognized as an internal or external command,\noperable program or batch file.",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T16:51:23+00:00",
+    "updated_at": "2026-06-09T16:53:15+00:00"
+  },
+  {
+    "id": "3f5f8201ba098974",
+    "title": "001",
+    "desc": "检查电脑配置",
+    "status": "completed",
+    "report": "[STATUS: DONE]\n??: ??????\n\n????:\n- CPU: Intel(R) Core(TM) i5-14600K\n- ???: 14\n- ??: 63.72 GB\n- ????: Microsoft Windows 11 ??? 10.0.22631",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T15:57:12+00:00",
+    "updated_at": "2026-06-09T16:02:25+00:00"
+  },
+  {
+    "id": "4bc90c121431a19d",
+    "title": "fuck 王旭",
+    "desc": "fuck王旭",
+    "status": "completed",
+    "report": "去弄刘瑞达",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T15:53:02+00:00",
+    "updated_at": "2026-06-09T15:56:07+00:00"
+  },
+  {
+    "id": "76fd3f105d17eb52",
+    "title": "Test",
+    "desc": "查看电脑基本配置",
+    "status": "completed",
+    "report": "[STATUS: DONE]\n已接收: Test\n查看电脑基本配置",
+    "publisher": "AI-Publisher-Node",
+    "created_at": "2026-06-09T15:46:19+00:00",
+    "updated_at": "2026-06-09T15:51:29+00:00"
+  }
+]
