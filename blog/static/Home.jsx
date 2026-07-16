@@ -114,6 +114,16 @@ const Home = ({ posts, session, onSignIn, onSignOut, onOpenPost, onCompose, onAd
 
 const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
   const isMobile = useIsMobile();
+  const desktopHighlights = [
+    "AAAI 2026 Oral Paper",
+    "ICASSP 2026 Student Travel Award",
+    "Global 2nd&3rd — Tencent AI+Oracle",
+    "National Gold — \"ChuangQingChun\"",
+    "Provincial Grand — \"Challenge Cup\"",
+    "National First — Lanqiao Cup",
+    "National First — CRAIC",
+    "100+ Awards · 20+ Papers",
+  ];
   return (
   <section style={{
     padding: isMobile ? "28px 18px 36px" : "44px 48px 60px",
@@ -181,7 +191,7 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
           color: "var(--ink-mute)", marginBottom: 22,
         }}>{BIO.blurbCn}</div>
 
-        <div style={{ display: "flex", gap: 22, flexWrap: "wrap", alignItems: "center", justifyContent: isMobile ? "center" : "flex-start" }}>
+        {isMobile && <div style={{ display: "flex", gap: 22, flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
           {BIO.links.map((l) => (
             <a key={l.label} href={l.url} target="_blank" rel="noopener noreferrer" style={{
               fontFamily: "var(--font-sans)", fontSize: 13, color: "var(--ink)",
@@ -189,7 +199,7 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
               textUnderlineOffset: 3, textDecorationThickness: 1,
             }}>{l.label}</a>
           ))}
-        </div>
+        </div>}
         {isMobile && (
           <div style={{ marginTop: 20, display: "flex", alignItems: "center", gap: 12 }}>
             <SessionChip session={session} onSignIn={onSignIn} onSignOut={onSignOut}/>
@@ -209,7 +219,7 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
           listStyle: "none", padding: 0, margin: "10px 0 0",
           display: "flex", flexDirection: "column", gap: 6,
         }}>
-          {BIO.highlights.map((h) => (
+          {desktopHighlights.map((h) => (
             <li key={h} style={{
               fontFamily: "var(--font-serif)", fontSize: 13.5,
               color: "var(--ink-soft)", lineHeight: 1.4,
@@ -217,22 +227,6 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
             }}>{h}</li>
           ))}
         </ul>
-        <div style={{
-          marginTop: 24, padding: "12px 0", borderTop: "1px solid var(--hairline)",
-          display: "flex", justifyContent: "flex-end", alignItems: "center", gap: 12,
-        }}>
-          <SessionChip session={session} onSignIn={onSignIn} onSignOut={onSignOut} />
-          {session?.role === "admin" && (
-            <>
-              <Button variant="ghost" onClick={onAdmin} leadIcon={<I.Settings size={14}/>}>
-                管理
-              </Button>
-              <Button variant="primary" onClick={onCompose} leadIcon={<I.Pen size={14}/>}>
-                Write
-              </Button>
-            </>
-          )}
-        </div>
       </div>}
     </div>
 
@@ -244,6 +238,35 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
       <span>↓ scroll for the latest posts</span>
       {!isMobile && <span>updated weekly · 旭</span>}
     </div>
+    {!isMobile && (
+      <div style={{
+        marginTop: 20,
+        display: "flex",
+        gap: "16px 24px",
+        flexWrap: "wrap",
+        alignItems: "center",
+      }}>
+        {BIO.links.map((l) => (
+          <a key={l.label} href={l.url} target="_blank" rel="noopener noreferrer" style={{
+            fontFamily: "var(--font-sans)", fontSize: 13, color: "var(--ink)",
+            textDecoration: "underline", textDecorationColor: "var(--rust)",
+            textUnderlineOffset: 3, textDecorationThickness: 1,
+          }}>{l.label}</a>
+        ))}
+        <span style={{ flex: 1 }}/>
+        <SessionChip session={session} onSignIn={onSignIn} onSignOut={onSignOut} />
+        {session?.role === "admin" && (
+          <>
+            <Button variant="ghost" onClick={onAdmin} leadIcon={<I.Settings size={14}/>}>
+              管理
+            </Button>
+            <Button variant="primary" onClick={onCompose} leadIcon={<I.Pen size={14}/>}>
+              Write
+            </Button>
+          </>
+        )}
+      </div>
+    )}
   </section>
   );
 };
