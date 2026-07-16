@@ -325,8 +325,8 @@ const SidebarTOC = ({ posts, activeId, onJump }) => {
                 transition: "all .22s var(--ease-out)",
               }}>
                 <div style={{
-                  fontFamily: "var(--font-display)", fontSize: active ? 16 : 15,
-                  lineHeight: 1.25, letterSpacing: "-0.005em",
+                  fontFamily: "var(--font-display)", fontSize: active ? 12.5 : 11.5,
+                  lineHeight: 1.3, letterSpacing: "0",
                   color: active ? "var(--ink)" : "var(--ink-mute)",
                   fontWeight: active ? 500 : 400,
                   transition: "all .22s var(--ease-out)",
@@ -398,8 +398,8 @@ const PostRow = ({ post, index, active, onOpen }) => {
         </div>
         <h2 style={{
           fontFamily: "var(--font-display)", fontWeight: 500,
-          fontSize: isMobile ? 22 : 34, lineHeight: isMobile ? 1.2 : 1.12,
-          letterSpacing: "-0.01em",
+          fontSize: isMobile ? 18 : 24, lineHeight: isMobile ? 1.24 : 1.2,
+          letterSpacing: "0",
           color: "var(--ink)", margin: isMobile ? "0 0 6px" : "0 0 10px",
         }} dangerouslySetInnerHTML={{
           __html: post.title.replace(/\*(.+?)\*/g, '<em style="font-style:italic">$1</em>'),

@@ -177,8 +177,8 @@ const Article = ({ posts, postId, session, onSignIn, onBack }) => {
             </div>
             <h1 style={{
               fontFamily: "var(--font-display)", fontWeight: 500,
-              fontSize: isMobile ? 36 : 62,
-              lineHeight: isMobile ? 1.15 : 1.05, letterSpacing: "-0.012em",
+              fontSize: isMobile ? 28 : 42,
+              lineHeight: isMobile ? 1.18 : 1.12, letterSpacing: "0",
               color: "var(--ink)", margin: "0 0 24px",
             }} dangerouslySetInnerHTML={{
               __html: post.title.replace(/\*(.+?)\*/g, '<em style="font-style:italic">$1</em>'),
@@ -249,8 +249,8 @@ const Article = ({ posts, postId, session, onSignIn, onBack }) => {
                     const active = activeSlug === slug;
                     const level = b.type === "h1" ? 1 : b.type === "h2" ? 2 : 3;
                     const baseIndent = (level - 1) * 14;
-                    const baseSize = level === 1 ? 13.5 : level === 2 ? 12.5 : 11.5;
-                    const activeSize = level === 1 ? 15.5 : level === 2 ? 14.5 : 13;
+                    const baseSize = level === 1 ? 12 : level === 2 ? 11 : 10.5;
+                    const activeSize = level === 1 ? 13 : level === 2 ? 12 : 11;
                     return (
                       <a key={i} href={"#" + slug}
                         onClick={(e) => {
@@ -418,8 +418,8 @@ const ProseBlock = ({ block, hlMap }) => {
     return (
       <h1 id={slug} style={{
         fontFamily: "var(--font-display)", fontWeight: 600,
-        fontSize: isMobile ? 26 : 40, lineHeight: 1.18, color: "var(--ink)",
-        margin: isMobile ? "40px 0 18px" : "60px 0 24px", letterSpacing: "-0.01em",
+        fontSize: isMobile ? 22 : 28, lineHeight: 1.22, color: "var(--ink)",
+        margin: isMobile ? "38px 0 16px" : "54px 0 22px", letterSpacing: "0",
         paddingBottom: 14, borderBottom: "1px solid var(--hairline)",
       }}>{block.text}</h1>
     );
@@ -433,8 +433,8 @@ const ProseBlock = ({ block, hlMap }) => {
     return (
       <h3 id={slug} style={{
         fontFamily: "var(--font-display)", fontWeight: 500,
-        fontSize: isMobile ? 18 : 23, lineHeight: 1.3, color: "var(--ink-soft)",
-        margin: isMobile ? "26px 0 12px" : "36px 0 14px", letterSpacing: "-0.005em",
+        fontSize: isMobile ? 16 : 18, lineHeight: 1.35, color: "var(--ink-soft)",
+        margin: isMobile ? "24px 0 12px" : "34px 0 14px", letterSpacing: "0",
       }}>{block.text}</h3>
     );
   }
@@ -624,18 +624,18 @@ const pStyle = {
   color: "var(--ink)", margin: "0 0 22px", textWrap: "pretty",
 };
 const h2Style = {
-  fontFamily: "var(--font-display)", fontWeight: 500, fontSize: 32,
+  fontFamily: "var(--font-display)", fontWeight: 500, fontSize: 24,
   lineHeight: 1.2, color: "var(--ink)", margin: "44px 0 18px",
-  letterSpacing: "-0.01em",
+  letterSpacing: "0",
 };
 const pStyleMobile = {
   fontFamily: "var(--font-serif)", fontSize: 18, lineHeight: 1.7,
   color: "var(--ink)", margin: "0 0 20px", textWrap: "pretty",
 };
 const h2StyleMobile = {
-  fontFamily: "var(--font-display)", fontWeight: 500, fontSize: 22,
+  fontFamily: "var(--font-display)", fontWeight: 500, fontSize: 19,
   lineHeight: 1.25, color: "var(--ink)", margin: "32px 0 14px",
-  letterSpacing: "-0.01em",
+  letterSpacing: "0",
 };
 
 const CodeBlock = ({ block }) => {
