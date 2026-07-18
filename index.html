@@ -368,6 +368,32 @@
       color: var(--ink-soft);
     }
     .ed-list .body b{ color: var(--ink); font-weight: 600; }
+    .playlist-note{
+      display: block;
+      margin-top: 3px;
+      font-family: var(--font-sans); font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--ink-mute);
+    }
+    .playlist-list li{
+      grid-template-columns: 88px 42px 1fr auto;
+      column-gap: 10px;
+      align-items: center;
+    }
+    .playlist-cover{
+      width: 38px; height: 38px;
+      border-radius: 999px;
+      border: 1px solid var(--hairline);
+      object-fit: cover;
+      display: block;
+      box-shadow: var(--shadow-1);
+    }
+    .playlist-created{
+      justify-self: end;
+      font-family: var(--font-sans); font-size: 12px;
+      color: var(--ink-faint);
+      white-space: nowrap;
+    }
 
     .hidden-row{ display: none; }
     .hidden-row.show{ display: grid; }
@@ -603,6 +629,16 @@
       .org-logo{ justify-content: flex-start; height: 48px; }
       .ed-list li{ grid-template-columns: 1fr; gap: 3px; }
       .ed-list .level{ min-width: 0; }
+      .playlist-list li{ grid-template-columns: 40px 1fr auto; gap: 4px 10px; align-items: center; }
+      .playlist-list .level{
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        white-space: nowrap;
+      }
+      .playlist-cover{ width: 36px; height: 36px; }
+      .playlist-list .body{ grid-column: 2; grid-row: 1 / span 2; }
+      .playlist-created{ grid-column: 3; grid-row: 2; justify-self: end; }
       .footer{ padding: 12px; flex-direction: column; gap: 6px; }
     }
   </style>
@@ -622,6 +658,7 @@
       <a href="#publications">Publications</a>
       <a href="#awards">Awards</a>
       <a href="#other">Service</a>
+      <a href="#playlists">Playlists</a>
       <!-- <a href="/blog/">Blog</a> -->
     </nav>
   </header>
@@ -682,12 +719,12 @@
       <a href="https://scholar.google.com.hk/citations?user=rptpIw4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a>
       <a href="https://github.com/Zaozzz" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="mailto:202311102025@stu.sdjzu.edu.cn">Email</a>
-      <a href="https://mp.weixin.qq.com/s/nz1zQbTVOQPCuvf7RJ7XlQ" target="_blank" rel="noopener noreferrer">WeChat</a>
       <a href="/blog/" target="_blank" rel="noopener noreferrer">Blog</a>
+      <a href="/news/" target="_blank" rel="noopener noreferrer">News</a>
+      <a href="https://mp.weixin.qq.com/s/nz1zQbTVOQPCuvf7RJ7XlQ" target="_blank" rel="noopener noreferrer">WeChat</a>
+      <a href="https://wangxu.life/map/" target="_blank" rel="noopener noreferrer">Travel Map</a>
       <a href="https://music.163.com/#/user/home?id=558948530" target="_blank" rel="noopener noreferrer">NetEase Music</a>
       <a href="/love/" target="_blank" rel="noopener noreferrer">Love Diary</a>
-      <a href="/news/" target="_blank" rel="noopener noreferrer">News</a>
-      <a href="https://wangxu.life/map/" target="_blank" rel="noopener noreferrer">Travel Map</a>
     </div>
   </section>
 
@@ -704,6 +741,7 @@
         <li><a href="#publications" data-section="publications">Publications<span class="toc-cat">now reading</span></a></li>
         <li><a href="#awards" data-section="awards">Awards<span class="toc-cat">now reading</span></a></li>
         <li><a href="#other" data-section="other">Service<span class="toc-cat">now reading</span></a></li>
+        <li><a href="#playlists" data-section="playlists">Playlists<span class="toc-cat">now reading</span></a></li>
       </ul>
     </aside>
 
@@ -749,6 +787,14 @@
             <p>
               I am invited to serve as a reviewer for conferences such as ICME, AVSS and BIBE, and
               journals such as TKDE. I am also a student member of AAAI, CCF, SDCAI.
+              Beyond academic research, I am also a recognized NetEase Cloud Music playlist curator
+              and music-review writer. My playlists have attracted over <b>3 million</b> plays and
+              tens of thousands of saves, while my published music comments have received hundreds
+              of thousands of likes. Several of my playlists have entered the NetEase Cloud Music
+              Soaring Playlist Chart Top 20, and my comments have repeatedly been featured on the
+              platform's hot-comment wall. I also founded the public account <b>ICCV</b>
+              (<b>I Code Computer Vision</b>), where I have published dozens of paper-sharing articles
+              and accumulated tens of thousands of reads.
             </p>
           </div>
         </div>
@@ -799,9 +845,6 @@
           <span id="newsToggleText">Show more</span>
           <span class="arrow">↓</span>
         </button>
-        <div style="text-align:center; margin-top:16px;">
-          <a href="/news/" style="font-family:var(--font-mono); font-size:13px; color:var(--rust); text-decoration:none;">View all news &rarr;</a>
-        </div>
       </section>
 
       <!-- ===== Education ===== -->
@@ -926,6 +969,20 @@
               </div>
             </div>
             <div class="pub-thumb-wrap"><img class="pub-thumb" alt="Hint recognition" src="/assets/optimized/papers/Hint%20recognition%20in%20Chinese%20and%20Russian.webp" loading="lazy" /></div>
+          </article>
+
+          <article class="pub hidden-row" data-nlp-hidden style="display:none;">
+            <div class="pub-no nlp"><span class="num">No. 018</span><span class="year">2026</span></div>
+            <div class="pub-body">
+              <div class="pub-cat nlp">NLP · ICIC</div>
+              <h3 class="pub-title"><a href="https://doi.org/10.1007/978-981-92-3560-5_28" target="_blank" rel="noopener noreferrer">PolicySimEval: A Benchmark for Evaluating Policy Outcomes Through Agent-Based Simulation</a></h3>
+              <p class="pub-authors">Jiaju Kang*, Puyu Han*, <b>Xu Wang*</b>, Weichao Pan, Ruida Liu, Chenggang Zhang, Keyan Jin</p>
+              <div class="pub-venue"><span class="badge nlp">ICIC 2026</span>CCF-C · Oral</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1007/978-981-92-3560-5_28" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
+            </div>
+            <div class="pub-thumb-wrap"><img class="pub-thumb" alt="PolicySimEval" src="/assets/optimized/papers/PolicySimEval.webp" loading="lazy" /></div>
           </article>
         </div>
         <button class="toggle-btn" id="nlpToggle" type="button" aria-expanded="false" onclick="toggleRows('[data-nlp-hidden]','nlpToggle','grid')">
@@ -1114,6 +1171,18 @@
             </div>
             <div class="pub-thumb-wrap"><img class="pub-thumb" alt="YOLO-FireAD" src="/assets/optimized/papers/YOLO-FireAD.webp" loading="lazy" /></div>
           </article>
+
+          <article class="pub hidden-row" data-ind-hidden style="display:none;">
+            <div class="pub-no cv-ind"><span class="num">No. 019</span><span class="year">2025</span></div>
+            <div class="pub-body">
+              <div class="pub-cat cv-ind">ML · 软件导刊</div>
+              <h3 class="pub-title"><a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/" target="_blank" rel="noopener noreferrer">基于招聘大数据与机器学习的数字人才需求与能力模型构建</a></h3>
+              <p class="pub-authors">潘维超, 郇文庆, 刘兴波, <b>王旭</b></p>
+              <div class="pub-venue"><span class="badge cv-ind">软件导刊 2025</span>中文核心 · CCF-T3</div>
+              <div class="pub-links"><a href="https://www.rjdk.org.cn/zh/article/doi/10.11907/rjdk.241973/" target="_blank" rel="noopener noreferrer">Paper</a></div>
+            </div>
+            <div class="pub-thumb-wrap"><img class="pub-thumb" alt="数字人才能力模型" src="/assets/optimized/papers/digital_talent.webp" loading="lazy" /></div>
+          </article>
         </div>
         <button class="toggle-btn" id="indToggle" type="button" aria-expanded="false" onclick="toggleRows('[data-ind-hidden]','indToggle','grid')">
           <span id="indToggleText">Show more</span>
@@ -1194,6 +1263,22 @@
           <li><span class="level">[Volunteering]</span><span class="body">200+ hours of volunteer service, recognized as Outstanding Volunteer 14 times; participated in 4 social practice projects.</span></li>
           <li><span class="level">[Leadership]</span><span class="body">Minister of Library Volunteer Association; Entrepreneurship Park Lead; Class Psychological Committee Member; Teaching Assistant.</span></li>
           <li><span class="level">[Conferences]</span><span class="body">Taishan AI Industry Innovation Conference (2024), CNCC (2024), WAIC (2025), ICIC (2025), BMVC (2025), IEEE CloudCom (2025), TRAE Meetup (Shenzhen 2025), AAAI (2026), ICASSP (2026).</span></li>
+        </ul>
+      </section>
+
+      <!-- ===== Playlists ===== -->
+      <section class="section" id="playlists">
+        <div class="section-head">
+          <span class="section-no">No. 08</span>
+          <h2 class="section-title">NetEase <em>Playlists</em></h2>
+          <span class="section-count">5 selected lists</span>
+        </div>
+        <ul class="ed-list playlist-list">
+          <li><span class="level">[2103k播放]</span><img class="playlist-cover" src="/assets/optimized/playlists/2804037354.jpg" alt="高考后一起去一场live吧 cover" loading="lazy" /><span class="body"><a href="https://music.163.com/#/playlist?id=2804037354" target="_blank" rel="noopener noreferrer">高考后一起去一场live吧</a><span class="playlist-note">网易云音乐高分歌单</span></span><span class="playlist-created">创建于 2019.05.18</span></li>
+          <li><span class="level">[919k播放]</span><img class="playlist-cover" src="/assets/optimized/playlists/2721877134.jpg" alt="人间不值得 黄诗扶值得. cover" loading="lazy" /><span class="body"><a href="https://music.163.com/#/playlist?id=2721877134" target="_blank" rel="noopener noreferrer">人间不值得 黄诗扶值得.</a><span class="playlist-note">黄诗扶歌手个人专属歌单TOP-3</span></span><span class="playlist-created">创建于 2019.03.23</span></li>
+          <li><span class="level">[430k播放]</span><img class="playlist-cover" src="/assets/optimized/playlists/2846393337.jpg" alt="喜欢是藏不住的 嘴巴闭上眼睛也会说出来 cover" loading="lazy" /><span class="body"><a href="https://music.163.com/#/playlist?id=2846393337" target="_blank" rel="noopener noreferrer">喜欢是藏不住的 嘴巴闭上眼睛也会说出来</a><span class="playlist-note">520限定杰出歌单</span></span><span class="playlist-created">创建于 2019.06.16</span></li>
+          <li><span class="level">[284k播放]</span><img class="playlist-cover" src="/assets/optimized/playlists/2941089379.jpg" alt="被人规划在未来是顶级浪漫 cover" loading="lazy" /><span class="body"><a href="https://music.163.com/#/playlist?id=2941089379" target="_blank" rel="noopener noreferrer">被人规划在未来是顶级浪漫</a><span class="playlist-note">歌单飙升榜TOP-20｜七夕限定杰出歌单</span></span><span class="playlist-created">创建于 2019.08.17</span></li>
+          <li><span class="level">[45k播放]</span><img class="playlist-cover" src="/assets/optimized/playlists/2984639566.jpg" alt="18年夏天：除了热什么都好的夏天 cover" loading="lazy" /><span class="body"><a href="https://music.163.com/#/playlist?id=2984639566" target="_blank" rel="noopener noreferrer">18年夏天：除了热什么都好的夏天</a><span class="playlist-note">18年夏天回忆优秀歌单</span></span><span class="playlist-created">创建于 2019.09.14</span></li>
         </ul>
       </section>
 
@@ -1377,16 +1462,10 @@
     function updateVisitorCount(){
       var el = document.getElementById("visitorCount");
       if (!el) return;
-      fetch("/analytics.json", { cache: "no-store" })
-        .then(function(r){ if (!r.ok) throw new Error("Static analytics unavailable"); return r.json(); })
+      fetch("/api/analytics?days=all", { cache: "no-store" })
+        .then(function(r){ if (!r.ok) throw new Error("Analytics unavailable"); return r.json(); })
         .then(function(payload){
-          var daily = payload.daily || {};
-          var pv = Object.keys(daily).reduce(function(total, date){
-            var row = daily[date] || {};
-            return total + Object.keys(row).reduce(function(sum, country){
-              return sum + Number((row[country] && row[country].pv) || 0);
-            }, 0);
-          }, 0);
+          var pv = Number((payload && payload.total && payload.total.pv) || 0);
           el.textContent = pv > 0 ? pv.toLocaleString() : "—";
         })
         .catch(function(){ el.textContent = "—"; });
