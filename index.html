@@ -228,23 +228,6 @@
       color: var(--ink-soft); line-height: 1.4;
       border-left: 1px solid var(--hairline); padding-left: 10px;
     }
-    .hero-visitor{
-      margin-top: 24px; padding: 12px 0;
-      border-top: 1px solid var(--hairline);
-      display: flex; justify-content: flex-end; align-items: center; gap: 12px;
-    }
-    .visitor-block{
-      text-align: right;
-    }
-    .visitor-count{
-      font-family: var(--font-display); font-size: 22px; font-weight: 500;
-      color: var(--rust); line-height: 1;
-    }
-    .visitor-label{
-      font-family: var(--font-sans); font-size: 10px;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--ink-mute); margin-top: 4px;
-    }
 
     .hero-divider{
       height: 1px; background: var(--hairline); margin-top: 36px;
@@ -700,12 +683,6 @@
           <li>National First — CRAIC</li>
           <li>100+ Awards · 20+ Papers</li>
         </ul>
-        <div class="hero-visitor">
-          <div class="visitor-block">
-            <div class="visitor-count" id="visitorCount" aria-live="polite">—</div>
-            <div class="visitor-label">visitors since Feb 2026</div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1462,19 +1439,6 @@
       scrollRaf = requestAnimationFrame(function(){ scrollRaf = 0; updateActiveNav(); });
     }, { passive: true });
 
-    /* ============== Visitor count ============== */
-    function updateVisitorCount(){
-      var el = document.getElementById("visitorCount");
-      if (!el) return;
-      fetch("/api/analytics?days=all", { cache: "no-store" })
-        .then(function(r){ if (!r.ok) throw new Error("Analytics unavailable"); return r.json(); })
-        .then(function(payload){
-          var pv = Number((payload && payload.total && payload.total.pv) || 0);
-          el.textContent = pv > 0 ? pv.toLocaleString() : "—";
-        })
-        .catch(function(){ el.textContent = "—"; });
-    }
-    updateVisitorCount();
 
     /* ============== Cloud canvas (subtle) ============== */
     (function(){
