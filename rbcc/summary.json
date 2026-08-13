@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-08-14 00:16:53",
+  "total_posts": 46731,
+  "total_users": 2465,
+  "by_platform": {
+    "tieba": {
+      "users": 960,
+      "posts": 1294,
+      "related": 767,
+      "unrelated": 527
+    },
+    "zhihu": {
+      "users": 1505,
+      "posts": 45437,
+      "related": 45437,
+      "unrelated": 0
+    }
+  },
+  "by_scene": {
+    "creative_content": {
+      "scene_name": "创意与内容产业场景",
+      "tieba": {
+        "users": 247,
+        "posts": 285,
+        "related": 139,
+        "unrelated": 146,
+        "total_content_chars": 89015
+      },
+      "zhihu": {
+        "users": 380,
+        "posts": 13097,
+        "related": 13097,
+        "unrelated": 0,
+        "total_content_chars": 7802943
+      },
+      "total_users": 627,
+      "total_posts": 13382,
+      "total_related": 13236
+    },
+    "equipment_manufacturing_assembly": {
+      "scene_name": "装备制造加工和装配场景",
+      "tieba": {
+        "users": 202,
+        "posts": 296,
+        "related": 203,
+        "unrelated": 93,
+        "total_content_chars": 143413
+      },
+      "zhihu": {
+        "users": 352,
+        "posts": 9511,
+        "related": 9511,
+        "unrelated": 0,
+        "total_content_chars": 5399568
+      },
+      "total_users": 554,
+      "total_posts": 9807,
+      "total_related": 9714
+    },
+    "health_homecare": {
+      "scene_name": "医疗健康与家居照护场景",
+      "tieba": {
+        "users": 168,
+        "posts": 281,
+        "related": 166,
+        "unrelated": 115,
+        "total_content_chars": 128640
+      },
+      "zhihu": {
+        "users": 100,
+        "posts": 2368,
+        "related": 2368,
+        "unrelated": 0,
+        "total_content_chars": 251773
+      },
+      "total_users": 268,
+      "total_posts": 2649,
+      "total_related": 2534
+    },
+    "public_service_urban": {
+      "scene_name": "公共服务与城市空间场景",
+      "tieba": {
+        "users": 114,
+        "posts": 163,
+        "related": 101,
+        "unrelated": 62,
+        "total_content_chars": 87196
+      },
+      "zhihu": {
+        "users": 290,
+        "posts": 7352,
+        "related": 7352,
+        "unrelated": 0,
+        "total_content_chars": 7402070
+      },
+      "total_users": 404,
+      "total_posts": 7515,
+      "total_related": 7453
+    },
+    "smart_transport_infra": {
+      "scene_name": "智慧交通与基础设施场景",
+      "tieba": {
+        "users": 229,
+        "posts": 269,
+        "related": 158,
+        "unrelated": 111,
+        "total_content_chars": 97920
+      },
+      "zhihu": {
+        "users": 383,
+        "posts": 13109,
+        "related": 13109,
+        "unrelated": 0,
+        "total_content_chars": 8378564
+      },
+      "total_users": 612,
+      "total_posts": 13378,
+      "total_related": 13267
+    }
+  }
+}
