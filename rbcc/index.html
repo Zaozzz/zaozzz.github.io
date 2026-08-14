@@ -401,6 +401,11 @@ function truncate(value,len){
 }
 function sceneName(id){return SCENE_NAMES[id]||id||"未知场景"}
 function sceneColor(id){return SCENE_COLORS[id]||"#c51d3a"}
+function anonName(u,index){
+  if(u.anon_name)return u.anon_name;
+  const n=String(index+1).padStart(3,"0");
+  return `石榴籽#${n}`;
+}
 
 function renderOverview(){
   const scenes=Object.keys(summary.by_scene||{});
@@ -470,8 +475,8 @@ function filteredUsers(){
   if(state.scene!=="all")list=list.filter(u=>u.scene_id===state.scene);
   if(state.query){
     const q=state.query.toLowerCase();
-    list=list.filter(u=>{
-      const blob=[u.user_name,u.bio,u.company,u.job,u.location,sceneName(u.scene_id),...(u.sample_posts||[]).flatMap(p=>[p.title,p.content])].join(" ").toLowerCase();
+    list=list.filter((u,index)=>{
+      const blob=[anonName(u,index),sceneName(u.scene_id),...(u.sample_posts||[]).flatMap(p=>[p.title,p.content])].join(" ").toLowerCase();
       return blob.includes(q);
     });
   }
@@ -491,13 +496,15 @@ function renderPersonas(){
     return;
   }
   grid.innerHTML=pageItems.map((u,index)=>{
+    const globalIndex=users.findIndex(item=>item===u);
     const post=(u.sample_posts||[])[0]||{};
-    const initial=(u.user_name||u.user_id||"?").slice(0,1).toUpperCase();
+    const displayName=anonName(u,globalIndex<0?index:globalIndex);
+    const initial="籽";
     return `
       <article class="persona-panel persona-card" style="--scene-color:${sceneColor(u.scene_id)}">
         <div class="persona-top">
           <div>
-            <p class="persona-name">${escapeHtml(u.user_name||u.user_id)}</p>
+            <p class="persona-name">${escapeHtml(displayName)}</p>
             <div class="scene-tag">${sceneName(u.scene_id)}</div>
           </div>
           <div class="avatar">${escapeHtml(initial)}</div>
@@ -509,16 +516,16 @@ function renderPersonas(){
         </div>
         <div class="post-preview">
           <div class="post-title">${escapeHtml(post.title||"代表内容")}</div>
-          ${escapeHtml(truncate(post.content||u.bio||"暂无简介",112))}
+          ${escapeHtml(truncate(post.content||"暂无代表内容",112))}
         </div>
         <div class="card-actions">
           <span class="scene-tag">#${(state.page-1)*pageSize+index+1}</span>
-          <button class="link-btn" type="button" data-user="${escapeHtml(u.user_id)}">展开证据</button>
+          <button class="link-btn" type="button" data-index="${users.indexOf(u)}">展开证据</button>
         </div>
       </article>
     `;
   }).join("");
-  grid.querySelectorAll(".link-btn").forEach(btn=>btn.addEventListener("click",()=>openDrawer(btn.dataset.user)));
+  grid.querySelectorAll(".link-btn").forEach(btn=>btn.addEventListener("click",()=>openDrawer(Number(btn.dataset.index))));
   renderPagination(list.length,totalPages);
 }
 function renderPagination(total,totalPages){
@@ -540,10 +547,10 @@ function renderPagination(total,totalPages){
     document.getElementById("personas").scrollIntoView({behavior:"smooth",block:"start"});
   }));
 }
-function openDrawer(userId){
-  const user=users.find(u=>u.user_id===userId);
+function openDrawer(userIndex){
+  const user=users[userIndex];
   if(!user)return;
-  document.getElementById("drawerName").textContent=user.user_name||user.user_id;
+  document.getElementById("drawerName").textContent=anonName(user,userIndex);
   document.getElementById("drawerScene").textContent=sceneName(user.scene_id)+" · "+short(user.total_chars)+"字";
   document.getElementById("drawerPosts").innerHTML=(user.sample_posts||[]).slice(0,5).map(p=>`
     <article class="drawer-post">
