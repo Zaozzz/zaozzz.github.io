@@ -117,5 +117,8 @@
       "total_posts": 13378,
       "total_related": 13267
     }
-  }
+  },
+  "display_users": 500,
+  "display_page_size": 20,
+  "health_display_users": 20
 }
