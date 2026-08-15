@@ -408,7 +408,7 @@ function anonName(u,index){
   return `石榴籽#${n}`;
 }
 function publicCount(){
-  return users.length||summary.display_users||summary.sample_users||summary.total_users||0;
+  return summary.total_users||users.length||0;
 }
 function pageNoForIndex(index){
   return Math.floor(index/pageSize)+1;
@@ -435,7 +435,7 @@ function renderOverview(){
   const tieba=summary.by_platform?.tieba?.posts||0;
   const zhihu=summary.by_platform?.zhihu?.posts||0;
   document.getElementById("statsGrid").innerHTML=[
-    ["展示画像",publicCount(),"匿名石榴籽样本"],
+    ["展示画像",publicCount(),"匿名真实用户"],
     ["公开内容",summary.total_posts,"帖子与回答"],
     ["贴吧帖子",tieba,"保留场景噪声"],
     ["知乎回答",zhihu,"高信息量文本"]
