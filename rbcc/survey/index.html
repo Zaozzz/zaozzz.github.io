@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>打车找车体验调研 · 开源数据集 | RBCC-16 石榴籽</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23fff8f5'/%3E%3Ccircle cx='32' cy='38' r='19' fill='%23c51d3a'/%3E%3Cpath d='M32 12l4 6-8 0z' fill='%231f8a70'/%3E%3C/svg%3E">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d0709;--surface:rgba(30,18,20,.62);--surface2:rgba(46,26,30,.5);
+  --text:#f7f2f3;--text2:#b8a6aa;--text3:#7d6b6f;
+  --border:rgba(255,220,225,.09);--pome:#e8465f;--pome-deep:#c51d3a;--seed:#2fae8f;
+  --radius:18px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.65;letter-spacing:.01em;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(ellipse 700px 500px at 15% 5%,rgba(197,29,58,.16),transparent 60%),
+  radial-gradient(ellipse 600px 500px at 85% 20%,rgba(47,174,143,.10),transparent 60%),
+  radial-gradient(ellipse 500px 700px at 50% 95%,rgba(232,70,95,.08),transparent 60%)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(13,7,9,.78);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);height:52px;display:flex;align-items:center;justify-content:center;gap:18px;font-size:.92em}
+.nav a{color:var(--text2);text-decoration:none}
+.nav a:hover{color:var(--pome)}
+.nav .home{color:var(--pome);font-weight:600}
+.hero{padding:72px 0 44px;text-align:center}
+.badge{display:inline-block;font-size:.78em;letter-spacing:.22em;color:var(--pome);
+  border:1px solid rgba(232,70,95,.35);border-radius:99px;padding:5px 16px;margin-bottom:20px;background:rgba(232,70,95,.08)}
+h1{font-size:clamp(30px,4.6vw,46px);font-weight:700;letter-spacing:-.01em}
+.hero p{color:var(--text2);margin-top:14px;font-size:1.05em}
+.sample{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.sample .s{background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:14px 26px;min-width:150px}
+.sample b{font-size:26px;display:block;font-weight:700}
+.sample span{font-size:.82em;color:var(--text2)}
+.sample .g1 b{color:var(--pome)}
+.sample .g2 b{color:var(--seed)}
+h2{font-size:24px;margin:52px 0 18px;font-weight:650;display:flex;align-items:center;gap:10px}
+h2::before{content:'';width:5px;height:22px;border-radius:3px;background:linear-gradient(180deg,var(--pome),var(--seed))}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
+.grid{display:grid;gap:16px}
+.g2c{grid-template-columns:1fr 1fr}
+@media(max-width:760px){.g2c{grid-template-columns:1fr}}
+.q-row{display:flex;gap:10px;align-items:baseline;padding:9px 12px;border-bottom:1px dashed var(--border);font-size:.94em}
+.q-row:last-child{border:none}
+.q-id{color:var(--pome);font-weight:700;font-size:.85em;min-width:36px}
+.q-type{font-size:.7em;padding:2px 9px;border-radius:99px;min-width:44px;text-align:center}
+.t-单选{background:rgba(232,70,95,.16);color:#f08aa0}
+.t-多选{background:rgba(47,174,143,.16);color:#7fd8c2}
+.t-打分{background:rgba(120,130,255,.15);color:#a9b2ff}
+.t-开放{background:rgba(240,180,70,.14);color:#ecc078}
+.q-text{color:var(--text);flex:1}
+canvas{max-height:300px}
+.note{font-size:.82em;color:var(--text3);margin-top:10px}
+table{width:100%;border-collapse:collapse;font-size:.92em}
+th{color:var(--text2);font-weight:500;text-align:left;padding:10px 12px;border-bottom:1px solid var(--border)}
+td{padding:10px 12px;border-bottom:1px dashed var(--border)}
+tr:last-child td{border:none}
+td:not(:first-child),th:not(:first-child){text-align:center}
+.wc-box{text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.wc-box img{max-width:420px;width:100%;border-radius:12px}
+.opens{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.open-card{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-size:.88em;color:var(--text2)}
+.open-card p{margin-top:8px;color:var(--text)}
+.open-tag{font-size:.7em;color:var(--seed);background:rgba(47,174,143,.12);padding:2px 10px;border-radius:99px}
+.dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.dl a{display:block;background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:18px 20px;text-decoration:none;color:var(--text);transition:.2s}
+.dl a:hover{border-color:rgba(232,70,95,.5);transform:translateY(-2px)}
+.dl b{display:block;font-size:.98em}
+.dl span{font-size:.78em;color:var(--text3)}
+footer{margin-top:64px;padding:30px 0 40px;border-top:1px solid var(--border);text-align:center;color:var(--text3);font-size:.85em}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="home" href="/rbcc/">数字人知识库</a>
+  <a href="#dataset">数据集</a>
+  <a href="#questionnaire">问卷</a>
+  <a href="#analysis">数据分析</a>
+  <a href="#download">开源下载</a>
+</nav>
+
+<header class="hero wrap">
+  <div class="badge">RBCC-16 · 调研问卷开源</div>
+  <h1>网约车打车找车体验调研</h1>
+  <p>基于数字人知识库的多场景用户行为语料，围绕「打车后找不到车」这一高频痛点开展的结构化调研。问卷、逐份作答数据与分析结果全部开源。</p>
+  <div class="sample">
+    <div class="s"><b>1,237</b><span>有效问卷</span></div>
+    <div class="s g1"><b>1,000</b><span>石榴籽数字人填写</span></div>
+    <div class="s g2"><b>237</b><span>真人填写</span></div>
+    <div class="s"><b>14</b><span>题目</span></div>
+    <div class="s"><b>5</b><span>场景覆盖</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2 id="dataset">数据集说明</h2>
+  <div class="card grid g2c">
+    <div>
+      <p style="font-size:.95em;color:var(--text2)">全部 1,237 份问卷中，<b style="color:var(--pome)">1,000 份由石榴籽数字人填写</b>——基于知识库中真实用户的公开画像与历史发言语料，由数字人以其身份、职业、表达风格代入作答；<b style="color:var(--seed)">237 份为真人填写</b>。样本覆盖创意内容、装备制造、医疗健康、公共服务、智慧交通五大场景人群。</p>
+    </div>
+    <div>
+      <table>
+        <tr><th>场景</th><th>样本量</th></tr>
+        <tr><td>创意与内容产业</td><td>338</td></tr><tr><td>智慧交通基建</td><td>334</td></tr><tr><td>装备制造加工</td><td>287</td></tr><tr><td>公共服务城市</td><td>212</td></tr><tr><td>医疗健康照护</td><td>66</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h2 id="questionnaire">问卷内容（共 14 题）</h2>
+  <div class="card">
+    <div class="q-row"><span class="q-id">Q1</span><span class="q-type t-单选">单选</span><span class="q-text">你的身份是？</span></div>
+<div class="q-row"><span class="q-id">Q2</span><span class="q-type t-单选">单选</span><span class="q-text">一周大概会打车多少次？</span></div>
+<div class="q-row"><span class="q-id">Q3</span><span class="q-type t-多选">多选</span><span class="q-text">平时打车最多会去哪些地方？</span></div>
+<div class="q-row"><span class="q-id">Q4</span><span class="q-type t-单选">单选</span><span class="q-text">平时主要用哪个软件打车？</span></div>
+<div class="q-row"><span class="q-id">Q5</span><span class="q-type t-打分">打分</span><span class="q-text">地图显示我和司机距离很近，但我还是很难找到车</span></div>
+<div class="q-row"><span class="q-id">Q6</span><span class="q-type t-打分">打分</span><span class="q-text">在车站、医院这种多层、多出入口的地方，找车总要浪费很久</span></div>
+<div class="q-row"><span class="q-id">Q7</span><span class="q-type t-打分">打分</span><span class="q-text">找不到车的时候，需要反复打电话和司机确认位置，很麻烦</span></div>
+<div class="q-row"><span class="q-id">Q8</span><span class="q-type t-打分">打分</span><span class="q-text">经常遇到隔着栏杆、不在同一楼层，明明坐标很近却碰不到</span></div>
+<div class="q-row"><span class="q-id">Q9</span><span class="q-type t-打分">打分</span><span class="q-text">曾经因为互相找不到对方，取消过打车订单</span></div>
+<div class="q-row"><span class="q-id">Q10</span><span class="q-type t-打分">打分</span><span class="q-text">手机地图只会标一个点位，不会一步步带我走到车子旁边</span></div>
+<div class="q-row"><span class="q-id">Q11</span><span class="q-type t-打分">打分</span><span class="q-text">车多的时候，很难快速分辨哪一辆是自己预约的车</span></div>
+<div class="q-row"><span class="q-id">Q12</span><span class="q-type t-打分">打分</span><span class="q-text">要是能实时提示车辆在左 / 右 / 正前方，能大大缓解找车的烦躁感</span></div>
+<div class="q-row"><span class="q-id">Q13</span><span class="q-type t-打分">打分</span><span class="q-text">这类专门解决找车难题的功能，打车平台很有必要上线使用</span></div>
+<div class="q-row"><span class="q-id">Q14</span><span class="q-type t-开放">开放</span><span class="q-text">你打车找车时，最头疼的问题是什么？</span></div>
+    <p class="note">打分题采用 Likert 5 级量表：1 完全不符合 ~ 5 完全符合。</p>
+  </div>
+
+  <h2 id="analysis">数据分析</h2>
+
+  <div class="grid g2c">
+    <div class="card">
+      <h3 style="font-size:15px;margin-bottom:12px;color:var(--text2)">常用打车软件</h3>
+      <canvas id="cApp"></canvas>
+    </div>
+    <div class="card">
+      <h3 style="font-size:15px;margin-bottom:12px;color:var(--text2)">常去地点（多选人次）</h3>
+      <canvas id="cPlace"></canvas>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3 style="font-size:15px;margin-bottom:12px;color:var(--text2)">体验痛点打分均值（1-5）</h3>
+    <canvas id="cPain" style="max-height:330px"></canvas>
+    <p class="note">「多层多出口找车耗时」均值 4.59 为最强痛点；「因找不到取消订单」2.90 相对低频但真实存在。</p>
+  </div>
+
+  <div class="grid g2c" style="margin-top:16px">
+    <div class="card">
+      <h3 style="font-size:15px;margin-bottom:12px;color:var(--text2)">需求验证：找车功能</h3>
+      <canvas id="cNeed"></canvas>
+      <p class="note">实时方位提示（4.99）与找车功能必要性（4.99）近乎满分，需求强烈且跨场景一致。</p>
+    </div>
+    <div class="card">
+      <h3 style="font-size:15px;margin-bottom:12px;color:var(--text2)">场景交叉（均值）</h3>
+      <table>
+        <tr><th>场景</th><th>n</th><th>难找车</th><th>方位提示</th><th>功能必要</th></tr>
+        <tr><td>创意与内容产业</td><td>338</td><td>3.57</td><td>4.99</td><td>4.98</td></tr>
+<tr><td>装备制造加工</td><td>287</td><td>3.52</td><td>4.99</td><td>4.99</td></tr>
+<tr><td>医疗健康照护</td><td>66</td><td>3.67</td><td>4.99</td><td>5.00</td></tr>
+<tr><td>公共服务城市</td><td>212</td><td>3.55</td><td>4.99</td><td>5.00</td></tr>
+<tr><td>智慧交通基建</td><td>334</td><td>3.57</td><td>4.98</td><td>4.99</td></tr>
+      </table>
+      <p class="note">五大场景人群打分高度一致，说明找车痛点具有跨人群普适性。</p>
+    </div>
+  </div>
+
+  <h2>开放题词云</h2>
+  <div class="wc-box">
+    <img src="wordcloud_open.png" alt="开放题词云（石榴形状）">
+    <p class="note">基于 1,237 条开放题回答分词生成，石榴形状呼应 RBCC-16 主题。高频词：地图、打电话、显示、头疼、说不清、楼层、商场、定位。</p>
+  </div>
+
+  <h2>开放题精选回答</h2>
+  <div class="opens">
+    <div class="open-card"><span class="open-tag">创意与内容产业</span><p>最烦定位不准，明明就在附近却要绕半天，尤其商场地下车库。能不能搞个AR指引？</p></div>
+<div class="open-card"><span class="open-tag">公共服务城市</span><p>最头疼的是在火车站、医院这种多层结构的地方，地图上显示就在附近，但实际不在同一层，绕来绕去还得打电话问司机，特别费劲。</p></div>
+<div class="open-card"><span class="open-tag">创意与内容产业</span><p>最烦的就是定位不准，明明地图上叠一块了，人就是不在一个楼层或者隔条马路，来回打电话跟司机对暗号似的，费劲。</p></div>
+<div class="open-card"><span class="open-tag">公共服务城市</span><p>最烦在高铁站那种大地方，地图上看着挺近，结果一个在楼上一个在楼下，打电话也说不清，绕来绕去耽误时间。</p></div>
+<div class="open-card"><span class="open-tag">装备制造加工</span><p>最烦的就是地图上看着近，实际上隔道墙或者不在一个楼层，绕来绕去就是碰不上。尤其车站那种地方，出入口又多，定位还飘，打电话说半天也说不清。要是能直接显示车在哪个方向、哪个口，那就省事多了。</p></div>
+<div class="open-card"><span class="open-tag">公共服务城市</span><p>车站和医院这种地方，出入口多，导航定位不准，明明显示很近，就是找不到车，还得打电话来回说，麻烦得很。</p></div>
+<div class="open-card"><span class="open-tag">装备制造加工</span><p>最烦那种地图上看着就几十米，结果中间隔了堵墙或者天桥，绕来绕去半天找不到，电话打几遍还说不清楚。</p></div>
+<div class="open-card"><span class="open-tag">创意与内容产业</span><p>最烦在机场和高铁站找车，楼层多出口多，手机定位又不准，来回跑好几趟，打电话也说不清，希望有个箭头直接带我走。</p></div>
+<div class="open-card"><span class="open-tag">智慧交通基建</span><p>最头疼的是地图显示很近但实际隔了条马路或在不同楼层，尤其是商场和车站，打电话描述位置也说不清，希望有更精准的室内导航和实景指引。</p></div>
+<div class="open-card"><span class="open-tag">装备制造加工</span><p>我这边经常要去工厂和客户那边，有时候导航显示到了，但就是找不到车，尤其厂区里面楼层多，绕来绕去很烦，打电话说半天也说不清。</p></div>
+  </div>
+
+  <h2 id="download">开源下载</h2>
+  <div class="dl">
+    <a href="survey_stats.json" download>
+      <b>survey_stats.json</b>
+      <span>完整数据：汇总统计 + 1,237 条逐份作答记录（含用户画像字段），可直接 pandas 加载</span>
+    </a>
+    <a href="wordcloud_open.png" download>
+      <b>wordcloud_open.png</b>
+      <span>开放题词云高清图（石榴 mask）</span>
+    </a>
+    <a href="questionnaire.json" download>
+      <b>questionnaire.json</b>
+      <span>问卷结构定义（14 题题目、题型、选项）</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div style="font-weight:600;color:var(--text2)">RBCC-16 · 石榴籽调研数据平台</div>
+  <p style="margin-top:6px">Survey Corpus · 2026 · 1,237 responses · CC BY-NC 4.0</p>
+  <p style="margin-top:4px"><a href="/" style="color:var(--text3)">← 返回主页</a> · <a href="/rbcc/" style="color:var(--text3)">数字人知识库</a></p>
+</footer>
+
+<script>
+Chart.defaults.color='#b8a6aa';
+Chart.defaults.borderColor='rgba(255,220,225,.08)';
+Chart.defaults.font.family="-apple-system,'PingFang SC',sans-serif";
+new Chart(cApp,{type:'doughnut',data:{
+  labels:["滴滴", "高德（聚合打车）", "其他打车软件", "路边直接拦出租车"],
+  datasets:[{data:[1002, 228, 2, 5],backgroundColor:['#e8465f','#2fae8f','#8a7dff','#f0b446'],borderColor:'#0d0709',borderWidth:3}]},
+  options:{plugins:{legend:{position:'right'}},cutout:'62%'}});
+new Chart(cPlace,{type:'bar',data:{
+  labels:["机场、高铁站", "医院", "写字楼、商场", "小区", "大型会展、场馆"],
+  datasets:[{data:[977, 100, 1186, 488, 31],backgroundColor:'#e8465f',borderRadius:6,barThickness:18}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(255,220,225,.06)'}}}}});
+new Chart(cPain,{type:'bar',data:{
+  labels:[{"q": "多层多出口找车耗时", "m": 4.586}, {"q": "反复电话确认位置", "m": 4.051}, {"q": "地图只标点不引路", "m": 3.979}, {"q": "隔栏不同层碰不到", "m": 3.937}, {"q": "车多难辨预约车", "m": 3.634}, {"q": "距离近仍难找车", "m": 3.559}, {"q": "因找不到取消订单", "m": 2.897}].map(d=>d.q),
+  datasets:[{data:[{"q": "多层多出口找车耗时", "m": 4.586}, {"q": "反复电话确认位置", "m": 4.051}, {"q": "地图只标点不引路", "m": 3.979}, {"q": "隔栏不同层碰不到", "m": 3.937}, {"q": "车多难辨预约车", "m": 3.634}, {"q": "距离近仍难找车", "m": 3.559}, {"q": "因找不到取消订单", "m": 2.897}].map(d=>d.m),backgroundColor:m=>m.raw>4?'#c51d3a':(m.raw>3.5?'#e8465f':'#a05a68'),borderRadius:6,barThickness:20}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{min:1,max:5,grid:{color:'rgba(255,220,225,.06)'}}}}});
+new Chart(cNeed,{type:'bar',data:{
+  labels:[{"q": "实时方位提示有用", "m": 4.985}, {"q": "找车功能有必要", "m": 4.988}].map(d=>d.q),
+  datasets:[{data:[{"q": "实时方位提示有用", "m": 4.985}, {"q": "找车功能有必要", "m": 4.988}].map(d=>d.m),backgroundColor:['#2fae8f','#1d8a6e'],borderRadius:8,barThickness:44}]},
+  options:{plugins:{legend:{display:false}},scales:{y:{min:4.8,max:5},x:{grid:{display:false}}}}});
+</script>
+</body>
+</html>

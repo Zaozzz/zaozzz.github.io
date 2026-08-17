@@ -1,0 +1,128 @@
+{
+ "questionnaire": {
+  "id": "RBCC2026_RIDE",
+  "title": "网约车打车路程体验调研问卷",
+  "description": "面向乘客、司机与平台工作人员的打车找车体验调研，\n关注复杂场景（车站/医院/场馆等）下人与车互相找不到的痛点。\n"
+ },
+ "questions": [
+  {
+   "id": "q1",
+   "type": "single_choice",
+   "text": "你的身份是？",
+   "options": [
+    "经常打车的乘客",
+    "网约车 / 出租车司机",
+    "打车平台、车站 / 机场工作人员",
+    "其他"
+   ],
+   "required": true
+  },
+  {
+   "id": "q2",
+   "type": "single_choice",
+   "text": "一周大概会打车多少次？",
+   "options": [
+    "1 次以内",
+    "2-4 次",
+    "5-10 次",
+    "10 次以上"
+   ],
+   "required": true
+  },
+  {
+   "id": "q3",
+   "type": "multiple_choice",
+   "text": "平时打车最多会去哪些地方（可多选）",
+   "options": [
+    "机场、高铁站",
+    "医院",
+    "写字楼、商场",
+    "小区",
+    "大型会展、场馆"
+   ],
+   "required": true
+  },
+  {
+   "id": "q4",
+   "type": "single_choice",
+   "text": "平时主要用哪个软件打车？",
+   "options": [
+    "滴滴",
+    "高德（聚合打车）",
+    "其他打车软件",
+    "路边直接拦出租车"
+   ],
+   "required": true
+  },
+  {
+   "id": "q5",
+   "type": "likert",
+   "text": "地图显示我和司机距离很近，但我还是很难找到车",
+   "scale": 5,
+   "required": true
+  },
+  {
+   "id": "q6",
+   "type": "likert",
+   "text": "在车站、医院这种多层、多出入口的地方，找车总要浪费很久",
+   "scale": 5,
+   "required": true
+  },
+  {
+   "id": "q7",
+   "type": "likert",
+   "text": "找不到车的时候，需要反复打电话和司机确认位置，很麻烦",
+   "scale": 5,
+   "required": true
+  },
+  {
+   "id": "q8",
+   "type": "likert",
+   "text": "经常遇到隔着栏杆、不在同一楼层，明明坐标很近却碰不到",
+   "scale": 5,
+   "required": true
+  },
+  {
+   "id": "q9",
+   "type": "likert",
+   "text": "曾经因为互相找不到对方，取消过打车订单",
+   "scale": 5,
+   "required": true
+  },
+  {
+   "id": "q10",
+   "type": "likert",
+   "text": "手机地图只会标一个点位，不会一步步带我走到车子旁边",
+   "scale": 5,
+   "required": true
+  },
+  {
+   "id": "q11",
+   "type": "likert",
+   "text": "车多的时候，很难快速分辨哪一辆是自己预约的车",
+   "scale": 5,
+   "required": true
+  },
+  {
+   "id": "q12",
+   "type": "likert",
+   "text": "要是能实时提示车辆在左 / 右 / 正前方，能大大缓解找车的烦躁感",
+   "scale": 5,
+   "required": true
+  },
+  {
+   "id": "q13",
+   "type": "likert",
+   "text": "这类专门解决找车难题的功能，打车平台很有必要上线使用",
+   "scale": 5,
+   "required": true
+  },
+  {
+   "id": "q14",
+   "type": "open_text",
+   "text": "你打车找车时，最头疼的问题是什么？",
+   "max_length": 200,
+   "required": false
+  }
+ ]
+}
