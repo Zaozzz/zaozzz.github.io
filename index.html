@@ -238,6 +238,9 @@ h2{font-size:clamp(25px,3.4vw,38px);margin:0;letter-spacing:-.035em}
     <a href="#overview">数据全景</a>
     <a href="#insight">核心洞察</a>
     <a href="#personas">用户画像</a>
+    <a href="/rbcc/insights/">数字人知识库</a>
+    <a href="/rbcc/survey/">调研问卷</a>
+    <a href="/rbcc/profile/">个人档案</a>
   </nav>
 </header>
 
@@ -582,7 +585,7 @@ document.getElementById("sort").addEventListener("change",e=>{
 
 async function init(){
   try{
-    [summary,users]=await Promise.all([loadJson("summary.json"),loadJson("top100_users.json")]);
+    [summary,users]=await Promise.all([loadJson("rbcc/summary.json"),loadJson("rbcc/top100_users.json")]);
     renderOverview();
     renderFilters();
     renderPersonas();
