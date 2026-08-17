@@ -238,7 +238,9 @@ h2{font-size:clamp(25px,3.4vw,38px);margin:0;letter-spacing:-.035em}
     <a href="#overview">数据全景</a>
     <a href="#insight">核心洞察</a>
     <a href="#personas">用户画像</a>
+    <a href="/rbcc/insights/">数字人知识库</a>
     <a href="/rbcc/survey/">调研问卷</a>
+    <a href="/rbcc/profile/">个人档案</a>
   </nav>
 </header>
 
@@ -270,7 +272,7 @@ h2{font-size:clamp(25px,3.4vw,38px);margin:0;letter-spacing:-.035em}
       <div class="section-head">
         <div>
           <h2>数据全景</h2>
-          <p class="section-note">石榴籽不是装饰，而是这次调研的隐喻：每颗籽都保留场景、内容和证据线索，最终聚合成可复盘的判断结构。</p>
+          <p class="section-note">石榴籽不是装饰，而是这次调研的隐喻：每颗籽都保留来源、场景和用户线索，最终聚合成可追溯的证据结构。</p>
         </div>
       </div>
       <div class="stats-grid" id="statsGrid">
@@ -290,7 +292,7 @@ h2{font-size:clamp(25px,3.4vw,38px);margin:0;letter-spacing:-.035em}
           <div class="insight-list">
             <div class="insight-item">
               <div class="num">1</div>
-              <div><h3>保留证据</h3><p>每条内容先按平台、主题与场景进入聚合，再转化为可讨论的证据，避免只剩结论、丢失判断依据。</p></div>
+              <div><h3>保留来源</h3><p>每条内容先保留用户、帖子、平台与场景，再进入聚合，避免只剩结论、丢失证据。</p></div>
             </div>
             <div class="insight-item">
               <div class="num">2</div>
@@ -319,7 +321,7 @@ h2{font-size:clamp(25px,3.4vw,38px);margin:0;letter-spacing:-.035em}
         </div>
       </div>
       <div class="toolbar">
-        <input class="search" id="search" type="search" placeholder="搜索石榴籽、场景或帖子关键词">
+        <input class="search" id="search" type="search" placeholder="搜索用户、场景、简介或帖子关键词">
         <select class="sort" id="sort">
           <option value="chars">按信息量排序</option>
           <option value="posts">按内容数量排序</option>
@@ -371,9 +373,8 @@ const SCENE_COLORS={
 };
 let summary=null;
 let users=[];
-let userPages=new Map();
 let state={scene:"all",query:"",sort:"chars",page:1};
-const pageSize=20;
+const pageSize=9;
 
 function dataPaths(file){
   const inRbcc=location.pathname.includes("/rbcc/");
@@ -408,35 +409,17 @@ function anonName(u,index){
   const n=String(index+1).padStart(3,"0");
   return `石榴籽#${n}`;
 }
-function publicCount(){
-  return summary.total_users||users.length||0;
-}
-function pageNoForIndex(index){
-  return Math.floor(index/pageSize)+1;
-}
-async function loadUserPageByIndex(index){
-  const pageNo=pageNoForIndex(index);
-  if(userPages.has(pageNo))return userPages.get(pageNo);
-  const filename=`users_page_${String(pageNo).padStart(3,"0")}.json`;
-  const pageData=await loadJson(filename);
-  userPages.set(pageNo,pageData);
-  return pageData;
-}
-function pageUserFromCache(index){
-  const pageData=userPages.get(pageNoForIndex(index));
-  return pageData?.find(u=>u.index===index)||null;
-}
 
 function renderOverview(){
   const scenes=Object.keys(summary.by_scene||{});
-  document.getElementById("heroUsers").textContent=fmt(publicCount());
+  document.getElementById("heroUsers").textContent=fmt(summary.total_users);
   document.getElementById("heroPosts").textContent=fmt(summary.total_posts);
   document.getElementById("heroScenes").textContent=fmt(scenes.length);
   document.getElementById("generatedAt").textContent=(summary.generated_at||"--").slice(0,10);
   const tieba=summary.by_platform?.tieba?.posts||0;
   const zhihu=summary.by_platform?.zhihu?.posts||0;
   document.getElementById("statsGrid").innerHTML=[
-    ["展示画像",publicCount(),"匿名真实用户"],
+    ["用户样本",summary.total_users,"跨平台画像池"],
     ["公开内容",summary.total_posts,"帖子与回答"],
     ["贴吧帖子",tieba,"保留场景噪声"],
     ["知乎回答",zhihu,"高信息量文本"]
@@ -496,8 +479,7 @@ function filteredUsers(){
   if(state.query){
     const q=state.query.toLowerCase();
     list=list.filter((u,index)=>{
-      const preview=u.preview_post||{};
-      const blob=[anonName(u,index),sceneName(u.scene_id),preview.title,preview.content].join(" ").toLowerCase();
+      const blob=[anonName(u,index),sceneName(u.scene_id),...(u.sample_posts||[]).flatMap(p=>[p.title,p.content])].join(" ").toLowerCase();
       return blob.includes(q);
     });
   }
@@ -505,14 +487,7 @@ function filteredUsers(){
   list.sort((a,b)=>(b[key]||0)-(a[key]||0));
   return list;
 }
-async function ensureVisibleDetails(pageItems){
-  const missingPages=[...new Set(pageItems.map(u=>u.index).filter(i=>i!=null&&!pageUserFromCache(i)).map(pageNoForIndex))];
-  await Promise.all(missingPages.map(async pageNo=>{
-    const filename=`users_page_${String(pageNo).padStart(3,"0")}.json`;
-    userPages.set(pageNo,await loadJson(filename));
-  }));
-}
-async function renderPersonas(){
+function renderPersonas(){
   const grid=document.getElementById("personaGrid");
   const list=filteredUsers();
   const totalPages=Math.max(1,Math.ceil(list.length/pageSize));
@@ -523,16 +498,9 @@ async function renderPersonas(){
     renderPagination(0,1);
     return;
   }
-  grid.innerHTML='<div class="loading">正在加载本页画像...</div>';
-  try{
-    await ensureVisibleDetails(pageItems);
-  }catch(err){
-    console.error(err);
-  }
   grid.innerHTML=pageItems.map((u,index)=>{
-    const globalIndex=u.index??users.findIndex(item=>item===u);
-    const detail=globalIndex==null?null:pageUserFromCache(globalIndex);
-    const post=detail?.sample_posts?.[0]||u.preview_post||{};
+    const globalIndex=users.findIndex(item=>item===u);
+    const post=(u.sample_posts||[])[0]||{};
     const displayName=anonName(u,globalIndex<0?index:globalIndex);
     const initial="籽";
     return `
@@ -555,7 +523,7 @@ async function renderPersonas(){
         </div>
         <div class="card-actions">
           <span class="scene-tag">#${(state.page-1)*pageSize+index+1}</span>
-          <button class="link-btn" type="button" data-index="${globalIndex}">展开证据</button>
+          <button class="link-btn" type="button" data-index="${users.indexOf(u)}">展开证据</button>
         </div>
       </article>
     `;
@@ -582,16 +550,8 @@ function renderPagination(total,totalPages){
     document.getElementById("personas").scrollIntoView({behavior:"smooth",block:"start"});
   }));
 }
-async function openDrawer(userIndex){
-  let user=pageUserFromCache(userIndex);
-  if(!user){
-    try{
-      await loadUserPageByIndex(userIndex);
-      user=pageUserFromCache(userIndex);
-    }catch(err){
-      console.error(err);
-    }
-  }
+function openDrawer(userIndex){
+  const user=users[userIndex];
   if(!user)return;
   document.getElementById("drawerName").textContent=anonName(user,userIndex);
   document.getElementById("drawerScene").textContent=sceneName(user.scene_id)+" · "+short(user.total_chars)+"字";
@@ -625,12 +585,12 @@ document.getElementById("sort").addEventListener("change",e=>{
 
 async function init(){
   try{
-    [summary,users]=await Promise.all([loadJson("summary.json"),loadJson("users_index.json")]);
+    [summary,users]=await Promise.all([loadJson("summary.json"),loadJson("top100_users.json")]);
     renderOverview();
     renderFilters();
     renderPersonas();
   }catch(err){
-    document.getElementById("statsGrid").innerHTML='<div class="loading">数据加载失败，请检查 rbcc/summary.json 与 rbcc/users_index.json。</div>';
+    document.getElementById("statsGrid").innerHTML='<div class="loading">数据加载失败，请检查 rbcc/summary.json 与 rbcc/top100_users.json。</div>';
     document.getElementById("personaGrid").innerHTML='<div class="empty">无法读取用户画像数据</div>';
     console.error(err);
   }
