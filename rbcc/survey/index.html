@@ -228,7 +228,7 @@ footer{margin-top:64px;padding:30px 0 40px;border-top:1px solid var(--border);te
       </table>
     </div>
     <div class="pager" id="pager"></div>
-    <p class="note">石榴籽 ID：SLK-0001 ~ SLK-1000（数字人）；真人 ID：ZR-0001 ~ ZR-0237。痛点均分为 q5~q13 九题打分均值（1-5 分）。出于隐私考虑不展示任何个人信息。</p>
+    <p class="note">石榴籽 ID：SLK-0001 ~ SLK-1000（数字人，覆盖五大场景）；真人 ID：ZR-0001 ~ ZR-0237（均来自智慧交通基建场景人群）。痛点均分为 q5~q13 九题打分均值（1-5 分）。出于隐私考虑不展示任何个人信息。</p>
   </div>
 </main>
 
@@ -271,12 +271,12 @@ function render(){
   const list=filtered(),pages=Math.max(1,Math.ceil(list.length/PER));
   if(curPage>pages)curPage=pages;
   const start=(curPage-1)*PER,rows=list.slice(start,start+PER);
-  document.getElementById('dataBody').innerHTML=rows.map(r=>`<tr>
+  document.getElementById('dataBody').innerHTML=rows.length?rows.map(r=>`<tr>
     <td class="id-tag">${r[0]}</td>
     <td><span class="src-pill ${r[1]==='真人'?'src-real':'src-slk'}">${r[1]}</span></td>
     <td>${esc(r[2])}</td><td>${esc(r[3])}</td><td>${esc(r[4])}</td><td>${esc(r[5])}</td>
     <td style="text-align:center">${r[6]??'—'}</td>
-    <td><span class="q14cell" title="${esc(r[7])}">${esc(r[7])||'—'}</span></td></tr>`).join('');
+    <td><span class="q14cell" title="${esc(r[7])}">${esc(r[7])||'—'}</span></td></tr>`).join(''):'<tr><td colspan="8" style="color:var(--text3);padding:26px">当前筛选条件下暂无记录，请调整来源或场景。</td></tr>';
   document.getElementById('pageInfo').textContent=`${list.length} 份 · 第 ${curPage} / ${pages} 页`;
   let btns=`<button class="pbtn" data-p="${curPage-1}" ${curPage<=1?'disabled':''}>‹</button>`;
   const show=new Set([1,2,curPage-1,curPage,curPage+1,pages-1,pages]);
