@@ -1,4 +1,4 @@
-<!--rebuilt92389--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -9,41 +9,38 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#fffdfa;--surface:#ffffff;--surface2:#fdf4f1;
-  --text:#171015;--text2:#75646a;--text3:#9b878d;
-  --border:#f0c9c2;--pome:#c51d3a;--pome-deep:#7e1027;--seed:#1f8a70;
-  --radius:18px;--shadow:0 14px 40px rgba(126,16,39,.10);
+  --bg:#0d0709;--surface:rgba(30,18,20,.62);--surface2:rgba(46,26,30,.5);
+  --text:#f7f2f3;--text2:#b8a6aa;--text3:#7d6b6f;
+  --border:rgba(255,220,225,.09);--pome:#e8465f;--pome-deep:#c51d3a;--seed:#2fae8f;
+  --radius:18px;
 }
 body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif;
-  color:var(--text);line-height:1.65;letter-spacing:.01em;overflow-x:hidden;
-  background:
-    linear-gradient(90deg,rgba(197,29,58,.045) 1px,transparent 1px),
-    linear-gradient(180deg,rgba(197,29,58,.035) 1px,transparent 1px),
-    radial-gradient(circle at 15% 20%,rgba(255,217,223,.9),transparent 28%),
-    radial-gradient(circle at 90% 8%,rgba(31,138,112,.14),transparent 24%),
-    linear-gradient(180deg,#fffdfa 0%,#fff1ee 48%,#f7fffb 100%);
-  background-size:28px 28px,28px 28px,auto,auto,auto}
+  background:var(--bg);color:var(--text);line-height:1.65;letter-spacing:.01em;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(ellipse 700px 500px at 15% 5%,rgba(197,29,58,.16),transparent 60%),
+  radial-gradient(ellipse 600px 500px at 85% 20%,rgba(47,174,143,.10),transparent 60%),
+  radial-gradient(ellipse 500px 700px at 50% 95%,rgba(232,70,95,.08),transparent 60%)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-.nav{position:sticky;top:0;z-index:50;background:rgba(255,248,245,.88);backdrop-filter:blur(18px);
+.nav{position:sticky;top:0;z-index:50;background:rgba(13,7,9,.78);backdrop-filter:blur(18px);
   border-bottom:1px solid var(--border);height:52px;display:flex;align-items:center;justify-content:center;gap:18px;font-size:.92em}
 .nav a{color:var(--text2);text-decoration:none}
 .nav a:hover{color:var(--pome)}
 .nav .home{color:var(--pome);font-weight:600}
 .hero{padding:72px 0 44px;text-align:center}
 .badge{display:inline-block;font-size:.78em;letter-spacing:.22em;color:var(--pome);
-  border:1px solid var(--border);border-radius:99px;padding:5px 16px;margin-bottom:20px;background:rgba(197,29,58,.08)}
+  border:1px solid rgba(232,70,95,.35);border-radius:99px;padding:5px 16px;margin-bottom:20px;background:rgba(232,70,95,.08)}
 h1{font-size:clamp(30px,4.6vw,46px);font-weight:700;letter-spacing:-.01em}
 .hero p{color:var(--text2);margin-top:14px;font-size:1.05em}
 .sample{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
 .sample .s{background:var(--surface);border:1px solid var(--border);border-radius:14px;
-  padding:14px 26px;min-width:150px;box-shadow:var(--shadow)}
+  padding:14px 26px;min-width:150px}
 .sample b{font-size:26px;display:block;font-weight:700}
 .sample span{font-size:.82em;color:var(--text2)}
 .sample .g1 b{color:var(--pome)}
 .sample .g2 b{color:var(--seed)}
 h2{font-size:24px;margin:52px 0 18px;font-weight:650;display:flex;align-items:center;gap:10px}
 h2::before{content:'';width:5px;height:22px;border-radius:3px;background:linear-gradient(180deg,var(--pome),var(--seed))}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
 .grid{display:grid;gap:16px}
 .g2c{grid-template-columns:1fr 1fr}
 @media(max-width:760px){.g2c{grid-template-columns:1fr}}
@@ -51,10 +48,10 @@ h2::before{content:'';width:5px;height:22px;border-radius:3px;background:linear-
 .q-row:last-child{border:none}
 .q-id{color:var(--pome);font-weight:700;font-size:.85em;min-width:36px}
 .q-type{font-size:.7em;padding:2px 9px;border-radius:99px;min-width:44px;text-align:center}
-.t-单选{background:rgba(197,29,58,.09);color:var(--pome)}
-.t-多选{background:rgba(31,138,112,.10);color:var(--seed)}
-.t-打分{background:rgba(36,76,154,.09);color:var(--blue,#244c9a)}
-.t-开放{background:rgba(212,138,24,.12);color:#a06a0d}
+.t-单选{background:rgba(232,70,95,.16);color:#f08aa0}
+.t-多选{background:rgba(47,174,143,.16);color:#7fd8c2}
+.t-打分{background:rgba(120,130,255,.15);color:#a9b2ff}
+.t-开放{background:rgba(240,180,70,.14);color:#ecc078}
 .q-text{color:var(--text);flex:1}
 canvas{max-height:300px}
 .note{font-size:.82em;color:var(--text3);margin-top:10px}
@@ -63,12 +60,12 @@ th{color:var(--text2);font-weight:500;text-align:left;padding:10px 12px;border-b
 td{padding:10px 12px;border-bottom:1px dashed var(--border)}
 tr:last-child td{border:none}
 td:not(:first-child),th:not(:first-child){text-align:center}
-.wc-box{text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.wc-box{text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
 .wc-box img{max-width:420px;width:100%;border-radius:12px}
 .opens{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
 .open-card{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-size:.88em;color:var(--text2)}
 .open-card p{margin-top:8px;color:var(--text)}
-.open-tag{font-size:.7em;color:var(--seed);background:rgba(31,138,112,.1);padding:2px 10px;border-radius:99px}
+.open-tag{font-size:.7em;color:var(--seed);background:rgba(47,174,143,.12);padding:2px 10px;border-radius:99px}
 .dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
 .dl a{display:block;background:var(--surface);border:1px solid var(--border);border-radius:14px;
   padding:18px 20px;text-decoration:none;color:var(--text);transition:.2s}
@@ -76,39 +73,38 @@ td:not(:first-child),th:not(:first-child){text-align:center}
 .dl b{display:block;font-size:.98em}
 .dl span{font-size:.78em;color:var(--text3)}
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
-.fbtn{background:var(--surface);border:1px solid var(--border);color:var(--text2);border-radius:99px;
+.fbtn{background:var(--surface2);border:1px solid var(--border);color:var(--text2);border-radius:99px;
   padding:6px 16px;font-size:.85em;cursor:pointer;transition:.15s}
-.fbtn.active{background:rgba(197,29,58,.1);border-color:rgba(197,29,58,.4);color:var(--pome)}
-.fsel{background:var(--surface);border:1px solid var(--border);color:var(--text);border-radius:99px;
+.fbtn.active{background:rgba(232,70,95,.18);border-color:rgba(232,70,95,.5);color:var(--pome)}
+.fsel{background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:99px;
   padding:6px 14px;font-size:.85em}
 table.data{font-size:.78em}
 table.data td{padding:8px 8px}
 table.data th{white-space:nowrap}
 .id-tag{font-family:ui-monospace,Menlo,monospace;font-size:.88em}
 .src-pill{font-size:.74em;padding:2px 10px;border-radius:99px}
-.src-real{background:rgba(31,138,112,.12);color:var(--seed)}
-.src-slk{background:rgba(197,29,58,.1);color:var(--pome)}
-.score.s5{color:var(--pome);font-weight:650}
-.score.s4{color:#d8536b}
-.score.s3{color:#8d7a80}
-.score.s1,.score.s2{color:#a59298}
-.score.mean{color:var(--seed);font-weight:700}
+.src-real{background:rgba(47,174,143,.15);color:#7fd8c2}
+.src-slk{background:rgba(232,70,95,.15);color:#f092a4}
+.score.s5{color:#ff7a93;font-weight:650}
+.score.s4{color:#f092a4}
+.score.s3{color:#b8a6aa}
+.score.s1,.score.s2{color:#7d6b6f}
+.score.mean{color:#7fd8c2;font-weight:700}
 .pager{display:flex;gap:6px;justify-content:center;margin-top:16px;flex-wrap:wrap}
-.pbtn{background:var(--surface);border:1px solid var(--border);color:var(--text2);border-radius:8px;
+.pbtn{background:var(--surface2);border:1px solid var(--border);color:var(--text2);border-radius:8px;
   min-width:34px;height:32px;font-size:.85em;cursor:pointer}
-.pbtn.active{background:rgba(197,29,58,.12);border-color:rgba(197,29,58,.4);color:var(--pome)}
+.pbtn.active{background:rgba(232,70,95,.2);border-color:rgba(232,70,95,.5);color:var(--pome)}
 .pbtn:disabled{opacity:.35;cursor:default}
 footer{margin-top:64px;padding:30px 0 40px;border-top:1px solid var(--border);text-align:center;color:var(--text3);font-size:.85em}
 </style>
 </head>
 <body>
 <nav class="nav">
-  <a class="home" href="/rbcc/">项目主页</a>
-  <a href="/rbcc/insights/">数字人知识库</a>
+  <a class="home" href="/rbcc/">数字人知识库</a>
+  <a href="#dataset">数据集</a>
   <a href="#questionnaire">问卷</a>
   <a href="#analysis">数据分析</a>
   <a href="#records">作答数据</a>
-  <a href="/rbcc/profile/">个人档案</a>
 </nav>
 
 <header class="hero wrap">
@@ -245,28 +241,28 @@ footer{margin-top:64px;padding:30px 0 40px;border-top:1px solid var(--border);te
 <footer>
   <div style="font-weight:600;color:var(--text2)">RBCC-16 · 石榴籽调研数据平台</div>
   <p style="margin-top:6px">Survey Corpus · 2026 · 1,237 responses</p>
-  <p style="margin-top:4px"><a href="/rbcc/" style="color:var(--text3)">项目主页</a> · <a href="/rbcc/insights/" style="color:var(--text3)">数字人知识库</a> · <a href="/rbcc/profile/" style="color:var(--text3)">个人档案</a></p>
+  <p style="margin-top:4px"><a href="/" style="color:var(--text3)">← 返回主页</a> · <a href="/rbcc/" style="color:var(--text3)">数字人知识库</a></p>
 </footer>
 
 <script>
-Chart.defaults.color='#75646a';
-Chart.defaults.borderColor='rgba(240,201,194,.5)';
+Chart.defaults.color='#b8a6aa';
+Chart.defaults.borderColor='rgba(255,220,225,.08)';
 Chart.defaults.font.family="-apple-system,'PingFang SC',sans-serif";
 new Chart(cApp,{type:'doughnut',data:{
   labels:["滴滴", "高德（聚合打车）", "其他打车软件", "路边直接拦出租车"],
-  datasets:[{data:[1002, 228, 2, 5],backgroundColor:['#c51d3a','#1f8a70','#244c9a','#d48a18'],borderColor:'#ffffff',borderWidth:3}]},
+  datasets:[{data:[1002, 228, 2, 5],backgroundColor:['#e8465f','#2fae8f','#8a7dff','#f0b446'],borderColor:'#0d0709',borderWidth:3}]},
   options:{plugins:{legend:{position:'right'}},cutout:'62%'}});
 new Chart(cPlace,{type:'bar',data:{
   labels:["机场、高铁站", "医院", "写字楼、商场", "小区", "大型会展、场馆"],
-  datasets:[{data:[977, 100, 1186, 488, 31],backgroundColor:'#c51d3a',borderRadius:6,barThickness:18}]},
-  options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(117,100,106,.12)'}}}}});
+  datasets:[{data:[977, 100, 1186, 488, 31],backgroundColor:'#e8465f',borderRadius:6,barThickness:18}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(255,220,225,.06)'}}}}});
 new Chart(cPain,{type:'bar',data:{
   labels:[{"q": "多层多出口找车耗时", "m": 4.586}, {"q": "反复电话确认位置", "m": 4.051}, {"q": "地图只标点不引路", "m": 3.979}, {"q": "隔栏不同层碰不到", "m": 3.937}, {"q": "车多难辨预约车", "m": 3.634}, {"q": "距离近仍难找车", "m": 3.559}, {"q": "因找不到取消订单", "m": 2.897}].map(d=>d.q),
-  datasets:[{data:[{"q": "多层多出口找车耗时", "m": 4.586}, {"q": "反复电话确认位置", "m": 4.051}, {"q": "地图只标点不引路", "m": 3.979}, {"q": "隔栏不同层碰不到", "m": 3.937}, {"q": "车多难辨预约车", "m": 3.634}, {"q": "距离近仍难找车", "m": 3.559}, {"q": "因找不到取消订单", "m": 2.897}].map(d=>d.m),backgroundColor:m=>m.raw>4?'#c51d3a':(m.raw>3.5?'#e0596e':'#e59aa6'),borderRadius:6,barThickness:20}]},
-  options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{min:1,max:5,grid:{color:'rgba(117,100,106,.12)'}}}}});
+  datasets:[{data:[{"q": "多层多出口找车耗时", "m": 4.586}, {"q": "反复电话确认位置", "m": 4.051}, {"q": "地图只标点不引路", "m": 3.979}, {"q": "隔栏不同层碰不到", "m": 3.937}, {"q": "车多难辨预约车", "m": 3.634}, {"q": "距离近仍难找车", "m": 3.559}, {"q": "因找不到取消订单", "m": 2.897}].map(d=>d.m),backgroundColor:m=>m.raw>4?'#c51d3a':(m.raw>3.5?'#e8465f':'#a05a68'),borderRadius:6,barThickness:20}]},
+  options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{min:1,max:5,grid:{color:'rgba(255,220,225,.06)'}}}}});
 new Chart(cNeed,{type:'bar',data:{
   labels:[{"q": "实时方位提示有用", "m": 4.985}, {"q": "找车功能有必要", "m": 4.988}].map(d=>d.q),
-  datasets:[{data:[{"q": "实时方位提示有用", "m": 4.985}, {"q": "找车功能有必要", "m": 4.988}].map(d=>d.m),backgroundColor:['#1f8a70','#177a61'],borderRadius:8,barThickness:44}]},
+  datasets:[{data:[{"q": "实时方位提示有用", "m": 4.985}, {"q": "找车功能有必要", "m": 4.988}].map(d=>d.m),backgroundColor:['#2fae8f','#1d8a6e'],borderRadius:8,barThickness:44}]},
   options:{plugins:{legend:{display:false}},scales:{y:{min:4.8,max:5},x:{grid:{display:false}}}}});
 
 /* ---- 作答数据表 ---- */
