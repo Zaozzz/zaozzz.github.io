@@ -29,6 +29,15 @@ h1 b{color:var(--pome)}
 .card p{color:var(--muted);font-size:.92em;line-height:1.75}
 .card .go{display:inline-block;margin-top:16px;font-size:.88em;font-weight:650;color:var(--pome)}
 .foot{margin-top:56px;padding-top:22px;border-top:1px dashed var(--line);color:var(--muted);font-size:.84em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.qrs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:0 0 46px}
+.qr{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 14px;text-align:center;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:.18s}
+.qr:hover{transform:translateY(-3px)}
+.qr img{width:118px;height:118px;border-radius:8px;display:block;margin:0 auto 10px}
+.qr b{font-size:.95em;display:block}
+.qr span{font-size:.78em;color:var(--muted)}
+.qrtitle{font-size:1.3em;font-weight:700;margin:0 0 16px;display:flex;align-items:center;gap:10px}
+.qrtitle::before{content:'';width:5px;height:22px;border-radius:3px;background:linear-gradient(180deg,var(--pome),var(--leaf))}
 </style>
 </head>
 <body>
@@ -64,6 +73,14 @@ h1 b{color:var(--pome)}
       <p>DeepSeek 对各场景代表数字人的公开内容做行为分析，生成身份推断、性格标签、表达风格等人物画像档案。</p>
       <span class="go">查看个人档案 →</span>
     </a>
+  </div>
+
+  <div class="qrtitle" id="qrcode">扫码访问</div>
+  <div class="qrs">
+    <a class="qr" href="/rbcc/"><img src="/rbcc/qrcodes/qr_home.png" alt="项目主页二维码"><b>项目主页</b><span>zaozzz.github.io/rbcc</span></a>
+    <a class="qr" href="/rbcc/insights/"><img src="/rbcc/qrcodes/qr_insights.png" alt="数字人知识库二维码"><b>数字人知识库</b><span>/rbcc/insights</span></a>
+    <a class="qr" href="/rbcc/survey/"><img src="/rbcc/qrcodes/qr_survey.png" alt="调研问卷二维码"><b>调研问卷</b><span>/rbcc/survey</span></a>
+    <a class="qr" href="/rbcc/profile/"><img src="/rbcc/qrcodes/qr_profile.png" alt="个人档案二维码"><b>个人档案</b><span>/rbcc/profile</span></a>
   </div>
 
   <div class="foot">
