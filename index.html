@@ -625,6 +625,19 @@
       .footer{ padding: 12px; flex-direction: column; gap: 6px; }
     }
   </style>
+  <style>
+  /* ===== Demos 缩略区块 ===== */
+  .demo-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:22px; }
+  .demo-card{ position:relative; display:block; border-radius:14px; overflow:hidden; background:#0f1115; border:1px solid rgba(255,255,255,.09); text-decoration:none; box-shadow:0 10px 24px rgba(0,0,0,.25); transition:transform .2s ease, box-shadow .2s ease; }
+  .demo-card:hover{ transform:translateY(-4px); box-shadow:0 18px 34px rgba(0,0,0,.38); }
+  .demo-shot{ position:relative; display:block; height:180px; overflow:hidden; background:#0f1115; }
+  .demo-shot iframe{ position:absolute; top:0; left:0; width:100%; height:600px; border:0; pointer-events:none; opacity:.94; }
+  .demo-meta{ position:absolute; left:0; right:0; bottom:0; padding:30px 14px 12px; display:flex; justify-content:space-between; align-items:center; color:#fff; font-style:normal; background:linear-gradient(transparent, rgba(0,0,0,.8)); }
+  .demo-meta b{ font-size:.92rem; font-weight:600; }
+  .demo-meta i{ font-style:normal; font-size:.72rem; letter-spacing:.3px; opacity:.72; }
+  @media (max-width:860px){ .demo-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .demo-grid{ grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
   <canvas class="cloud-canvas" id="cloudCanvas"></canvas>
@@ -723,7 +736,7 @@
         <li><a href="#awards" data-section="awards">Awards<span class="toc-cat">now reading</span></a></li>
         <li><a href="#other" data-section="other">Service<span class="toc-cat">now reading</span></a></li>
         <li><a href="#playlists" data-section="playlists">Playlists<span class="toc-cat">now reading</span></a></li>
-        <li><a href="/demo/" target="_blank" rel="noopener noreferrer">Demo<span class="toc-cat">experiments</span></a></li>
+        <li><a href="#demos" data-section="demos">Demo<span class="toc-cat">experiments</span></a></li>
       </ul>
     </aside>
 
@@ -1024,6 +1037,29 @@
           <li><span class="level">[284k播放]</span><img class="playlist-cover" src="/assets/optimized/playlists/2941089379.jpg" alt="被人规划在未来是顶级浪漫 cover" loading="lazy" /><span class="body"><a href="https://music.163.com/#/playlist?id=2941089379" target="_blank" rel="noopener noreferrer">被人规划在未来是顶级浪漫</a><span class="playlist-note">歌单飙升榜TOP-20｜七夕限定杰出歌单</span></span><span class="playlist-created">创建于 2019.08.17</span></li>
           <li><span class="level">[45k播放]</span><img class="playlist-cover" src="/assets/optimized/playlists/2984639566.jpg" alt="18年夏天：除了热什么都好的夏天 cover" loading="lazy" /><span class="body"><a href="https://music.163.com/#/playlist?id=2984639566" target="_blank" rel="noopener noreferrer">18年夏天：除了热什么都好的夏天</a><span class="playlist-note">18年夏天回忆优秀歌单</span></span><span class="playlist-created">创建于 2019.09.14</span></li>
         </ul>
+      </section>
+
+      <!-- ===== Demos ===== -->
+      <section class="section" id="demos">
+        <div class="section-head">
+          <span class="section-no">No. 10</span>
+          <h2 class="section-title">Interactive <em>Demos</em></h2>
+          <span class="section-count">live snippets</span>
+        </div>
+        <div class="demo-grid">
+          <a class="demo-card" href="/fork-lab.html" target="_blank" rel="noopener noreferrer" aria-label="Fork Lab">
+            <span class="demo-shot"><iframe src="/fork-lab.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Fork Lab 预览"></iframe></span>
+            <span class="demo-meta"><b>Fork Lab</b><i>LAB · 实验沙盒</i></span>
+          </a>
+          <a class="demo-card" href="/demo/gravity-echo.html" target="_blank" rel="noopener noreferrer" aria-label="重力回声 Gravity Echo">
+            <span class="demo-shot"><iframe src="/demo/gravity-echo.html" loading="lazy" tabindex="-1" aria-hidden="true" title="重力回声 预览"></iframe></span>
+            <span class="demo-meta"><b>重力回声 · Gravity Echo</b><i>GAME · 宇宙生存</i></span>
+          </a>
+          <a class="demo-card" href="/demo/seeway.html" target="_blank" rel="noopener noreferrer" aria-label="石榴 SeeWay">
+            <span class="demo-shot"><iframe src="/demo/seeway.html" loading="lazy" tabindex="-1" aria-hidden="true" title="SeeWay 预览"></iframe></span>
+            <span class="demo-meta"><b>石榴 SeeWay</b><i>APP · 叫车全路径</i></span>
+          </a>
+        </div>
       </section>
 
     </main>
