@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demos · Xu Wang</title>
-<meta name="description" content="Xu Wang 的交互实验小站，收录我的一些 Demo 与原型。">
+<meta name="description" content="Xu Wang 的交互实验小站，点击即可预览每个 Demo。">
 <style>
   :root{
     color-scheme: light dark;
@@ -18,32 +18,42 @@
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    background:var(--bg);color:var(--ink);line-height:1.6;
-  }
-  .wrap{max-width:920px;margin:0 auto;padding:0 20px 72px}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px 72px}
   header.top{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line);margin-bottom:36px}
   .brand{font-weight:700;letter-spacing:.2px}
-  .back{color:var(--muted);text-decoration:none;font-size:.9rem}
-  .back:hover{color:var(--accent)}
+  .back{color:var(--muted);text-decoration:none;font-size:.9rem}.back:hover{color:var(--accent)}
   h1{font-size:1.7rem;margin:0 0 6px}
-  .lead{color:var(--muted);font-size:1rem;margin:0 0 32px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-  .card{
-    display:flex;flex-direction:column;justify-content:space-between;gap:10px;
-    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;
-    text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease;
-  }
-  a.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
-  .card .tag{font-size:.72rem;font-weight:600;letter-spacing:.4px;color:var(--accent);
-    background:var(--accent-soft);padding:3px 9px;border-radius:999px;align-self:flex-start}
+  .lead{color:var(--muted);font-size:1rem;margin:0 0 28px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+  .card{display:flex;flex-direction:column;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;transition:transform .15s ease,box-shadow .15s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(0,0,0,.08)}
+  .tag{font-size:.72rem;font-weight:600;letter-spacing:.4px;color:var(--accent);background:var(--accent-soft);padding:3px 9px;border-radius:999px;align-self:flex-start}
   .card h3{margin:0;font-size:1.05rem}
-  .card p{margin:0;color:var(--muted);font-size:.88rem;flex:1}
-  .card .go{font-size:.8rem;color:var(--accent);font-weight:600}
-  .placeholder{opacity:.55;cursor:default;border-style:dashed}
-  .placeholder a{text-decoration:none;color:inherit}
+  .card p{margin:0;color:var(--muted);font-size:.87rem;flex:1}
+  .card-actions{display:flex;gap:8px;margin-top:6px}
+  .btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;font:inherit;font-size:.85rem;font-weight:600;color:var(--accent);background:var(--accent-soft);border:0;border-radius:9px;padding:9px 10px;cursor:pointer;text-decoration:none;transition:filter .15s}
+  .btn:hover{filter:brightness(1.05)}
+  .btn.ghost{color:var(--muted);background:transparent;border:1px solid var(--line);flex:0 0 auto}
+  .btn.ghost:hover{color:var(--accent)}
   footer{margin-top:48px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between}
+  /* ===== 预览小窗 ===== */
+  .mask{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;animation:fade .2s ease}
+  .sheet{width:min(980px,100%);max-height:88vh;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.3);animation:pop .22s ease}
+  .sheet-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+  .sheet-head strong{font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .close{font:inherit;font-size:1.1rem;line-height:1;color:var(--muted);background:transparent;border:0;cursor:pointer;padding:6px 10px;border-radius:8px}
+  .close:hover{color:var(--ink);background:var(--accent-soft)}
+  .sheet-body{position:relative;height:62vh;background:#000}
+  .sheet-body iframe{width:100%;height:100%;border:0;display:block}
+  .loader{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:.9rem;letter-spacing:.1em;background:linear-gradient(135deg,#20242b,#141517)}
+  .sheet-foot{padding:12px 18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.82rem;color:var(--muted)}
+  .sheet-foot a{color:var(--accent);text-decoration:none;font-weight:600}
+  .sheet-foot a:hover{text-decoration:underline}
+  [hidden]{display:none!important}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+  @media (max-width:560px){.sheet-body{height:58vh}.mask{padding:12px}}
 </style>
 </head>
 <body>
@@ -54,33 +64,9 @@
   </header>
 
   <h1>交互实验 / Demo</h1>
-  <p class="lead">一些有意思的小实验、可交互的原型与小玩具。点击卡片即可打开。</p>
+  <p class="lead">点击「预览」在弹窗里查看每个小 demo，或点 ↗ 打开全屏版本。</p>
 
-  <div class="grid">
-
-    <!-- ===== 在此继续添加新的 demo 卡片即可，复制下面这块并修改链接与文字 ===== -->
-    <a class="card" href="/fork-lab.html" target="_blank" rel="noopener noreferrer">
-      <span class="tag">LAB</span>
-      <h3>Fork Lab</h3>
-      <p>一个可交互的实验沙盒 / 可视化小工具。</p>
-      <span class="go">打开 →</span>
-    </a>
-
-    <a class="card" href="/demo/gravity-echo.html" target="_blank" rel="noopener noreferrer">
-      <span class="tag">GAME</span>
-      <h3>重力回声 · Gravity Echo</h3>
-      <p>进入引力场，捕获敌人弹幕，召回过去的自己。一个关于引力与时间的宇宙生存游戏。</p>
-      <span class="go">打开 →</span>
-    </a>
-
-    <a class="card" href="/demo/seeway.html" target="_blank" rel="noopener noreferrer">
-      <span class="tag">APP</span>
-      <h3>石榴 SeeWay</h3>
-      <p>最后 50 米，带你找到车。叫车、出发、近距引导、现场互认与车辆核验的全路径交互演示。</p>
-      <span class="go">打开 →</span>
-    </a>
-
-  </div>
+  <div class="grid" id="grid"><!-- 卡片由 JS 生成 --></div>
 
   <footer>
     <span>© <span id="yr"></span> Xu Wang</span>
@@ -88,6 +74,76 @@
   </footer>
 </div>
 
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<div class="mask" id="mask" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="demo 预览">
+    <div class="sheet-head">
+      <strong id="p-title">demo</strong>
+      <button class="close" id="p-close" aria-label="关闭">✕</button>
+    </div>
+    <div class="sheet-body">
+      <div class="loader" id="p-loader">LOADING …</div>
+      <iframe id="p-frame" title="demo 预览"></iframe>
+    </div>
+    <div class="sheet-foot">
+      <span id="p-from"></span>
+      <a id="p-open" href="#" target="_blank" rel="noopener noreferrer">在新标签打开完整版 ↗</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const DEMOS = [
+  {title:"Fork Lab", tag:"LAB", desc:"可交互的实验沙盒 / 可视化小工具。", url:"/fork-lab.html"},
+  {title:"重力回声 · Gravity Echo", tag:"GAME", desc:"进入引力场，捕获敌人弹幕，召回过去的自己。宇宙生存游戏。", url:"/demo/gravity-echo.html"},
+  {title:"石榴 SeeWay", tag:"APP", desc:"最后 50 米，带你找到车。叫车、出发、近距引导、现场互认与核验。", url:"/demo/seeway.html"}
+];
+const grid = document.getElementById('grid');
+const mask = document.getElementById('mask');
+const frame = document.getElementById('p-frame');
+const loader = document.getElementById('p-loader');
+const pTitle = document.getElementById('p-title');
+const pOpen = document.getElementById('p-open');
+const pFrom = document.getElementById('p-from');
+
+function buildCards(){
+  DEMOS.forEach((d,i)=>{
+    const c = document.createElement('article');
+    c.className = 'card';
+    c.innerHTML =
+      '<span class="tag">'+d.tag+'</span>'+
+      '<h3>'+d.title+'</h3>'+
+      '<p>'+d.desc+'</p>'+
+      '<div class="card-actions">'+
+        '<button class="btn" type="button">预览</button>'+
+        '<a class="btn ghost" href="'+d.url+'" target="_blank" rel="noopener noreferrer" title="全屏打开">↗</a>'+
+      '</div>';
+    c.querySelector('button').addEventListener('click', ()=>openPreview(i));
+    grid.appendChild(c);
+  });
+}
+function openPreview(i){
+  const d = DEMOS[i];
+  pTitle.textContent = d.title;
+  pOpen.href = d.url;
+  pFrom.textContent = d.url.replace(/\/$/,'');
+  loader.style.display = 'grid';
+  frame.hidden = true;
+  frame.src = d.url;               // 每次重新设 src，触发加载
+  frame.onload = ()=>{ loader.style.display='none'; frame.hidden=false; };
+  mask.hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+function closePreview(){
+  mask.hidden = true;
+  frame.src = '';                  // 卸载，停止播放/交互
+  document.body.style.overflow = '';
+}
+document.getElementById('p-close').addEventListener('click', closePreview);
+mask.addEventListener('click', (e)=>{ if(e.target===mask) closePreview(); });
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closePreview(); });
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+buildCards();
+</script>
 </body>
 </html>
