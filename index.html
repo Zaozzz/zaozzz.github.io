@@ -577,6 +577,12 @@
       font-family: var(--font-mono); font-size: 11px; color: var(--ink-mute);
       display: flex; justify-content: space-between;
     }
+    .foot-sitemap{
+      flex: 1 1 100%; display: flex; gap: 14px;
+      justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 6px;
+    }
+    .foot-sitemap a{ color: var(--ink-mute); text-decoration: none; text-transform: uppercase; letter-spacing: .08em; }
+    .foot-sitemap a:hover{ color: var(--ink); text-decoration: underline; }
 
     /* ============== Cloud canvas ============== */
     .cloud-canvas{
@@ -1084,6 +1090,7 @@
   <footer class="footer">
     <span>This website was originally designed by Wang Xu and was last updated on <time datetime="2026-07-14">2026-07-14</time>.</span>
     <span>Xu Wang</span>
+    <span class="foot-sitemap"><a href="/blog/" rel="noopener noreferrer">Blog</a><a href="/news/" rel="noopener noreferrer">News</a><a href="/love/" rel="noopener noreferrer">Love</a><a href="/demo/" rel="noopener noreferrer">Demos</a><a href="/rbcc/" rel="noopener noreferrer">RBCC</a></span>
   </footer>
 
   <script>
