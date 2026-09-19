@@ -1,0 +1,1527 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Stardust</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Stardust" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Stardust&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+:root:not([data-app-block-surface], [data-visualize-standalone]) &gt; body {
+  padding: 12px;
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* The shared runtime owns data-tooltip; suppress AppBlock&#x27;s pseudo-tooltip. */
+main [data-tooltip]::after {
+  content: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;stardust-lab&quot; lang=&quot;zh-CN&quot;&gt;
+  &lt;header class=&quot;sd-header&quot;&gt;&lt;div class=&quot;sd-brand&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;✳&lt;/span&gt; STARDUST &lt;span class=&quot;sd-brand-cn&quot;&gt;星尘&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;sd-edition&quot;&gt;INTERACTIVE GENERATIVE ART / 002&lt;/span&gt;&lt;/header&gt;
+  &lt;div class=&quot;sd-heading&quot;&gt;&lt;h1&gt;把宇宙，握在手里。&lt;/h1&gt;&lt;span&gt;每一颗星，都回应你。&lt;/span&gt;&lt;/div&gt;
+  &lt;section class=&quot;sd-stage&quot; aria-label=&quot;可交互的粒子星海&quot;&gt;
+    &lt;canvas id=&quot;sd-canvas&quot; role=&quot;img&quot; aria-label=&quot;粒子生成艺术。移动指针吸引星尘，按住拖动扰动星海，点击产生扩散。也可通过下方按钮切换形态、引爆和暂停。&quot;&gt;请使用支持 Canvas 的浏览器查看星海。&lt;/canvas&gt;
+    &lt;div class=&quot;sd-stage-top&quot;&gt;&lt;span id=&quot;sd-mode-label&quot;&gt;01 / SPIRAL GALAXY&lt;/span&gt;&lt;span class=&quot;sd-live&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span id=&quot;sd-live-label&quot;&gt;LIVE&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;sd-stage-bottom&quot;&gt;&lt;div&gt;&lt;span class=&quot;sd-art-name&quot; id=&quot;sd-art-name&quot;&gt;旋涡星系&lt;/span&gt;&lt;span class=&quot;sd-gesture&quot; id=&quot;sd-gesture&quot;&gt;移动吸引 · 点击引爆&lt;/span&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; id=&quot;sd-pause&quot; aria-label=&quot;暂停星尘运动&quot;&gt;Ⅱ 暂停&lt;/button&gt;&lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class=&quot;sd-modebar&quot; aria-label=&quot;选择星海形态&quot;&gt;
+    &lt;button type=&quot;button&quot; data-sd-mode=&quot;galaxy&quot; aria-pressed=&quot;true&quot;&gt;&lt;span&gt;01&lt;/span&gt; 旋涡星系&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-sd-mode=&quot;hole&quot; aria-pressed=&quot;false&quot;&gt;&lt;span&gt;02&lt;/span&gt; 黑洞&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-sd-mode=&quot;dna&quot; aria-pressed=&quot;false&quot;&gt;&lt;span&gt;03&lt;/span&gt; 双螺旋&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-sd-mode=&quot;text&quot; aria-pressed=&quot;false&quot;&gt;&lt;span&gt;04&lt;/span&gt; 你的文字&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;form class=&quot;sd-compose&quot; id=&quot;sd-compose&quot;&gt;&lt;label for=&quot;sd-words&quot;&gt;给星海一句话&lt;/label&gt;&lt;div class=&quot;sd-input-group&quot;&gt;&lt;input id=&quot;sd-words&quot; type=&quot;text&quot; value=&quot;万物有光&quot; maxlength=&quot;8&quot; placeholder=&quot;输入名字或短句&quot; autocomplete=&quot;off&quot; spellcheck=&quot;false&quot; aria-label=&quot;输入最多八个字符，让星尘聚成文字&quot;&gt;&lt;button type=&quot;submit&quot; id=&quot;sd-form-text&quot;&gt;聚成文字 ↗&lt;/button&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; id=&quot;sd-burst&quot;&gt;✳ 引爆星海&lt;/button&gt;&lt;/form&gt;
+  &lt;div class=&quot;sd-footer&quot;&gt;&lt;span id=&quot;sd-status&quot; aria-live=&quot;polite&quot;&gt;星系已就绪。&lt;/span&gt;&lt;span&gt;&lt;span id=&quot;sd-count&quot;&gt;5,600&lt;/span&gt; 颗粒子 · 艺术模拟&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+#stardust-lab{color-scheme:light dark;--sd-bg:light-dark(#f6f5f2,#14151d);--sd-ink:light-dark(#252835,#f1f0f4);--sd-muted:light-dark(#636778,#aaadbd);--sd-line:light-dark(#dbdce2,#30313e);--sd-soft:light-dark(#eae9e5,#22232f);--sd-stage:light-dark(#0a1020,#060b16);--sd-stage-ink:light-dark(#f0f2ff,#f0f2ff);--sd-stage-muted:light-dark(#a6b4d1,#a2b2d0);--sd-c1:light-dark(#bba6ff,#b6a3ff);--sd-c2:light-dark(#77d7f0,#6ad9f3);--sd-c3:light-dark(#f9c982,#ffd18b);--sd-c4:light-dark(#f595d1,#f5a2d6);--sd-c5:light-dark(#e3edff,#e7eeff);--sd-glow:light-dark(#614b9c,#573f8c);background:var(--sd-bg);color:var(--sd-ink);font-family:Inter,&quot;PingFang SC&quot;,&quot;Microsoft YaHei&quot;,sans-serif;border:1px solid var(--sd-line);border-radius:17px;overflow:hidden;isolation:isolate;width:100%;box-sizing:border-box;text-align:left}
+#stardust-lab *{box-sizing:border-box}#stardust-lab button,#stardust-lab input{font:inherit}#stardust-lab button{cursor:pointer;touch-action:manipulation;color:inherit}#stardust-lab button:focus-visible,#stardust-lab input:focus-visible{outline:2px solid var(--sd-c1);outline-offset:3px}#stardust-lab h1{margin:0;font-weight:500;letter-spacing:-.05em}#stardust-lab .sd-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 23px;border-bottom:1px solid var(--sd-line)}#stardust-lab .sd-brand{display:flex;align-items:center;gap:10px;font-weight:500;letter-spacing:.13em}#stardust-lab .sd-brand&gt;span:first-child{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--sd-muted)}#stardust-lab .sd-brand-cn{color:var(--sd-muted);letter-spacing:.1em;margin-left:5px}#stardust-lab .sd-edition{color:var(--sd-muted);letter-spacing:.06em}#stardust-lab .sd-heading{padding:26px 25px;display:flex;align-items:baseline;justify-content:space-between;gap:16px}#stardust-lab .sd-heading&gt;span{color:var(--sd-muted);white-space:nowrap}
+#stardust-lab .sd-stage{position:relative;height:470px;background:var(--sd-stage);color:var(--sd-stage-ink)}#stardust-lab #sd-canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}#stardust-lab .sd-stage-top{position:absolute;left:22px;right:22px;top:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;pointer-events:none;color:var(--sd-stage-muted);letter-spacing:.12em}#stardust-lab .sd-live{display:flex;align-items:center;gap:7px}#stardust-lab .sd-live&gt;span:first-child{width:5px;height:5px;border-radius:50%;background:var(--sd-c2)}#stardust-lab .sd-stage-bottom{position:absolute;left:22px;right:18px;bottom:18px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;pointer-events:none}#stardust-lab .sd-stage-bottom&gt;div{display:flex;flex-direction:column;gap:5px}#stardust-lab .sd-art-name{letter-spacing:.12em}#stardust-lab .sd-gesture{color:var(--sd-stage-muted)}#stardust-lab #sd-pause{pointer-events:auto;background:var(--sd-stage);border:1px solid color-mix(in srgb,var(--sd-stage-muted) 25%,transparent);color:var(--sd-stage-muted);border-radius:6px;padding:7px 12px}
+#stardust-lab .sd-modebar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;padding:15px 18px 10px}#stardust-lab .sd-modebar button{border:1px solid transparent;border-radius:7px;background:transparent;padding:10px 8px;white-space:nowrap;text-align:center}#stardust-lab .sd-modebar button&gt;span{color:var(--sd-muted);margin-right:7px;font-variant-numeric:tabular-nums}#stardust-lab .sd-modebar button:hover{background:var(--sd-soft)}#stardust-lab .sd-modebar button[aria-pressed=true]{background:var(--sd-soft);border-color:var(--sd-line)}#stardust-lab .sd-compose{display:flex;align-items:center;gap:12px;padding:10px 23px 21px;flex-wrap:wrap}#stardust-lab .sd-compose&gt;label{color:var(--sd-muted);white-space:nowrap}#stardust-lab .sd-input-group{display:flex;flex:1;min-width:190px;align-items:center;background:var(--sd-bg);border:1px solid var(--sd-line);border-radius:7px;overflow:hidden}#stardust-lab .sd-input-group input{min-width:0;width:100%;flex:1;border:0;border-radius:0;background:transparent;color:var(--sd-ink);padding:10px 12px}#stardust-lab .sd-input-group button{flex-shrink:0;border:0;background:transparent;padding:10px 12px;color:var(--sd-ink);white-space:nowrap}#stardust-lab .sd-input-group button:hover{background:var(--sd-soft)}#stardust-lab #sd-burst{border:0;background:var(--sd-ink);color:var(--sd-bg);border-radius:7px;padding:11px 16px;white-space:nowrap}#stardust-lab #sd-burst:hover{opacity:.88}#stardust-lab .sd-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid var(--sd-line);padding:12px 23px;color:var(--sd-muted)}#stardust-lab #sd-count{font-variant-numeric:tabular-nums}
+@media(max-width:650px){#stardust-lab .sd-edition{display:none}#stardust-lab .sd-heading{padding:23px 20px}#stardust-lab .sd-heading&gt;span{display:none}#stardust-lab .sd-stage{height:420px}#stardust-lab .sd-compose&gt;label{flex-basis:100%}#stardust-lab .sd-compose{gap:9px;padding:10px 18px 18px}#stardust-lab .sd-modebar{padding:13px 12px 9px;gap:2px}#stardust-lab .sd-modebar button&gt;span{display:none}#stardust-lab .sd-modebar button{padding:10px 5px}#stardust-lab .sd-footer{padding:12px 18px}#stardust-lab #sd-burst{padding:11px 12px}}
+@media(max-width:400px){#stardust-lab .sd-stage{height:360px}#stardust-lab .sd-stage-top{left:16px;right:16px}#stardust-lab .sd-stage-bottom{left:16px;right:14px}#stardust-lab .sd-compose{gap:9px}#stardust-lab .sd-input-group{min-width:0;flex-basis:100%}#stardust-lab #sd-burst{width:100%}#stardust-lab .sd-header{padding:15px 18px}}
+@media(pointer:coarse){#stardust-lab button,#stardust-lab input{min-height:44px}#stardust-lab input{font-size:16px}}
+@media(prefers-reduced-motion:reduce){#stardust-lab *{transition:none!important}}
+&lt;/style&gt;
+&lt;script&gt;
+(function(){
+&#x27;use strict&#x27;;
+const root=document.getElementById(&#x27;stardust-lab&#x27;);if(!root)return;
+const $=id=&gt;root.querySelector(&#x27;#&#x27;+id), buttons=Array.from(root.querySelectorAll(&#x27;[data-sd-mode]&#x27;));
+const canvas=$(&#x27;sd-canvas&#x27;),g=canvas.getContext(&#x27;2d&#x27;,{alpha:false});if(!g){$(&#x27;sd-status&#x27;).textContent=&#x27;当前浏览器不支持 Canvas。&#x27;;return;}
+const small=canvas.clientWidth&lt;500,N=small?3400:5600;
+const pos=new Float32Array(N*3),vel=new Float32Array(N*3),target=new Float32Array(N*3),seeds=new Float32Array(N*5),screenX=new Float32Array(N),screenY=new Float32Array(N);
+let mode=&#x27;galaxy&#x27;,W=1,H=1,S=1,dpr=1,clock=0,last=0,raf=0,visible=true,paused=window.matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches,first=true,burstAt=-10,morphAt=-10;
+let pointer={x:0,y:0,active:false,down:false,moved:0,startX:0,startY:0,id:null};
+let palette={},sprites=[],backdrop=null,textPoints=[],word=&#x27;万物有光&#x27;,shockwaves=[];
+const TAU=Math.PI*2,clamp=(x,a,b)=&gt;Math.max(a,Math.min(b,x));
+let randomSeed=161803;
+function random(){randomSeed^=randomSeed&lt;&lt;13;randomSeed^=randomSeed&gt;&gt;&gt;17;randomSeed^=randomSeed&lt;&lt;5;return (randomSeed&gt;&gt;&gt;0)/4294967296;}
+for(let i=0;i&lt;seeds.length;i++)seeds[i]=random();
+const meta={galaxy:[&#x27;01 / SPIRAL GALAXY&#x27;,&#x27;旋涡星系&#x27;],hole:[&#x27;02 / EVENT HORIZON&#x27;,&#x27;黑洞&#x27;],dna:[&#x27;03 / DOUBLE HELIX&#x27;,&#x27;双螺旋&#x27;],text:[&#x27;04 / WRITTEN IN THE STARS&#x27;,&#x27;你的文字&#x27;]};
+const probe=document.createElement(&#x27;span&#x27;);probe.setAttribute(&#x27;aria-hidden&#x27;,&#x27;true&#x27;);probe.style.cssText=&#x27;position:absolute;visibility:hidden;pointer-events:none&#x27;;root.appendChild(probe);
+function colors(){for(const k of [&#x27;stage&#x27;,&#x27;stage-ink&#x27;,&#x27;stage-muted&#x27;,&#x27;c1&#x27;,&#x27;c2&#x27;,&#x27;c3&#x27;,&#x27;c4&#x27;,&#x27;c5&#x27;,&#x27;glow&#x27;]){probe.style.color=&#x27;var(--sd-&#x27;+k+&#x27;)&#x27;;palette[k]=getComputedStyle(probe).color;}}
+function rgba(c,a){const v=(c.match(/[\d.]+/g)||[0,0,0]).slice(0,3);return &#x27;rgba(&#x27;+v.join(&#x27;,&#x27;)+&#x27;,&#x27;+a+&#x27;)&#x27;;}
+function makeCanvas(w,h){const c=document.createElement(&#x27;canvas&#x27;);c.width=w;c.height=h;return c;}
+function makeSprites(){sprites=[];for(const key of [&#x27;c1&#x27;,&#x27;c2&#x27;,&#x27;c3&#x27;,&#x27;c4&#x27;,&#x27;c5&#x27;]){const c=makeCanvas(48,48),ctx=c.getContext(&#x27;2d&#x27;),gradient=ctx.createRadialGradient(24,24,0,24,24,24);gradient.addColorStop(0,rgba(palette.c5,1));gradient.addColorStop(.10,rgba(palette[key],.97));gradient.addColorStop(.23,rgba(palette[key],.52));gradient.addColorStop(.48,rgba(palette[key],.13));gradient.addColorStop(1,rgba(palette[key],0));ctx.fillStyle=gradient;ctx.fillRect(0,0,48,48);sprites.push(c);}}
+function makeBackdrop(){backdrop=makeCanvas(Math.round(W*dpr),Math.round(H*dpr));const c=backdrop.getContext(&#x27;2d&#x27;);c.scale(dpr,dpr);c.fillStyle=palette.stage;c.fillRect(0,0,W,H);
+for(const nebula of [[.35,.47,.48,&#x27;glow&#x27;,.11],[.67,.56,.35,&#x27;c2&#x27;,.045],[.58,.45,.2,&#x27;c3&#x27;,.035]]){const [x,y,r,col,a]=nebula,gr=c.createRadialGradient(W*x,H*y,0,W*x,H*y,W*r);gr.addColorStop(0,rgba(palette[col],a));gr.addColorStop(1,rgba(palette[col],0));c.fillStyle=gr;c.fillRect(0,0,W,H);}
+for(let i=0;i&lt;240;i++){const j=(i*19)%(N-2),x=seeds[j*5]*W,y=seeds[j*5+1]*H,r=seeds[j*5+2];c.fillStyle=rgba(palette.c5,.12+r*.4);c.beginPath();c.arc(x,y,.25+r*.65,0,TAU);c.fill();if(r&gt;.985){c.strokeStyle=rgba(palette.c2,.3);c.lineWidth=.6;c.beginPath();c.moveTo(x-3,y);c.lineTo(x+3,y);c.moveTo(x,y-3);c.lineTo(x,y+3);c.stroke();}}
+}
+function buildText(){const c=makeCanvas(1000,420),ctx=c.getContext(&#x27;2d&#x27;);ctx.fillStyle=palette.c5;ctx.textAlign=&#x27;center&#x27;;ctx.textBaseline=&#x27;middle&#x27;;const chars=Array.from(word).slice(0,8),lines=chars.length&gt;4?[chars.slice(0,4).join(&#x27;&#x27;),chars.slice(4).join(&#x27;&#x27;)]:[chars.join(&#x27;&#x27;)];let fontSize=lines.length===1?190:154;
+ctx.font=&#x27;700 &#x27;+fontSize+&#x27;px Arial, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif&#x27;;let measure=Math.max(...lines.map(t=&gt;ctx.measureText(t).width));if(measure&gt;900){fontSize*=900/measure;ctx.font=&#x27;700 &#x27;+fontSize+&#x27;px Arial, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif&#x27;;}
+lines.forEach((line,i)=&gt;ctx.fillText(line,500,lines.length===1?210:122+i*180));const pixels=ctx.getImageData(0,0,1000,420).data;const points=[];for(let y=20;y&lt;400;y+=3)for(let x=25;x&lt;975;x+=3){if(pixels[(y*1000+x)*4+3]&gt;130)points.push([(x-500)/270,(210-y)/270]);}
+if(!points.length){for(let i=0;i&lt;800;i++){const a=i/800*TAU;points.push([Math.cos(a),Math.sin(a)*.6]);}}
+textPoints=points;
+}
+function targets(t){for(let i=0;i&lt;N;i++){const j=i*3,k=i*5,u=seeds[k],v=seeds[k+1],a=seeds[k+2],b=seeds[k+3],c=seeds[k+4];let x,y,z;
+if(mode===&#x27;galaxy&#x27;){
+if(u&lt;.17){const r=Math.pow(v,.7)*.36,th=a*TAU,phi=Math.acos(2*b-1);x=r*Math.sin(phi)*Math.cos(th);z=r*Math.sin(phi)*Math.sin(th);y=r*Math.cos(phi)*.62;}
+else{const r=.15+Math.pow((u-.17)/.83,.65)*1.55,th=(i%4)/4*TAU+Math.log(r+.12)*2.4+(v-.5)*(.22+.3*r)+t*.09/(r+.4);x=r*Math.cos(th);z=r*Math.sin(th);y=(a-.5)*(.045+.11*(1-r/1.8));}
+const tilt=.64,zz=z;x*=1.06;y=y*Math.cos(tilt)-zz*Math.sin(tilt);z=zz*Math.cos(tilt)+y*.2;
+}else if(mode===&#x27;hole&#x27;){
+const r=.31+Math.pow(u,1.65)*1.24,th=v*TAU+t*(.35+.28/(r+.1));x=r*Math.cos(th);y=Math.sin(th)*r*.19+(a-.5)*.035;z=Math.sin(th)*r*.91;
+if(i%5===0){const q=v*TAU,rr=.36+(u*.07);x=Math.cos(q)*rr;y=Math.sin(q)*rr;z=(a-.5)*.04;}
+}else if(mode===&#x27;dna&#x27;){
+const yy=u*2.12-1.06,theta=yy*7+t*.25,side=i%2?1:-1;
+if(i%5===0){const rung=Math.round(u*29)/29*2.12-1.06,q=rung*7+t*.25;x=Math.cos(q)*.42*(2*v-1);y=rung;z=Math.sin(q)*.42*(2*v-1);}
+else{x=Math.cos(theta)*.45*side+(v-.5)*.07;y=yy+(a-.5)*.025;z=Math.sin(theta)*.45*side+(b-.5)*.07;}
+const r=-.49,xx=x;x=xx*Math.cos(r)-y*Math.sin(r);y=xx*Math.sin(r)+y*Math.cos(r);
+}else{const p=textPoints[Math.floor(u*textPoints.length)%textPoints.length]||[0,0];x=p[0]+(a-.5)*.008;y=p[1]+(b-.5)*.008;z=(v-.5)*.11;}
+target[j]=x;target[j+1]=y;target[j+2]=z;
+}}
+function colorIndex(i){const u=seeds[i*5];if(mode===&#x27;hole&#x27;)return u&lt;.36?2:u&lt;.7?3:0;if(mode===&#x27;dna&#x27;)return i%5===0?4:i%2?1:0;if(mode===&#x27;text&#x27;)return i%13===0?4:i%3===0?1:0;return u&lt;.32?2:u&lt;.59?4:u&lt;.8?1:0;}
+function toScreen(x,y,z){const perspective=3.7/(3.7-z*.30);return [W/2+x*S*perspective,H*.485-y*S*perspective,perspective];}
+function burst(x=0,y=0){burstAt=clock;shockwaves.push({x,y,t:clock});if(shockwaves.length&gt;4)shockwaves.shift();for(let i=0;i&lt;N;i++){const j=i*3,dx=pos[j]-x,dy=pos[j+1]-y,dz=pos[j+2],d=Math.hypot(dx,dy,dz)+.08,k=.085/(.5+d),q=i*5;vel[j]+=dx/d*k+(seeds[q+1]-.5)*.035;vel[j+1]+=dy/d*k+(seeds[q+2]-.5)*.035;vel[j+2]+=dz/d*k+(seeds[q+3]-.5)*.07;}if(paused){for(let i=0;i&lt;N*3;i++){pos[i]+=vel[i]*8;vel[i]=0;}draw();}$(&#x27;sd-status&#x27;).textContent=paused?&#x27;星尘已散开；继续播放可看它重组。&#x27;:&#x27;星海已打散，正在重新聚拢。&#x27;;}
+function physics(step){targets(clock);const burstAge=clock-burstAt,spring=burstAge&lt;.45?.0035:.015,damping=Math.pow(.86,step);for(let i=0;i&lt;N;i++){const j=i*3;for(let a=0;a&lt;3;a++)vel[j+a]+=(target[j+a]-pos[j+a])*spring*step;
+if(pointer.active){const dx=pointer.x-pos[j],dy=pointer.y-pos[j+1],d2=dx*dx+dy*dy+.06,fall=Math.exp(-d2*1.35),force=(pointer.down?.014:.0038)*fall/d2;vel[j]+=(dx-(pointer.down?dy*.5:0))*force*step;vel[j+1]+=(dy+(pointer.down?dx*.5:0))*force*step;}
+for(let a=0;a&lt;3;a++){vel[j+a]=clamp(vel[j+a]*damping,-.22,.22);pos[j+a]=clamp(pos[j+a]+vel[j+a]*step,-5,5);}
+}}
+function draw(){
+g.globalCompositeOperation=&#x27;source-over&#x27;;g.globalAlpha=1;g.drawImage(backdrop,0,0,W,H);
+const centre=toScreen(0,0,0);
+if(mode===&#x27;galaxy&#x27;||mode===&#x27;hole&#x27;){
+const r=S*(mode===&#x27;hole&#x27;?.75:.55),halo=g.createRadialGradient(centre[0],centre[1],0,centre[0],centre[1],r);halo.addColorStop(0,rgba(palette.c3,mode===&#x27;hole&#x27;?.12:.16));halo.addColorStop(.24,rgba(palette.c3,.05));halo.addColorStop(1,rgba(palette.c3,0));g.fillStyle=halo;g.fillRect(0,0,W,H);
+}
+g.globalCompositeOperation=&#x27;lighter&#x27;;
+for(let i=0;i&lt;N;i++){const j=i*3,k=i*5,p=toScreen(pos[j],pos[j+1],pos[j+2]),x=p[0],y=p[1];screenX[i]=x;screenY[i]=y;if(x&lt; -25||x&gt;W+25||y&lt; -25||y&gt;H+25)continue;
+const size=(2.1+Math.pow(seeds[k+3],5)*7.1)*p[2]*(mode===&#x27;text&#x27;?.82:1),col=colorIndex(i),opacity=clamp(.39+pos[j+2]*.10+seeds[k+4]*.40,.18,.88);g.globalAlpha=opacity;g.drawImage(sprites[col],x-size/2,y-size/2,size,size);
+const v=Math.hypot(vel[j],vel[j+1]);if(v&gt;.006){const q=toScreen(pos[j]-vel[j]*2.2,pos[j+1]-vel[j+1]*2.2,pos[j+2]);g.globalAlpha=Math.min(.27,v*2);g.strokeStyle=palette[[&#x27;c1&#x27;,&#x27;c2&#x27;,&#x27;c3&#x27;,&#x27;c4&#x27;,&#x27;c5&#x27;][col]];g.lineWidth=.65;g.beginPath();g.moveTo(q[0],q[1]);g.lineTo(x,y);g.stroke();}
+if(seeds[k+3]&gt;.995&amp;&amp;mode!==&#x27;text&#x27;){g.globalAlpha=.45;g.strokeStyle=palette.c5;g.lineWidth=.6;g.beginPath();g.moveTo(x-3.6,y);g.lineTo(x+3.6,y);g.moveTo(x,y-3.6);g.lineTo(x,y+3.6);g.stroke();}
+}
+g.globalAlpha=1;
+if(mode===&#x27;hole&#x27;){
+const r=S*.283;
+g.globalCompositeOperation=&#x27;source-over&#x27;;const mask=g.createRadialGradient(centre[0],centre[1],r*.82,centre[0],centre[1],r*1.08);mask.addColorStop(0,palette.stage);mask.addColorStop(.90,palette.stage);mask.addColorStop(1,rgba(palette.stage,0));g.fillStyle=mask;g.beginPath();g.arc(centre[0],centre[1],r*1.08,0,TAU);g.fill();
+g.globalCompositeOperation=&#x27;lighter&#x27;;for(let k=0;k&lt;3;k++){g.beginPath();g.arc(centre[0],centre[1],r*(1.10+k*.045),0,TAU);g.strokeStyle=rgba(k?palette.c3:palette.c5,k?.22:.55);g.lineWidth=k?1.8:.8;g.stroke();}
+}
+if(pointer.active){const p=toScreen(pointer.x,pointer.y,0);g.globalCompositeOperation=&#x27;source-over&#x27;;g.strokeStyle=rgba(palette.c2,.5);g.lineWidth=.75;g.beginPath();g.arc(p[0],p[1],pointer.down?15:9,0,TAU);g.stroke();g.fillStyle=rgba(palette.c5,.85);g.beginPath();g.arc(p[0],p[1],1.3,0,TAU);g.fill();}
+if(!paused){shockwaves=shockwaves.filter(w=&gt;clock-w.t&lt;1.8);for(const wave of shockwaves){const age=clock-wave.t,p=toScreen(wave.x,wave.y,0);g.globalCompositeOperation=&#x27;lighter&#x27;;g.strokeStyle=rgba(palette.c2,Math.max(0,.32*(1-age/1.8)));g.lineWidth=.8;g.beginPath();g.arc(p[0],p[1],(age*.95+.06)*S,0,TAU);g.stroke();}}
+g.globalAlpha=1;g.globalCompositeOperation=&#x27;source-over&#x27;;
+}
+function frame(now){raf=0;if(paused||!visible||document.hidden)return;const delta=last?clamp((now-last)/1000,.001,.04):1/60;last=now;clock+=delta;physics(delta*60);draw();raf=requestAnimationFrame(frame);}
+function run(){if(!paused&amp;&amp;visible&amp;&amp;!document.hidden&amp;&amp;!raf){last=0;raf=requestAnimationFrame(frame);}}
+function syncPause(){$(&#x27;sd-pause&#x27;).textContent=paused?&#x27;▶ 继续&#x27;:&#x27;Ⅱ 暂停&#x27;;$(&#x27;sd-pause&#x27;).setAttribute(&#x27;aria-label&#x27;,paused?&#x27;继续星尘运动&#x27;:&#x27;暂停星尘运动&#x27;);$(&#x27;sd-live-label&#x27;).textContent=paused?&#x27;PAUSED&#x27;:&#x27;LIVE&#x27;;}
+function switchMode(next){mode=next;pointer.active=false;morphAt=clock;buttons.forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,String(b.dataset.sdMode===mode)));$(&#x27;sd-mode-label&#x27;).textContent=meta[mode][0];$(&#x27;sd-art-name&#x27;).textContent=mode===&#x27;text&#x27;?word:meta[mode][1];$(&#x27;sd-status&#x27;).textContent=mode===&#x27;text&#x27;?&#x27;星海正在写下「&#x27;+word+&#x27;」。&#x27;:meta[mode][1]+&#x27; · 同一群星尘，新的形态。&#x27;;if(mode===&#x27;text&#x27;)buildText();targets(clock);if(paused){pos.set(target);vel.fill(0);}draw();run();}
+function resize(){const rect=canvas.getBoundingClientRect();W=Math.max(1,rect.width);H=Math.max(1,rect.height);dpr=Math.min(1.75,window.devicePixelRatio||1);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);g.setTransform(dpr,0,0,dpr,0,0);S=Math.min(W/4.2,H/2.95);colors();makeSprites();makeBackdrop();if(!textPoints.length)buildText();if(first){targets(clock);pos.set(target);first=false;}draw();}
+function point(e){const r=canvas.getBoundingClientRect();return [(e.clientX-r.left-W/2)/S,(H*.485-(e.clientY-r.top))/S];}
+canvas.addEventListener(&#x27;pointermove&#x27;,e=&gt;{const [x,y]=point(e);pointer.x=x;pointer.y=y;pointer.active=true;if(pointer.down)pointer.moved=Math.max(pointer.moved,Math.hypot(e.clientX-pointer.startX,e.clientY-pointer.startY));if(paused)draw();});
+canvas.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{const [x,y]=point(e);pointer={x,y,active:true,down:true,moved:0,startX:e.clientX,startY:e.clientY,id:e.pointerId};canvas.setPointerCapture(e.pointerId);});
+function release(e){if(pointer.id!==e.pointerId)return;const wasClick=pointer.moved&lt;6;pointer.down=false;pointer.id=null;if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);if(e.type!==&#x27;pointercancel&#x27;&amp;&amp;wasClick)burst(pointer.x,pointer.y);if(e.pointerType===&#x27;touch&#x27;)pointer.active=false;}
+canvas.addEventListener(&#x27;pointerup&#x27;,release);canvas.addEventListener(&#x27;pointercancel&#x27;,release);canvas.addEventListener(&#x27;pointerleave&#x27;,()=&gt;{if(!pointer.down){pointer.active=false;if(paused)draw();}});
+buttons.forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;switchMode(b.dataset.sdMode)));
+$(&#x27;sd-compose&#x27;).addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();word=Array.from($(&#x27;sd-words&#x27;).value.trim()).slice(0,8).join(&#x27;&#x27;)||&#x27;万物有光&#x27;;$(&#x27;sd-words&#x27;).value=word;switchMode(&#x27;text&#x27;);});
+$(&#x27;sd-burst&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;burst());$(&#x27;sd-pause&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{paused=!paused;syncPause();if(paused){if(raf)cancelAnimationFrame(raf);raf=0;draw();}else run();});
+document.addEventListener(&#x27;visibilitychange&#x27;,()=&gt;{if(document.hidden){if(raf)cancelAnimationFrame(raf);raf=0;last=0;}else run();});
+const observer=new ResizeObserver(resize);observer.observe(canvas);
+if(typeof IntersectionObserver!==&#x27;undefined&#x27;){const io=new IntersectionObserver(entries=&gt;{visible=entries[0].isIntersecting;if(!visible){if(raf)cancelAnimationFrame(raf);raf=0;}else run();},{threshold:.02});io.observe(root);}
+const theme=window.matchMedia(&#x27;(prefers-color-scheme: dark)&#x27;);theme.addEventListener(&#x27;change&#x27;,resize);
+const reduced=window.matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;);reduced.addEventListener(&#x27;change&#x27;,e=&gt;{if(e.matches){paused=true;if(raf)cancelAnimationFrame(raf);raf=0;syncPause();draw();}});
+const mo=new MutationObserver(resize);mo.observe(document.documentElement,{attributes:true,attributeFilter:[&#x27;class&#x27;,&#x27;style&#x27;,&#x27;data-theme&#x27;]});
+$(&#x27;sd-count&#x27;).textContent=N.toLocaleString();colors();resize();syncPause();run();
+})();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>
