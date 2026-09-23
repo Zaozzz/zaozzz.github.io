@@ -54,6 +54,10 @@
   @keyframes fade{from{opacity:0}to{opacity:1}}
   @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
   @media (max-width:560px){.sheet-body{height:58vh}.mask{padding:12px}}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 24px}
+  .filters .f{padding:7px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);font:inherit;font-size:.84rem;cursor:pointer;transition:all .15s ease}
+  .filters .f:hover{border-color:var(--accent);color:var(--accent)}
+  .filters .f.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 </style>
 </head>
 <body>
@@ -66,7 +70,9 @@
   <h1>交互实验 / Demo</h1>
   <p class="lead">点击「预览」在弹窗里查看每个小 demo，或点 ↗ 打开全屏版本。</p>
 
-  <div class="grid" id="grid"><!-- 卡片由 JS 生成 --></div>
+  <div class="filters" id="filters"></div>
+
+    <div class="grid" id="grid"><!-- 卡片由 JS 生成 --></div>
 
   <footer>
     <span>© <span id="yr"></span> Xu Wang</span>
@@ -93,21 +99,22 @@
 
 <script>
 const DEMOS = [
-  {title:"Stardust", tag:"LAB", desc:"星尘 · 粒子交互实验。", url:"/demo/stardust.html"},
-  {title:"Fork Lab", tag:"LAB", desc:"可交互的实验沙盒 / 可视化小工具。", url:"/demo/fork-lab.html"},
-  {title:"重力回声 · Gravity Echo", tag:"GAME", desc:"进入引力场，捕获敌人弹幕，召回过去的自己。宇宙生存游戏。", url:"/demo/gravity-echo.html"},
-  {title:"琉光群岛 · AURELIA", tag:"LAB", desc:"海岛突围实验。", url:"/demo/aurelia.html"},
-  {title:"AURELIA V2", tag:"LAB", desc:"海岛突围 · V2。", url:"/demo/aurelia-v2.html"},
-  {title:"AURELIA V3 · NIGHTFALL", tag:"LAB", desc:"夜幕突围实验。", url:"/demo/aurelia-v3.html"},
-  {title:"石榴 SeeWay", tag:"APP", desc:"最后 50 米，带你找到车。叫车、出发、近距引导、现场互认与核验。", url:"/demo/seeway.html"},
-  {title:"RBCC", tag:"LAB", desc:"港科广红鸟挑战营。", url:"/rbcc/"},
-  {title:"Marble Orchestra", tag:"MUSIC", desc:"弹珠音乐盒 · 看彩珠滚落，奏出清脆乐章。", url:"/demo/marble-orchestra.html"},
-  {title:"A Little Island", tag:"GAME", desc:"风里的小岛 · 循着风的方向，去听一座岛。", url:"/demo/wind-island.html"},
-  {title:"Pocket Cosmos", tag:"GAME", desc:"引力游乐场 · 在指尖宇宙中抛射星辰、捕获轨迹。", url:"/demo/pocket-cosmos.html"},
-  {title:"Embodied Studio", tag:"LAB", desc:"三维具身智能实验室 · 感知决策行动，含机器人摄像头与雷达。", url:"/demo/embodied-studio.html"},
-  {title:"Embodied Lab", tag:"LAB", desc:"具身智能交互实验室 · 二维导航、强化学习与机械臂控制。", url:"/demo/embodied-lab.html"},
-  {title:"IELTS Studio", tag:"APP", desc:"雅思学习工作台。", url:"/demo/ielts-studio.html"}
+  {title:"Stardust", tag:"研究", desc:"星尘 \u00b7 粒子交互实验。", url:"/demo/stardust.html"},
+  {title:"Fork Lab", tag:"研究", desc:"可交互的实验沙盒 / 可视化小工具。", url:"/demo/fork-lab.html"},
+  {title:"重力回声 \u00b7 Gravity Echo", tag:"游戏", desc:"进入引力场，捕获敌人弹幕，召回过去的自己。宇宙生存游戏。", url:"/demo/gravity-echo.html"},
+  {title:"琉光群岛 \u00b7 AURELIA", tag:"研究", desc:"海岛突围实验。", url:"/demo/aurelia.html"},
+  {title:"AURELIA V2", tag:"研究", desc:"海岛突围 \u00b7 V2。", url:"/demo/aurelia-v2.html"},
+  {title:"AURELIA V3 \u00b7 NIGHTFALL", tag:"研究", desc:"夜幕突围实验。", url:"/demo/aurelia-v3.html"},
+  {title:"石榴 SeeWay", tag:"研究", desc:"最后 50 米，带你找到车。叫车、出发、近距引导、现场互认与核验。", url:"/demo/seeway.html"},
+  {title:"RBCC", tag:"RBCC", desc:"港科广红鸟挑战营。", url:"/rbcc/"},
+  {title:"Marble Orchestra", tag:"治愈", desc:"弹珠音乐盒 \u00b7 看彩珠滚落，奏出清脆乐章。", url:"/demo/marble-orchestra.html"},
+  {title:"A Little Island", tag:"治愈", desc:"风里的小岛 \u00b7 循着风的方向，去听一座岛。", url:"/demo/wind-island.html"},
+  {title:"Pocket Cosmos", tag:"游戏", desc:"引力游乐场 \u00b7 在指尖宇宙中抛射星辰、捕获轨迹。", url:"/demo/pocket-cosmos.html"},
+  {title:"Embodied Studio", tag:"研究", desc:"三维具身智能实验室 \u00b7 感知决策行动，含机器人摄像头与雷达。", url:"/demo/embodied-studio.html"},
+  {title:"Embodied Lab", tag:"研究", desc:"具身智能交互实验室 \u00b7 二维导航、强化学习与机械臂控制。", url:"/demo/embodied-lab.html"},
+  {title:"IELTS Studio", tag:"雅思", desc:"雅思学习工作台。", url:"/demo/ielts-studio.html"}
 ];
+const CATEGORIES = ["研究","游戏","治愈","RBCC","雅思"];
 const grid = document.getElementById('grid');
 const mask = document.getElementById('mask');
 const frame = document.getElementById('p-frame');
@@ -116,8 +123,27 @@ const pTitle = document.getElementById('p-title');
 const pOpen = document.getElementById('p-open');
 const pFrom = document.getElementById('p-from');
 
+let activeCat = 'all';
+function initFilters(){
+  const box = document.getElementById('filters');
+  ['all'].concat(CATEGORIES).forEach(cat=>{
+    const b = document.createElement('button');
+    b.className = 'f'+(cat==='all'?' active':'');
+    b.dataset.cat = cat;
+    b.textContent = cat==='all' ? '全部' : cat;
+    b.addEventListener('click', ()=>{
+      document.querySelectorAll('#filters .f').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      activeCat = cat;
+      buildCards();
+    });
+    box.appendChild(b);
+  });
+}
 function buildCards(){
+  grid.innerHTML = '';
   DEMOS.forEach((d,i)=>{
+    if(activeCat!=='all' && d.tag!==activeCat) return;
     const c = document.createElement('article');
     c.className = 'card';
     c.innerHTML =
@@ -128,12 +154,11 @@ function buildCards(){
         '<button class="btn" type="button">预览</button>'+
         '<a class="btn ghost" href="'+d.url+'" target="_blank" rel="noopener noreferrer" title="全屏打开">↗</a>'+
       '</div>';
-    c.querySelector('button').addEventListener('click', ()=>openPreview(i));
+    c.querySelector('button').addEventListener('click', ()=>openPreview(d));
     grid.appendChild(c);
   });
 }
-function openPreview(i){
-  const d = DEMOS[i];
+function openPreview(d){
   pTitle.textContent = d.title;
   pOpen.href = d.url;
   pFrom.textContent = d.url.replace(/\/$/,'');
@@ -154,6 +179,7 @@ mask.addEventListener('click', (e)=>{ if(e.target===mask) closePreview(); });
 document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closePreview(); });
 
 document.getElementById('yr').textContent = new Date().getFullYear();
+initFilters();
 buildCards();
 </script>
 </body>
