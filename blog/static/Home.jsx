@@ -2,12 +2,11 @@
 
 const Home = ({ posts, session, onSignIn, onSignOut, onOpenPost, onCompose, onAdmin }) => {
   const [scrollY, setScrollY] = React.useState(0);
-  const [filter, setFilter] = React.useState("research");
   const [activeId, setActiveId] = React.useState(null);
   const scrollerRef = React.useRef(null);
   const isMobile = useIsMobile();
 
-  const filtered = posts.filter((p) => p.cat === filter);
+  const filtered = posts;
 
   React.useEffect(() => {
     const el = scrollerRef.current;
@@ -32,7 +31,7 @@ const Home = ({ posts, session, onSignIn, onSignOut, onOpenPost, onCompose, onAd
     el.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => el.removeEventListener("scroll", onScroll);
-  }, [filter]);
+  }, []);
 
   // Hero collapses across 280px of scroll.
   const T = Math.min(1, scrollY / 280);
@@ -93,9 +92,6 @@ const Home = ({ posts, session, onSignIn, onSignOut, onOpenPost, onCompose, onAd
         {!isMobile && <SidebarTOC posts={filtered} activeId={activeId} onJump={onOpenPost} />}
         <main style={{ flex: 1, minWidth: 0 }}>
           <div style={{ display: "flex", gap: 8, marginBottom: 28, alignItems: "center", flexWrap: "wrap" }}>
-            {Object.entries(CATEGORIES).map(([k, c]) => (
-              <Pill key={k} active={filter === k} onClick={() => setFilter(k)}>{c.cn}</Pill>
-            ))}
             <div style={{ flex: 1 }}/>
             <div style={{
               fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--ink-mute)",
@@ -141,7 +137,7 @@ const Hero = ({ session, onSignIn, onSignOut, onCompose, onAdmin }) => {
           boxShadow: "var(--shadow-2)",
           border: "1px solid var(--hairline)",
         }}>
-          <img src="/assets/optimized/homepage-960.webp" alt="Xu Wang"
+          <img src="/assets/optimized/homepage-2026-960.webp" alt="Xu Wang"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.style.background = 'var(--rust)'; e.target.parentElement.style.color = 'var(--paper)'; e.target.parentElement.style.fontFamily = 'var(--font-cn-display)'; e.target.parentElement.style.fontSize = isMobile ? '32px' : '48px'; e.target.parentElement.style.fontWeight = '600'; e.target.parentElement.textContent = '旭'; }}/>
         </div>
