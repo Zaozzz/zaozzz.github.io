@@ -324,6 +324,20 @@
 
     .cat-label.rust-deep{ color: var(--rust-deep); }
     .cat-label.gold{ color: var(--gold); }
+
+    .demo-list{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; }
+    .demo-row{ display:grid; grid-template-columns:40px 1fr auto; column-gap:12px; align-items:center; padding:8px 10px; border-radius:12px; border:1px solid var(--hairline); background:var(--paper); transition:background .15s ease, transform .15s ease; }
+    .demo-row:hover{ background:var(--accent-soft); transform:translateY(-1px); }
+    .demo-cover{ width:38px; height:38px; border-radius:999px; overflow:hidden; display:block; border:1px solid var(--hairline); box-shadow:var(--shadow-1); background:#0f1115; }
+    .demo-cover iframe{ width:100%; height:190px; border:0; pointer-events:none; transform:translateY(-76px); opacity:.96; }
+    .demo-dot{ justify-self:center; }
+    .demo-cat{ display:inline-block; font-family:var(--font-sans); font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-mute); }
+    .demo-body{ display:flex; flex-direction:column; gap:2px; min-width:0; }
+    .demo-body a{ font-family:var(--font-serif); font-size:16px; color:var(--ink); text-decoration:none; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .demo-body a:hover{ text-decoration:underline; text-underline-offset:3px; }
+    .demo-note{ font-family:var(--font-sans); font-size:12px; color:var(--ink-mute); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .demo-open{ justify-self:end; font-family:var(--font-sans); font-size:14px; color:var(--ink-faint); }
+    @media (max-width:560px){ .demo-row{ grid-template-columns:40px 1fr; } .demo-open{ display:none; } }
     .demo-intro{ margin:-4px 0 8px; font-size:14px; color:var(--ink-mute); }
     .demo-intro a{ color:var(--indigo); text-decoration:underline; text-underline-offset:2px; }
     .demo-lead{ margin:4px 0 14px; font-size:13.5px; color:var(--ink-mute); line-height:1.7; }
@@ -1325,92 +1339,111 @@
       </section>
 
       <!-- ===== Demos ===== -->
-            <section class="section" id="demos">
+                  <section class="section" id="demos">
         <div class="section-head">
           <span class="section-no">No. 10</span>
           <h2 class="section-title">Interactive <em>Demos</em></h2>
-          <span class="section-count">13 live demos</span>
+          <span class="section-count">12 live demos</span>
         </div>
-        <p class="demo-intro">选一些自己做的交互小实验，从具身智能到弹珠音乐盒。完整列表见 <a href="/demo/" target="_blank" rel="noopener noreferrer">Demo 中心</a>。</p>
+        <p class="demo-intro">一点自己做的交互小实验，从具身智能到弹珠音乐盒。完整列表见 <a href="/demo/" target="_blank" rel="noopener noreferrer">Demo 中心</a>。</p>
 
         <div class="cat-label indigo">研究 · Research</div>
         <p class="demo-lead">从粒子系统到具身智能的交互实验：动手把算法变成可看的画面。</p>
-        <div class="demo-grid">
-          <a class="demo-card" href="/demo/fork-lab.html" target="_blank" rel="noopener noreferrer" aria-label="Fork Lab">
-            <span class="demo-shot"><iframe src="/demo/fork-lab.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Fork Lab preview"></iframe></span>
-            <span class="demo-meta"><b>Fork Lab</b><i>research</i></span>
-          </a>
-          <a class="demo-card" href="/demo/embodied-studio.html" target="_blank" rel="noopener noreferrer" aria-label="Embodied Studio">
-            <span class="demo-shot"><iframe src="/demo/embodied-studio.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Embodied Studio preview"></iframe></span>
-            <span class="demo-meta"><b>Embodied Studio</b><i>research</i></span>
-          </a>
-          <a class="demo-card" href="/demo/embodied-lab.html" target="_blank" rel="noopener noreferrer" aria-label="Embodied Lab">
-            <span class="demo-shot"><iframe src="/demo/embodied-lab.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Embodied Lab preview"></iframe></span>
-            <span class="demo-meta"><b>Embodied Lab</b><i>research</i></span>
-          </a>
-        </div>
+        <ul class="demo-list">
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/fork-lab.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Fork Lab preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">research</span></span>
+            <span class="demo-body"><a href="/demo/fork-lab.html" target="_blank" rel="noopener noreferrer">Fork Lab</a><span class="demo-note">可交互的实验沙盒 / 可视化小工具</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/embodied-studio.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Embodied Studio preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">research</span></span>
+            <span class="demo-body"><a href="/demo/embodied-studio.html" target="_blank" rel="noopener noreferrer">Embodied Studio</a><span class="demo-note">三维具身智能实验室，机器人摄像头与 180 线雷达</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/embodied-lab.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Embodied Lab preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">research</span></span>
+            <span class="demo-body"><a href="/demo/embodied-lab.html" target="_blank" rel="noopener noreferrer">Embodied Lab</a><span class="demo-note">二维导航、强化学习与机械臂控制</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+        </ul>
 
         <div class="cat-label rust">游戏 · Game</div>
         <p class="demo-lead">把物理引擎和挑战做成指尖小游戏：引力、弹幕、夜色与突围。</p>
-        <div class="demo-grid">
-          <a class="demo-card" href="/demo/gravity-echo.html" target="_blank" rel="noopener noreferrer" aria-label="重力回声 · Gravity Echo">
-            <span class="demo-shot"><iframe src="/demo/gravity-echo.html" loading="lazy" tabindex="-1" aria-hidden="true" title="重力回声 · Gravity Echo preview"></iframe></span>
-            <span class="demo-meta"><b>重力回声 · Gravity Echo</b><i>game</i></span>
-          </a>
-          <a class="demo-card" href="/demo/aurelia-v3.html" target="_blank" rel="noopener noreferrer" aria-label="夜幕疾行 · Dusk Sprint">
-            <span class="demo-shot"><iframe src="/demo/aurelia-v3.html" loading="lazy" tabindex="-1" aria-hidden="true" title="夜幕疾行 · Dusk Sprint preview"></iframe></span>
-            <span class="demo-meta"><b>夜幕疾行 · Dusk Sprint</b><i>game</i></span>
-          </a>
-          <a class="demo-card" href="/demo/pocket-cosmos.html" target="_blank" rel="noopener noreferrer" aria-label="Pocket Cosmos">
-            <span class="demo-shot"><iframe src="/demo/pocket-cosmos.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Pocket Cosmos preview"></iframe></span>
-            <span class="demo-meta"><b>Pocket Cosmos</b><i>game</i></span>
-          </a>
-        </div>
+        <ul class="demo-list">
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/gravity-echo.html" loading="lazy" tabindex="-1" aria-hidden="true" title="重力回声 · Gravity Echo preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">game</span></span>
+            <span class="demo-body"><a href="/demo/gravity-echo.html" target="_blank" rel="noopener noreferrer">重力回声 · Gravity Echo</a><span class="demo-note">进入引力场，捕获敌人弹幕，召回过去的自己</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/aurelia-v3.html" loading="lazy" tabindex="-1" aria-hidden="true" title="夜幕疾行 · Dusk Sprint preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">game</span></span>
+            <span class="demo-body"><a href="/demo/aurelia-v3.html" target="_blank" rel="noopener noreferrer">夜幕疾行 · Dusk Sprint</a><span class="demo-note">夜色中极速穿梭的突围挑战</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/pocket-cosmos.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Pocket Cosmos preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">game</span></span>
+            <span class="demo-body"><a href="/demo/pocket-cosmos.html" target="_blank" rel="noopener noreferrer">Pocket Cosmos</a><span class="demo-note">引力游乐场 · 抛射星辰、捕获轨迹</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+        </ul>
 
         <div class="cat-label pine">治愈 · Healing</div>
         <p class="demo-lead">慢下来，用光、声音和一点粒子，装下一个小小的安静世界。</p>
-        <div class="demo-grid">
-          <a class="demo-card" href="/demo/stardust.html" target="_blank" rel="noopener noreferrer" aria-label="Stardust">
-            <span class="demo-shot"><iframe src="/demo/stardust.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Stardust preview"></iframe></span>
-            <span class="demo-meta"><b>Stardust</b><i>healing</i></span>
-          </a>
-          <a class="demo-card" href="/demo/aurelia.html" target="_blank" rel="noopener noreferrer" aria-label="琉光屿 · Glow Isle">
-            <span class="demo-shot"><iframe src="/demo/aurelia.html" loading="lazy" tabindex="-1" aria-hidden="true" title="琉光屿 · Glow Isle preview"></iframe></span>
-            <span class="demo-meta"><b>琉光屿 · Glow Isle</b><i>healing</i></span>
-          </a>
-          <a class="demo-card" href="/demo/marble-orchestra.html" target="_blank" rel="noopener noreferrer" aria-label="Marble Orchestra">
-            <span class="demo-shot"><iframe src="/demo/marble-orchestra.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Marble Orchestra preview"></iframe></span>
-            <span class="demo-meta"><b>Marble Orchestra</b><i>healing</i></span>
-          </a>
-          <a class="demo-card" href="/demo/wind-island.html" target="_blank" rel="noopener noreferrer" aria-label="A Little Island">
-            <span class="demo-shot"><iframe src="/demo/wind-island.html" loading="lazy" tabindex="-1" aria-hidden="true" title="A Little Island preview"></iframe></span>
-            <span class="demo-meta"><b>A Little Island</b><i>healing</i></span>
-          </a>
-        </div>
+        <ul class="demo-list">
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/aurelia.html" loading="lazy" tabindex="-1" aria-hidden="true" title="琉光屿 · Glow Isle preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">healing</span></span>
+            <span class="demo-body"><a href="/demo/aurelia.html" target="_blank" rel="noopener noreferrer">琉光屿 · Glow Isle</a><span class="demo-note">流光之岛，一座宁静发光的小岛</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/marble-orchestra.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Marble Orchestra preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">healing</span></span>
+            <span class="demo-body"><a href="/demo/marble-orchestra.html" target="_blank" rel="noopener noreferrer">Marble Orchestra</a><span class="demo-note">弹珠音乐盒 · 看彩珠滚落，奏出清脆乐章</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/wind-island.html" loading="lazy" tabindex="-1" aria-hidden="true" title="A Little Island preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">healing</span></span>
+            <span class="demo-body"><a href="/demo/wind-island.html" target="_blank" rel="noopener noreferrer">A Little Island</a><span class="demo-note">风里的小岛 · 循着风，去听一座岛</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+        </ul>
 
         <div class="cat-label gold">RBCC</div>
         <p class="demo-lead">Red Bird Challenger Camp（港科广）的实践作品。</p>
-        <div class="demo-grid">
-          <a class="demo-card" href="/demo/seeway.html" target="_blank" rel="noopener noreferrer" aria-label="石榴 SeeWay">
-            <span class="demo-shot"><iframe src="/demo/seeway.html" loading="lazy" tabindex="-1" aria-hidden="true" title="石榴 SeeWay preview"></iframe></span>
-            <span class="demo-meta"><b>石榴 SeeWay</b><i>rbcc</i></span>
-          </a>
-          <a class="demo-card" href="/rbcc/" target="_blank" rel="noopener noreferrer" aria-label="RBCC">
-            <span class="demo-shot"><iframe src="/rbcc/" loading="lazy" tabindex="-1" aria-hidden="true" title="RBCC preview"></iframe></span>
-            <span class="demo-meta"><b>RBCC</b><i>rbcc</i></span>
-          </a>
-        </div>
+        <ul class="demo-list">
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/seeway.html" loading="lazy" tabindex="-1" aria-hidden="true" title="石榴 SeeWay preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">rbcc</span></span>
+            <span class="demo-body"><a href="/demo/seeway.html" target="_blank" rel="noopener noreferrer">石榴 SeeWay</a><span class="demo-note">最后 50 米带你找到车：近距引导与现场互认</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/rbcc/" loading="lazy" tabindex="-1" aria-hidden="true" title="RBCC preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">rbcc</span></span>
+            <span class="demo-body"><a href="/rbcc/" target="_blank" rel="noopener noreferrer">RBCC</a><span class="demo-note">港科广红鸟挑战营专题</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+        </ul>
 
         <div class="cat-label rust-deep">雅思 · IELTS</div>
         <p class="demo-lead">备考雅思的学习工作台。</p>
-        <div class="demo-grid">
-          <a class="demo-card" href="/demo/ielts-studio.html" target="_blank" rel="noopener noreferrer" aria-label="IELTS Studio">
-            <span class="demo-shot"><iframe src="/demo/ielts-studio.html" loading="lazy" tabindex="-1" aria-hidden="true" title="IELTS Studio preview"></iframe></span>
-            <span class="demo-meta"><b>IELTS Studio</b><i>ielts</i></span>
-          </a>
-        </div>
-      </section>
-    </main>
+        <ul class="demo-list">
+          <li class="demo-row">
+            <span class="demo-cover"><iframe src="/demo/ielts-studio.html" loading="lazy" tabindex="-1" aria-hidden="true" title="IELTS Studio preview"></iframe></span>
+            <span class="demo-dot"><span class="demo-cat">ielts</span></span>
+            <span class="demo-body"><a href="/demo/ielts-studio.html" target="_blank" rel="noopener noreferrer">IELTS Studio</a><span class="demo-note">雅思学习工作台，规划、练习、自测一体化</span></span>
+            <span class="demo-open">&#8599;</span>
+          </li>
+        </ul>
+      </section>    </main>
   </div>
 
   <footer class="footer">
