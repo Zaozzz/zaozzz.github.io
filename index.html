@@ -339,6 +339,7 @@
     .demo-note{ font-family:var(--font-sans); font-size:13px; color:var(--ink-mute); line-height:1.5; overflow-wrap:break-word; }
     .demo-cover{ width:200px; height:118px; border-radius:12px; overflow:hidden; display:block; border:1px solid var(--hairline); box-shadow:var(--shadow-1); background:#0f1115; justify-self:end; }
     .demo-cover iframe{ width:100%; height:320px; border:0; pointer-events:none; transform:translateY(-96px) scale(1); opacity:.97; }
+    .demo-cover img{ width:100%; height:100%; object-fit:cover; display:block; }
     @media (max-width:760px){
       .demo-row{ grid-template-columns:1fr; row-gap:12px; }
       .demo-cover{ width:100%; height:190px; justify-self:stretch; }
@@ -1361,15 +1362,15 @@
         <ul class="demo-list">
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/fork-lab.html" target="_blank" rel="noopener noreferrer">Fork Lab</a><span class="demo-note">An interactive playground of mini visualizations and tiny tools.</span></span>
-            <span class="demo-cover"><iframe src="/demo/fork-lab.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Fork Lab preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/fork-lab.webp" alt="Fork Lab preview preview" loading="lazy" /></span>
           </li>
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/embodied-studio.html" target="_blank" rel="noopener noreferrer">Embodied Studio</a><span class="demo-note">A 3D embodied-intelligence studio with robot cameras and 180-line LiDAR.</span></span>
-            <span class="demo-cover"><iframe src="/demo/embodied-studio.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Embodied Studio preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/embodied-studio.webp" alt="Embodied Studio preview preview" loading="lazy" /></span>
           </li>
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/embodied-lab.html" target="_blank" rel="noopener noreferrer">Embodied Lab</a><span class="demo-note">2D navigation, reinforcement learning, and robotic arm control.</span></span>
-            <span class="demo-cover"><iframe src="/demo/embodied-lab.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Embodied Lab preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/embodied-lab.webp" alt="Embodied Lab preview preview" loading="lazy" /></span>
           </li>
         </ul>
 
@@ -1378,15 +1379,15 @@
         <ul class="demo-list">
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/gravity-echo.html" target="_blank" rel="noopener noreferrer">Gravity Echo</a><span class="demo-note">Step into a gravity field, catch enemy bullets, and call back your past self.</span></span>
-            <span class="demo-cover"><iframe src="/demo/gravity-echo.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Gravity Echo preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/gravity-echo.webp" alt="Gravity Echo preview preview" loading="lazy" /></span>
           </li>
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/aurelia-v3.html" target="_blank" rel="noopener noreferrer">Dusk Sprint</a><span class="demo-note">A high-speed breakout race weaving through the night.</span></span>
-            <span class="demo-cover"><iframe src="/demo/aurelia-v3.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Dusk Sprint preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/aurelia-v3.webp" alt="Dusk Sprint preview preview" loading="lazy" /></span>
           </li>
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/pocket-cosmos.html" target="_blank" rel="noopener noreferrer">Pocket Cosmos</a><span class="demo-note">A gravity playground — fling stars and capture their orbits.</span></span>
-            <span class="demo-cover"><iframe src="/demo/pocket-cosmos.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Pocket Cosmos preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/pocket-cosmos.webp" alt="Pocket Cosmos preview preview" loading="lazy" /></span>
           </li>
         </ul>
 
@@ -1395,15 +1396,15 @@
         <ul class="demo-list">
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/aurelia.html" target="_blank" rel="noopener noreferrer">Glow Isle</a><span class="demo-note">An isle of drifting light — a calm, softly glowing little island.</span></span>
-            <span class="demo-cover"><iframe src="/demo/aurelia.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Glow Isle preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/aurelia.webp" alt="Glow Isle preview preview" loading="lazy" /></span>
           </li>
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/marble-orchestra.html" target="_blank" rel="noopener noreferrer">Marble Orchestra</a><span class="demo-note">A marble music box — watch colored beads tumble into bright little melodies.</span></span>
-            <span class="demo-cover"><iframe src="/demo/marble-orchestra.html" loading="lazy" tabindex="-1" aria-hidden="true" title="Marble Orchestra preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/marble-orchestra.webp" alt="Marble Orchestra preview preview" loading="lazy" /></span>
           </li>
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/wind-island.html" target="_blank" rel="noopener noreferrer">A Little Island</a><span class="demo-note">An island in the wind — follow the breeze and listen to its quiet song.</span></span>
-            <span class="demo-cover"><iframe src="/demo/wind-island.html" loading="lazy" tabindex="-1" aria-hidden="true" title="A Little Island preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/wind-island.webp" alt="A Little Island preview preview" loading="lazy" /></span>
           </li>
         </ul>
 
@@ -1412,7 +1413,7 @@
         <ul class="demo-list">
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/seeway.html" target="_blank" rel="noopener noreferrer">SeeWay</a><span class="demo-note">Guides you to your car in the last 50 meters — precise positioning and spot recognition.</span></span>
-            <span class="demo-cover"><iframe src="/demo/seeway.html" loading="lazy" tabindex="-1" aria-hidden="true" title="SeeWay preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/seeway.webp" alt="SeeWay preview preview" loading="lazy" /></span>
           </li>
           <li class="demo-row">
             <span class="demo-body"><a href="/rbcc/" target="_blank" rel="noopener noreferrer">RBCC</a><span class="demo-note">A gallery of work from the Red Bird Challenger Camp at HKUST(GZ).</span></span>
@@ -1425,7 +1426,7 @@
         <ul class="demo-list">
           <li class="demo-row">
             <span class="demo-body"><a href="/demo/ielts-studio.html" target="_blank" rel="noopener noreferrer">IELTS Studio</a><span class="demo-note">An all-in-one IELTS workspace — plan, practice, and self-test.</span></span>
-            <span class="demo-cover"><iframe src="/demo/ielts-studio.html" loading="lazy" tabindex="-1" aria-hidden="true" title="IELTS Studio preview"></iframe></span>
+            <span class="demo-cover"><img src="/assets/demo-thumbs/ielts-studio.webp" alt="IELTS Studio preview preview" loading="lazy" /></span>
           </li>
         </ul>
           </main>
