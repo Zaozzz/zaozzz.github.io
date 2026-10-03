@@ -21,17 +21,17 @@
        Paper-and-ink editorial system. No external CDN fonts.
        ============================================================ */
     :root{
-      --paper:          #F5F1E8;
-      --paper-soft:     #EDE7D7;
-      --paper-deep:     #E4DCC6;
-      --paper-shadow:   #D6CCB2;
+      --paper:          #FFFFFF;
+      --paper-soft:     #FBFBF9;
+      --paper-deep:     #F3F3EF;
+      --paper-shadow:   #E9E9E4;
 
       --ink:            #1A1612;
       --ink-soft:       #3A332B;
       --ink-mute:       #6B6258;
       --ink-faint:      #968B7B;
-      --hairline:       #D9D0BC;
-      --hairline-soft:  #E6DFCC;
+      --hairline:       #D8D6CF;
+      --hairline-soft:  #E8E6E0;
 
       --rust:           #A03A1F;
       --rust-deep:      #7A2A14;
@@ -72,7 +72,12 @@
     html{ scroll-behavior: smooth; }
     body{
       margin: 0;
-      background: var(--paper);
+      background-color: var(--paper);
+      background-image:
+        repeating-linear-gradient( 0deg,  rgba(26,22,18,.030) 0 1px, transparent 1px 22px ),
+        repeating-linear-gradient( 90deg,  rgba(26,22,18,.030) 0 1px, transparent 1px 22px ),
+        repeating-linear-gradient( 0deg,  rgba(26,22,18,.014) 0 1px, transparent 1px 11px ),
+        repeating-linear-gradient( 90deg,  rgba(26,22,18,.014) 0 1px, transparent 1px 11px );
       color: var(--ink);
       font-family: var(--font-sans);
       font-size: 15px;
