@@ -80,7 +80,7 @@
         repeating-linear-gradient( 90deg,  rgba(26,22,18,.014) 0 1px, transparent 1px 11px );
       color: var(--ink);
       font-family: var(--font-sans);
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.6;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
@@ -331,7 +331,7 @@
     .cat-label.rust-deep{ color: var(--rust-deep); }
     .cat-label.gold{ color: var(--gold); }
 
-    .demo-list{ list-style:none; padding:0; margin:0 0 26px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .demo-list{ list-style:none; padding:0; margin:0 0 26px; display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
     .demo-list:last-of-type{ margin-bottom:0; }
     .demo-row{
       display:flex; flex-direction:column; overflow:hidden;
@@ -347,9 +347,12 @@
     .demo-body a:hover{ text-decoration:underline; text-underline-offset:3px; }
     .demo-note{ font-family:var(--font-sans); font-size:11.5px; color:var(--ink-mute); line-height:1.5; overflow-wrap:break-word; }
     @media (max-width:1120px){
+      .demo-list{ grid-template-columns:repeat(3,1fr); }
+    }
+    @media (max-width:900px){
       .demo-list{ grid-template-columns:repeat(2,1fr); }
     }
-    @media (max-width:760px){
+    @media (max-width:640px){
       .demo-list{ grid-template-columns:1fr; }
       .demo-cover{ height:170px; }
       .demo-cover iframe{ height:300px; transform:translateY(-70px); }
@@ -358,10 +361,11 @@
     .demo-intro a{ color:var(--indigo); text-decoration:underline; text-underline-offset:2px; }
     .demo-lead{ margin:4px 0 14px; font-size:13.5px; color:var(--ink-mute); line-height:1.7; }
     .cat-label + .demo-list{ margin-top:2px; }
+    #publications{ font-size: 14px; }
 
     /* ============== Prose ============== */
     .prose{
-      font-family: var(--font-serif); font-size: 19px; line-height: 1.62;
+      font-family: var(--font-serif); font-size: 15px; line-height: 1.62;
       color: var(--ink); max-width: 68ch;
     }
     .prose p{ margin: 0 0 16px; }
