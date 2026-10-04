@@ -336,10 +336,10 @@
     .demo-list:last-of-type{ margin-bottom:0; }
     .demo-row{
       display:flex; flex-direction:row; align-items:center; overflow:hidden;
-      border-radius:14px; border:1px solid var(--hairline); background:var(--paper);
-      transition:background .18s ease, transform .18s ease, box-shadow .18s ease;
+      border-left:1.5px solid var(--hairline);
+      transition:border-color .18s ease;
     }
-    .demo-row:hover{ background:var(--paper); transform:translateY(-3px); box-shadow:var(--shadow-2, 0 8px 24px rgba(0,0,0,.08)); }
+    .demo-row:hover{ border-color: var(--ink-soft); }
     .demo-cover{ width:64px; height:64px; flex-shrink:0; display:block; overflow:hidden; background:#0f1115; border-right:1px solid var(--hairline); border-radius:14px; margin-left:auto; margin-right:6px; }
     .demo-cover iframe{ width:100%; height:128px; border:0; pointer-events:none; transform:translateY(-64px) scale(1); opacity:.97; }
     .demo-cover img{ width:100%; height:100%; object-fit:cover; object-position:left center; display:block; -webkit-mask-image:linear-gradient(to right,#000 70%,transparent); mask-image:linear-gradient(to right,#000 70%,transparent); }
