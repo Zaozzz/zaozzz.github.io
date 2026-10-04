@@ -138,6 +138,13 @@
       color: var(--rust);
       background: var(--rust-paper);
     }
+    .lang-toggle{
+      font-family: var(--font-sans); font-size: 13px; color: var(--ink-soft);
+      background: transparent; border: 1px solid var(--hairline); border-radius: 999px;
+      padding: 4px 12px; cursor: pointer; margin-left: 6px; flex-shrink: 0;
+      transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+    }
+    .lang-toggle:hover{ border-color: var(--rust); color: var(--rust); }
 
     /* ============== Hero (blog-style) ============== */
     .hero{
@@ -720,6 +727,7 @@
       <a href="/demo/" target="_blank" rel="noopener noreferrer">Demo</a>
       <!-- <a href="/blog/">Blog</a> -->
     </nav>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">中文</button>
   </header>
 
   <!-- ============== Hero ============== -->
@@ -1495,7 +1503,7 @@
           item.style.transform = "translateY(-8px)";
           setTimeout(function(){ item.style.display = "none"; }, 300);
         });
-        text.textContent = "Show more";
+        text.textContent = window.__lang === "zh" ? "查看更多" : "Show more";
         btn.setAttribute("aria-expanded", "false");
         btn.querySelector(".arrow").style.transform = "rotate(0deg)";
       } else {
@@ -1509,7 +1517,7 @@
             item.style.transform = "translateY(0)";
           }, index * 40);
         });
-        text.textContent = "Show less";
+        text.textContent = window.__lang === "zh" ? "收起" : "Show less";
         btn.setAttribute("aria-expanded", "true");
         btn.querySelector(".arrow").style.transform = "rotate(180deg)";
       }
@@ -1529,7 +1537,7 @@
           item.style.transform = "translateY(-10px)";
           setTimeout(function(){ item.style.display = "none"; }, 300);
         });
-        text.textContent = "Show more";
+        text.textContent = window.__lang === "zh" ? "查看更多" : "Show more";
         btn.setAttribute("aria-expanded", "false");
         btn.querySelector(".arrow").style.transform = "rotate(0deg)";
         return;
@@ -1547,11 +1555,11 @@
       });
       var stillHidden = items.filter(function(item){ return item.style.display === "none" || item.style.display === ""; }).length;
       if (stillHidden === 0){
-        text.textContent = "Show less";
+        text.textContent = window.__lang === "zh" ? "收起" : "Show less";
         btn.setAttribute("aria-expanded", "true");
         btn.querySelector(".arrow").style.transform = "rotate(180deg)";
       } else {
-        text.textContent = "Show more";
+        text.textContent = window.__lang === "zh" ? "查看更多" : "Show more";
         btn.setAttribute("aria-expanded", "false");
         btn.querySelector(".arrow").style.transform = "rotate(0deg)";
       }
@@ -1636,6 +1644,251 @@
         else { visible = true; if (!raf) animate(); }
       });
       animate();
+    })();
+
+    /* ============== i18n (EN/中文) ============== */
+    (function(){
+      var I18N = [
+        /* header nav */
+        {e:"Biography", z:"个人简介"},
+        {e:"News", z:"新闻"},
+        {e:"Education", z:"教育"},
+        {e:"Internships", z:"实习"},
+        {e:"Entrepreneurship", z:"创业"},
+        {e:"Publications", z:"论文"},
+        {e:"Awards", z:"荣誉"},
+        {e:"Service", z:"服务"},
+        {e:"Playlists", z:"歌单"},
+        {e:"Demo", z:"演示"},
+        /* toc */
+        {e:"On this page", z:"本页目录"},
+        {e:"now reading", z:"正在阅读"},
+        {e:"experiments", z:"实验"},
+        {e:"Biography<span class=\"toc-cat\">now reading</span>", z:"个人简介<span class=\"toc-cat\">正在阅读</span>"},
+        {e:"News<span class=\"toc-cat\">now reading</span>", z:"新闻<span class=\"toc-cat\">正在阅读</span>"},
+        {e:"Education<span class=\"toc-cat\">now reading</span>", z:"教育<span class=\"toc-cat\">正在阅读</span>"},
+        {e:"Internships<span class=\"toc-cat\">now reading</span>", z:"实习<span class=\"toc-cat\">正在阅读</span>"},
+        {e:"Entrepreneurship<span class=\"toc-cat\">now reading</span>", z:"创业<span class=\"toc-cat\">正在阅读</span>"},
+        {e:"Publications<span class=\"toc-cat\">now reading</span>", z:"论文<span class=\"toc-cat\">正在阅读</span>"},
+        {e:"Awards<span class=\"toc-cat\">now reading</span>", z:"荣誉<span class=\"toc-cat\">正在阅读</span>"},
+        {e:"Service<span class=\"toc-cat\">now reading</span>", z:"服务<span class=\"toc-cat\">正在阅读</span>"},
+        {e:"Playlists<span class=\"toc-cat\">now reading</span>", z:"歌单<span class=\"toc-cat\">正在阅读</span>"},
+        {e:"Demo<span class=\"toc-cat\">experiments</span>", z:"演示<span class=\"toc-cat\">实验</span>"},
+        /* hero */
+        {e:"Hi, I'm <span class=\"accent\">Xu Wang</span>.", z:"你好，我是<span class=\"accent\">王旭</span>。"},
+        {e:"Exploring large language models —<br />how they reason, generate, and understand the world.", z:"探索大语言模型 —<br />它们如何推理、生成与理解世界。"},
+        {e:"<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M2.5 9 12 3.5 21.5 9 12 14.5 2.5 9Z'/><path d='M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5'/></svg>Google Scholar", z:"<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M2.5 9 12 3.5 21.5 9 12 14.5 2.5 9Z'/><path d='M6 11.5V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5'/></svg>谷歌学术"},
+        {e:"<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='2.5' y='5' width='19' height='14' rx='2'/><path d='m3.5 7.5 8.5 6 8.5-6'/></svg>Email", z:"<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='2.5' y='5' width='19' height='14' rx='2'/><path d='m3.5 7.5 8.5 6 8.5-6'/></svg>邮箱"},
+        {e:"<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M12 20h9'/><path d='M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z'/></svg>Blog", z:"<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M12 20h9'/><path d='M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z'/></svg>博客"},
+        {e:"↓ scroll for more things about me", z:"↓ 向下滚动，了解更多关于我"},
+        {e:"updated weekly · Xu Wang", z:"每周更新 · 王旭"},
+        /* section titles & counts */
+        {e:"Biography<span class=\"section-count\">about me</span>", z:"个人简介<span class=\"section-count\">关于我</span>"},
+        {e:"about me", z:"关于我"},
+        {e:"latest · 2026", z:"最新 · 2026"},
+        {e:"1 institution", z:"1 所学校"},
+        {e:"2 positions", z:"2 段经历"},
+        {e:"2 startups", z:"2 个创业项目"},
+        {e:"Selected <em>Publications</em>", z:"精选<em>论文</em>"},
+        {e:"20+ papers · 2024–2026", z:"20+ 篇论文 · 2024–2026"},
+        {e:"Honors &amp; <em>Awards</em>", z:"荣誉与<em>奖项</em>"},
+        {e:"100+ awards", z:"100+ 项荣誉"},
+        {e:"Service &amp; <em>Engagement</em>", z:"服务与<em>参与</em>"},
+        {e:"community", z:"社区服务"},
+        {e:"NetEase <em>Playlists</em>", z:"网易云<em>歌单</em>"},
+        {e:"5 selected lists", z:"5 个精选歌单"},
+        {e:"Interactive <em>Demos</em>", z:"互动<em>演示</em>"},
+        {e:"12 live demos", z:"12 个在线演示"},
+        /* biography */
+        {e:"Hi, I am <b>Xu Wang</b>, an undergraduate student majoring in <b>Artificial Intelligence</b> at <b>Shandong Jianzhu University</b>. My research interests lie in <b>Natural Language Processing</b> and <b>Computer Vision</b>, particularly controllable text generation, medical AI, object detection, and image classification.", z:"你好，我是<b>王旭</b>，山东建筑大学<b>人工智能</b>专业本科生。研究方向为<b>自然语言处理</b>与<b>计算机视觉</b>，重点关注可控文本生成、医疗AI、目标检测与图像分类。"},
+        {e:"I have published <b>20+ papers</b> in venues including <b>AAAI, ICASSP, and Information Processing &amp; Management</b>. My work on controllable paragraph generation has received recognition from science-fiction writers such as <b>Yan Wu</b>. I also proposed an <b>ECG clinical reasoning benchmark</b> that has been cited by works at <b>ICLR 2026</b> and <b>ICML 2026</b>, and adopted by subsequent studies such as <b>CARE-ECG</b>. Related follow-up research has involved leading researchers including <b>Wei Wang</b> and <b>Krishnendu Chakrabarty</b>. The benchmark has also been recognized by the <b>MiniMind</b> open-source project. In addition, my work on oracle-bone inscription deduplication and fragment stitching won <b>2nd</b> and <b>3rd</b> place in the Tencent SSV AI+Oracle competition.", z:"我已在<b>AAAI、ICASSP、Information Processing &amp; Management</b>等期刊会议发表<b>20余篇论文</b>。可控段落生成方面的工作获得了科幻作家<b>吴岩（Yan Wu）</b>的认可；我还提出了<b>ECG临床推理基准</b>，被<b>ICLR 2026</b>与<b>ICML 2026</b>的工作引用，并被<b>CARE-ECG</b>等后续研究采用，相关后续研究亦有<b>Wei Wang</b>与<b>Krishnendu Chakrabarty</b>等资深学者参与。该基准还得到<b>MiniMind</b>开源项目认可。此外，我在甲骨文复刻去重与残片缀合方面的工作获得腾讯SSV AI+甲骨文挑战赛<b>第2名</b>与<b>第3名</b>。"},
+        {e:"I have participated in two Provincial Undergraduate Innovation &amp; Entrepreneurship Training Program projects and received over <b>100 awards and honors</b>, including the <b>CNCC 2024 Student Travel Award</b>, <b>ICASSP 2026 Student Travel Award</b>, National Gold Award in <b>ChuangQingChun 2025</b>, Grand Prize in the <b>Shandong Challenge Cup</b>, and National First Prizes in the <b>Lanqiao Cup</b> and <b>CRAIC 2025</b>.", z:"我参与了两个省级大学生创新创业训练计划项目，累计获得<b>100余项</b>奖项与荣誉，包括<b>CNCC 2024学生参会奖</b>、<b>ICASSP 2026学生参会奖</b>、<b>2025创青春国家级金奖</b>、<b>山东省挑战杯特等奖</b>，以及<b>蓝桥杯</b>与<b>CRAIC 2025</b>国家级一等奖。"},
+        {e:"I serve as a reviewer for conferences including <b>ICME, AVSS, and BIBE</b>, as well as journals such as <b>IEEE TKDE</b> and <b>Scientific Reports</b>, and I am a student member of <b>AAAI, CCF, and SDCAI</b>.", z:"我担任<b>ICME、AVSS、BIBE</b>等会议以及<b>IEEE TKDE</b>、<b>Scientific Reports</b>等期刊的审稿人，同时也是<b>AAAI、CCF、SDCAI</b>的学生会员。"},
+        {e:"Beyond research, I am a recognized <b>NetEase Cloud Music playlist curator and music-review writer</b>. My playlists have accumulated over <b>3 million</b> plays, while my music reviews have received hundreds of thousands of likes. I also founded <b>ICCV (I Code Computer Vision)</b>, a public account focused on sharing research papers and computer vision insights, with tens of thousands of cumulative reads.", z:"科研之外，我是网易云音乐认证的<b>歌单达人</b>与<b>乐评人</b>。我的歌单累计播放<b>300万+</b>，乐评收获数十万点赞。我还创办了<b>ICCV（I Code Computer Vision）</b>公众号，专注分享研究论文与计算机视觉见解，累计阅读数万次。"},
+        {e:"Show more", z:"查看更多"},
+        {e:"Show less", z:"收起"},
+        /* news */
+        {e:"Won the National Third Prize in the \"Challenge Cup\" China College Students Entrepreneurship Plan Competition.", z:"荣获“挑战杯”中国大学生创业计划竞赛国家级三等奖。"},
+        {e:"MedCTM is recognized as an ESI Highly Cited paper.", z:"MedCTM 入选 ESI 高被引论文。"},
+        {e:"Won the Gold Award in the China International College Student Innovation Competition (Shandong Division).", z:"荣获中国国际大学生创新大赛（山东赛区）金奖。"},
+        {e:"One paper is accepted by The Computer Journal.", z:"一篇论文被 The Computer Journal 接收。"},
+        {e:"One paper is accepted by Pattern Recognition Letters.", z:"一篇论文被 Pattern Recognition Letters 接收。"},
+        {e:"Participated in RBCC at HKUST(GZ).", z:"参加香港科技大学（广州）RBCC。"},
+        {e:"Invited to serve as a reviewer for ICICN 2026 and BIBE 2026.", z:"受邀担任 ICICN 2026 与 BIBE 2026 审稿人。"},
+        {e:"Invited to join the Technical Committee of ICICN 2026.", z:"受邀加入 ICICN 2026 技术委员会。"},
+        {e:"Two papers are accepted by ICICN 2026.", z:"两篇论文被 ICICN 2026 接收。"},
+        {e:"Milestone: My Google Scholar citations exceeded 100.", z:"里程碑：Google Scholar 引用突破 100。"},
+        {e:"Won the Gold Award in the \"Mass Innovation Cup\" Entrepreneurship Competition and \"Create Win Future\" 2026 Entrepreneurship Competition Guangdong Province Selection - People's Livelihood Needs + Entrepreneurship Track.", z:"荣获“众创杯”创新创业大赛及“创赢未来”2026创新创业大赛广东省选拔赛——民生需求+创业赛道金奖。"},
+        {e:"Won the Grand Prize (Shandong Province) in the \"Challenge Cup\" China College Students Entrepreneurship Plan Competition.", z:"荣获“挑战杯”中国大学生创业计划竞赛山东省特等奖。"},
+        {e:"One paper is accepted by Journal of Imaging Informatics in Medicine.", z:"一篇论文被 Journal of Imaging Informatics in Medicine 接收。"},
+        {e:"Milestone: My GitHub stars exceeded 50.", z:"里程碑：GitHub Stars 突破 50。"},
+        {e:"Traveled to Barcelona to attend ICASSP 2026.", z:"前往巴塞罗那参加 ICASSP 2026。"},
+        {e:"Received the May Fourth Recognition (Science &amp; Innovation) from Shandong Jianzhu University.", z:"获山东建筑大学五四表彰（科技创新）。"},
+        {e:"One paper is accepted for an oral presentation at ICIC 2026.", z:"一篇论文被 ICIC 2026 接收作口头报告。"},
+        {e:"One paper is accepted by Information Processing &amp; Management.", z:"一篇论文被 Information Processing &amp; Management 接收。"},
+        {e:"Milestone: My Google Scholar citations exceeded 50.", z:"里程碑：Google Scholar 引用突破 50。"},
+        {e:"Received the ICASSP 2026 Student Travel Award.", z:"获得 ICASSP 2026 学生参会奖。"},
+        {e:"This website is now online at <a href='https://wangxu.life' target='_blank' rel='noopener noreferrer'>wangxu.life</a>.", z:"本网站现已上线：<a href='https://wangxu.life' target='_blank' rel='noopener noreferrer'>wangxu.life</a>。"},
+        {e:"One paper is accepted by Optics and Laser Technology.", z:"一篇论文被 Optics and Laser Technology 接收。"},
+        {e:"One paper is accepted by ICASSP 2026.", z:"一篇论文被 ICASSP 2026 接收。"},
+        {e:"One paper is accepted by Scientific Reports.", z:"一篇论文被 Scientific Reports 接收。"},
+        {e:"Traveled to Singapore to attend AAAI 2026.", z:"前往新加坡参加 AAAI 2026。"},
+        /* education / internships / entrepreneurship */
+        {e:"Sep 2023 – Present · B.Eng. in Artificial Intelligence", z:"2023年9月 – 至今 · 人工智能工学学士"},
+        {e:"Ranking's Global Ranking of Academic Subjects: 151 · <a href='https://www.shanghairanking.cn/rankings/gras/2025/AS0229' target='_blank' rel='noopener noreferrer'>Link</a>", z:"软科世界一流学科排名：151 · <a href='https://www.shanghairanking.cn/rankings/gras/2025/AS0229' target='_blank' rel='noopener noreferrer'>链接</a>"},
+        {e:"2025.6 – 2025.8 · Visiting Student", z:"2025.6 – 2025.8 · 访问学生"},
+        {e:"Medical image foreground/background preprocessing · Advisor: Guangshun Wei", z:"医学图像前后景预处理 · 导师：Guangshun Wei"},
+        {e:"2026.3 – 2026.9 · Research Assistant", z:"2026.3 – 2026.9 · 科研助理"},
+        {e:"Large-model Scheduling &amp; Compute-power Coordination · Advisor: Cong Zhang", z:"大模型调度与算力电力协同 · 导师：Cong Zhang"},
+        {e:"2025.3 – Present · Tech Lead · <a href='https://www.fuxi-lab.com/' target='_blank' rel='noopener noreferrer'>fuxi-lab.com ↗</a>", z:"2025.3 – 至今 · 技术负责人 · <a href='https://www.fuxi-lab.com/' target='_blank' rel='noopener noreferrer'>fuxi-lab.com ↗</a>"},
+        {e:"Cultural heritage digitalization · 2nd &amp; 3rd place, Tencent SSV AI+Oracle Challenge", z:"文化遗产数字化 · 腾讯SSV AI+甲骨文挑战赛 第2、3名"},
+        {e:"2025.7 – Present · Tech Lead", z:"2025.7 – 至今 · 技术负责人"},
+        {e:"AI for art &amp; design · National Gold, \"Chuangqingchun\" Competition", z:"AI 艺术与设计 · “创青春”竞赛国家级金奖"},
+        /* publication categories */
+        {e:"Natural Language Processing", z:"自然语言处理"},
+        {e:"CV in Medical", z:"医学计算机视觉"},
+        {e:"CV in Industrial", z:"工业计算机视觉"},
+        /* awards */
+        {e:"[National Gold]", z:"[国家级金奖]"},
+        {e:"[3rd in Deduplication; 2nd in Stitching]", z:"[去重第3名；缀合第2名]"},
+        {e:"[Provincial Grand]", z:"[省级特等奖]"},
+        {e:"[National First ×1; National Third ×2]", z:"[国家级一等奖×1；三等奖×2]"},
+        {e:"[National First]", z:"[国家级一等奖]"},
+        {e:"[National Second ×3; National Third ×5]", z:"[国家级二等奖×3；三等奖×5]"},
+        {e:"[National Third ×4]", z:"[国家级三等奖×4]"},
+        {e:"[National Third]", z:"[国家级三等奖]"},
+        {e:"[National Bronze]", z:"[国家级铜奖]"},
+        {e:"[Gold ×1; Silver ×1; Bronze ×1]", z:"[金奖×1；银奖×1；铜奖×1]"},
+        {e:"[Provincial Bronze]", z:"[省级铜奖]"},
+        {e:"[Provincial Third]", z:"[省级三等奖]"},
+        {e:"[Provincial Top 112]", z:"[省赛Top 112]"},
+        {e:"[Provincial Second ×2; Provincial Third ×3]", z:"[省级二等奖×2；三等奖×3]"},
+        {e:"[Provincial Second]", z:"[省级二等奖]"},
+        {e:"[Provincial Third ×2]", z:"[省级三等奖×2]"},
+        {e:"[Provincial First ×1; Provincial Third ×1]", z:"[省级一等奖×1；三等奖×1]"},
+        {e:"[Provincial First ×1; Provincial Second ×1; Provincial Third ×1]", z:"[省级一等奖×1；二等奖×1；三等奖×1]"},
+        {e:"\"Chuangqingchun\" Youth Innovation &amp; Entrepreneurship Competition - Startup Track, 1st place", z:"“创青春”青年创新创业大赛——创业赛道 第一名"},
+        {e:"Tencent SSV AI+Oracle Challenge", z:"腾讯SSV AI+甲骨文挑战赛"},
+        {e:"\"Challenge Cup\" China College Students Entrepreneurship Plan Competition", z:"“挑战杯”中国大学生创业计划竞赛"},
+        {e:"Lanqiao Cup National Software &amp; IT Talent Competition", z:"蓝桥杯全国软件和信息技术专业人才大赛"},
+        {e:"China Robot &amp; Artificial Intelligence Competition", z:"中国机器人及人工智能大赛"},
+        {e:"Global Campus AI Algorithm Elite Competition", z:"全球校园AI算法精英大赛"},
+        {e:"National College Student Digital Media Technology Works &amp; Creativity Competition", z:"全国大学生数字媒体科技作品及创意竞赛"},
+        {e:"China College Student Computer Design Competition", z:"中国大学生计算机设计大赛"},
+        {e:"National College Student Algorithm Design &amp; Programming Challenge", z:"全国大学生算法设计与编程挑战赛"},
+        {e:"\"Teddy Cup\" Data Analysis Skills Competition - National Third Prize", z:"“泰迪杯”数据分析技能赛 国家级三等奖"},
+        {e:"National College Physics Experimental Competition - National Third Prize", z:"全国大学生物理实验竞赛 国家级三等奖"},
+        {e:"Jinglian Cup National College Student Innovation &amp; Entrepreneurship Competition - National Bronze Prize", z:"竞联杯全国大学生创新创业竞赛 国家级铜奖"},
+        {e:"China International College Student Innovation Competition (Shandong)", z:"中国国际大学生创新大赛（山东）"},
+        {e:"National Career Planning Competition (Shandong)", z:"全国大学生职业规划大赛（山东）"},
+        {e:"National College Physics Experimental Competition", z:"全国大学生物理实验竞赛"},
+        {e:"Baidu Star Programming Competition (Shandong) - Top 112", z:"百度之星程序设计大赛（山东赛区）Top 112"},
+        {e:"China College Student Computer Competition", z:"中国大学生计算机大赛"},
+        {e:"National Mathematical Contest in Modeling", z:"全国大学生数学建模竞赛"},
+        {e:"National College Student Software Innovation Competition", z:"全国大学生软件创新大赛"},
+        {e:"RoboMaster Competition", z:"RoboMaster 机甲大师赛"},
+        {e:"Future Designer National College Digital Art Design Competition", z:"未来设计师全国高校数字艺术设计大赛"},
+        {e:"Chuanzhi Cup National IT Skills Competition", z:"传智杯全国IT技能大赛"},
+        {e:"Shandong Province College Student Software Design Competition", z:"山东省大学生软件设计大赛"},
+        {e:"Hunan Province \"Chuangqingchun\" Competition", z:"湖南省“创青春”竞赛"},
+        /* service */
+        {e:"[Academic Service]", z:"[学术服务]"},
+        {e:"[Memberships]", z:"[会员与社区]"},
+        {e:"[Volunteering]", z:"[志愿服务]"},
+        {e:"[Leadership]", z:"[学生工作]"},
+        {e:"[Conferences]", z:"[参会会议]"},
+        {e:"Reviewer/Program Committee for TKDE (CCF-A), ICME 2025/2026 (CCF-B), AVSS 2025 (CORE-B), and other venues.", z:"担任 TKDE（CCF-A）、ICME 2025/2026（CCF-B）、AVSS 2025（CORE-B）等期刊会议的审稿人/程序委员会成员。"},
+        {e:"Huawei Ascend Core Developer, Datawhale Contributor, AAAI Student Member, CCF Member, Shandong AI Society Student Member.", z:"华为昇腾核心开发者、Datawhale 贡献者、AAAI 学生会员、CCF 会员、山东省人工智能学会学生会员。"},
+        {e:"200+ hours of volunteer service, recognized as Outstanding Volunteer 14 times; participated in 4 social practice projects.", z:"累计志愿服务 200+ 小时，14 次获评优秀志愿者；参与 4 项社会实践项目。"},
+        {e:"Minister of Library Volunteer Association; Entrepreneurship Park Lead; Class Psychological Committee Member; Teaching Assistant.", z:"图书馆志愿者协会部长、创业园负责人、班级心理委员、助教。"},
+        {e:"Taishan AI Industry Innovation Conference (2024), CNCC (2024), WAIC (2025), ICIC (2025), BMVC (2025), IEEE CloudCom (2025), TRAE Meetup (Shenzhen 2025), AAAI (2026), ICASSP (2026).", z:"泰山人工智能产业创新大会（2024）、CNCC（2024）、WAIC（2025）、ICIC（2025）、BMVC（2025）、IEEE CloudCom（2025）、TRAE Meetup（深圳 2025）、AAAI（2026）、ICASSP（2026）。"},
+        /* playlists */
+        {e:"[2.1M plays]", z:"[2.1M 播放]"},
+        {e:"[919k plays]", z:"[919k 播放]"},
+        {e:"[430k plays]", z:"[430k 播放]"},
+        {e:"[284k plays]", z:"[284k 播放]"},
+        {e:"[45k plays]", z:"[45k 播放]"},
+        {e:"Let's go to a live concert after the Gaokao", z:"高考后一起去一场live吧"},
+        {e:"If life isn't worth it, Huang Shifu is.", z:"人间不值得 黄诗扶值得."},
+        {e:"Love can't be hidden — it speaks even when you close your eyes", z:"喜欢是藏不住的，就算捂住嘴巴，也会从眼睛里跑出来"},
+        {e:"Being written into someone's future is the ultimate romance", z:"被人规划在未来是顶级浪漫"},
+        {e:"Summer '18: perfect in every way but the heat", z:"18年的夏天，除了热，什么都好"},
+        {e:"High-rated playlist on NetEase Music", z:"网易云高分歌单"},
+        {e:"TOP-3 artist playlist · Huang Shifu", z:"歌手黄诗扶TOP-3歌单"},
+        {e:"520 exclusive curated playlist", z:"520专属精选歌单"},
+        {e:"Top-20 Rising Chart · Tanabata exclusive", z:"飙升榜TOP-20 · 七夕限定"},
+        {e:"“Summer 2018” nostalgia favorite", z:"“2018年夏天”怀旧精选"},
+        {e:"Created on 2019.05.18", z:"创建于 2019.05.18"},
+        {e:"Created on 2019.03.23", z:"创建于 2019.03.23"},
+        {e:"Created on 2019.06.16", z:"创建于 2019.06.16"},
+        {e:"Created on 2019.08.17", z:"创建于 2019.08.17"},
+        {e:"Created on 2019.09.14", z:"创建于 2019.09.14"},
+        /* demos */
+        {e:"Research", z:"研究"},
+        {e:"Game", z:"游戏"},
+        {e:"Healing", z:"治愈"},
+        {e:"Interactive experiments that turn algorithms into something you can see and touch, from particle systems to embodied intelligence.", z:"把算法变成看得见、摸得着的交互实验，从粒子系统到具身智能。"},
+        {e:"Tiny games that put physics engines and real challenges under your fingertips.", z:"把物理引擎和真实挑战放在指尖的小游戏。"},
+        {e:"Slow down, and let light, sound, and a few particles hold a small, quiet world.", z:"慢下来，让光、声音和几粒微尘托起一个小小的安静世界。"},
+        {e:"Mini visualizations and tiny tools.", z:"迷你可视化与小工具。"},
+        {e:"3D embodied intelligence with robots and LiDAR.", z:"机器人+激光雷达的3D具身智能。"},
+        {e:"2D navigation, RL, and robotic-arm control.", z:"2D导航、强化学习与机械臂控制。"},
+        {e:"Catch bullets and call back your past self.", z:"接住子弹，唤回过去的自己。"},
+        {e:"A high-speed breakout race in the night.", z:"夜色中的高速弹球竞速。"},
+        {e:"Fling stars and capture their orbits.", z:"掷出星辰，捕捉它们的轨道。"},
+        {e:"A calm, softly glowing little island.", z:"一座安静、微微发光的小岛。"},
+        {e:"Watch colored beads tumble into little melodies.", z:"看彩色珠子滚落成小小的旋律。"},
+        {e:"An island in the wind — a quiet song.", z:"风中的小岛 — 一首安静的歌。"},
+        {e:"Design, arrange, and export your own bracelets.", z:"设计、排列并导出自己的手串。"},
+        {e:"Cast a chart and let the symbolism unfold.", z:"排一张命盘，让象征徐徐展开。"},
+        {e:"Wander the school grounds as a tiny visitor.", z:"以小小访客的身份漫步校园。"},
+        /* closing */
+        {e:"Thanks for reading.", z:"感谢阅读。"},
+        {e:"Stay curious — there&rsquo;s always more to build.", z:"保持好奇 — 总还有更多值得创造。"}
+      ];
+
+      function norm(s){
+        var d = document.createElement("div");
+        d.innerHTML = s;
+        return (d.textContent || "").replace(/\s+/g, " ").trim();
+      }
+      var enMap = {}, zhMap = {};
+      I18N.forEach(function(item){
+        enMap[norm(item.e)] = item;
+        zhMap[norm(item.z)] = item;
+      });
+
+      function updateToggleTexts(lang){
+        document.querySelectorAll(".toggle-btn").forEach(function(btn){
+          var t = btn.querySelector("[id$=ToggleText]");
+          if (!t) return;
+          var expanded = btn.getAttribute("aria-expanded") === "true";
+          t.textContent = lang === "zh" ? (expanded ? "收起" : "查看更多") : (expanded ? "Show less" : "Show more");
+        });
+      }
+      function applyLang(lang){
+        var map = lang === "zh" ? enMap : zhMap;
+        document.querySelectorAll("h1,h2,h3,p,a,span,li,button,div,em,strong,b").forEach(function(el){
+          if (el.querySelector("h1,h2,h3,p,li,button")) return;
+          var t = (el.textContent || "").replace(/\s+/g, " ").trim();
+          var hit = map[t];
+          if (hit) el.innerHTML = lang === "zh" ? hit.z : hit.e;
+        });
+        window.__lang = lang;
+        document.documentElement.lang = lang;
+        try { localStorage.setItem("site-lang", lang); } catch(e){}
+        updateToggleTexts(lang);
+        var btn = document.getElementById("langToggle");
+        if (btn) btn.textContent = lang === "zh" ? "EN" : "中文";
+      }
+      window.applyLang = applyLang;
+      var toggle = document.getElementById("langToggle");
+      if (toggle) toggle.addEventListener("click", function(){
+        applyLang(window.__lang === "zh" ? "en" : "zh");
+      });
+      var saved = null;
+      try { saved = localStorage.getItem("site-lang"); } catch(e){}
+      applyLang(saved === "zh" ? "zh" : "en");
     })();
   </script>
 </body>
