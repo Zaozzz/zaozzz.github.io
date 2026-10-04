@@ -686,6 +686,12 @@
   .demo-meta i{ font-style:normal; font-size:.72rem; letter-spacing:.3px; opacity:.72; }
   @media (max-width:860px){ .demo-grid{ grid-template-columns:repeat(2,1fr); } }
   @media (max-width:560px){ .demo-grid{ grid-template-columns:1fr; } }
+
+  /* ===== Closing ===== */
+  .closing{ max-width:640px; margin:64px auto 8px; text-align:center; }
+  .closing-rule{ width:56px; height:2px; background:var(--muted); opacity:.55; margin:0 auto 20px; border-radius:2px; }
+  .closing-text{ margin:0; font-family:var(--font-serif); font-size:24px; color:var(--ink); letter-spacing:.2px; }
+  .closing-sub{ margin:10px 0 0; font-family:var(--font-serif); font-style:italic; font-size:15px; color:var(--muted); }
   </style>
 </head>
 <body>
@@ -1379,7 +1385,12 @@
           </li>
         </ul>
 
-        
+        <div class="closing">
+          <div class="closing-rule" aria-hidden="true"></div>
+          <p class="closing-text">Thanks for reading.</p>
+          <p class="closing-sub">Stay curious — there&rsquo;s always more to build.</p>
+        </div>
+
                   </main>
   </div>
 
