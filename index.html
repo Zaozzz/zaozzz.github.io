@@ -467,13 +467,15 @@
       font-size: 16px; color: var(--ink); line-height: 1.3;
     }
     .org-meta{
-      margin: 4px 0 0; color: var(--ink-mute);
-      font-family: var(--font-sans); font-size: 13px;
+      margin: 2px 0 0; color: var(--ink-mute);
+      font-family: var(--font-sans); font-size: 13px; line-height:1.4;
     }
     .org-details{
-      margin: 6px 0 0; font-family: var(--font-serif);
-      font-size: 14px; color: var(--ink-soft);
+      margin: 3px 0 0; font-family: var(--font-serif);
+      font-size: 14px; color: var(--ink-soft); line-height:1.4;
     }
+    .org-details + .org-details{ margin-top: 2px; }
+    .org-meta + .org-meta{ margin-top: 2px; }
 
     /* ============== Publication rows (blog PostRow style) ============== */
     .pub-list{ display: flex; flex-direction: column; }
