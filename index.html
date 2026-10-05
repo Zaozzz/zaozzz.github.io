@@ -353,16 +353,12 @@
     .demo-body a:hover{ text-decoration:underline; text-underline-offset:3px; }
     .demo-note{ font-family:var(--font-sans); font-size:11.5px; color:var(--ink-mute); line-height:1.5; overflow-wrap:break-word; }
     @media (max-width:1120px){
-      html:not(.zoom-scale){
       .demo-list{ grid-template-columns:repeat(2,1fr); }
-      }
     }
     @media (max-width:900px){
-      html:not(.zoom-scale){
       .demo-list{ grid-template-columns:1fr; }
       .demo-cover{ width:52px; height:52px; }
       .demo-cover iframe{ height:104px; transform:translateY(-52px); }
-      }
     }
     .demo-intro{ margin:-4px 0 8px; font-size:14px; color:var(--ink-mute); }
     .demo-intro a{ color:var(--indigo); text-decoration:underline; text-underline-offset:2px; }
@@ -644,15 +640,8 @@
       opacity: 0.15;
     }
 
-    /* ============== Whole-page proportional scale ============== */
-    html.zoom-scale body{
-      width: 1280px; min-width: 1280px; margin: 0 auto;
-      transform-origin: top center;
-    }
-
     /* ============== Responsive ============== */
     @media (max-width: 900px){
-      html:not(.zoom-scale){
       .masthead{ padding: 0 12px; }
       .masthead nav{ display: none; }
       .hero{ padding: 20px 12px 28px; max-width: none; width: 100%; }
@@ -689,7 +678,6 @@
       .playlist-list .body{ grid-column: 2; grid-row: 1 / span 2; }
       .playlist-created{ grid-column: 3; grid-row: 2; justify-self: end; }
       .footer{ padding: 12px; flex-direction: column; gap: 6px; }
-      }
     }
   </style>
   <style>
@@ -702,8 +690,8 @@
   .demo-meta{ position:absolute; left:0; right:0; bottom:0; padding:30px 14px 12px; display:flex; justify-content:space-between; align-items:center; color:#fff; font-style:normal; background:linear-gradient(transparent, rgba(0,0,0,.8)); }
   .demo-meta b{ font-size:.92rem; font-weight:600; }
   .demo-meta i{ font-style:normal; font-size:.72rem; letter-spacing:.3px; opacity:.72; }
-  @media (max-width:860px){ html:not(.zoom-scale) .demo-grid{ grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:560px){ html:not(.zoom-scale) .demo-grid{ grid-template-columns:1fr; } }
+  @media (max-width:860px){ .demo-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .demo-grid{ grid-template-columns:1fr; } }
 
   /* ===== Closing ===== */
   .closing{ max-width:640px; margin:28px auto 8px; text-align:center; }
@@ -1425,25 +1413,6 @@
   </div>
 
   <script>
-    /* ============== Whole-page proportional zoom (design width 1280) ============== */
-    (function(){
-      var DESIGN = 1280;
-      var mq = window.matchMedia('(max-width:'+ (DESIGN-1) +'px)');
-      function applyZoom(){
-        var scale;
-        if (mq.matches){
-          scale = document.documentElement.clientWidth / DESIGN;
-          document.documentElement.classList.add('zoom-scale');
-          document.documentElement.style.setProperty('zoom', scale);
-        } else {
-          document.documentElement.classList.remove('zoom-scale');
-          document.documentElement.style.removeProperty('zoom');
-        }
-      }
-      mq.addEventListener('change', applyZoom);
-      applyZoom();
-    })();
-
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var isMobile = window.matchMedia('(max-width: 900px)').matches;
 
