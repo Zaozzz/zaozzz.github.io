@@ -829,6 +829,7 @@
               vision insights, with tens of thousands of cumulative reads.
             </p>
           </div>
+          <button class="toggle-btn" id="bioToggle" aria-expanded="false" onclick="toggleRows('[data-bio-hidden]','bioToggle','block')"><span id="bioToggleText">Show more</span><span class="arrow">▾</span></button>
         </div>
       </section>
 
@@ -878,6 +879,7 @@
           <li class="hidden-row" data-news-hidden style="display:none;"><span class="date">[01/2026]</span><span class="body">One paper is accepted by ICASSP 2026.</span></li>
           <li class="hidden-row" data-news-hidden style="display:none;"><span class="date">[01/2026]</span><span class="body">One paper is accepted by Scientific Reports.</span></li>
           <li class="hidden-row" data-news-hidden style="display:none;"><span class="date">[01/2026]</span><span class="body">Traveled to Singapore to attend AAAI 2026.</span></li>
+        <button class="toggle-btn" id="newsToggle" aria-expanded="false" onclick="toggleRows('[data-news-hidden]','newsToggle','grid')"><span id="newsToggleText">Show more</span><span class="arrow">▾</span></button>
         </ul>
       </section>
 
@@ -1156,6 +1158,7 @@
           <li class="hidden-row" data-award-hidden style="display:none;"><span class="level">[Provincial First ×1; Provincial Third ×1]</span><span class="body">Chuanzhi Cup National IT Skills Competition</span></li>
           <li class="hidden-row" data-award-hidden style="display:none;"><span class="level">[Provincial First ×1; Provincial Second ×1; Provincial Third ×1]</span><span class="body">Shandong Province College Student Software Design Competition</span></li>
           <li class="hidden-row" data-award-hidden style="display:none;"><span class="level">[Provincial Third]</span><span class="body">Hunan Province "Chuangqingchun" Competition</span></li>
+        <button class="toggle-btn" id="awardToggle" aria-expanded="false" onclick="toggleRows('[data-award-hidden]','awardToggle','grid')"><span id="awardToggleText">Show more</span><span class="arrow">▾</span></button>
         </ul>
       </section>
       <section class="section" id="other">
