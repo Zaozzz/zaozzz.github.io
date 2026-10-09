@@ -396,12 +396,17 @@
     }
     .ed-list .body b{ color: var(--ink); font-weight: 600; }
     /* Honors & Awards specific */
-    #awards .ed-list .level{
-      font-family: var(--font-sans); font-size: 11px; font-weight: 500;
-      letter-spacing: 0.04em; color: var(--ink);
+    #awards .ed-list li{
+      display: block !important; padding: 9px 0; gap: 0;
+      border-bottom: 1px solid var(--hairline-soft);
+      grid-template-columns: 1fr;
     }
-    #awards .ed-list .body{
-      font-family: var(--serif-soft); font-size: 14px; line-height: 1.45;
+    #awards .ed-list li:last-child{ border-bottom: 0; }
+    #awards .ed-list .award-text{
+      font-family: var(--font-serif); font-size: 14px; line-height: 1.55;
+      color: var(--ink); display: block;
+    }
+    #awards .ed-list .comp-name{
       color: var(--indigo); font-style: italic;
     }
     .playlist-note{
