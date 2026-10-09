@@ -43,7 +43,7 @@
       --pine-soft:      #6B8A5A;
       --pine-wash:      #D7DFCB;
 
-      --indigo:         #2A3656;
+      --indigo:         #6B4AB0;
       --indigo-soft:    #4F628E;
       --indigo-wash:    #C9D1E2;
 
@@ -396,10 +396,9 @@
     }
     .ed-list .body b{ color: var(--ink); font-weight: 600; }
     /* Honors & Awards specific */
-    #awards .ed-list li{
-      display: block !important; padding: 9px 0; gap: 0;
+    #awards .ed-list li:not(.hidden-row){
+      display: block; padding: 9px 0; gap: 0;
       border-bottom: 1px solid var(--hairline-soft);
-      grid-template-columns: 1fr;
     }
     #awards .ed-list li:last-child{ border-bottom: 0; }
     #awards .ed-list .award-text{
@@ -407,7 +406,7 @@
       color: var(--ink); display: block;
     }
     #awards .ed-list .comp-name{
-      color: var(--indigo); font-weight: 600; font-style: normal;
+      color: var(--indigo); font-weight: 600; font-style: italic;
     }
     .playlist-note{
       display: block;
