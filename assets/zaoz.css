@@ -1,17 +1,3 @@
-/* Syncopate Bold by Astigmatic, Apache License 2.0.
-   Self-hosted from google/fonts; see assets/zaoz/Syncopate-LICENSE.txt. */
-@font-face {
-  font-family: "Syncopate";
-  src: url("/assets/zaoz/syncopate-bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-.zaoz-name, .zaoz-wordmark {
-  font-family: "Syncopate", var(--font-sans);
-  font-weight: 700;
-  font-synthesis: none;
-}
 /* ZAOZ additions. Reuse the existing paper-and-ink tokens; keep the
    orange-red accent local to the brand, without changing academic colors. */
 :root {
@@ -69,10 +55,10 @@
 }
 .zaoz-wordmark {
   margin: 0;
-  font-family: "Syncopate", var(--font-sans);
+  font-family: var(--font-display);
   font-size: 30px;
-  font-weight: 700;
-  letter-spacing: .015em;
+  font-weight: 500;
+  letter-spacing: -.01em;
   line-height: 1.15;
   color: var(--ink);
 }
@@ -98,13 +84,6 @@
   text-decoration-color: var(--zaoz-accent);
 }
 .zaoz-link:hover { color: var(--zaoz-accent-deep); }
-.zaoz-news-copy { display: block; margin-top: 5px; }
-.zaoz-news-note {
-  display: block;
-  margin-top: 5px;
-  color: var(--ink-mute);
-  font-style: italic;
-}
 .zaoz-announcement .body a { color: var(--ink); text-decoration-color: var(--zaoz-accent); }
 .zaoz-announcement .body a:hover { color: var(--zaoz-accent-deep); }
 .zaoz-announcement .date { color: var(--zaoz-accent); }
