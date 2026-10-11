@@ -241,3 +241,17 @@
   html:has(.zaoz-brand-page) { scroll-behavior: auto; }
   .zaoz-brand-page a { transition: none; }
 }
+
+/* Shared sunrise masthead. Main-page sections remain in the sidebar. */
+.site-logo { display: inline-flex; align-items: center; flex-shrink: 0; text-decoration: none; }
+.site-logo img { display: block; width: 112px; height: 32px; object-fit: contain; }
+@media (max-width: 900px) {
+  .zaoz-integrated .masthead { padding: 0 16px; gap: 8px; }
+  .zaoz-integrated .masthead nav { display: flex; gap: 0; overflow: visible; }
+  .zaoz-integrated .masthead nav a { padding: 8px; font-size: 12px; }
+  .site-logo img { width: 88px; height: 28px; }
+}
+@media (max-width: 620px) {
+  .zaoz-brand-page .masthead nav a:not([href="/zaoz/"]) { display: inline-block; }
+  .zaoz-integrated .masthead nav a { padding: 8px 6px; font-size: 11px; }
+}

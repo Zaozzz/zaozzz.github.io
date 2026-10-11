@@ -56,10 +56,9 @@ const Home = ({ posts, session, onSignIn, onSignOut, onOpenPost, onCompose, onAd
         display: "flex", alignItems: "center",
         padding: isMobile ? "0 16px" : "0 48px", gap: 18,
       }}>
-        <div style={{
-          fontFamily: "var(--font-display)", fontStyle: "italic",
-          fontSize: 18, color: "var(--ink)", fontWeight: 500,
-        }}>Xu Wang</div>
+        <a href="/" aria-label="Xu Wang · Academic homepage" style={{ display: "inline-flex", flexShrink: 0 }}>
+          <img src="/assets/zaoz/zaoz-sunrise.png" alt="ZAOZ sunrise and mountain logo" width="98" height="28" style={{ display: "block", objectFit: "contain" }} />
+        </a>
         <div style={{ flex: 1 }}/>
         <SessionChip session={session} onSignIn={onSignIn} onSignOut={onSignOut} compact />
       </div>
