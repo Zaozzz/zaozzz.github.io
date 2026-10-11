@@ -1,0 +1,243 @@
+/* Tencent W7, from Tencent's official website font resource.
+   https://www.tencent.com/wp-content/themes/tencent-web/assets/dist/78b43a79c77441483d8e.woff */
+@font-face {
+  font-family: "Tencent W7";
+  src: url("/assets/zaoz/tencent-w7.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.zaoz-name, .zaoz-wordmark {
+  font-family: "Tencent W7", "TencentSansW7", "腾讯体 W7", var(--font-sans);
+  font-weight: 700;
+  font-synthesis: none;
+}
+/* ZAOZ additions. Reuse the existing paper-and-ink tokens; keep the
+   orange-red accent local to the brand, without changing academic colors. */
+:root {
+  --zaoz-accent: #B9471C;
+  --zaoz-accent-deep: #913717;
+}
+
+/* Preserve the original navigation order, with room for the new link. */
+.zaoz-integrated .masthead nav {
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+.zaoz-integrated .masthead nav a { flex-shrink: 0; white-space: nowrap; }
+.zaoz-integrated .masthead .spacer { min-width: 0; }
+.zaoz-integrated .masthead nav a[href="/zaoz/"] {
+  color: var(--zaoz-accent);
+}
+.zaoz-integrated .masthead nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--zaoz-accent);
+  text-underline-offset: 5px;
+}
+.zaoz-mobile-link { display: none; }
+.zaoz-integrated a:focus-visible {
+  outline: 2px solid var(--zaoz-accent);
+  outline-offset: 4px;
+}
+
+.zaoz-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.zaoz-feature {
+  scroll-margin-top: 80px;
+  display: grid;
+  grid-template-columns: minmax(160px, 240px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  margin: 0;
+  padding: 8px 0 16px;
+
+}
+.zaoz-feature-copy { min-width: 0; }
+.zaoz-kicker {
+  margin: 0 0 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: var(--zaoz-accent);
+}
+.zaoz-wordmark {
+  margin: 0;
+  font-family: "Tencent W7", "TencentSansW7", "腾讯体 W7", var(--font-sans);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.zaoz-slogan {
+  margin: 5px 0 12px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.3;
+  color: var(--ink-soft);
+}
+.zaoz-summary {
+  margin: 0 0 12px;
+  font-family: var(--font-serif);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-mute);
+}
+.zaoz-link {
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  text-decoration-color: var(--zaoz-accent);
+}
+.zaoz-link:hover { color: var(--zaoz-accent-deep); }
+.zaoz-news-copy { display: block; margin-top: 5px; }
+.zaoz-news-note {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink-mute);
+  font-style: italic;
+}
+.zaoz-announcement .body a { color: var(--ink); text-decoration-color: var(--zaoz-accent); }
+.zaoz-announcement .body a:hover { color: var(--zaoz-accent-deep); }
+.zaoz-announcement .date { color: var(--zaoz-accent); }
+
+/* Independent brand page — same paper, type, rules and masthead. */
+.zaoz-page { max-width: 1104px; margin: 0 auto; padding: 0 48px 64px; }
+.zaoz-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 64px;
+  padding: 72px 0 56px;
+}
+.zaoz-hero .zaoz-wordmark { font-size: 64px; }
+.zaoz-hero .zaoz-slogan { margin: 10px 0 18px; font-size: 32px; }
+.zaoz-hero-note {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--ink-mute);
+}
+.zaoz-chapter { border-top: 1px solid var(--hairline); padding: 36px 0 40px; }
+.zaoz-chapter-head { margin-bottom: 24px; }
+.zaoz-chapter-head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+}
+.zaoz-bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.zaoz-page p { text-wrap: pretty; }
+.zaoz-bilingual p {
+  margin: 0 0 14px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.zaoz-page .zaoz-cn { font-family: var(--font-sans); font-size: 14px; color: var(--ink-mute); line-height: 1.9; }
+.zaoz-page .zaoz-cn p { font-family: var(--font-sans); font-size: 14px; color: var(--ink-mute); line-height: 1.9; }
+.zaoz-pullquote {
+  margin: 22px 0 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--zaoz-accent);
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 1.5;
+}
+.zaoz-pullquote span { display: block; margin-top: 8px; font-family: var(--font-cn-display); font-size: 15px; color: var(--ink-mute); }
+.zaoz-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.zaoz-principles h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.zaoz-principles p { margin: 0 0 10px; font-size: 14px; line-height: 1.7; color: var(--ink-soft); }
+.zaoz-explore-intro { margin: -8px 0 24px; font-size: 14px; color: var(--ink-mute); }
+.zaoz-directions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 48px; margin: 0; }
+.zaoz-directions div { padding-top: 14px; border-top: 1px solid var(--hairline-soft); }
+.zaoz-directions dt { margin-bottom: 7px; font-family: var(--font-display); font-size: 22px; }
+.zaoz-directions dd { margin: 0; font-size: 14px; line-height: 1.7; color: var(--ink-soft); }
+.zaoz-directions dd span { display: block; margin-top: 8px; font-size: 13px; color: var(--ink-mute); }
+.zaoz-founder-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 14px; }
+.zaoz-closing { padding: 32px 0 12px; text-align: center; }
+.zaoz-closing p { margin: 0 0 8px; font-family: var(--font-display); font-size: 24px; }
+.zaoz-closing span { color: var(--ink-mute); font-family: var(--font-display); font-size: 17px; font-style: italic; }
+.zaoz-footer {
+  max-width: 1008px;
+  margin: 0 auto;
+  border-top: 1px solid var(--hairline);
+  padding: 20px 0 36px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-mute);
+}
+.zaoz-footer a { color: var(--ink-mute); }
+.zaoz-skip-link { position: absolute; top: -100px; left: 16px; z-index: 200; background: var(--paper); padding: 12px; }
+.zaoz-skip-link:focus { top: 8px; }
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .zaoz-integrated .masthead { padding: 0 24px; gap: 12px; }
+  .zaoz-integrated .masthead nav { gap: 2px; }
+  .zaoz-integrated .masthead nav a { padding: 6px 8px; font-size: 12px; }
+}
+@media (max-width: 900px) {
+  .zaoz-mobile-link {
+    display: inline-block;
+    padding: 10px 4px;
+    color: var(--zaoz-accent);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: .04em;
+  }
+  .zaoz-brand-page .masthead { padding: 0 20px; }
+  .zaoz-brand-page .masthead nav { gap: 2px; }
+  .zaoz-brand-page .masthead nav a { padding: 8px; font-size: 12px; }
+  .zaoz-page { padding: 0 24px 48px; }
+  .zaoz-hero { gap: 32px; padding: 56px 0 40px; }
+  .zaoz-hero .zaoz-wordmark { font-size: 52px; }
+  .zaoz-hero .zaoz-slogan { font-size: 27px; }
+  .zaoz-bilingual { gap: 28px; }
+  .zaoz-principles { gap: 20px; }
+  .zaoz-footer { margin: 0 24px; }
+}
+@media (max-width: 620px) {
+  .zaoz-feature { grid-template-columns: 1fr; gap: 14px; text-align: center; padding: 24px 0 28px; }
+  .zaoz-feature .zaoz-logo { width: min(280px, 100%); margin: 0 auto; }
+  .zaoz-feature .zaoz-kicker { font-size: 9px; }
+  .zaoz-brand-page .masthead { padding: 0 16px; gap: 12px; }
+  .zaoz-brand-page .masthead nav a:not([href="/zaoz/"]) { display: none; }
+  .zaoz-brand-page .masthead nav a { font-size: 13px; }
+  .zaoz-page { padding: 0 20px 40px; }
+  .zaoz-hero { grid-template-columns: 1fr; gap: 20px; text-align: center; padding: 36px 0 36px; }
+  .zaoz-hero .zaoz-logo { width: min(360px, 100%); margin: 0 auto; }
+  .zaoz-hero .zaoz-wordmark { font-size: 48px; }
+  .zaoz-hero .zaoz-slogan { font-size: 27px; }
+  .zaoz-chapter { padding: 28px 0 32px; }
+  .zaoz-chapter-head h2 { font-size: 27px; }
+  .zaoz-bilingual, .zaoz-principles, .zaoz-directions { grid-template-columns: 1fr; gap: 20px; }
+  .zaoz-principles article + article { padding-top: 20px; border-top: 1px solid var(--hairline-soft); }
+  .zaoz-pullquote { font-size: 20px; }
+  .zaoz-footer { margin: 0 20px; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:has(.zaoz-brand-page) { scroll-behavior: auto; }
+  .zaoz-brand-page a { transition: none; }
+}
