@@ -1,14 +1,14 @@
-/* Tencent W7, from Tencent's official website font resource.
-   https://www.tencent.com/wp-content/themes/tencent-web/assets/dist/78b43a79c77441483d8e.woff */
+/* Syncopate Bold by Astigmatic, Apache License 2.0.
+   Self-hosted from google/fonts; see assets/zaoz/Syncopate-LICENSE.txt. */
 @font-face {
-  font-family: "Tencent W7";
-  src: url("/assets/zaoz/tencent-w7.woff") format("woff");
+  font-family: "Syncopate";
+  src: url("/assets/zaoz/syncopate-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 .zaoz-name, .zaoz-wordmark {
-  font-family: "Tencent W7", "TencentSansW7", "腾讯体 W7", var(--font-sans);
+  font-family: "Syncopate", var(--font-sans);
   font-weight: 700;
   font-synthesis: none;
 }
@@ -69,10 +69,10 @@
 }
 .zaoz-wordmark {
   margin: 0;
-  font-family: "Tencent W7", "TencentSansW7", "腾讯体 W7", var(--font-sans);
+  font-family: "Syncopate", var(--font-sans);
   font-size: 30px;
   font-weight: 700;
-  letter-spacing: .06em;
+  letter-spacing: .015em;
   line-height: 1.15;
   color: var(--ink);
 }
