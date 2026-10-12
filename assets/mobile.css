@@ -1,0 +1,110 @@
+/* Responsive refinements shared by the academic and brand pages. */
+.org-logo-picture { display: contents; }
+
+@media (max-width: 900px) {
+  .zaoz-integrated { --mobile-gutter: clamp(16px, 4.6vw, 24px); }
+  .zaoz-integrated .masthead { padding-inline: var(--mobile-gutter); }
+  .zaoz-integrated .hero { padding-inline: var(--mobile-gutter); }
+  .zaoz-integrated .body-layout { padding-inline: var(--mobile-gutter); }
+  .zaoz-integrated .main { width: 100%; }
+  .zaoz-integrated .hero-links { justify-content: center; gap: 8px 18px; }
+  .zaoz-integrated .hero-links a { min-height: 44px; }
+  .zaoz-integrated .hero-meta { gap: 12px; flex-wrap: wrap; line-height: 1.5; }
+  .zaoz-integrated .prose { line-height: 1.65; }
+  .zaoz-integrated .section { scroll-margin-top: 76px; }
+  .zaoz-integrated .pub {
+    grid-template-columns: minmax(0, 1fr) 140px;
+    gap: 8px 20px;
+    padding: 20px 0;
+  }
+  .zaoz-integrated .pub-no { grid-column: 1 / -1; padding-top: 0; }
+  .zaoz-integrated .pub-body { grid-column: 1; min-width: 0; }
+  .zaoz-integrated .pub-thumb-wrap {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 0;
+    max-width: 100%;
+  }
+  .zaoz-integrated .pub-thumb { width: 140px; max-width: 100%; height: 104px; object-fit: contain; }
+  .zaoz-integrated .pub-venue { flex-wrap: wrap; gap: 6px 10px; line-height: 1.5; }
+  .zaoz-integrated .pub-venue .badge-group { flex-wrap: wrap; }
+  .zaoz-integrated .org-row { grid-template-columns: 144px minmax(0, 1fr); gap: 16px; padding: 16px 0; }
+  .zaoz-integrated .org-row:hover { padding-left: 0; }
+  .zaoz-integrated .org-row > div { min-width: 0; }
+  .zaoz-integrated .org-logo { justify-content: flex-start; }
+  .zaoz-integrated .org-logo img { object-position: left center; }
+  .zaoz-integrated .org-meta,
+  .zaoz-integrated .org-details { line-height: 1.6; overflow-wrap: break-word; }
+  .zaoz-integrated .ed-list .body,
+  .zaoz-integrated .award-text { line-height: 1.6; overflow-wrap: break-word; }
+  .zaoz-integrated .car-btn { width: 40px; height: 40px; }
+  .zaoz-integrated .toggle-btn { min-height: 44px; }
+  .zaoz-integrated .footer { padding-inline: var(--mobile-gutter); flex-wrap: wrap; row-gap: 12px; line-height: 1.6; }
+  .zaoz-integrated .container { padding-inline: var(--mobile-gutter); }
+}
+
+@media (max-width: 620px) {
+  .zaoz-integrated { --mobile-gutter: clamp(16px, 4.6vw, 20px); }
+  .zaoz-integrated .hero { padding-block: 24px 28px; }
+  .zaoz-integrated .hero-portrait { max-width: 100%; }
+  .zaoz-integrated .hero-meta { flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+  .zaoz-integrated .hero-divider { margin-top: 24px; }
+  .zaoz-integrated .body-layout { padding-top: 20px; padding-bottom: 48px; }
+  .zaoz-integrated .section { margin-bottom: 36px; }
+  .zaoz-integrated .section-head {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 6px 8px;
+    margin-bottom: 20px;
+    align-items: baseline;
+  }
+  .zaoz-integrated .section-no { font-size: 10px; }
+  .zaoz-integrated .section-title { font-size: 28px; line-height: 1.2; }
+  .zaoz-integrated .section-count { grid-column: 2; margin-left: 0; line-height: 1.5; }
+  .zaoz-integrated .org-row { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 16px 0; }
+  .zaoz-integrated .org-logo { width: 144px; height: 40px; }
+  .zaoz-integrated .org-logo img { max-height: 40px; }
+  .zaoz-integrated .org-title { font-size: 17px; line-height: 1.4; }
+  .zaoz-integrated .org-meta,
+  .zaoz-integrated .org-details { font-size: 12.5px; }
+  .zaoz-integrated .pub { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 22px 0; }
+  .zaoz-integrated .pub::before { display: none; }
+  .zaoz-integrated .pub-no { display: flex; gap: 8px; align-items: baseline; }
+  .zaoz-integrated .pub-no .year { margin-top: 0; }
+  .zaoz-integrated .pub-title { font-size: 18px; line-height: 1.4; }
+  .zaoz-integrated .pub-cat { flex-wrap: wrap; line-height: 1.5; letter-spacing: .12em; }
+  .zaoz-integrated .pub-authors { line-height: 1.6; overflow-wrap: break-word; }
+  .zaoz-integrated .pub-thumb-wrap { grid-column: 1; grid-row: auto; width: 100%; }
+  .zaoz-integrated .pub-thumb {
+    width: 100%;
+    height: clamp(120px, 38vw, 168px);
+    object-fit: contain;
+    background: transparent;
+  }
+  .zaoz-integrated .pub:hover .pub-thumb-wrap { transform: none; }
+  .zaoz-integrated .ed-list li { gap: 6px; padding-block: 12px; }
+  .zaoz-integrated .ed-list .body { font-size: 14.5px; }
+  .zaoz-integrated .playlist-list li { grid-template-columns: 40px minmax(0, 1fr); gap: 4px 12px; }
+  .zaoz-integrated .playlist-list .level { grid-column: 2; grid-row: 1; justify-self: start; }
+  .zaoz-integrated .playlist-cover { grid-column: 1; grid-row: 1 / span 3; align-self: start; width: 40px; height: 40px; }
+  .zaoz-integrated .playlist-list .body { grid-column: 2; grid-row: 2; }
+  .zaoz-integrated .playlist-created { grid-column: 2; grid-row: 3; justify-self: start; white-space: normal; }
+  .zaoz-integrated .playlist-note { line-height: 1.6; letter-spacing: 0; }
+  .zaoz-integrated .demo-row { padding-block: 8px; }
+  .zaoz-integrated .demo-body { padding-left: 12px; padding-right: 8px; }
+  .zaoz-integrated .demo-body a { font-size: 15px; line-height: 1.4; white-space: normal; }
+  .zaoz-integrated .demo-note { font-size: 12px; }
+  .zaoz-integrated .demo-cover { margin-right: 0; }
+  .zaoz-integrated .demo-cover img { -webkit-mask-image: none; mask-image: none; }
+  .zaoz-integrated .closing { padding-inline: var(--mobile-gutter); }
+  .zaoz-integrated .closing-text { font-size: 22px; line-height: 1.4; }
+  .zaoz-integrated .zaoz-feature { padding: 16px 0 8px; gap: 16px; }
+  .zaoz-brand-page .zaoz-page { padding-inline: var(--mobile-gutter); }
+  .zaoz-brand-page .zaoz-hero { padding-block: 28px 32px; gap: 24px; }
+  .zaoz-brand-page .zaoz-hero .zaoz-logo { width: min(320px, 100%); }
+  .zaoz-brand-page .zaoz-bilingual { gap: 24px; }
+  .zaoz-brand-page .zaoz-founder-links { gap: 8px 20px; }
+  .zaoz-brand-page .zaoz-founder-links a { min-height: 44px; display: inline-flex; align-items: center; }
+  .zaoz-brand-page .zaoz-footer { margin-inline: var(--mobile-gutter); line-height: 1.6; }
+}
