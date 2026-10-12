@@ -34,6 +34,7 @@
   .zaoz-integrated .org-row > div { min-width: 0; }
   .zaoz-integrated .org-logo { justify-content: flex-start; }
   .zaoz-integrated .org-logo img { object-position: left center; }
+  .zaoz-integrated .org-logo .org-logo-picture img { width: 104px; height: auto; }
   .zaoz-integrated .org-meta,
   .zaoz-integrated .org-details { line-height: 1.6; overflow-wrap: break-word; }
   .zaoz-integrated .ed-list .body,
