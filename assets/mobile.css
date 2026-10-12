@@ -76,7 +76,7 @@
   .zaoz-integrated .pub-title { font-size: 18px; line-height: 1.4; }
   .zaoz-integrated .pub-cat { flex-wrap: wrap; line-height: 1.5; letter-spacing: .12em; }
   .zaoz-integrated .pub-authors { line-height: 1.6; overflow-wrap: break-word; }
-  .zaoz-integrated .pub-thumb-wrap { grid-column: 1; grid-row: auto; width: 100%; }
+  .zaoz-integrated .pub-thumb-wrap { display: none; }
   .zaoz-integrated .pub-thumb {
     width: 100%;
     height: clamp(120px, 38vw, 168px);
