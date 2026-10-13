@@ -659,14 +659,6 @@
     .foot-sitemap a{ color: var(--ink-mute); text-decoration: none; text-transform: uppercase; letter-spacing: .08em; }
     .foot-sitemap a:hover{ color: var(--ink); text-decoration: underline; }
 
-    /* ============== Cloud canvas ============== */
-    .cloud-canvas{
-      position: fixed; top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none; z-index: 0;
-      opacity: 0.15;
-    }
-
     /* ============== Responsive ============== */
     @media (max-width: 900px){
       .masthead{ padding: 0 12px; }
@@ -728,9 +720,10 @@
   </style>
   <link rel="stylesheet" href="/assets/zaoz.css?v=default-type-1" />
   <link rel="stylesheet" href="/assets/mobile.css?v=3" />
+  <link rel="stylesheet" href="/assets/pixel-paper.css?v=1" />
 </head>
-<body class="zaoz-integrated">
-  <canvas class="cloud-canvas" id="cloudCanvas"></canvas>
+<body class="zaoz-integrated zaoz-pixel-background">
+  <canvas class="zaoz-pixel-paper" id="zaozPixelPaper" aria-hidden="true"></canvas>
 
   <!-- ============== Masthead ============== -->
   <header class="masthead">
@@ -1503,64 +1496,8 @@
       scrollRaf = requestAnimationFrame(function(){ scrollRaf = 0; updateActiveNav(); });
     }, { passive: true });
 
-    /* ============== Cloud canvas (subtle) ============== */
-    (function(){
-      if (reduceMotion || isMobile) return;
-      var canvas = document.getElementById("cloudCanvas");
-      if (!canvas) return;
-      var ctx = canvas.getContext("2d");
-      var clouds = [];
-      var raf = null;
-      var visible = true;
-      function resize(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-      window.addEventListener("resize", resize);
-      resize();
-      function Cloud(){
-        this.reset();
-        this.y = Math.random() * canvas.height;
-      }
-      Cloud.prototype.reset = function(){
-        this.x = Math.random() * canvas.width;
-        this.y = -50;
-        this.vx = (Math.random() - 0.5) * 0.4;
-        this.vy = Math.random() * 0.8 + 0.3;
-        this.size = Math.random() * 8 + 4;
-        this.alpha = Math.random() * 0.4 + 0.2;
-      };
-      Cloud.prototype.update = function(){
-        this.x += this.vx;
-        this.y += this.vy;
-        this.alpha -= 0.002;
-        if (this.alpha <= 0 || this.y > canvas.height + 50){ this.reset(); }
-      };
-      Cloud.prototype.draw = function(){
-        ctx.save();
-        ctx.globalAlpha = this.alpha;
-        ctx.fillStyle = "#ffffff";
-        var r = this.size;
-        ctx.beginPath();
-        ctx.arc(this.x - r*0.6, this.y, r*0.8, 0, Math.PI*2);
-        ctx.arc(this.x - r*0.3, this.y - r*0.5, r*0.9, 0, Math.PI*2);
-        ctx.arc(this.x + r*0.3, this.y - r*0.5, r*0.9, 0, Math.PI*2);
-        ctx.arc(this.x + r*0.6, this.y, r*0.7, 0, Math.PI*2);
-        ctx.arc(this.x, this.y + r*0.3, r*0.8, 0, Math.PI*2);
-        ctx.fill();
-        ctx.restore();
-      };
-      for (var i = 0; i < 10; i++) clouds.push(new Cloud());
-      function animate(){
-        if (!visible){ ctx.clearRect(0,0,canvas.width,canvas.height); return; }
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        clouds.forEach(function(c){ c.update(); c.draw(); });
-        raf = requestAnimationFrame(animate);
-      }
-      document.addEventListener("visibilitychange", function(){
-        if (document.hidden){ visible = false; if (raf){ cancelAnimationFrame(raf); raf = null; } }
-        else { visible = true; if (!raf) animate(); }
-      });
-      animate();
-    })();
   </script>
+  <script src="/assets/pixel-paper.js?v=1" defer></script>
 </body>
 </html>
 

@@ -1,0 +1,15 @@
+/* The paper and emblem share one fixed coordinate grid. */
+.zaoz-pixel-background {
+  isolation: isolate;
+  background-image: none;
+  --pixel-sun-opacity: .085;
+  --pixel-mountain-opacity: .045;
+}
+.zaoz-pixel-paper {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
