@@ -24,7 +24,8 @@
     context.fillRect(0, 0, width, height);
 
     if (logo.naturalWidth && sampleContext) {
-      const cell = width <= 620 ? 11 : 22;
+      // Split each former 22px block into 2×2 cells on the 11px paper grid.
+      const cell = 11;
       const columns = Math.max(1, Math.floor(Math.min(width - 44, 1056) / cell));
       const rows = Math.max(1, Math.round(columns * logo.naturalHeight / logo.naturalWidth));
       const resolution = 8;
