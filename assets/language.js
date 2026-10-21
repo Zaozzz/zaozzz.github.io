@@ -6,14 +6,9 @@
   const root = document.documentElement;
   const normalize = value => value.replace(/\s+/g, ' ').trim();
   const own = (map, key) => Object.prototype.hasOwnProperty.call(map, key);
-  const storageKey = 'zaoz-language';
   const normalizeLanguage = value => value === 'zh' || value === 'zh-CN' ? 'zh' : value === 'en' ? 'en' : null;
-  const getLanguage = () => {
-    const explicit = normalizeLanguage(new URL(location.href).searchParams.get('lang'));
-    if (explicit) return explicit;
-    try { return normalizeLanguage(localStorage.getItem(storageKey)) || 'en'; }
-    catch (_) { return 'en'; }
-  };
+  // English is the default; Chinese is shown only when explicitly requested.
+  const getLanguage = () => normalizeLanguage(new URL(location.href).searchParams.get('lang')) || 'en';
   const blocks = [];
   document.querySelectorAll('#bio .prose p, .hero h1, .hero .tagline, .section-title, #news .body, .news-item .body').forEach(el => {
     const key = normalize(el.textContent);
@@ -86,7 +81,6 @@
       button.setAttribute('aria-pressed', String(button.dataset.setLanguage === language));
     });
     updateLinks(language);
-    try { localStorage.setItem(storageKey, language); } catch (_) { /* Private browsing still supports the URL. */ }
     if (updateUrl) {
       const url = new URL(location.href);
       url.searchParams.set('lang', language);

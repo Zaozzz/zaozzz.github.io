@@ -1,17 +1,19 @@
 /* Bilingual controls and Chinese editorial typography. */
-.language-switch { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.language-switch { display: inline-flex; align-items: center; flex: 0 0 auto; gap: 12px; }
 .language-switch[hidden] { display: none; }
 .language-switch button {
   position: relative; appearance: none; border: 0; background: none;
-  color: var(--ink-mute, #6b6258); font: 500 12px/1.2 var(--font-sans);
-  min-height: 32px; padding: 4px 0; cursor: pointer;
+  color: var(--ink-mute, #6b6258);
+  font: 400 15px/1.2 var(--font-display);
+  letter-spacing: .01em; min-height: 32px; padding: 4px 0; cursor: pointer;
 }
 /* Keep a comfortable tap area without adding visual weight. */
-.language-switch button::after { content: ""; position: absolute; inset: -4px -6px; }
-.language-switch button + button::before {
-  content: "/"; margin: 0 6px; color: var(--hairline, #d8d6cf); font-weight: 400;
+.language-switch button::after { content: ""; position: absolute; inset: 0 -6px; }
+.language-switch button[aria-pressed="true"] {
+  color: var(--ink, #1a1612);
+  text-decoration: underline; text-decoration-thickness: 1px;
+  text-decoration-color: var(--ink-faint, #968b7b); text-underline-offset: 4px;
 }
-.language-switch button[aria-pressed="true"] { color: var(--ink, #1a1612); }
 .language-switch button:hover { color: var(--ink, #1a1612); }
 .language-switch button:focus-visible { outline: 2px solid var(--rust, #5c2e91); outline-offset: 2px; }
 .pub-title-zh { display: none; }
