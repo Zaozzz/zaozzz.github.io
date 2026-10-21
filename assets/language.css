@@ -1,18 +1,19 @@
 /* Bilingual controls and Chinese editorial typography. */
-.language-switch {
-  display: inline-flex; align-items: center; flex: 0 0 auto; gap: 2px;
-  padding: 3px; border: 1px solid var(--hairline, #d8d6cf); border-radius: 7px;
-  background: var(--paper, #fff);
-}
+.language-switch { display: inline-flex; align-items: center; flex: 0 0 auto; }
 .language-switch[hidden] { display: none; }
 .language-switch button {
-  appearance: none; border: 0; border-radius: 4px; background: transparent;
+  position: relative; appearance: none; border: 0; background: none;
   color: var(--ink-mute, #6b6258); font: 500 12px/1.2 var(--font-sans);
-  min-width: 36px; min-height: 30px; padding: 6px 9px; cursor: pointer;
+  min-height: 32px; padding: 4px 0; cursor: pointer;
 }
-.language-switch button[aria-pressed="true"] { color: var(--rust-deep, #4a2380); background: var(--rust-paper, #ece4f7); }
+/* Keep a comfortable tap area without adding visual weight. */
+.language-switch button::after { content: ""; position: absolute; inset: -4px -6px; }
+.language-switch button + button::before {
+  content: "/"; margin: 0 6px; color: var(--hairline, #d8d6cf); font-weight: 400;
+}
+.language-switch button[aria-pressed="true"] { color: var(--ink, #1a1612); }
 .language-switch button:hover { color: var(--ink, #1a1612); }
-.language-switch button:focus-visible { outline: 2px solid var(--rust, #5c2e91); outline-offset: 3px; }
+.language-switch button:focus-visible { outline: 2px solid var(--rust, #5c2e91); outline-offset: 2px; }
 .pub-title-zh { display: none; }
 html:lang(zh-CN) { --font-cn-body: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
 html:lang(zh-CN) .hero h1 { font-family: var(--font-cn-display); font-size: clamp(38px, 4.3vw, 56px); line-height: 1.25; letter-spacing: .02em; }
@@ -58,8 +59,6 @@ html:lang(zh-CN) .zaoz-directions dt { font-family: var(--font-cn-body); }
   .zaoz-integrated .masthead { gap: 8px; }
   .zaoz-integrated .masthead nav { gap: 2px; }
   .zaoz-integrated .masthead nav a { padding-inline: 6px; font-size: 12px; }
-  .language-switch { padding: 2px; }
-  .language-switch button { min-width: 32px; padding-inline: 7px; }
   html:lang(zh-CN) .hero h1 { font-size: 39px; }
   html:lang(zh-CN) .hero .tagline { font-size: 20px; line-height: 1.75; max-width: 19em; }
   html:lang(zh-CN) .section-title { font-size: 26px; }
