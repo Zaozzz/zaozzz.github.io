@@ -201,6 +201,7 @@
   </style>
   <link rel="stylesheet" href="/assets/zaoz.css?v=default-type-1" />
   <link rel="stylesheet" href="/assets/mobile.css?v=3" />
+  <link rel="stylesheet" href="/assets/language.css?v=1" />
 </head>
 <body class="zaoz-integrated">
   <header class="masthead">
@@ -211,6 +212,10 @@
       <a href="/publications.html">Publications</a>
       <a href="/zaoz/">ZAOZ</a>
     </nav>
+    <div class="language-switch" role="group" aria-label="Language / 语言" hidden>
+      <button type="button" data-set-language="en" lang="en" aria-label="Read in English" aria-pressed="true">EN</button>
+      <button type="button" data-set-language="zh" lang="zh-CN" aria-label="切换为中文" aria-pressed="false">中文</button>
+    </div>
   </header>
 
   <div class="container">
@@ -313,5 +318,7 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="/assets/zh-CN.js?v=1"></script>
+  <script src="/assets/language.js?v=1"></script>
 </body>
 </html>

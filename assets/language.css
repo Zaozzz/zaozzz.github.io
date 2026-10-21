@@ -1,0 +1,83 @@
+/* Bilingual controls and Chinese editorial typography. */
+.language-switch {
+  display: inline-flex; align-items: center; flex: 0 0 auto; gap: 2px;
+  padding: 3px; border: 1px solid var(--hairline, #d8d6cf); border-radius: 7px;
+  background: var(--paper, #fff);
+}
+.language-switch[hidden] { display: none; }
+.language-switch button {
+  appearance: none; border: 0; border-radius: 4px; background: transparent;
+  color: var(--ink-mute, #6b6258); font: 500 12px/1.2 var(--font-sans);
+  min-width: 36px; min-height: 30px; padding: 6px 9px; cursor: pointer;
+}
+.language-switch button[aria-pressed="true"] { color: var(--rust-deep, #4a2380); background: var(--rust-paper, #ece4f7); }
+.language-switch button:hover { color: var(--ink, #1a1612); }
+.language-switch button:focus-visible { outline: 2px solid var(--rust, #5c2e91); outline-offset: 3px; }
+.pub-title-zh { display: none; }
+html:lang(zh-CN) { --font-cn-body: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
+html:lang(zh-CN) .hero h1 { font-family: var(--font-cn-display); font-size: clamp(38px, 4.3vw, 56px); line-height: 1.25; letter-spacing: .02em; }
+html:lang(zh-CN) .hero .tagline { font-family: var(--font-cn-display); font-size: clamp(21px, 2.1vw, 28px); font-style: normal; line-height: 1.65; margin-top: 12px; text-wrap: pretty; }
+html:lang(zh-CN) .prose { font-family: var(--font-cn-body); font-size: 15px; line-height: 1.95; }
+html:lang(zh-CN) .prose p { margin-bottom: 1.15em; }
+html:lang(zh-CN) .section-title, html:lang(zh-CN) .page-head h1,
+html:lang(zh-CN) .zaoz-chapter h2 { font-family: var(--font-cn-display); font-style: normal; line-height: 1.35; letter-spacing: .035em; }
+html:lang(zh-CN) .section-title { font-size: 29px; }
+html:lang(zh-CN) .section-count, html:lang(zh-CN) .hero-meta,
+html:lang(zh-CN) .eyebrow, html:lang(zh-CN) .toc-cat,
+html:lang(zh-CN) .cat-label, html:lang(zh-CN) .zaoz-kicker { letter-spacing: .04em; }
+html:lang(zh-CN) .toc a { font-family: var(--font-cn-body); font-size: 13px; }
+html:lang(zh-CN) .org-title { font-family: var(--font-cn-body); font-weight: 600; }
+html:lang(zh-CN) .org-details, html:lang(zh-CN) .org-meta,
+html:lang(zh-CN) .ed-list .body, html:lang(zh-CN) .award-text,
+html:lang(zh-CN) .news-item .body { font-family: var(--font-cn-body); line-height: 1.85; }
+html:lang(zh-CN) .comp-name { font-style: normal; }
+html:lang(zh-CN) .pub-title-zh {
+  display: block; margin: 7px 0 8px; color: var(--ink-mute); font: 13px/1.8 var(--font-cn-body);
+  text-wrap: pretty;
+}
+html:lang(zh-CN) .demo-lead, html:lang(zh-CN) .demo-note,
+html:lang(zh-CN) .playlist-note, html:lang(zh-CN) .zaoz-summary { font-family: var(--font-cn-body); line-height: 1.8; font-style: normal; }
+html:lang(zh-CN) .closing-text { font-family: var(--font-cn-display); }
+html:lang(zh-CN) .closing-sub { font-family: var(--font-cn-body); font-style: normal; font-size: 13px; }
+/* The brand page already has parallel Chinese copy. Show one coherent reading flow in Chinese. */
+html:lang(zh-CN) .zaoz-bilingual { grid-template-columns: minmax(0, 1fr); max-width: 760px; }
+html:lang(zh-CN) .zaoz-bilingual > .zaoz-cn,
+html:lang(zh-CN) .zaoz-principles .zaoz-cn,
+html:lang(zh-CN) .zaoz-pullquote > span[lang="zh-CN"],
+html:lang(zh-CN) .zaoz-directions dd > span[lang="zh-CN"] { display: none; }
+html:lang(zh-CN) .zaoz-bilingual p, html:lang(zh-CN) .zaoz-principles p,
+html:lang(zh-CN) .zaoz-directions dd { font-family: var(--font-cn-body); line-height: 1.9; }
+html:lang(zh-CN) .zaoz-principles h3, html:lang(zh-CN) .zaoz-pullquote { font-family: var(--font-cn-display); font-style: normal; }
+html:lang(zh-CN) .zaoz-directions dt { font-family: var(--font-cn-body); }
+@media (max-width: 900px) {
+  .zaoz-integrated .masthead { gap: 10px; }
+  .language-switch button { min-height: 38px; }
+  html:lang(zh-CN) .hero .tagline { max-width: 26em; margin-inline: auto; }
+}
+@media (max-width: 620px) {
+  .zaoz-integrated .masthead { gap: 8px; }
+  .zaoz-integrated .masthead nav { gap: 2px; }
+  .zaoz-integrated .masthead nav a { padding-inline: 6px; font-size: 12px; }
+  .language-switch { padding: 2px; }
+  .language-switch button { min-width: 32px; padding-inline: 7px; }
+  html:lang(zh-CN) .hero h1 { font-size: 39px; }
+  html:lang(zh-CN) .hero .tagline { font-size: 20px; line-height: 1.75; max-width: 19em; }
+  html:lang(zh-CN) .section-title { font-size: 26px; }
+  html:lang(zh-CN) .prose { font-size: 14.5px; line-height: 1.95; }
+  html:lang(zh-CN) .pub-title-zh { font-size: 12.5px; }
+}
+@media (max-width: 360px) {
+  .zaoz-integrated .masthead .site-logo { width: 76px; }
+  .zaoz-integrated .masthead .site-logo img { max-width: 76px; }
+  html:lang(zh-CN) .hero h1 { font-size: 35px; }
+  html:lang(zh-CN) .hero .tagline { font-size: 18px; }
+}
+.zaoz-integrated .masthead nav a[href^="/zaoz/"] { color: var(--zaoz-accent); }
+@media (max-width: 620px) {
+  .zaoz-integrated .masthead:has(nav a[href^="/publications"]) {
+    height: auto; min-height: 56px; flex-wrap: wrap; padding-block: 5px; row-gap: 2px;
+  }
+  .zaoz-integrated .masthead:has(nav a[href^="/publications"]) nav {
+    order: 3; flex-basis: 100%; justify-content: flex-end;
+  }
+}

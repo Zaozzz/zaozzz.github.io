@@ -721,6 +721,7 @@
   <link rel="stylesheet" href="/assets/zaoz.css?v=default-type-1" />
   <link rel="stylesheet" href="/assets/mobile.css?v=3" />
   <link rel="stylesheet" href="/assets/pixel-paper.css?v=1" />
+  <link rel="stylesheet" href="/assets/language.css?v=1" />
 </head>
 <body class="zaoz-integrated zaoz-pixel-background">
   <canvas class="zaoz-pixel-paper" id="zaozPixelPaper" aria-hidden="true"></canvas>
@@ -732,6 +733,10 @@
     <nav aria-label="Main navigation">
       <a href="/zaoz/">ZAOZ</a>
     </nav>
+    <div class="language-switch" role="group" aria-label="Language / 语言" hidden>
+      <button type="button" data-set-language="en" lang="en" aria-label="Read in English" aria-pressed="true">EN</button>
+      <button type="button" data-set-language="zh" lang="zh-CN" aria-label="切换为中文" aria-pressed="false">中文</button>
+    </div>
   </header>
 
   <!-- ============== Hero ============== -->
@@ -1413,7 +1418,7 @@
           item.style.transform = "translateY(-8px)";
           setTimeout(function(){ item.style.display = "none"; }, 300);
         });
-        text.textContent = "Show more";
+        text.textContent = window.SiteLanguage ? SiteLanguage.toggleLabel(false) : "Show more";
         btn.setAttribute("aria-expanded", "false");
         btn.querySelector(".arrow").style.transform = "rotate(0deg)";
       } else {
@@ -1427,7 +1432,7 @@
             item.style.transform = "translateY(0)";
           }, index * 40);
         });
-        text.textContent = "Show less";
+        text.textContent = window.SiteLanguage ? SiteLanguage.toggleLabel(true) : "Show less";
         btn.setAttribute("aria-expanded", "true");
         btn.querySelector(".arrow").style.transform = "rotate(180deg)";
       }
@@ -1447,7 +1452,7 @@
           item.style.transform = "translateY(-10px)";
           setTimeout(function(){ item.style.display = "none"; }, 300);
         });
-        text.textContent = "Show more";
+        text.textContent = window.SiteLanguage ? SiteLanguage.toggleLabel(false) : "Show more";
         btn.setAttribute("aria-expanded", "false");
         btn.querySelector(".arrow").style.transform = "rotate(0deg)";
         return;
@@ -1465,11 +1470,11 @@
       });
       var stillHidden = items.filter(function(item){ return item.style.display === "none" || item.style.display === ""; }).length;
       if (stillHidden === 0){
-        text.textContent = "Show less";
+        text.textContent = window.SiteLanguage ? SiteLanguage.toggleLabel(true) : "Show less";
         btn.setAttribute("aria-expanded", "true");
         btn.querySelector(".arrow").style.transform = "rotate(180deg)";
       } else {
-        text.textContent = "Show more";
+        text.textContent = window.SiteLanguage ? SiteLanguage.toggleLabel(false) : "Show more";
         btn.setAttribute("aria-expanded", "false");
         btn.querySelector(".arrow").style.transform = "rotate(0deg)";
       }
@@ -1500,6 +1505,8 @@
 
   </script>
   <script src="/assets/pixel-paper.js?v=2" defer></script>
+  <script src="/assets/zh-CN.js?v=1"></script>
+  <script src="/assets/language.js?v=1"></script>
 </body>
 </html>
 
