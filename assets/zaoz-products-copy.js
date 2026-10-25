@@ -91,5 +91,43 @@
   "Clearer decisions. Lighter days.": "让决策更清晰，让日子更轻松。",
   "Tools for clearer decisions. Time for a sunrise.": "让工具帮助决策，留一点时间看日出。"
 });
+ Object.assign(copy.text,{
+  "Decide & act": "决策与行动",
+  "Play & create": "治愈与创作",
+  "ZAOZ is a brand for useful tools and quiet play. Two products, with one idea: make room for the choices that matter, and time for a sunrise.": "ZAOZ 是一个关注决策与治愈的品牌。我们用两个产品，为重要的选择留出心力，也为生活留一点时间，看一次日出。",
+  "01 / A ZAOZ product": "01 / ZAOZ 产品",
+  "02 / A ZAOZ product": "02 / ZAOZ 产品",
+  "Decide & act.": "决策与行动。",
+  "Play & create.": "治愈与创作。",
+  "Understand your situation, compare options, and turn a decision into action. The final judgment stays yours.": "理解处境、比较选择，把决定推进到行动。关键的判断，始终由你作出。",
+  "Quiet games and creative tools. Build, wander, make, or explore — choose the experience that fits this moment.": "游戏，也可以是安静的创作。建造、漫游、搭配与探索，选择此刻想做的事。",
+  "THE WORKSPACE": "决策工作台",
+  "Adjust a budget, compare project combinations, review the evidence, and follow an approved plan. Try the workspace below.": "调整预算、比较项目组合、核查依据，再跟进已经确认的方案。下方工作台可以直接操作。",
+  "A SMALL SCENARIO / RBCC": "RBCC / 一个出行小场景",
+  "From the arrival hall": "从到达大厅，",
+  "to the right car.": "走到你的车前。",
+  "A focused ride-hailing rehearsal. Request a ride, follow the route, and verify the vehicle. Try each step in the scene beside this text.": "从叫车、寻找上车点到车辆核验，展示一个具体的乘车流程。你可以在体验区逐步操作。",
+  "Request a ride": "呼叫车辆",
+  "Find the pickup point": "找到上车点",
+  "Verify the vehicle": "核验车辆",
+  "One scene, more possibilities.": "从一个场景，延伸到更多。",
+  "The same approach could extend to station transfers, visitor guidance, and event meetups. These are future directions.": "同样的情境判断与行动引导，可以继续探索车站接驳、访客引导、活动会合等场景。这些是后续拓展方向。",
+  "BUILD A WORLD": "自由建造",
+  "Plant a tree, lay a path, change the weather. Build directly on the island below.": "种一棵树，铺一条路，换一种天气。直接在下方的小岛上开始建造。",
+  "01 / WORLD BUILDING": "01 / 建造小岛",
+  "02 / EXPLORATION": "02 / 群岛漫游",
+  "Start a walk, or take a flight around the islands.": "开始漫步，或选择环岛飞行，直接探索群岛。",
+  "03 / THE MAKER'S DESK": "03 / 手作工作室",
+  "Choose materials, arrange beads, and save a bracelet of your own.": "选择材质，搭配珠子，保存你设计的手串。",
+  "MATERIAL / COLOR / FORM": "材质 / 配色 / 形态",
+  "04 / A PHYSICS PLAYGROUND": "04 / 引力游乐场",
+  "Add a planet, change gravity, and watch the orbit respond.": "加入一颗星球，改变引力，观察轨道如何变化。",
+  "Open full app": "打开完整版",
+  "Interactive demo": "可直接体验",
+  "Expand": "放大",
+  "Loading demo…": "正在载入…",
+  "Try again": "重新载入"
+});
+ Object.assign(copy.text,{"01 / Decide & act":"01 / 决策与行动","02 / Play & create":"02 / 治愈与创作","Try the decision product":"体验决策产品","Try the play product":"体验治愈产品"});
  Object.assign(copy.meta,{"ZAOZ builds decision tools and restorative play. Keep your attention for the choices that matter, and make time for a sunrise.": "ZAOZ 关注个人决策优化与治愈性游戏。把心力留给重要的决定，也留一点时间，看一次日出。"});
 })();
