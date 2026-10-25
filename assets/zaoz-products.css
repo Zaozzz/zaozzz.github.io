@@ -16,3 +16,5 @@ html:lang(zh-CN) .sunrise-hero h1{font-family:var(--font-cn-display);font-size:c
 /* Keep media at its real proportions; HTML dimensions reserve loading space only. */
 .sunrise-scene img{height:auto;aspect-ratio:1.7}.showcase-visual img{height:auto;aspect-ratio:auto;object-fit:contain}.showcase-description{font-size:13px}.section-heading>p{font-size:14px}.brand-skip{clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}.brand-skip:focus{clip-path:none;width:auto;height:auto}
 @media(max-width:780px){.showcase-description{font-size:12px}.section-heading>p{font-size:12px}.sunrise-scene img{aspect-ratio:1.48}}
+
+.showcase-expansion{grid-column:1/-1;display:grid;grid-template-columns:1fr 2fr;gap:24px;margin:24px 0 0;padding-top:18px;border-top:1px solid #dbe1d3;color:#7b866f;font-size:11px;line-height:1.9}.showcase-expansion strong{font-weight:500;color:#5e7150}.showcase-expansion span{display:block}@media(max-width:780px){.showcase-expansion{grid-template-columns:1fr;gap:7px;font-size:10px;margin-top:23px;padding-top:16px}}

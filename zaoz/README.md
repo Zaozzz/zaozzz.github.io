@@ -18,10 +18,12 @@ ZAOZ 希望构建一种更从容的个人工作与生活方式：以安全、可
 | 治愈性游戏 | [AURELIA · 琉光群岛](https://zaozzz.github.io/demo/aurelia.html) | 群岛漫游、飞行、摄影 |
 | 自由创作 | [一串 · 手串设计器](https://zaozzz.github.io/demo/bead-studio.html) | 材质与颜色搭配、三维预览、保存和导出设计 |
 | 自由游玩 | [Pocket Cosmos · 引力游乐场](https://zaozzz.github.io/demo/pocket-cosmos.html) | 星体、引力、轨道与宇宙预设实验 |
-| 出行协同 | [RBCC · 石榴 SeeWay](https://zaozzz.github.io/demo/seeway.html) | 叫车流程、最后 50 米找车、楼层与连接异常、现场互认与车辆核验 |
+| 小场景演示 | [RBCC · 石榴 SeeWay](https://zaozzz.github.io/demo/seeway.html) | 以最后 50 米找车为例，展示情境判断、行动引导与现场协同确认 |
 | 组织决策 | [ZAOZ ATLAS](https://zaozzz.github.io/zaoz/decision-lab/) | 预算与人力约束、方案比较、风险与依赖检查、本人确认、行动跟进与导出 |
 
 游戏为可游玩或可交互原型，尚不代表经过验证的减压效果。RBCC 的 SeeWay 是不会真实叫车或扣费的打车交互原型；ATLAS 使用虚构组织与演练数据，在浏览器内进行规则计算和本地保存，没有接入真实企业业务或 AI 服务。
+
+SeeWay 是一个具体出行场景的展示。其“情境判断—行动引导—协同确认”思路，后续可探索车站接驳、园区访客引导、活动会合等更多需要现场协同的场景；这些属于拓展方向，尚不代表已经实现。
 
 ## 为什么想做这件事
 
