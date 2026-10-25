@@ -7,9 +7,10 @@
   <meta name="theme-color" content="#202d2b">
   <title>ATLAS 组织决策工作台 · ZAOZ</title>
   <link rel="icon" href="./favicon.svg">
-  <link rel="stylesheet" href="./atlas.css?v=1">
+  <link rel="stylesheet" href="./atlas.css?v=2">
+  <link rel="stylesheet" href="./atlas-refined.css?v=1">
   <script src="./engine.js?v=1" defer></script>
-  <script src="./atlas.js?v=1" defer></script>
+  <script src="./atlas.js?v=2" defer></script>
 </head>
 <body>
   <a href="#workspace" class="skip">跳至工作区</a>
@@ -29,7 +30,7 @@
   <div class="shell">
     <header class="topbar">
       <div class="breadcrumb">ZAOZ / <b>ATLAS</b><span>组织决策演练</span></div>
-      <div class="toolbar"><span id="saveStatus" class="save-status" role="status">本地就绪</span><button class="quiet" data-action="guide">体验指引</button><button class="quiet" data-action="export">导出记录 ↓</button><button class="quiet" data-action="reset">重置</button></div>
+      <div class="toolbar"><span id="saveStatus" class="save-status" role="status">本地就绪</span><button class="quiet" data-action="guide">体验指引</button><button class="quiet" data-action="export">导出记录 ↓</button><button class="quiet" data-action="reset">重置</button><button class="profile-button" data-action="profile" aria-label="个人信息与工作偏好"><span class="profile-avatar" id="profileAvatar">访</span><span class="profile-button-copy"><b id="profileName">访客工作空间</b><small>个人信息与偏好</small></span></button></div>
     </header>
     <main id="workspace" tabindex="-1">
       <noscript>此演练需要启用 JavaScript；没有外部模型调用，也不需要登录。</noscript>

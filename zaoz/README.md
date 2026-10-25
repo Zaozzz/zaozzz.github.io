@@ -1,6 +1,6 @@
 # ZAOZ｜个人决策优化与治愈性游戏
 
-**让 AI 分担日常，把心力留给重要的决定，把时间还给快乐的生活。**
+**让 AI 分担日常，把心力留给重要的决定。留一点时间，看一次日出。**
 
 ZAOZ 希望构建一种更从容的个人工作与生活方式：以安全、可控的主动 AI 减轻事务负担，以轻松、有温度的游戏体验为生活留出休息和快乐的空间。
 
@@ -18,10 +18,10 @@ ZAOZ 希望构建一种更从容的个人工作与生活方式：以安全、可
 | 治愈性游戏 | [AURELIA · 琉光群岛](https://zaozzz.github.io/demo/aurelia.html) | 群岛漫游、飞行、摄影 |
 | 自由创作 | [一串 · 手串设计器](https://zaozzz.github.io/demo/bead-studio.html) | 材质与颜色搭配、三维预览、保存和导出设计 |
 | 自由游玩 | [Pocket Cosmos · 引力游乐场](https://zaozzz.github.io/demo/pocket-cosmos.html) | 星体、引力、轨道与宇宙预设实验 |
-| 调研决策 | [RBCC · 石榴籽](https://zaozzz.github.io/rbcc/insights/) | 多场景材料检索、证据展开与问题定义原型 |
+| 出行协同 | [RBCC · 石榴 SeeWay](https://zaozzz.github.io/demo/seeway.html) | 叫车流程、最后 50 米找车、楼层与连接异常、现场互认与车辆核验 |
 | 组织决策 | [ZAOZ ATLAS](https://zaozzz.github.io/zaoz/decision-lab/) | 预算与人力约束、方案比较、风险与依赖检查、本人确认、行动跟进与导出 |
 
-游戏为可游玩或可交互原型，尚不代表经过验证的减压效果。RBCC 使用真人与模拟调研材料；ATLAS 使用虚构组织与演练数据，在浏览器内进行规则计算和本地保存，没有接入真实企业业务或 AI 服务。
+游戏为可游玩或可交互原型，尚不代表经过验证的减压效果。RBCC 的 SeeWay 是不会真实叫车或扣费的打车交互原型；ATLAS 使用虚构组织与演练数据，在浏览器内进行规则计算和本地保存，没有接入真实企业业务或 AI 服务。
 
 ## 为什么想做这件事
 
