@@ -20,9 +20,9 @@
     {id:'p8',name:'自动化提效',short:'自动化',owner:'研发团队',cost:26,people:8,weeks:5,risk:27,growth:77,resilience:75,experience:68,deps:['p6'],evidence:['e1','e5'],description:'在数据观察台具备基础能力后，对重复流程进行自动化，减少人工整理与交接成本。'}
   ];
   const scenarios={
-    launch:{name:'新品上市',title:'增长机会，先配好交付能力。',brief:'下一季度计划推出新产品。有限的预算和团队投入，需要在新增长、现有客户与交付稳定性之间取舍。',budget:120,capacity:40,horizon:12,risk:36,weights:{growth:55,resilience:20,experience:25},mandatory:['p7'],event:'需求窗口缩短 2 周，项目成本上浮 8%。'},
-    supply:{name:'供应受阻',title:'先守住交付，再寻找增长。',brief:'核心供应不稳定，需要建立双源保障，同时保留客户服务能力。先确认必做事项，再比较剩余资源的去向。',budget:104,capacity:36,horizon:13,risk:27,weights:{growth:20,resilience:60,experience:20},mandatory:['p2','p7'],event:'备选供应验证延长 2 周，项目成本上浮 10%。'},
-    tight:{name:'预算收紧',title:'资源减少时，保留最有用的行动。',brief:'预算与团队投入受限。优先守住质量和客户体验，明确本轮选择以及需要延后的项目。',budget:76,capacity:26,horizon:10,risk:25,weights:{growth:25,resilience:40,experience:35},mandatory:['p7'],event:'可用预算临时减少 20%，人力与期限保持不变。'}
+    launch:{name:'新品上市',title:'新品上市',brief:'下一季度计划推出新产品。有限的预算和团队投入，需要在新增长、现有客户与交付稳定性之间取舍。',budget:120,capacity:40,horizon:12,risk:36,weights:{growth:55,resilience:20,experience:25},mandatory:['p7'],event:'需求窗口缩短 2 周，项目成本上浮 8%。'},
+    supply:{name:'供应受阻',title:'供应受阻',brief:'核心供应不稳定，需要建立双源保障，同时保留客户服务能力。先确认必做事项，再比较剩余资源的去向。',budget:104,capacity:36,horizon:13,risk:27,weights:{growth:20,resilience:60,experience:20},mandatory:['p2','p7'],event:'备选供应验证延长 2 周，项目成本上浮 10%。'},
+    tight:{name:'预算收紧',title:'预算收紧',brief:'预算与团队投入受限。优先守住质量和客户体验，明确本轮选择以及需要延后的项目。',budget:76,capacity:26,horizon:10,risk:25,weights:{growth:25,resilience:40,experience:35},mandatory:['p7'],event:'可用预算临时减少 20%，人力与期限保持不变。'}
   };
   const policies=[{id:'recommended',name:'当前目标优先',note:'按你设定的目标权重，寻找可行范围内贡献最高的组合。'}, {id:'resilient',name:'韧性优先',note:'提高韧性权重，比较更重视稳定性的选择。',weights:{growth:15,resilience:70,experience:15}}, {id:'growth',name:'增长优先',note:'提高增长权重，检视机会与风险之间的取舍。',weights:{growth:75,resilience:10,experience:15}}];
   const find=id=>projects.find(p=>p.id===id);
