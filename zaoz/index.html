@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>ZAOZ — Build What Matters.</title>
-  <meta name="description" content="ZAOZ is an independent technology and creative brand founded by Zaozzz in October 2026. Artificial intelligence, research, products, and creative technology. Build What Matters." />
+  <meta name="description" content="ZAOZ is an independent technology and creative brand founded by Zaozzz in October 2026. Decision tools and restorative play. Explore interactive products, organizational decision demos, and a vision for safe proactive AI." />
   <meta name="theme-color" content="#FFFFFF" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://zaozzz.github.io/zaoz/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ZAOZ" />
   <meta property="og:title" content="ZAOZ — Build What Matters." />
-  <meta property="og:description" content="An independent technology and creative brand by Zaozzz. Think independently. Build consistently. Let results speak." />
+  <meta property="og:description" content="Decision tools and restorative play by ZAOZ. Clearer decisions. Lighter days." />
   <meta property="og:url" content="https://zaozzz.github.io/zaoz/" />
   <meta property="og:image" content="https://zaozzz.github.io/assets/zaoz/zaoz-sunrise.png" />
   <meta property="og:image:type" content="image/png" />
@@ -20,7 +20,7 @@
   <meta property="og:image:alt" content="ZAOZ official logo: an orange-red sun above two dark mountain curves" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZAOZ — Build What Matters." />
-  <meta name="twitter:description" content="An independent technology and creative brand by Zaozzz. Independent thinking, continuous creation, long-term value." />
+  <meta name="twitter:description" content="Decision tools and restorative play by ZAOZ. Clearer decisions. Lighter days." />
   <meta name="twitter:image" content="https://zaozzz.github.io/assets/zaoz/zaoz-sunrise.png" />
   <meta name="twitter:image:alt" content="ZAOZ official logo: an orange-red sun above two dark mountain curves" />
   <link rel="icon" type="image/png" sizes="256x256" href="/assets/zaoz/zaoz-favicon.png?v=1">
@@ -152,79 +152,53 @@
   <link rel="stylesheet" href="/assets/zaoz.css?v=default-type-1" />
   <link rel="stylesheet" href="/assets/mobile.css?v=3" />
   <link rel="stylesheet" href="/assets/language.css?v=3" />
+  <link rel="stylesheet" href="/assets/pixel-paper.css?v=2">
+  <link rel="stylesheet" href="/assets/zaoz-products.css?v=1">
 </head>
-<body class="zaoz-integrated zaoz-brand-page">
+<body class="zaoz-integrated zaoz-brand-page zaoz-pixel-background zaoz-products-page">
+  <canvas class="zaoz-pixel-paper" id="zaozPixelPaper" aria-hidden="true"></canvas>
   <a class="zaoz-skip-link" href="#brand-main">Skip to content</a>
   <header class="masthead">
-    <a class="site-logo" href="/" aria-label="Xu Wang · Academic homepage"><img src="/assets/zaoz/zaoz-sunrise.png" width="112" height="32" alt="ZAOZ sunrise and mountain logo" decoding="async" /></a>
+    <a class="site-logo" href="/" aria-label="Xu Wang · Academic homepage"><img src="/assets/zaoz/zaoz-sunrise.png" width="112" height="32" alt="ZAOZ sunrise and mountain logo" decoding="async"></a>
     <div class="spacer"></div>
-    <nav aria-label="Main navigation"><a href="/">Academic homepage <span aria-hidden="true">↗</span></a></nav>
-    <div class="language-switch" role="group" aria-label="Language / 语言" hidden>
-      <button type="button" data-set-language="en" lang="en" aria-label="Read in English" aria-pressed="true">EN</button>
-      <button type="button" data-set-language="zh" lang="zh-CN" aria-label="切换为中文" aria-pressed="false">中文</button>
-    </div>
+    <nav aria-label="Main navigation"><a href="#products">Play</a><a href="#decisions">Decide</a><a href="/">Academic homepage <span aria-hidden="true">↗</span></a></nav>
+    <div class="language-switch" role="group" aria-label="Language / 语言" hidden><button type="button" data-set-language="en" lang="en" aria-label="Read in English" aria-pressed="true">EN</button><button type="button" data-set-language="zh" lang="zh-CN" aria-label="切换为中文" aria-pressed="false">中文</button></div>
   </header>
-
   <main class="zaoz-page" id="brand-main">
     <section class="zaoz-hero" aria-labelledby="brand-title">
-      <img class="zaoz-logo" src="/assets/zaoz/zaoz-sunrise.png" width="1024" height="341" decoding="async" fetchpriority="high" alt="ZAOZ official logo: an orange-red sun above two dark mountain curves" />
-      <div>
-        <p class="zaoz-kicker">Independent brand · Est. October 2026</p>
-        <h1 id="brand-title" class="zaoz-wordmark">ZAOZ</h1>
-        <p class="zaoz-slogan">Build What Matters.</p>
-        <p class="zaoz-hero-note">Artificial Intelligence × Research<br />Technology × Creativity</p>
+      <div class="zaoz-emblem"><img class="zaoz-logo" src="/assets/zaoz/zaoz-sunrise.png" width="1024" height="341" decoding="async" fetchpriority="high" alt="ZAOZ official logo: an orange-red sun above two dark mountain curves"><p class="zaoz-emblem-note">A little light. A little room.</p></div>
+      <div><p class="zaoz-kicker">Independent brand · Est. October 2026</p><h1 id="brand-title" class="zaoz-wordmark">ZAOZ</h1><p class="zaoz-slogan">Build What Matters.</p><h2 class="zaoz-purpose">Clearer decisions. Lighter days.</h2><p class="zaoz-mission">Decision tools and restorative play, made to give your time and attention room to breathe.</p><div class="zaoz-actions"><a class="zaoz-button" href="#products">Explore our products <span aria-hidden="true">↓</span></a><a class="zaoz-link" href="/zaoz/decision-lab/">Try ATLAS <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+    <div class="zaoz-intro-strip"><span>FOCUS / PLAY &amp; DECISION</span><p>Let useful tools carry the routine. Keep the important choices, and the joy, yours.</p></div>
+
+    <section class="zaoz-chapter" id="products" aria-labelledby="products-title">
+      <div class="zaoz-section-heading"><div class="zaoz-chapter-head"><span class="zaoz-kicker">01 / Restorative play</span><h2 id="products-title">Small worlds. Room to unwind.</h2></div><p>Four interactive products you can try now. Build, explore, create, and leave whenever you like.</p></div>
+      <div class="zaoz-product-grid">
+        <article class="zaoz-product"><a class="zaoz-product-image" href="/demo/wind-island.html" aria-label="Play A Little Island"><img src="/assets/demo-thumbs/wind-island.webp" width="640" height="400" loading="lazy" alt="A Little Island interactive landscape"></a><div class="zaoz-product-info"><div class="zaoz-product-label"><span>01 / LITTLE WORLDS</span><span>Playable prototype</span></div><h3>A Little Island</h3><p>Create an island with paths, homes, trees, and gardens. Change the light and weather, then send yourself a postcard.</p><div class="zaoz-product-bottom"><span>Build · Weather · Postcards</span><a href="/demo/wind-island.html">Enter the island <span aria-hidden="true">↗</span></a></div></div></article>
+        <article class="zaoz-product"><a class="zaoz-product-image" href="/demo/aurelia.html" aria-label="Play AURELIA"><img src="/assets/demo-thumbs/aurelia.webp" width="640" height="400" loading="lazy" alt="AURELIA luminous island world"></a><div class="zaoz-product-info"><div class="zaoz-product-label"><span>02 / QUIET EXPLORATION</span><span>Playable prototype</span></div><h3>AURELIA</h3><p>Wander luminous islands, unfold your wings, change the scenery, and capture a quiet moment along the way.</p><div class="zaoz-product-bottom"><span>Explore · Fly · Photograph</span><a href="/demo/aurelia.html">Explore AURELIA <span aria-hidden="true">↗</span></a></div></div></article>
+        <article class="zaoz-product"><a class="zaoz-product-image" href="/demo/bead-studio.html" aria-label="Open Bead Studio"><img src="/assets/demo-thumbs/bead-studio.webp" width="640" height="400" loading="lazy" alt="Bead Studio bracelet design workspace"></a><div class="zaoz-product-info"><div class="zaoz-product-label"><span>03 / SLOW CREATION</span><span>Interactive prototype</span></div><h3>Bead Studio</h3><p>Choose materials and colors, arrange a bracelet in 3D, save a design, and export a picture of something you made.</p><div class="zaoz-product-bottom"><span>Design · Arrange · Export</span><a href="/demo/bead-studio.html">Make a bracelet <span aria-hidden="true">↗</span></a></div></div></article>
+        <article class="zaoz-product"><a class="zaoz-product-image" href="/demo/pocket-cosmos.html" aria-label="Play Pocket Cosmos"><img src="/assets/demo-thumbs/pocket-cosmos.webp" width="640" height="400" loading="lazy" alt="Pocket Cosmos orbital playground"></a><div class="zaoz-product-info"><div class="zaoz-product-label"><span>04 / OPEN-ENDED PLAY</span><span>Playable prototype</span></div><h3>Pocket Cosmos</h3><p>Launch a planet, follow its orbit, try a binary star system, or turn gravity upside down in a small cosmic playground.</p><div class="zaoz-product-bottom"><span>Gravity · Orbits · Discovery</span><a href="/demo/pocket-cosmos.html">Play with gravity <span aria-hidden="true">↗</span></a></div></div></article>
       </div>
+      <p class="zaoz-product-footnote">These are experiential prototypes. “Restorative” describes the intended tone of play; wellbeing effects have not been established.</p>
     </section>
 
-    <section class="zaoz-chapter" aria-labelledby="about-title">
-      <div class="zaoz-chapter-head"><span class="zaoz-kicker">01 / About</span><h2 id="about-title">Ideas into meaningful things.</h2></div>
-      <div class="zaoz-bilingual">
-        <div>
-          <p>ZAOZ is an independent technology and creative brand founded by Zaozzz.</p>
-          <p>Rooted in artificial intelligence, research, and design, ZAOZ explores ideas and turns them into meaningful products.</p>
-          <p>We believe in independent thinking, decisive action, and long-term value creation.</p>
-        </div>
-        <div lang="zh-CN" class="zaoz-cn">
-          <p>ZAOZ 是由 Zaozzz 发起的独立科技与创意品牌。</p>
-          <p>以人工智能为起点，连接科研、技术、设计与产品创造。</p>
-          <p>我们相信独立思考、主动行动和长期积累。让能力转化为作品，让作品积累价值，让价值随时间持续增长。</p>
-        </div>
-      </div>
-      <p class="zaoz-pullquote">Think independently. Build consistently. Let results speak.<span lang="zh-CN">独立思考，持续创造，让结果说话。</span></p>
+    <section class="zaoz-chapter" id="decisions" aria-labelledby="decisions-title">
+      <div class="zaoz-section-heading"><div class="zaoz-chapter-head"><span class="zaoz-kicker">02 / Decision systems</span><h2 id="decisions-title">See the evidence. Understand the trade-offs.</h2></div><p>Two demonstrations, from framing a problem to comparing plans and following through.</p></div>
+      <article class="zaoz-atlas-feature">
+        <div class="zaoz-atlas-copy"><span class="zaoz-prototype-tag">NEW / INTERACTIVE DEMO</span><h3>ATLAS</h3><p class="zaoz-atlas-subtitle">An organizational decision workspace.</p><p>Choose a scenario, set your budget and team capacity, compare project portfolios, review the evidence, and confirm a plan before moving into execution.</p><ul class="zaoz-feature-list"><li>Three contexts, eight projects, explicit constraints.</li><li>Scenario changes, risk limits, and dependency checks.</li><li>Human confirmation, action tracking, and exportable briefs.</li></ul><div class="zaoz-actions"><a class="zaoz-button" href="/zaoz/decision-lab/">Open the workspace <span aria-hidden="true">↗</span></a><a class="zaoz-link" href="/zaoz/decision-lab/ZAOZ-ATLAS.html" download>Download offline demo <span aria-hidden="true">↓</span></a></div><p class="zaoz-demo-note">Fictional rehearsal data. Browser-local computation and storage; no live AI or business integration.</p></div>
+        <a class="zaoz-atlas-screen" href="/zaoz/decision-lab/" aria-label="Open ATLAS organizational decision demo"><span class="zaoz-window-bar"><i></i><i></i><i></i><span>ZAOZ / ATLAS</span></span><img src="/assets/zaoz/atlas-preview.png" width="1440" height="1000" loading="lazy" alt="ATLAS dashboard with resource constraints, portfolio options, and decision workflow"><span class="zaoz-screen-caption">Explore the full workflow <span aria-hidden="true">↗</span></span></a>
+      </article>
+      <article class="zaoz-rbcc-feature"><div class="zaoz-rbcc-diagram" aria-hidden="true"><span>RBCC / RESEARCH TO DECISION</span><div><b>01</b><p>Research materials</p></div><i>↓</i><div><b>02</b><p>Searchable evidence</p></div><i>↓</i><div><b>03</b><p>Problem definition</p></div></div><div class="zaoz-rbcc-copy"><span class="zaoz-prototype-tag">RESEARCH PROTOTYPE</span><h3>RBCC · Shiliuzi</h3><p class="zaoz-atlas-subtitle">From research clues to a clearer problem.</p><p>Browse five research contexts, filter and search the material, inspect supporting evidence, and follow the path from candidate pain points to problem definition.</p><p class="zaoz-demo-note">A research and problem-framing prototype with mixed human and simulated research materials. It is not an institutional endorsement or an automated personal assessment.</p><a class="zaoz-link" href="/rbcc/insights/">Explore the research demo <span aria-hidden="true">↗</span></a></div></article>
     </section>
 
-    <section class="zaoz-chapter" aria-labelledby="philosophy-title">
-      <div class="zaoz-chapter-head"><span class="zaoz-kicker">02 / Philosophy</span><h2 id="philosophy-title">A way of working.</h2></div>
-      <div class="zaoz-principles">
-        <article><h3>Independent Thinking.</h3><p>Start with questions. Make considered judgments. Take responsibility for the direction.</p><p lang="zh-CN" class="zaoz-cn">从问题出发，独立判断，主动行动。</p></article>
-        <article><h3>Continuous Creation.</h3><p>Use AI to extend capability. Learn through research, craft, and the steady practice of building.</p><p lang="zh-CN" class="zaoz-cn">用 AI 拓展能力，在研究与创造中持续精进。</p></article>
-        <article><h3>Long-Term Value.</h3><p>Build knowledge, useful work, and trust over time. Let each creation become a foundation for the next.</p><p lang="zh-CN" class="zaoz-cn">积累知识、作品与信誉，让每次创造成为下一步的基础。</p></article>
-      </div>
-    </section>
-
-    <section class="zaoz-chapter" aria-labelledby="explore-title">
-      <div class="zaoz-chapter-head"><span class="zaoz-kicker">03 / Explore</span><h2 id="explore-title">Directions for exploration.</h2></div>
-      <p class="zaoz-explore-intro">ZAOZ begins in October 2026. These are directions for the work ahead.</p>
-      <dl class="zaoz-directions">
-        <div><dt>Artificial Intelligence</dt><dd>Understanding intelligent systems and applying them to useful problems.<span lang="zh-CN">理解智能系统，探索有实际价值的应用。</span></dd></div>
-        <div><dt>Research</dt><dd>Asking precise questions and testing ideas with evidence.<span lang="zh-CN">提出清晰的问题，用证据检验想法。</span></dd></div>
-        <div><dt>Products</dt><dd>Turning technical ideas into thoughtful tools and meaningful experiences.<span lang="zh-CN">将技术想法转化为实用工具与有意义的体验。</span></dd></div>
-        <div><dt>Creative Technology</dt><dd>Connecting code, design, and experimentation to discover new possibilities.<span lang="zh-CN">连接代码、设计与实验，探索新的创造方式。</span></dd></div>
-      </dl>
-    </section>
-
-    <section class="zaoz-chapter zaoz-founder" aria-labelledby="founder-title">
-      <div class="zaoz-chapter-head"><span class="zaoz-kicker">04 / Founder</span><h2 id="founder-title">Founded by Zaozzz.</h2></div>
-      <div class="zaoz-bilingual">
-        <div><p>Xu Wang is the person behind Zaozzz, his online identity. ZAOZ is the independent brand he founded to develop technology, products, and creative work over the long term.</p><p>His academic research and publications remain part of his personal scholarly work.</p></div>
-        <div lang="zh-CN" class="zaoz-cn"><p>Xu Wang 是个人学术身份，Zaozzz 是个人互联网身份，ZAOZ 是由他发起的独立科技与创意品牌。</p><p>个人科研成果归属于个人；ZAOZ 承载面向未来的技术探索、产品研发与创意实践。</p></div>
-      </div>
-      <div class="zaoz-founder-links"><a class="zaoz-link" href="/">Xu Wang · Academic homepage <span aria-hidden="true">→</span></a><a class="zaoz-link" href="https://github.com/Zaozzz" target="_blank" rel="noopener noreferrer">Zaozzz · GitHub <span aria-hidden="true">↗</span></a></div>
-    </section>
-    <div class="zaoz-closing"><p>Less Noise. More Creation.</p><span>Build What Matters.</span></div>
+    <section class="zaoz-chapter" id="principles" aria-labelledby="principles-title"><div class="zaoz-chapter-head"><span class="zaoz-kicker">03 / What comes next</span><h2 id="principles-title">Proactive help, with boundaries you control.</h2></div><div class="zaoz-next-intro"><p>Our next direction is a personal AI for people carrying demanding responsibilities: preparing information, planning time, and handling authorized routine work, while leaving important decisions with you.</p><span class="zaoz-prototype-tag">CONCEPT / IN EXPLORATION</span></div><div class="zaoz-principles"><article><span>01</span><h3>Permission before action.</h3><p>Reading information does not grant permission to act. Sensitive work needs explicit data and action boundaries.</p></article><article><span>02</span><h3>Evidence before advice.</h3><p>Show the sources, alternatives, and unknowns. Keep the final judgment with the person responsible.</p></article><article><span>03</span><h3>Room for life.</h3><p>Rest and play remain a choice. Avoid reminders or reward systems that turn relaxation into another obligation.</p></article></div><a class="zaoz-link zaoz-vision-link" href="https://github.com/Zaozzz/zaozzz.github.io/blob/main/zaoz/README.md" target="_blank" rel="noopener noreferrer">Read the full project vision <span aria-hidden="true">↗</span></a></section>
+    <section class="zaoz-chapter zaoz-founder" aria-labelledby="founder-title"><div class="zaoz-chapter-head"><span class="zaoz-kicker">04 / Founder</span><h2 id="founder-title">Founded by Zaozzz.</h2></div><p class="zaoz-founder-copy">Xu Wang is the person behind Zaozzz, his online identity. ZAOZ is the independent brand he founded to develop technology, products, and creative work over the long term.</p><div class="zaoz-founder-links"><a class="zaoz-link" href="/">Xu Wang · Academic homepage <span aria-hidden="true">→</span></a><a class="zaoz-link" href="https://github.com/Zaozzz" target="_blank" rel="noopener noreferrer">Zaozzz · GitHub <span aria-hidden="true">↗</span></a></div></section>
+    <div class="zaoz-closing"><p>Make room for what matters.</p><span>Build What Matters.</span></div>
   </main>
   <footer class="zaoz-footer"><span>ZAOZ · Established October 2026</span><a href="/">Back to academic homepage <span aria-hidden="true">↑</span></a></footer>
   <script src="/assets/zh-CN.js?v=2"></script>
+  <script src="/assets/zaoz-products-copy.js?v=1"></script>
   <script src="/assets/language.js?v=2"></script>
+  <script src="/assets/pixel-paper.js?v=3" defer></script>
 </body>
 </html>

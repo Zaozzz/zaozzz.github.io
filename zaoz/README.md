@@ -8,6 +8,21 @@ ZAOZ 希望构建一种更从容的个人工作与生活方式：以安全、可
 
 > 当前阶段：公开想法与产品方向，征集讨论。本文描述的是设计目标和待验证的设想，不代表已经具备相应产品能力、安全保证或效果证据。
 
+## 可体验的产品与决策展示
+
+[ZAOZ 产品页](https://zaozzz.github.io/zaoz/?lang=zh) 汇集以下现有作品与演示。它们分别呈现交互体验和决策流程；个人主动 AI 的整体能力仍处于构想阶段。
+
+| 方向 | 产品或演示 | 体验内容 |
+| --- | --- | --- |
+| 治愈性游戏 | [风里的小岛](https://zaozzz.github.io/demo/wind-island.html) | 建造小岛、切换光景与天气、导出明信片 |
+| 治愈性游戏 | [AURELIA · 琉光群岛](https://zaozzz.github.io/demo/aurelia.html) | 群岛漫游、飞行、摄影 |
+| 自由创作 | [一串 · 手串设计器](https://zaozzz.github.io/demo/bead-studio.html) | 材质与颜色搭配、三维预览、保存和导出设计 |
+| 自由游玩 | [Pocket Cosmos · 引力游乐场](https://zaozzz.github.io/demo/pocket-cosmos.html) | 星体、引力、轨道与宇宙预设实验 |
+| 调研决策 | [RBCC · 石榴籽](https://zaozzz.github.io/rbcc/insights/) | 多场景材料检索、证据展开与问题定义原型 |
+| 组织决策 | [ZAOZ ATLAS](https://zaozzz.github.io/zaoz/decision-lab/) | 预算与人力约束、方案比较、风险与依赖检查、本人确认、行动跟进与导出 |
+
+游戏为可游玩或可交互原型，尚不代表经过验证的减压效果。RBCC 使用真人与模拟调研材料；ATLAS 使用虚构组织与演练数据，在浏览器内进行规则计算和本地保存，没有接入真实企业业务或 AI 服务。
+
 ## 为什么想做这件事
 
 对承担重要责任的人来说，很多事情需要本人判断，但大量准备工作也随之堆积：阅读资料、核对进展、整理选项、安排时间、记住承诺、跟进截止日期。

@@ -10,7 +10,9 @@ ZAOZ 希望面向事务繁忙、需要处理敏感信息并亲自承担关键判
 
 [阅读完整项目愿景、行动边界与首个版本设想 →](zaoz/README.md)
 
-当前为公开构想阶段；文档描述的是设计目标与待验证的方向。
+[浏览 ZAOZ 产品与决策展示 →](https://zaozzz.github.io/zaoz/?lang=zh) · [直接体验 ATLAS 组织决策工作台 →](https://zaozzz.github.io/zaoz/decision-lab/)
+
+已有作品以可体验的产品原型与决策演示呈现；个人主动 AI 仍为公开构想，相关文档描述的是设计目标与待验证的方向。
 
 ## 网站入口
 
