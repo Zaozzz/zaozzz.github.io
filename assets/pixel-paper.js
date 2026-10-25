@@ -13,6 +13,7 @@
   if (!paperContext) return;
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const cell = 11;
+  const glowSurface = canvas.dataset.surface === 'glow';
   const frameInterval = 1000 / 24;
   let points = [];
   let width = 0;
@@ -38,6 +39,7 @@
     paperContext.setTransform(ratio, 0, 0, ratio, 0, 0);
 
     const styles = getComputedStyle(document.body);
+    if (!glowSurface) {
     paperContext.fillStyle = styles.getPropertyValue('--paper').trim() || '#fff';
     paperContext.fillRect(0, 0, width, height);
     // The original 11px paper grid stays still while its pixels glow.
@@ -55,6 +57,8 @@
       paperContext.moveTo(0, y + .5);
       paperContext.lineTo(width, y + .5);
       paperContext.stroke();
+    }
+
     }
 
     points = [];
@@ -99,7 +103,7 @@
             points.push({
               x: left + column * cell + 1,
               y: top + row * cell + 1,
-              color: `${red},${green},${blue}`,
+              color: glowSurface && !warm ? `188,176,166` : `${red},${green},${blue}`,
               opacity: warm ? sunOpacity : mountainOpacity,
               warm,
               // Fixed phases preserve the exact logo silhouette.

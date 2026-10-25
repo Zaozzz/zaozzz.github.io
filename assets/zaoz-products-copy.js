@@ -129,5 +129,6 @@
   "Try again": "重新载入"
 });
  Object.assign(copy.text,{"01 / Decide & act":"01 / 决策与行动","02 / Play & create":"02 / 治愈与创作","Try the decision product":"体验决策产品","Try the play product":"体验治愈产品"});
+ Object.assign(copy.attributes,{"Decision experiences":"决策体验","Play experiences":"治愈体验"});
  Object.assign(copy.meta,{"ZAOZ builds decision tools and restorative play. Keep your attention for the choices that matter, and make time for a sunrise.": "ZAOZ 关注个人决策优化与治愈性游戏。把心力留给重要的决定，也留一点时间，看一次日出。"});
 })();
