@@ -20,7 +20,6 @@ ZAOZ 是品牌。品牌下的两个产品是「决策与行动」和「治愈与
 | 决策与行动 | [RBCC · 石榴 SeeWay 小场景](https://zaozzz.github.io/demo/seeway.html) | 以最后 50 米找车为例，展示情境判断、行动引导与现场协同确认 |
 | 治愈与创作 | [风里的小岛](https://zaozzz.github.io/demo/wind-island.html) | 建造小岛、切换光景与天气、导出明信片 |
 | 治愈与创作 | [AURELIA · 琉光群岛](https://zaozzz.github.io/demo/aurelia.html) | 群岛漫游、飞行、摄影 |
-| 治愈与创作 | [一串 · 手串设计器](https://zaozzz.github.io/demo/bead-studio.html) | 材质与颜色搭配、三维预览、保存和导出设计 |
 | 治愈与创作 | [Pocket Cosmos · 引力游乐场](https://zaozzz.github.io/demo/pocket-cosmos.html) | 星体、引力、轨道与宇宙预设实验 |
 
 游戏为可游玩或可交互原型，尚不代表经过验证的减压效果。RBCC 的 SeeWay 是不会真实叫车或扣费的打车交互原型；ATLAS 使用虚构组织与演练数据，在浏览器内进行规则计算和本地保存，没有接入真实企业业务或 AI 服务。
