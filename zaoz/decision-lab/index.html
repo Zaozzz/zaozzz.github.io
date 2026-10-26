@@ -4,33 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="ZAOZ ATLAS：可交互的组织决策演练工作台。调整预算、人力与风险，比较项目组合，核查依据，确认并跟进执行。">
-  <meta name="theme-color" content="#202d2b">
+  <meta name="theme-color" content="#f8f9fb">
   <title>ATLAS 组织决策工作台 · ZAOZ</title>
   <link rel="icon" href="./favicon.svg">
   <link rel="stylesheet" href="./atlas.css?v=2">
-  <link rel="stylesheet" href="./atlas-refined.css?v=1">
+  <link rel="stylesheet" href="./atlas-refined.css?v=2">
   <script src="./engine.js?v=2" defer></script>
-  <script src="./atlas.js?v=3" defer></script>
+  <script src="./atlas.js?v=4" defer></script>
 <script src="/assets/zaoz-embed.js?v=1"></script>
 </head>
 <body>
   <a href="#workspace" class="skip">跳至工作区</a>
   <aside class="sidebar">
-    <a class="brand" href="https://zaozzz.github.io/zaoz/?lang=zh"><span class="brand-mark" aria-hidden="true">◒</span><span>ZAOZ <small>DECISION SYSTEMS</small></span></a>
-    <div class="workspace-label">演练工作空间<span>远川设备 · 虚构组织</span></div>
+    <a class="brand" href="https://zaozzz.github.io/zaoz/?lang=zh" aria-label="ATLAS · 返回 ZAOZ"><span class="atlas-logomark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 19 12 4l9 15M7 14h10"/></svg></span><span>ATLAS<small>by ZAOZ</small></span></a>
+    <div class="workspace-label"><span class="workspace-avatar" aria-hidden="true">远</span><span>远川设备<small>演练工作空间</small></span></div>
     <nav aria-label="工作台导航" id="nav">
-      <a href="#overview" data-route="overview"><span aria-hidden="true">◈</span>决策总览</a>
-      <a href="#scenarios" data-route="scenarios"><span aria-hidden="true">⤨</span>方案推演</a>
-      <a href="#portfolio" data-route="portfolio"><span aria-hidden="true">▦</span>项目组合</a>
-      <a href="#evidence" data-route="evidence"><span aria-hidden="true">⌕</span>依据与风险</a>
-      <a href="#execution" data-route="execution"><span aria-hidden="true">↗</span>审批与执行</a>
-      <a href="#history" data-route="history"><span aria-hidden="true">≡</span>决策记录</a>
+      <a href="#overview" data-route="overview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>决策总览</a>
+      <a href="#scenarios" data-route="scenarios"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M8 4v6M16 14v6"/></svg>方案推演</a>
+      <a href="#portfolio" data-route="portfolio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM4 10h16M10 5v14"/></svg>项目组合</a>
+      <a href="#evidence" data-route="evidence"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H4v18h16V7l-4-4H8M8 11h8M8 15h6M15 3v5h5"/></svg>依据与风险</a>
+      <a href="#execution" data-route="execution"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM8 9l2 2 5-5M8 15h7"/></svg>审批与执行</a>
+      <a href="#history" data-route="history"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10"/></svg>决策记录</a>
     </nav>
     <div class="side-note"><span class="status-dot"></span>浏览器内规则推演<p>示例数据 · 可解释计算<br>操作仅保存在此浏览器</p><a href="https://zaozzz.github.io/zaoz/?lang=zh">← 返回 ZAOZ 产品页</a></div>
   </aside>
   <div class="shell">
     <header class="topbar">
-      <div class="breadcrumb">ZAOZ / <b>ATLAS</b><span>组织决策演练</span></div>
+      <div class="breadcrumb"><span class="context-org">远川设备</span><span class="breadcrumb-divider" aria-hidden="true">/</span><b id="contextScenario">新品上市</b><span class="sample-label">演练</span></div>
       <div class="toolbar"><span id="saveStatus" class="save-status" role="status">本地就绪</span><button class="quiet" data-action="guide">体验指引</button><button class="quiet" data-action="export">导出记录 ↓</button><button class="quiet" data-action="reset">重置</button><button class="profile-button" data-action="profile" aria-label="个人信息与工作偏好"><span class="profile-avatar" id="profileAvatar">访</span><span class="profile-button-copy"><b id="profileName">访客工作空间</b><small>个人信息与偏好</small></span></button></div>
     </header>
     <main id="workspace" tabindex="-1">
