@@ -50,6 +50,7 @@ window.ZAOZ_ZH = {
     "8 selected ·": "精选 8 篇 ·",
     "20+ total →": "全部 20 余篇 →",
     "20+ papers · 2024–2026 ·": "20 余篇论文 · 2024—2026 ·",
+    "20 papers · 2025–2026 ·": "20 篇论文 · 2025—2026 ·",
     "← back home": "← 返回首页",
     "← Back to home": "← 返回首页",
     "Equal contribution ·": "共同贡献 ·",
