@@ -14,8 +14,8 @@
    stage.style.height='';stage.style.overflow='';rail();
    if(animate&&!reduced.matches){
     const height=stage.getBoundingClientRect().height;stage.dataset.switching='true';stage.style.overflow='clip';
-    animation=stage.animate([{height:oldHeight+'px'},{height:height+'px'}],{duration:560,easing:'cubic-bezier(.22,.8,.24,1)'});
-    entry=next.animate([{opacity:0,transform:'translateY(20px) scale(.985)',filter:'blur(5px)'},{opacity:1,transform:'translateY(0) scale(1)',filter:'blur(0)'}],{duration:640,easing:'cubic-bezier(.22,.8,.24,1)'});
+    animation=stage.animate([{height:oldHeight+'px'},{height:height+'px'}],{duration:460,easing:'cubic-bezier(.22,.8,.24,1)'});
+    entry=next.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:520,easing:'cubic-bezier(.22,.8,.24,1)'});
     const current=animation;current.finished.then(()=>{if(animation===current){stage.style.overflow='';delete stage.dataset.switching;}}).catch(()=>{});
    }else delete stage.dataset.switching;
    if(focus)tab.focus({preventScroll:true});group.dispatchEvent(new CustomEvent('zaoz:scene-change',{bubbles:true,detail:{id:next.id}}));
@@ -35,14 +35,14 @@
  }
  const demos=[...document.querySelectorAll('[data-demo]')].map(shell=>({shell,frame:null,ready:false,visible:false,failed:false,timer:null}));
  const words={
-  en:{idle:'Interactive demo',loading:'Loading demo…',ready:'Live demo',paused:'Paused',failed:'Demo unavailable',retry:'Try again',expand:'Expand',close:'Close',error:'Unable to load. Try again or open the full app.'},
+  en:{idle:'Ready to explore',loading:'Loading…',ready:'Ready',paused:'Paused',failed:'Unable to load',retry:'Try again',expand:'Expand',close:'Close',error:'Unable to load. Try again or open the full app.'},
   zh:{idle:'可直接体验',loading:'正在载入…',ready:'正在体验',paused:'已暂停',failed:'暂时无法载入',retry:'重新载入',expand:'放大',close:'收起',error:'暂时无法载入，可重试或打开完整版。'}
  };
- let expanded=null,inertElements=[],returnFocus=null;
+ let expanded=null,inertElements=[],returnFocus=null,musicMounted=false;
  const language=()=>document.documentElement.lang.startsWith('zh')?'zh':'en';
  function labels(demo){
   const w=words[language()],{shell}=demo;
-  const state=demo.failed?'failed':!demo.frame?'idle':!demo.ready?'loading':demo.visible&&!document.hidden&&(!expanded||expanded===demo)?'ready':'paused';
+  const state=demo.failed?'failed':!demo.frame?'idle':!demo.ready?'loading':demo.visible&&!document.hidden&&!musicMounted&&(!expanded||expanded===demo)?'ready':'paused';
   shell.dataset.state=state;shell.querySelector('[data-live-state]').textContent=w[state];
   shell.querySelector('[data-loading-label]').textContent=demo.failed?w.error:w.loading;
   shell.querySelector('[data-retry]').textContent=w.retry;shell.querySelector('[data-retry]').hidden=!demo.failed;
@@ -50,12 +50,12 @@
   button.setAttribute('aria-pressed',String(expanded===demo));button.setAttribute('aria-label',(expanded===demo?w.close:w.expand)+' · '+shell.dataset.title);
  }
  function activate(demo){
-  const active=demo.ready&&demo.visible&&!document.hidden&&(!expanded||expanded===demo);
+  const active=demo.ready&&demo.visible&&!document.hidden&&!musicMounted&&(!expanded||expanded===demo);
   demo.frame?.contentWindow?.postMessage({type:'zaoz:embed-state',active},location.origin);labels(demo);
  }
  function load(demo){
   if(demo.frame)return;demo.failed=demo.ready=false;
-  const frame=demo.frame=document.createElement('iframe');frame.title=demo.shell.dataset.title+' · interactive demo';
+  const frame=demo.frame=document.createElement('iframe');frame.title=demo.shell.dataset.title+' · embedded experience';
   frame.allow='fullscreen; autoplay';frame.setAttribute('referrerpolicy','strict-origin-when-cross-origin');frame.src=demo.shell.dataset.src;
   const fail=()=>{if(!demo.ready){demo.failed=true;labels(demo);}};
   frame.addEventListener('error',fail);demo.shell.querySelector('.live-viewport').append(frame);
@@ -104,5 +104,6 @@
    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
   }
  });
+ document.addEventListener('zaoz:music-player',event=>{musicMounted=Boolean(event.detail?.mounted);demos.forEach(activate);});
  document.addEventListener('visibilitychange',()=>demos.forEach(activate));document.addEventListener('languagechange',()=>demos.forEach(labels));
 })();
