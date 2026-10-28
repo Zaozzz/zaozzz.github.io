@@ -1,0 +1,35 @@
+/* Motion follows the tide: native shapes, directional transitions, restrained points of light. */
+.brand-ambient{position:fixed;inset:0;z-index:0;width:100%;height:100%;pointer-events:none;contain:strict}
+.brand-header,#brand-main{position:relative;z-index:1}
+.hero-currents{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;color:#034b61;opacity:.065;overflow:hidden}
+.hero-currents path{fill:none;stroke:currentColor;stroke-width:1;stroke-dasharray:2 12;animation:current-flow 28s linear infinite}
+.hero-currents path:nth-child(2){animation-direction:reverse;animation-duration:34s;opacity:.7}
+.hero-currents path:nth-child(3){animation-duration:42s;opacity:.55}
+.hero-copy,.hero-art-wrap{z-index:1}
+.dawn-float,.dawn-parallax{position:absolute;inset:0}
+.dawn-float{animation:dawn-float 8s ease-in-out infinite;transform-origin:55% 55%}
+.dawn-parallax{transform:perspective(1100px) translate3d(var(--dawn-x,0px),var(--dawn-y,0px),0) rotateX(var(--dawn-rx,0deg)) rotateY(var(--dawn-ry,0deg));transition:transform 150ms ease-out;transform-origin:55% 55%;will-change:transform}
+.dawn-art{touch-action:pan-y}
+.dawn-spark{position:absolute;width:14px;height:14px;pointer-events:none;opacity:0;transform:scale(.5) rotate(45deg);animation:dawn-spark 7.8s ease-in-out infinite;color:#fff9ef}
+.dawn-spark:before,.dawn-spark:after{content:"";position:absolute;background:currentColor;border-radius:100%;box-shadow:0 0 8px #fff7ee44}
+.dawn-spark:before{left:6px;top:0;width:2px;height:14px}.dawn-spark:after{top:6px;left:0;height:2px;width:14px}
+.spark-one{left:76%;top:24%;animation-delay:1.2s}.spark-two{left:40%;top:58%;color:#bcf2e9;animation-delay:3.8s;width:10px;height:10px}.spark-three{left:22%;top:37%;color:#bc5f6a;animation-delay:6s}
+.dawn-art:hover .dawn-spark{animation-duration:4.8s}
+.brand-identity>img{transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.brand-identity:hover>img{transform:translateY(-2px) rotate(-4deg)}
+.brand-button,.personalos-product-title>img{transition:transform .35s cubic-bezier(.2,.8,.2,1),background .25s,border-color .25s}
+.brand-button:hover{transform:translateY(-2px)}
+.personalos-product-title:hover>img{transform:rotate(-5deg)}
+.brand-button>span,.quiet-link>span,.live-footer a>span,.about-links a>span{display:inline-block;transition:transform .25s ease}
+.brand-button:hover>span,.quiet-link:hover>span,.live-footer a:hover>span,.about-links a:hover>span{transform:translate(2px,-2px)}
+.footer-wordmark:hover .zaoz-wordmark-dot{animation:wordmark-nod .8s ease both}
+.scene-stage[data-switching=true]>article:not([hidden]){will-change:transform,opacity}
+.scene-stage>article[inert]{pointer-events:none}
+body[data-dawn-motion=paused] .dawn-float,body[data-dawn-motion=paused] .dawn-spark,body[data-dawn-motion=paused] .hero-currents path{animation-play-state:paused}
+body[data-dawn-motion=paused] .dawn-parallax{transform:none;transition:none}
+@keyframes dawn-float{0%,100%{transform:translate3d(0,0,0) rotate(-.2deg)}50%{transform:translate3d(0,-7px,0) rotate(.2deg)}}
+@keyframes dawn-spark{0%,62%,100%{opacity:0;transform:scale(.45) rotate(45deg)}70%{opacity:.75;transform:scale(1) rotate(45deg)}76%{opacity:0;transform:scale(1.2) rotate(45deg)}}
+@keyframes current-flow{to{stroke-dashoffset:-280}}
+@keyframes wordmark-nod{0%,100%{transform:translateY(0)}40%{transform:translateY(-.08em)}70%{transform:translateY(.02em)}}
+@media(max-width:780px){.dawn-float{animation-duration:9s}.dawn-parallax{will-change:auto}.hero-currents{opacity:.045}}
+@media(prefers-reduced-motion:reduce){.dawn-float,.dawn-spark,.hero-currents path,.footer-wordmark:hover .zaoz-wordmark-dot{animation:none!important}.dawn-parallax{transform:none!important;transition:none!important}.brand-identity>img,.brand-button,.personalos-product-title>img,.brand-button>span,.quiet-link>span,.live-footer a>span,.about-links a>span{transition:none!important;transform:none!important}}
