@@ -3,7 +3,8 @@
 文字标志使用 **ZAOZ.**，采用已确认的紧凑无衬线字体与圆点。普通正文中的品牌名称保持 ZAOZ，不加句点。
 
 - 字体：`-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif`；字重 500，行高 1。
-- 字距：`-.07em`；圆点直径 `.17em`，与文字同尺度缩放，默认铜色 `#C57955`。
+- 字距：`-.07em`；圆点直径 `.17em`，与文字同尺度缩放，统一使用红橙色 `#DF6841`，字母使用黑色 `#171717`。
+- 页头字标约 24px；页尾字标最高 112px。深色背景上使用浅色底承托，保持黑色字母。
 - 共用样式：`assets/zaoz-wordmark.css`，外层 `.zaoz-wordmark`，末尾 `.zaoz-wordmark-dot`。
 - 图形标识沿用 `zaoz-sunrise.png`；页头同时放图形与文字标志。不得把正文中的 ZAOZ 批量替换成字标。
 

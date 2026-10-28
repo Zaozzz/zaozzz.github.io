@@ -32,11 +32,12 @@
     previous.hidden=false;previous.inert=true;previous.setAttribute('aria-hidden','true');
     previous.style.position='absolute';previous.style.inset='0 auto auto '+oldLeft+'px';previous.style.width=oldWidth+'px';previous.style.pointerEvents='none';
     next.style.pointerEvents='none';stage.style.height=oldHeight+'px';stage.style.overflow='hidden';stage.dataset.switching='true';
-    const timing={duration:620,easing:'cubic-bezier(.22,.78,.2,1)'};
+    const distance=Math.min(72,stage.clientWidth*.075);
+    const timing={duration:460,easing:'cubic-bezier(.25,.8,.25,1)',fill:'both'};
     animations=[
      stage.animate([{height:oldHeight+'px'},{height:nextHeight+'px'}],timing),
-     previous.animate([{transform:fromTransform,opacity:fromOpacity},{transform:'translateX('+(-direction*100)+'%)',opacity:.28}],timing),
-     next.animate([existingNext||{transform:'translateX('+(direction*100)+'%)',opacity:.6},{transform:'translateX(0)',opacity:1}],timing)
+     previous.animate([{transform:fromTransform,opacity:fromOpacity},{transform:'translateX('+(-direction*distance)+'px)',opacity:0}],timing),
+     next.animate([existingNext||{transform:'translateX('+(direction*distance)+'px)',opacity:0},{transform:'translateX(0)',opacity:1}],timing)
     ];
     Promise.all(animations.map(a=>a.finished)).then(()=>{if(generation===current){clearMotion();group.dispatchEvent(new CustomEvent('zaoz:scene-settled',{bubbles:true,detail:{id:next.id}}));}}).catch(()=>{});
    }

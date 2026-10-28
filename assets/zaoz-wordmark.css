@@ -1,3 +1,3 @@
 /* ZAOZ wordmark: match the approved compact system-sans signature, always with a round full stop. */
-.zaoz-wordmark{position:relative;display:inline-block;padding-right:.2em;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;font-weight:500;font-style:normal;line-height:1;letter-spacing:-.07em;white-space:nowrap;text-transform:none;text-decoration:none}
-.zaoz-wordmark-dot{position:absolute;right:-.05em;bottom:.14em;display:block;width:.17em;height:.17em;border-radius:50%;background:var(--zaoz-dot,#c57955);color:transparent;overflow:hidden;line-height:1;letter-spacing:0}
+.zaoz-wordmark{position:relative;display:inline-block;padding-right:.26em;max-inline-size:100%;vertical-align:middle;color:#171717;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;font-weight:500;font-style:normal;line-height:1;letter-spacing:-.07em;white-space:nowrap;text-transform:none;text-decoration:none}
+.zaoz-wordmark-dot{position:absolute;right:.01em;bottom:.14em;display:block;width:.17em;height:.17em;border-radius:50%;background:var(--zaoz-dot,#df6841);color:transparent;overflow:hidden;line-height:1;letter-spacing:0}

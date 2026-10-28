@@ -664,6 +664,6 @@ body[data-theme=night] .sample-notice{color:#b8c4a7;border-color:#49523e}body[da
 .masthead .seal{width:32px;height:32px;flex:0 0 32px;display:block}.masthead .seal svg{display:block;width:100%;height:100%}
 .masthead .publisher-link{display:inline-flex!important;align-items:center;gap:9px;font-size:17px;line-height:1;color:#034b61;white-space:nowrap;text-decoration:none}
 .publisher-link img{display:block;width:44px;height:24px;object-fit:contain;flex:0 0 44px}.publisher-link .zaoz-wordmark{font-size:17px}
-body[data-theme=night] .publisher-link{color:#e7e5d4}body[data-theme=night] .publisher-link img{filter:invert(1) hue-rotate(180deg)}
+body[data-theme=night] .publisher-link{color:#171717;background:#f7f5f1;padding:5px 8px;border-radius:3px}body[data-theme=night] .publisher-link img{filter:none}
 @media(max-width:760px){body .masthead{column-gap:10px}.masthead .publisher-link{gap:7px}.publisher-link img{width:36px;height:22px;flex-basis:36px}.publisher-link .zaoz-wordmark{font-size:16px}}
 @media(max-width:360px){.masthead .brand{font-size:18px}.publisher-link img{width:30px;flex-basis:30px}.publisher-link .zaoz-wordmark{font-size:15px}}
