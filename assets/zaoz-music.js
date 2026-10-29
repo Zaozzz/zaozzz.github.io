@@ -103,7 +103,7 @@
     });
     timer = setTimeout(() => { if (current === frame) stop('failed'); }, 22000);
     labels();
-    room.dispatchEvent(new CustomEvent('zaoz:music-player', { bubbles: true, detail: { mounted: true, playlist: selected.id } }));
+    room.dispatchEvent(new CustomEvent('zaoz:music-player', { bubbles: true, detail: { mounted: true, engaged: reveal !== false, playlist: selected.id } }));
   }
   buttons.forEach((button, i) => {
     button.addEventListener('click', () => select(catalog[i].id));
@@ -117,6 +117,12 @@
     });
   });
   open.addEventListener('click', () => { manuallyClosed = Boolean(frame); load(); });
+  // A visible, idle player should not pause a game before the visitor uses it.
+  window.addEventListener('blur', () => setTimeout(() => {
+    if (!frame || document.hidden) return;
+    if (document.activeElement === frame) room.dispatchEvent(new CustomEvent('zaoz:music-player', { bubbles: true, detail: { mounted: true, engaged: true, playlist: selected.id } }));
+    else if (document.activeElement?.tagName === 'IFRAME') stop('away');
+  }, 0));
   document.addEventListener('languagechange', labels);
   reduced.addEventListener('change', () => { if (reduced.matches) swapAnimation?.cancel(); });
   document.addEventListener('visibilitychange', () => { if (document.hidden && frame) stop('away'); });

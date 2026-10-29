@@ -33,3 +33,8 @@ body[data-dawn-motion=paused] .dawn-parallax{transform:none;transition:none}
 @keyframes wordmark-nod{0%,100%{transform:translateY(0)}40%{transform:translateY(-.08em)}70%{transform:translateY(.02em)}}
 @media(max-width:780px){.dawn-float{animation-duration:9s}.dawn-parallax{will-change:auto}.hero-currents{opacity:.045}}
 @media(prefers-reduced-motion:reduce){.dawn-float,.dawn-spark,.hero-currents path,.footer-wordmark:hover .zaoz-wordmark-dot{animation:none!important}.dawn-parallax{transform:none!important;transition:none!important}.brand-identity>img,.brand-button,.personalos-product-title>img,.brand-button>span,.quiet-link>span,.live-footer a>span,.about-links a>span{transition:none!important;transform:none!important}}
+
+/* Click-driven scene changes use the same shallow depth as the product film. */
+.scene-stage[data-switching=true]{perspective:1600px;isolation:isolate}
+.scene-stage[data-switching=true] .live-demo{will-change:transform;backface-visibility:hidden}
+.scene-rail{transition-duration:.68s;transition-timing-function:cubic-bezier(.22,.82,.22,1)}

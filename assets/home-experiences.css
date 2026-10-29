@@ -43,3 +43,15 @@
 .home-record{padding:0;border:0;background:transparent}.home-music-player{margin-top:0}.home-listen-controls{margin-top:8px;padding-inline:4px}.home-music-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.home-listen[data-music-state=error] .home-music-status{position:static;width:auto;height:auto;margin:8px 0;clip-path:none;white-space:normal}.home-record:has(.home-music-player[hidden]){min-height:90px;padding-top:18px}
 .zaoz-integrated .closing{margin-top:54px;padding-top:28px;padding-bottom:180px}
 @media(max-width:620px){.zaoz-integrated .closing{margin-top:40px;padding-bottom:140px}.home-record{padding:0}.home-demo-viewport{height:380px}}
+
+/* The player card and the five playlist rows share the same visual bounds. */
+.home-listen{--home-player-height:350px}
+.home-music-player{height:var(--home-player-height);overflow:hidden;isolation:isolate}
+.home-music-player iframe{width:calc(100% + 20px);height:calc(var(--home-player-height) + 20px);max-width:none;position:relative;left:-10px;top:-10px}
+.home-playlist-choices{height:var(--home-player-height);display:grid;grid-template-rows:repeat(5,minmax(0,1fr))}
+.home-playlist-choice,.home-playlist-choice:first-child{padding:8px;min-height:0}
+.home-choice-title{line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.home-choice-detail{line-height:1.5;margin-top:2px}
+@media(max-width:620px){.home-playlist-choices{height:auto;grid-template-rows:none}.home-playlist-choice,.home-playlist-choice:first-child{min-height:64px;padding:10px 8px}.home-choice-title{display:block;overflow:visible}}
+.home-music-player{border-radius:3px;box-shadow:0 6px 18px #1a161210}
+.home-playlist-choice:first-child{border-top:1px solid var(--hairline-soft)}

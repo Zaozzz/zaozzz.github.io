@@ -12,7 +12,7 @@
    panels.forEach(panel=>{
     const active=panel===selected;panel.hidden=!active;panel.inert=!active;
     panel.setAttribute('aria-hidden',String(!active));
-    for(const key of ['position','inset','width','pointerEvents'])panel.style[key]='';
+    for(const key of ['position','inset','width','pointerEvents','zIndex','transformOrigin'])panel.style[key]='';
    });
    stage.style.height='';stage.style.overflow='';delete stage.dataset.switching;
   }
@@ -22,6 +22,7 @@
    const index=tabs.indexOf(tab),next=panels[index];if(next===selected){if(focus)tab.focus({preventScroll:true});return;}
    const previous=selected,oldIndex=panels.indexOf(previous),oldHeight=stage.getBoundingClientRect().height,oldLeft=previous?.offsetLeft||0,oldWidth=previous?.offsetWidth||0;
    const fromTransform=previous?getComputedStyle(previous).transform:'none',fromOpacity=previous?getComputedStyle(previous).opacity:'1';
+   const previousIntro=previous?.querySelector('.workspace-intro,.scenario-copy,.island-intro,.cinema-intro,.cosmos-intro'),introOpacity=previousIntro?getComputedStyle(previousIntro).opacity:'1';
    const existingNext=next&&!next.hidden?{transform:getComputedStyle(next).transform,opacity:getComputedStyle(next).opacity}:null;
    const direction=directionHint||Math.sign(index-oldIndex)||1,current=++generation;
    selected=next;clearMotion();
@@ -32,13 +33,23 @@
     previous.hidden=false;previous.inert=true;previous.setAttribute('aria-hidden','true');
     previous.style.position='absolute';previous.style.inset='0 auto auto '+oldLeft+'px';previous.style.width=oldWidth+'px';previous.style.pointerEvents='none';
     next.style.pointerEvents='none';stage.style.height=oldHeight+'px';stage.style.overflow='hidden';stage.dataset.switching='true';
-    const distance=Math.min(72,stage.clientWidth*.075);
-    const timing={duration:460,easing:'cubic-bezier(.25,.8,.25,1)',fill:'both'};
+    const distance=Math.min(240,stage.clientWidth*.2);
+    const timing={duration:680,easing:'cubic-bezier(.22,.82,.22,1)',fill:'both'};
+    previous.style.zIndex='1';next.style.position='relative';next.style.zIndex='2';
+    previous.style.transformOrigin=direction>0?'left center':'right center';
+    next.style.transformOrigin=direction>0?'right center':'left center';
     animations=[
      stage.animate([{height:oldHeight+'px'},{height:nextHeight+'px'}],timing),
-     previous.animate([{transform:fromTransform,opacity:fromOpacity},{transform:'translateX('+(-direction*distance)+'px)',opacity:0}],timing),
-     next.animate([existingNext||{transform:'translateX('+(direction*distance)+'px)',opacity:0},{transform:'translateX(0)',opacity:1}],timing)
+     previous.animate([
+      {transform:fromTransform,opacity:fromOpacity},
+      {transform:'translateX('+(-direction*distance*.8)+'px) scale(.965) rotateY('+(-direction*2)+'deg)',opacity:0}
+     ],{...timing,duration:300,easing:'cubic-bezier(.4,0,.2,1)'}),
+     next.animate([existingNext||{transform:'translateX('+(direction*distance)+'px) scale(.965) rotateY('+(direction*3)+'deg)',opacity:.55},{transform:'translateX('+(direction*distance*.35)+'px) scale(.985) rotateY('+(direction*.8)+'deg)',opacity:1,offset:.28},{transform:'translateX(0) scale(1) rotateY(0deg)',opacity:1}],timing)
     ];
+    const viewport=next.querySelector('.live-demo'),intro=next.querySelector('.workspace-intro,.scenario-copy,.island-intro,.cinema-intro,.cosmos-intro');
+    if(previousIntro)animations.push(previousIntro.animate([{opacity:introOpacity},{opacity:0}],{...timing,duration:180}));
+    if(viewport)animations.push(viewport.animate([{transform:'translateX('+(direction*distance*.16)+'px)'},{transform:'translateX(0)'}],{...timing,duration:700}));
+    if(intro)animations.push(intro.animate([{opacity:0,transform:'translate3d('+(direction*14)+'px,8px,0)'},{opacity:1,transform:'translate3d(0,0,0)'}],{...timing,duration:500,delay:90}));
     Promise.all(animations.map(a=>a.finished)).then(()=>{if(generation===current){clearMotion();group.dispatchEvent(new CustomEvent('zaoz:scene-settled',{bubbles:true,detail:{id:next.id}}));}}).catch(()=>{});
    }
    if(focus)tab.focus({preventScroll:true});group.dispatchEvent(new CustomEvent('zaoz:scene-change',{bubbles:true,detail:{id:next.id,previous:previous?.id,direction}}));
@@ -130,6 +141,6 @@
  });
  document.addEventListener('zaoz:scene-change',()=>demos.forEach(activate));
  document.addEventListener('zaoz:scene-settled',()=>demos.forEach(activate));
- document.addEventListener('zaoz:music-player',event=>{musicMounted=Boolean(event.detail?.mounted);demos.forEach(activate);});
+ document.addEventListener('zaoz:music-player',event=>{musicMounted=Boolean(event.detail?.mounted&&event.detail?.engaged!==false);demos.forEach(activate);});
  document.addEventListener('visibilitychange',()=>demos.forEach(activate));document.addEventListener('languagechange',()=>demos.forEach(labels));
 })();
