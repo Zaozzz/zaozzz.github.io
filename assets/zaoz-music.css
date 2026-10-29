@@ -83,3 +83,10 @@
 @media(prefers-reduced-motion:reduce){.music-pick,.music-pick>img{transition:none}}
 
 .music-record-info h4,.music-pick-copy b{text-wrap:balance}
+
+/* Opening the player replaces the record introduction in the same space. */
+.music-room[data-music-state=loading] .music-record,.music-room[data-music-state=open] .music-record{display:block;padding-top:0}
+.music-room[data-music-state=loading] .music-sleeve,.music-room[data-music-state=open] .music-sleeve,.music-room[data-music-state=loading] .music-record-info,.music-room[data-music-state=open] .music-record-info{display:none}
+.music-record .music-player-shell{width:100%;max-width:440px;margin-inline:auto;border:0;background:transparent}
+.music-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:-1px}
+.music-room[data-music-phase=failed] .music-status{position:static;width:auto;height:auto;clip-path:none;margin:12px 0 0}

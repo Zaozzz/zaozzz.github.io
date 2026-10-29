@@ -17,15 +17,17 @@
   const mount = pick('[data-music-player]');
   const cover = pick('[data-music-cover]');
   const record = pick('.music-record');
+  record.prepend(mount);
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const open = pick('[data-music-open]');
-  let selected = catalog[0], frame = null, timer = null, phase = 'initial', swapAnimation = null;
+  let selected = catalog[0], frame = null, timer = null, phase = 'initial', swapAnimation = null, manuallyClosed = false;
   const lang = () => document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
   const title = item => item[lang()];
   const href = item => 'https://music.163.com/#/playlist?id=' + item.id;
 
   function labels() {
     const locale = lang(), w = words[locale];
+    room.dataset.musicPhase = phase;
     room.querySelectorAll('[data-music-copy]').forEach(el => { el.textContent = w[el.dataset.musicCopy] || ''; });
     pick('[data-music-title]').textContent = title(selected);
     pick('[data-music-category]').textContent = selected.category[locale];
@@ -68,9 +70,11 @@
     if (!reduced.matches && record.animate) {
       swapAnimation = record.animate([{ opacity: .22 }, { opacity: 1 }], { duration: 280, easing: 'ease-out' });
     }
+    manuallyClosed = false;
+    load(false);
     room.dispatchEvent(new CustomEvent('zaoz:music-change', { bubbles: true, detail: { playlist: item.id } }));
   }
-  function load() {
+  function load(reveal = true) {
     if (frame) { stop(); return; }
     const w = words[lang()];
     phase = 'loading';
@@ -95,7 +99,7 @@
     });
     mount.append(frame);
     requestAnimationFrame(() => {
-      if (current === frame) mount.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      if (reveal !== false && current === frame) mount.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
     });
     timer = setTimeout(() => { if (current === frame) stop('failed'); }, 22000);
     labels();
@@ -112,7 +116,7 @@
       if (next !== undefined) { event.preventDefault(); buttons[next].focus(); select(catalog[next].id); }
     });
   });
-  open.addEventListener('click', load);
+  open.addEventListener('click', () => { manuallyClosed = Boolean(frame); load(); });
   document.addEventListener('languagechange', labels);
   reduced.addEventListener('change', () => { if (reduced.matches) swapAnimation?.cancel(); });
   document.addEventListener('visibilitychange', () => { if (document.hidden && frame) stop('away'); });
@@ -128,7 +132,8 @@
   // never removes the player. It is removed only after the entire room leaves view.
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
-      if (!entries[0].isIntersecting && frame) stop('away');
+      if (entries[0].isIntersecting && !frame && !manuallyClosed && !document.hidden) load(false);
+      else if (!entries[0].isIntersecting && frame) stop('away');
     }, { threshold: 0, rootMargin: '180px 0px' });
     observer.observe(room);
   }
