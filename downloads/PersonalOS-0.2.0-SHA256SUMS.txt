@@ -1,0 +1,2 @@
+646432904d509527f13caa99f7626697443beb8c52cc4f3324d92efb906eed0b  PersonalOS-0.2.0-macOS-universal.dmg
+3d12701a9713282ce8fc8732ce2a3d7968c3bc801062546e69ed486b18c40cc2  PersonalOS-0.2.0-macOS-universal.zip

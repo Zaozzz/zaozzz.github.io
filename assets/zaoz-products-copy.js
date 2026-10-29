@@ -2,6 +2,11 @@
 (() => {
  const copy=window.ZAOZ_ZH;if(!copy)return;
  Object.assign(copy.text,{
+  "ZAOZ is my independent brand for personal decision tools, small games, and music.":"ZAOZ 是我发起的独立品牌，做个人决策工具、小游戏，也分享喜欢的音乐。",
+  "Read the idea behind ZAOZ":"展开品牌理念",
+  "ZAOZ explores proactive AI for individuals, especially people with a lot to handle and information they need to keep under their own control. With clearly chosen access, it should help organize information, arrange time, and take care of routine work.":"我们想做面向个人的主动 AI，尤其帮助事情繁多、又需要亲自掌握重要信息的人。它应当在明确授权的范围内整理资料、安排时间、处理重复事务。",
+  "The tools should make options, evidence, and trade-offs easier to understand. The final call on an important decision stays with the person. What is stored, and what is shared with a model, should be visible and optional.":"工具负责把选项、依据和代价摆清楚。重要决定的最后一步，始终留给本人。数据怎样保存、哪些内容交给模型，也应该看得见、选得了。",
+  "Time saved should also make room for living: a small game, a few songs, or a sunrise. ZAOZ brings decision tools, games, and music into one brand so there is space both for important work and for an ordinary, happier day.":"省下来的时间，不必继续塞满工作。可以玩一会小游戏，听几首歌，或者去看一次日出。ZAOZ 把个人决策工具、游戏与音乐放在同一个品牌里，让人既能专注重要的事，也有余地过好日常。",
   'Skip to content':'跳至正文',
   'Decide & act':'决策与行动',
   'Games & music':'小游戏与音乐',

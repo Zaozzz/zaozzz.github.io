@@ -63404,4 +63404,5 @@ function init(){
 async function exportImage(){if(!LuoPan3D.capture){notify('当前浏览器无法导出 3D，请开启图形加速');return}const btn=$('export');btn.disabled=true;try{const canvas=document.createElement('canvas');canvas.width=1500;canvas.height=1400;const ctx=canvas.getContext('2d');ctx.fillStyle='#09131f';ctx.fillRect(0,0,1500,1400);ctx.textAlign='center';ctx.fillStyle='#d9bc82';ctx.font='40px serif';ctx.fillText('玄 象 · 八卦罗盘',750,75);ctx.font='16px sans-serif';ctx.fillStyle='#8fa6bb';ctx.fillText((LuoPan3D.getState().order==='later'?'后天八卦':'先天八卦')+' / '+C.trigrams[currentTrigram].name+' · '+C.trigrams[currentTrigram].image,750,115);ctx.drawImage(LuoPan3D.capture(1500,1200),0,140);ctx.fillStyle='#91a6b8';ctx.font='16px sans-serif';ctx.fillText('传统文化交互探索 / XUANXIANG',750,1360);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw Error('导出失败');const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='玄象八卦罗盘.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),20000);notify('已导出当前视角的罗盘图片')}catch(e){notify('未能导出，请刷新页面后重试')}finally{btn.disabled=false}}
 window.XuanApp={readInput,calculate,sample,setTab,selectTrigram,renderHex,getResult:()=>result,getFortune:()=>C.annual(result,fortuneYear)};
 init();
-</script></body></html>
+</script><script src="/assets/demo-typography.js?v=1"></script>
+</body></html>

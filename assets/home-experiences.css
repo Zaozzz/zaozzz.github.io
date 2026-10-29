@@ -55,3 +55,12 @@
 @media(max-width:620px){.home-playlist-choices{height:auto;grid-template-rows:none}.home-playlist-choice,.home-playlist-choice:first-child{min-height:64px;padding:10px 8px}.home-choice-title{display:block;overflow:visible}}
 .home-music-player{border-radius:3px;box-shadow:0 6px 18px #1a161210}
 .home-playlist-choice:first-child{border-top:1px solid var(--hairline-soft)}
+
+/* A concise brand introduction closes the homepage; the idea opens on demand. */
+#zaoz .zaoz-summary{font-size:14px;line-height:1.85;margin-bottom:12px;max-width:580px}
+.zaoz-philosophy{margin:16px 0 0;color:var(--ink-mute);font:12px/1.9 var(--font-sans);max-width:610px}
+.zaoz-philosophy summary{cursor:pointer;width:fit-content;color:var(--ink-soft);text-underline-offset:4px;min-height:32px;padding:4px 0}
+.zaoz-philosophy[open] summary{margin-bottom:10px}.zaoz-philosophy summary:hover{text-decoration:underline}
+.zaoz-philosophy p{margin:0 0 12px;font-size:12px;line-height:1.9}.zaoz-philosophy p:last-child{margin-bottom:0}
+.zaoz-philosophy+.personalos-starter-inline{margin-top:16px}
+@media(max-width:620px){#zaoz .zaoz-feature-copy{text-align:left}#zaoz .zaoz-summary{font-size:13px}.zaoz-philosophy,.zaoz-philosophy p{font-size:11.5px}}
