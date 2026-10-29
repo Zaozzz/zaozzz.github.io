@@ -1,0 +1,92 @@
+{
+  "name": "PersonalOS Starter",
+  "version": "1.0.0",
+  "data": "Empty workspace; optional examples are fictional.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 61,
+      "sha256": "ebd3295f72d7cdae50e189ab7b5d07cc3945f005fd2c9f0f2820fe7742457e9b"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2420,
+      "sha256": "6a8487f5a3b10b9c2b96f041f535cb7c709377cb3655af2c39a6af1e67b29a10"
+    },
+    {
+      "path": "PROMPT.md",
+      "bytes": 3155,
+      "sha256": "b5ad6903408308670a2aa14a146dd5a4e5d26e1058b1741d6b5c2c975dacb7b5"
+    },
+    {
+      "path": "PROMPT_EN.md",
+      "bytes": 3223,
+      "sha256": "6cd60c269ab982ac3bc842d25cca1e94cf18266554175ec8e1d7d0de75ddc524"
+    },
+    {
+      "path": "PersonalOS.html",
+      "bytes": 42032,
+      "sha256": "d63ded95c51c2646ebd9fccb83f571bff3fbc3389544a0cd228d927fc5994a3f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4104,
+      "sha256": "664f792d3ab3c2cb3aab765af0d45d3edc741b814e31db065c14e0608d1e59a8"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 2626,
+      "sha256": "5e5c275007debfbeafed8af632f513c6c11846d139a062c6e2f1d562a9b9354c"
+    },
+    {
+      "path": "VERSION",
+      "bytes": 6,
+      "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03"
+    },
+    {
+      "path": "backups/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/FORMAT.md",
+      "bytes": 2566,
+      "sha256": "8ac1b86c3d306f1e6e013eb061f76c7539891c327e7b202ac52032164c4eddff"
+    },
+    {
+      "path": "data/personal-os.json",
+      "bytes": 314,
+      "sha256": "e385b1a5dfaa4472e6364b87216d8f8ffdf8c430db369e8917a02256e38a0843"
+    },
+    {
+      "path": "examples/fictional-person.json",
+      "bytes": 3332,
+      "sha256": "119a81da24c250ef11b5f15a86206ec24427152b2df56d8ff8c3ea7f0afe5560"
+    },
+    {
+      "path": "notes/DAILY_REVIEW.md",
+      "bytes": 459,
+      "sha256": "56bca67c673edd72cbdc529e2cd15ef73fef448608e1b8fad5684e22c1d84ece"
+    },
+    {
+      "path": "notes/DECISION.md",
+      "bytes": 465,
+      "sha256": "195422831b8fd9558cc1d7c691941ccb9ee01f63a9fc60d74ca4644de67559fb"
+    },
+    {
+      "path": "notes/GOALS.md",
+      "bytes": 415,
+      "sha256": "e28b13e3390a5e443ea3cbe2d12058773dddcc233d8e4c530c7f0fe66814874d"
+    },
+    {
+      "path": "notes/PERSON.md",
+      "bytes": 506,
+      "sha256": "25500eb83079253bb92d8bf3b7bdd8e3ec9c508a45f3284c784d4dc0f239d8e0"
+    },
+    {
+      "path": "tools/validate.py",
+      "bytes": 5917,
+      "sha256": "5bc1ab9cac91ef67c2e0d233b2cc79d24b720f0e406165867294f3a79b7442e1"
+    }
+  ]
+}

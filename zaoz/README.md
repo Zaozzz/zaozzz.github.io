@@ -140,3 +140,11 @@ ZAOZ 同时希望探索轻松、有温度、可以随时开始和结束的游戏
 **ZAOZ — Build What Matters.**
 
 让重要的事情得到专注，也让快乐的生活拥有空间。
+
+## 自己搭建一个简易 PersonalOS
+
+[下载 PersonalOS Starter 1.0.0](https://zaozzz.github.io/downloads/PersonalOS-Starter-1.0.0.zip) · [搭建与使用指南](https://zaozzz.github.io/zaoz/personalos/start/?lang=zh) · [搭建 Prompt](personalos/starter-kit/PROMPT.md)
+
+解压后双击 `PersonalOS.html` 即可使用。基础包包含空白资料、虚构示例、任务／日程／记录／决策功能、JSON 导入导出，以及供 Trae、Cursor 等 AI 编辑器读取的协作说明和资料模板。网页不包含大模型，首次使用不需要安装运行环境。
+
+用 AI 编辑器打开整个文件夹，粘贴 `PROMPT.md`，让 AI 根据本人提供的信息更新 `data/personal-os.json` 和笔记，再手动导入网页。网页新记录需要导出并保存回工作区，AI 才能继续读取；浏览器与文件不会自动同步。日历导出需要自行导入系统日历，网页关闭后没有后台提醒。

@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "PersonalOS",
+    "updatedAt": null,
+    "fictional": true
+  },
+  "profile": {
+    "name": "周禾",
+    "role": "独立设计师 · 虚构人物",
+    "focus": "本周先完成现有项目，并留出学习和休息时间。",
+    "notes": "全部资料和记录均为虚构示例。"
+  },
+  "settings": {
+    "dailyMinutes": 240
+  },
+  "tasks": [
+    {
+      "id": "task-example-1",
+      "title": "完成订单流程原型",
+      "project": "示例设计项目",
+      "priority": "high",
+      "plannedMinutes": 45,
+      "actualMinutes": null,
+      "due": "2026-10-29",
+      "status": "partial",
+      "nextStep": "先补齐退款页的错误提示。",
+      "notes": "已完成下单流程，退款流程仍在进行。"
+    },
+    {
+      "id": "task-example-2",
+      "title": "阅读一篇设计文章",
+      "project": "学习",
+      "priority": "normal",
+      "plannedMinutes": 25,
+      "actualMinutes": null,
+      "due": "",
+      "status": "planned",
+      "nextStep": "选一篇文章，记下三个观察。",
+      "notes": ""
+    },
+    {
+      "id": "task-example-3",
+      "title": "午后步行",
+      "project": "生活",
+      "priority": "normal",
+      "plannedMinutes": 20,
+      "actualMinutes": 20,
+      "due": "2026-10-29",
+      "status": "done",
+      "nextStep": "",
+      "notes": "已步行二十分钟。"
+    }
+  ],
+  "schedule": [
+    {
+      "id": "schedule-example-1",
+      "date": "2026-10-29",
+      "start": "09:30",
+      "end": "10:15",
+      "title": "原型设计",
+      "notes": "计划时段，不代表实际工作时长。"
+    },
+    {
+      "id": "schedule-example-2",
+      "date": "2026-10-29",
+      "start": "15:30",
+      "end": "15:50",
+      "title": "步行",
+      "notes": "可以根据当天情况调整。"
+    }
+  ],
+  "records": [
+    {
+      "id": "record-example-1",
+      "date": "2026-10-29",
+      "kind": "study",
+      "title": "阅读设计案例",
+      "minutes": 25,
+      "amount": null,
+      "notes": "虚构记录：整理了两处交互细节。"
+    },
+    {
+      "id": "record-example-2",
+      "date": "2026-10-29",
+      "kind": "expense",
+      "title": "午餐",
+      "minutes": null,
+      "amount": 28,
+      "notes": "虚构支出。"
+    },
+    {
+      "id": "record-example-3",
+      "date": "2026-10-29",
+      "kind": "health",
+      "title": "身体状态",
+      "minutes": null,
+      "amount": null,
+      "notes": "尚未记录具体睡眠和身体数据。"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "decision-example-1",
+      "title": "是否承接一个新项目",
+      "context": "新邀约与当前交付时间可能重叠，需要先核实范围和工期。",
+      "options": [
+        {
+          "id": "option-a",
+          "label": "先沟通范围与工期",
+          "benefit": "补齐信息，保留后续选择。",
+          "cost": "需要安排一次沟通。"
+        },
+        {
+          "id": "option-b",
+          "label": "本周先完成现有交付",
+          "benefit": "维持现有项目的进度。",
+          "cost": "新项目可能需要推迟或放弃。"
+        }
+      ],
+      "status": "open",
+      "selectedId": null,
+      "confirmedAt": null,
+      "reviewAt": "",
+      "reason": "",
+      "history": []
+    }
+  ]
+}

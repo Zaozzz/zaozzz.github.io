@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "PersonalOS",
+    "updatedAt": null,
+    "fictional": false
+  },
+  "profile": {
+    "name": "",
+    "role": "",
+    "focus": "",
+    "notes": ""
+  },
+  "settings": {
+    "dailyMinutes": 240
+  },
+  "tasks": [],
+  "schedule": [],
+  "records": [],
+  "decisions": []
+}

@@ -1,0 +1,217 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f7f2"><title>PersonalOS · 基础版</title><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQZXJzb25hbCBPUyDovajpgZNQ5qCH5b+XIj48cmVjdCB4PSIxIiB5PSIxIiB3aWR0aD0iNjIiIGhlaWdodD0iNjIiIHJ4PSIxOCIgZmlsbD0iIzVjMmU5MSIvPjxlbGxpcHNlIGN4PSIzMiIgY3k9IjMyIiByeD0iMjciIHJ5PSIxOSIgdHJhbnNmb3JtPSJyb3RhdGUoLTMyIDMyIDMyKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmNhMWQ5IiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9Ii42NSIvPjxwYXRoIGQ9Ik0yMyA0N1YxOGgxMWMxNSAwIDE1IDE5IDAgMTloLTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmFmMSIgc3Ryb2tlLXdpZHRoPSI2LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMTciIHI9IjQiIGZpbGw9IiNmMGRjYjYiLz48L3N2Zz4="><style>:root{--paper:#f8f7f2;--panel:#fffefb;--ink:#27372d;--muted:#74816e;--line:#dde2d7;--purple:#5c2e91;--wash:#ede6f5;--green:#e8efdd;--radius:14px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color-scheme:light}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-size:14px;line-height:1.7}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible{outline:2px solid var(--purple);outline-offset:3px}[hidden]{display:none!important}h1,h2,h3,p{margin:0}button{color:inherit}.header{border-bottom:1px solid var(--line);background:#fffefbe8;backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}.header-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 30px}.brand{display:flex;align-items:center;gap:11px;font-family:Georgia,"Songti SC",serif;font-size:23px;white-space:nowrap}.brand img{width:33px;height:33px}.tag{font:10px/1.4 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;color:var(--muted);border:1px solid var(--line);padding:3px 7px;border-radius:20px}.tools{display:flex;gap:8px}.btn{border:1px solid var(--line);background:var(--panel);border-radius:8px;min-height:38px;padding:7px 13px;font-size:12px}.btn.primary{background:var(--purple);border-color:var(--purple);color:#fff}.btn.quiet{background:transparent}.btn:hover{filter:brightness(.98)}.shell{max-width:1100px;margin:auto;padding:18px 30px 70px}.subline{display:flex;gap:16px;align-items:center;justify-content:space-between;color:var(--muted);font-size:11px;margin-bottom:20px}.status-error{color:#a14235}.tabs{display:flex;gap:8px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:30px;overflow-x:auto}.tab{border:0;background:none;border-radius:8px;padding:8px 18px;min-height:40px;color:var(--muted);white-space:nowrap}.tab[aria-selected=true]{background:var(--green);color:var(--ink)}.view-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:24px}.eyebrow{font-size:10px;letter-spacing:1.5px;color:var(--muted);margin-bottom:9px}h1{font:400 38px/1.3 Georgia,"Songti SC",serif;letter-spacing:-1px}h2{font-size:16px;font-weight:500}h3{font-size:15px;font-weight:500}.date{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:6px 12px;color:var(--muted);max-width:100%}.meta{font-size:11px;color:var(--muted);line-height:1.7}.intro{font-size:13px;color:var(--muted);margin-top:10px;max-width:640px}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:22px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}.stat small{color:var(--muted);font-size:11px}.stat b{display:block;font:400 28px/1.3 Georgia,serif;margin-top:7px}.columns{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,1fr);gap:22px;align-items:start}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;min-width:0}.card+.card{margin-top:18px}.card-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}.focus{background:linear-gradient(125deg,#edf3df,#f9f2df);border-color:#dbe4ca}.focus h2{font:400 24px/1.5 Georgia,"Songti SC",serif;margin:12px 0}.focus .next{font-size:13px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.empty{padding:24px 0;color:var(--muted);font-size:13px;line-height:1.9}.task{padding:18px 0;border-top:1px solid var(--line)}.task:first-child{border-top:0;padding-top:0}.task:last-child{padding-bottom:0}.task-top{display:flex;align-items:start;gap:14px;justify-content:space-between}.task h3{overflow-wrap:anywhere}.task small{font-size:10px;color:var(--muted)}.task-note{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--muted);margin-top:7px}.task-controls{display:flex;align-items:center;gap:8px;margin-top:12px}.task-controls select{max-width:160px;background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:5px 10px;font-size:12px}.text-btn{border:0;background:none;text-decoration:underline;text-underline-offset:4px;font-size:11px;color:var(--muted);padding:6px 0;min-height:32px}.pill{border-radius:20px;background:var(--wash);color:var(--purple);font-size:10px;padding:3px 8px;white-space:nowrap}.schedule-row,.record-row{border-top:1px solid var(--line);padding:15px 0;display:grid;grid-template-columns:95px minmax(0,1fr) auto;gap:12px;align-items:start}.schedule-row:first-child,.record-row:first-child{border-top:0}.time{font-size:11px;color:var(--muted);white-space:nowrap}.row-title{font-size:13px;overflow-wrap:anywhere}.decision{margin-bottom:18px}.decision p{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;color:var(--muted);margin-top:10px}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}.option{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px}.option.selected{border-color:#8ca272;background:var(--green)}.option .meta{margin:9px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}.footer{display:flex;align-items:center;justify-content:space-between;margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:10px;color:var(--muted);gap:18px}.wordmark{font:500 18px/1 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;letter-spacing:-.07em;text-decoration:none;color:#171717;display:inline-flex;align-items:baseline}.wordmark i{display:inline-block;width:.17em;height:.17em;border-radius:50%;background:#df6841;margin-left:.055em;transform:translateY(-.02em)}dialog{border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--ink);padding:24px;width:min(580px,calc(100% - 32px));max-height:90svh;overflow-y:auto;box-shadow:0 25px 100px #13221933}dialog::backdrop{background:#1a2a2455;backdrop-filter:blur(3px)}.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}.close{border:0;background:none;font-size:22px;min-width:36px;min-height:36px}.form{display:grid;gap:14px}.form label{display:grid;gap:5px;font-size:12px;color:var(--muted)}input,select,textarea{min-width:0;width:100%;border:1px solid var(--line);border-radius:8px;background:#fffefb;color:var(--ink);padding:9px 11px;font-size:13px}textarea{resize:vertical;min-height:78px}.form-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form .actions{justify-content:flex-end;margin-top:8px}.form-error{color:#a14235;font-size:12px;min-height:16px}.notice{padding:12px 16px;background:var(--wash);border-radius:10px;font-size:12px;line-height:1.8;margin-bottom:18px}.notice p+p{margin-top:10px}.profile-summary{display:grid;gap:12px}.profile-summary dt{font-size:11px;color:var(--muted)}.profile-summary dd{margin:3px 0 0;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:30;width:max-content;max-width:calc(100% - 32px);background:var(--ink);color:white;padding:11px 18px;border-radius:9px;box-shadow:0 6px 24px #0002;font-size:12px}details{font-size:12px;color:var(--muted)}details summary{cursor:pointer}details p{margin-top:9px}.health-note{font-size:12px;color:var(--muted);line-height:1.8}.checklist{margin:0;padding-left:20px;font-size:13px;color:var(--muted);line-height:2}
+@media(max-width:740px){.brand .tag{display:none}.header-inner{padding:14px 20px;gap:12px;flex-wrap:wrap}.brand{font-size:21px}.tools{margin-left:auto}.tools .btn{padding:6px 10px;min-height:36px;font-size:11px}.shell{padding:16px 20px 55px}.columns{grid-template-columns:1fr;gap:18px}.stats{gap:9px}.stat{padding:13px 11px}.stat b{font-size:23px}.stat small{font-size:10px}.view-head{align-items:start;flex-wrap:wrap}h1{font-size:32px}.card{padding:18px}.options{grid-template-columns:1fr}.subline{align-items:start;font-size:10px;gap:10px}.tabs{gap:4px;margin-bottom:24px}.tab{padding:8px 13px;font-size:13px}.schedule-row,.record-row{grid-template-columns:75px minmax(0,1fr) auto;gap:8px}.footer{align-items:start}.form-pair{grid-template-columns:1fr}.focus h2{font-size:22px}}@media(max-width:370px){.header-inner{padding-inline:16px}.brand .tag{display:none}.shell{padding-inline:16px}.brand{font-size:19px;gap:8px}.brand img{width:28px;height:28px}.tools{gap:5px}.tools .btn{padding-inline:8px}.stat small{font-size:9px}.tab{padding-inline:10px}.schedule-row,.record-row{grid-template-columns:68px minmax(0,1fr) auto}}@media(prefers-reduced-motion:no-preference){.btn,.tab{transition:background .2s,border-color .2s}.card{animation:enter .3s ease both}@keyframes enter{from{opacity:.6;transform:translateY(5px)}to{opacity:1;transform:none}}}
+</style></head><body>
+<header class="header"><div class="header-inner"><div class="brand"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQZXJzb25hbCBPUyDovajpgZNQ5qCH5b+XIj48cmVjdCB4PSIxIiB5PSIxIiB3aWR0aD0iNjIiIGhlaWdodD0iNjIiIHJ4PSIxOCIgZmlsbD0iIzVjMmU5MSIvPjxlbGxpcHNlIGN4PSIzMiIgY3k9IjMyIiByeD0iMjciIHJ5PSIxOSIgdHJhbnNmb3JtPSJyb3RhdGUoLTMyIDMyIDMyKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmNhMWQ5IiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9Ii42NSIvPjxwYXRoIGQ9Ik0yMyA0N1YxOGgxMWMxNSAwIDE1IDE5IDAgMTloLTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmFmMSIgc3Ryb2tlLXdpZHRoPSI2LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMTciIHI9IjQiIGZpbGw9IiNmMGRjYjYiLz48L3N2Zz4=" alt="PersonalOS">PersonalOS <span class="tag">基础版 1.0</span></div><div class="tools"><button class="btn quiet" id="importButton">导入</button><button class="btn quiet" id="exportButton">导出</button><button class="btn" id="profileButton">资料</button></div></div></header>
+<main class="shell"><div class="subline"><span id="workspaceLabel">空白工作区</span><span id="saveStatus" role="status">尚未修改</span></div><div class="tabs" role="tablist" aria-label="PersonalOS 功能"><button class="tab" role="tab" aria-selected="true" id="tab-today" aria-controls="view-today" data-view="today">今天</button><button class="tab" role="tab" aria-selected="false" id="tab-schedule" aria-controls="view-schedule" data-view="schedule" tabindex="-1">日程</button><button class="tab" role="tab" aria-selected="false" id="tab-records" aria-controls="view-records" data-view="records" tabindex="-1">记录</button><button class="tab" role="tab" aria-selected="false" id="tab-decisions" aria-controls="view-decisions" data-view="decisions" tabindex="-1">决策</button></div>
+<div class="view-head"><div><h1 id="viewTitle">今天</h1><p class="intro" id="profileFocus">先安排几件重要的事，再记录实际发生了什么。</p></div><label><span class="meta">查看日期</span><input class="date" type="date" id="dayInput" aria-label="查看日期"></label></div>
+<div id="fictionalNote" class="notice" hidden>当前是虚构人物与示例记录。导入自己的资料或新建空白工作区后再正式使用。</div>
+<section id="view-today" role="tabpanel" aria-labelledby="tab-today"><div class="stats" id="stats"></div><div class="columns"><div><div class="card focus" id="focusCard"></div><div class="card"><div class="card-head"><h2>任务</h2><button class="btn" id="addTask">新增任务</button></div><div id="taskList"></div></div></div><aside><div class="card"><div class="card-head"><h2>当天安排</h2><button class="text-btn" data-switch="schedule">查看日程</button></div><div id="todaySchedule"></div></div><div class="card"><div class="card-head"><h2>记一条</h2><button class="btn" id="quickRecord">新增记录</button></div><p class="health-note">写下实际用时、支出、身体感受或今天的观察。没有报告的数据可以留空。</p></div></aside></div></section>
+<section id="view-schedule" role="tabpanel" aria-labelledby="tab-schedule" hidden><div class="card"><div class="card-head"><h2>日程</h2><div class="actions" style="margin:0"><button class="btn quiet" id="calendarExport">导出日历</button><button class="btn" id="addSchedule">新增安排</button></div></div><div id="scheduleList"></div></div><p class="meta" style="margin-top:14px">安排表示计划。日历文件需要手动导入系统日历；提醒是否弹出由日历应用的权限和设置决定。</p></section>
+<section id="view-records" role="tabpanel" aria-labelledby="tab-records" hidden><div class="card"><div class="card-head"><h2>当天记录</h2><button class="btn" id="addRecord">新增记录</button></div><div id="recordList"></div></div></section>
+<section id="view-decisions" role="tabpanel" aria-labelledby="tab-decisions" hidden><div class="card-head"><h2>待比较与已确认的方案</h2><button class="btn" id="addDecision">新增决策</button></div><div id="decisionList"></div></section>
+<footer class="footer"><a class="wordmark" href="https://zaozzz.github.io/zaoz/" target="_blank" rel="noopener noreferrer" aria-label="ZAOZ">ZAOZ<i aria-hidden="true"></i></a><span>记录保存在当前浏览器。请定期导出 JSON；网页不会自动改写文件夹中的文件。</span></footer></main>
+<dialog id="modal" aria-labelledby="modalTitle"><div class="dialog-head"><h2 id="modalTitle"></h2><button class="close" id="closeModal" aria-label="关闭">×</button></div><div id="modalBody"></div></dialog><input id="importFile" type="file" accept="application/json,.json" hidden><div id="toast" role="status" aria-live="polite" hidden></div><script type="application/json" id="blankData">{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "PersonalOS",
+    "updatedAt": null,
+    "fictional": false
+  },
+  "profile": {
+    "name": "",
+    "role": "",
+    "focus": "",
+    "notes": ""
+  },
+  "settings": {
+    "dailyMinutes": 240
+  },
+  "tasks": [],
+  "schedule": [],
+  "records": [],
+  "decisions": []
+}
+</script><script type="application/json" id="exampleData">{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "PersonalOS",
+    "updatedAt": null,
+    "fictional": true
+  },
+  "profile": {
+    "name": "周禾",
+    "role": "独立设计师 · 虚构人物",
+    "focus": "本周先完成现有项目，并留出学习和休息时间。",
+    "notes": "全部资料和记录均为虚构示例。"
+  },
+  "settings": {
+    "dailyMinutes": 240
+  },
+  "tasks": [
+    {
+      "id": "task-example-1",
+      "title": "完成订单流程原型",
+      "project": "示例设计项目",
+      "priority": "high",
+      "plannedMinutes": 45,
+      "actualMinutes": null,
+      "due": "2026-10-29",
+      "status": "partial",
+      "nextStep": "先补齐退款页的错误提示。",
+      "notes": "已完成下单流程，退款流程仍在进行。"
+    },
+    {
+      "id": "task-example-2",
+      "title": "阅读一篇设计文章",
+      "project": "学习",
+      "priority": "normal",
+      "plannedMinutes": 25,
+      "actualMinutes": null,
+      "due": "",
+      "status": "planned",
+      "nextStep": "选一篇文章，记下三个观察。",
+      "notes": ""
+    },
+    {
+      "id": "task-example-3",
+      "title": "午后步行",
+      "project": "生活",
+      "priority": "normal",
+      "plannedMinutes": 20,
+      "actualMinutes": 20,
+      "due": "2026-10-29",
+      "status": "done",
+      "nextStep": "",
+      "notes": "已步行二十分钟。"
+    }
+  ],
+  "schedule": [
+    {
+      "id": "schedule-example-1",
+      "date": "2026-10-29",
+      "start": "09:30",
+      "end": "10:15",
+      "title": "原型设计",
+      "notes": "计划时段，不代表实际工作时长。"
+    },
+    {
+      "id": "schedule-example-2",
+      "date": "2026-10-29",
+      "start": "15:30",
+      "end": "15:50",
+      "title": "步行",
+      "notes": "可以根据当天情况调整。"
+    }
+  ],
+  "records": [
+    {
+      "id": "record-example-1",
+      "date": "2026-10-29",
+      "kind": "study",
+      "title": "阅读设计案例",
+      "minutes": 25,
+      "amount": null,
+      "notes": "虚构记录：整理了两处交互细节。"
+    },
+    {
+      "id": "record-example-2",
+      "date": "2026-10-29",
+      "kind": "expense",
+      "title": "午餐",
+      "minutes": null,
+      "amount": 28,
+      "notes": "虚构支出。"
+    },
+    {
+      "id": "record-example-3",
+      "date": "2026-10-29",
+      "kind": "health",
+      "title": "身体状态",
+      "minutes": null,
+      "amount": null,
+      "notes": "尚未记录具体睡眠和身体数据。"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "decision-example-1",
+      "title": "是否承接一个新项目",
+      "context": "新邀约与当前交付时间可能重叠，需要先核实范围和工期。",
+      "options": [
+        {
+          "id": "option-a",
+          "label": "先沟通范围与工期",
+          "benefit": "补齐信息，保留后续选择。",
+          "cost": "需要安排一次沟通。"
+        },
+        {
+          "id": "option-b",
+          "label": "本周先完成现有交付",
+          "benefit": "维持现有项目的进度。",
+          "cost": "新项目可能需要推迟或放弃。"
+        }
+      ],
+      "status": "open",
+      "selectedId": null,
+      "confirmedAt": null,
+      "reviewAt": "",
+      "reason": "",
+      "history": []
+    }
+  ]
+}
+</script><script>(() => {
+'use strict';
+const $=id=>document.getElementById(id),copy=x=>JSON.parse(JSON.stringify(x)),esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const BLANK=JSON.parse($('blankData').textContent),EXAMPLE=JSON.parse($('exampleData').textContent),KEY='personalos.starter.v1:'+location.pathname;
+const statusNames={planned:'计划',active:'进行中',partial:'部分完成',done:'已完成',paused:'暂缓'},kindNames={work:'工作',study:'学习',health:'身体',expense:'支出',income:'收入',review:'回顾'},priorityNames={high:'重要',normal:'常规',low:'稍后'};
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');},dateOK=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x+'T12:00:00Z'))&&new Date(x+'T12:00:00Z').toISOString().slice(0,10)===x;
+const str=(x,max=4000)=>typeof x==='string'&&x.length<=max,num=(x,max)=>typeof x==='number'&&Number.isFinite(x)&&x>=0&&x<=max,optionalNum=(x,max)=>x===null||num(x,max),uid=()=>crypto.randomUUID?crypto.randomUUID():'p-'+Date.now()+'-'+Math.random().toString(36).slice(2);
+function validate(v){
+ const fail=s=>{throw Error(s);};if(!v||v.schemaVersion!==1||!v.meta||typeof v.meta.fictional!=='boolean'||!str(v.meta.title,80)||!(v.meta.updatedAt===null||(str(v.meta.updatedAt,80)&&!Number.isNaN(Date.parse(v.meta.updatedAt)))))fail('文件版本或基本信息无效。');
+ if(!v.profile||!['name','role','focus','notes'].every(k=>str(v.profile[k],4000))||!v.settings||!num(v.settings.dailyMinutes,1440))fail('个人资料或时间设置无效。');
+ for(const key of ['tasks','schedule','records','decisions']){if(!Array.isArray(v[key])||v[key].length>5000)fail(key+' 不是有效列表。');const ids=new Set();for(const r of v[key]){if(!r||!str(r.id,100)||!r.id||ids.has(r.id)||!str(r.title,160)||!r.title.trim())fail(key+' 中的编号或标题无效。');ids.add(r.id);}}
+ for(const t of v.tasks)if(!Object.hasOwn(statusNames,t.status)||!Object.hasOwn(priorityNames,t.priority)||!str(t.project,160)||!str(t.nextStep)||!str(t.notes)||!(t.due===''||dateOK(t.due))||!optionalNum(t.plannedMinutes,1440)||!optionalNum(t.actualMinutes,1440))fail('任务中的日期、用时或状态无效。');
+ for(const s of v.schedule)if(!dateOK(s.date)||!/^([01]\d|2[0-3]):[0-5]\d$/.test(s.start)||!/^([01]\d|2[0-3]):[0-5]\d$/.test(s.end)||s.end<=s.start||!str(s.notes))fail('日程需在同一天内，结束时间必须晚于开始时间。');
+ for(const r of v.records)if(!dateOK(r.date)||!Object.hasOwn(kindNames,r.kind)||!str(r.notes)||!optionalNum(r.minutes,1440)||!optionalNum(r.amount,1e9)||(['expense','income'].includes(r.kind)&&r.amount===null))fail('记录中的日期、类型或数值无效。');
+ for(const d of v.decisions){if(!str(d.context)||!str(d.reason)||!(d.reviewAt===''||dateOK(d.reviewAt))||!['open','confirmed'].includes(d.status)||!Array.isArray(d.options)||d.options.length<2||d.options.length>6||!Array.isArray(d.history)||d.history.length>1000)fail('决策结构无效。');const ids=new Set();for(const o of d.options){if(!str(o.id,100)||!o.id||ids.has(o.id)||!str(o.label,160)||!o.label.trim()||!str(o.benefit)||!str(o.cost))fail('决策的选项无效。');ids.add(o.id);}if(d.status==='confirmed'&&(!ids.has(d.selectedId)||typeof d.confirmedAt!=='string'||Number.isNaN(Date.parse(d.confirmedAt))))fail('已确认的决策缺少本人选择或确认时间。');if(d.status==='open'&&(d.selectedId!==null||d.confirmedAt!==null))fail('待确认决策不应含最终选择。');for(const h of d.history)if(!h||!str(h.selectedId,100)||!str(h.at,80)||Number.isNaN(Date.parse(h.at))||!str(h.reason))fail('决策历史无效。');}
+ return v;
+}
+let data=copy(BLANK),day=today(),view='today',storageWorks=true,toastTimer;
+try{const raw=localStorage.getItem(KEY);if(raw)data=validate(JSON.parse(raw));}catch(e){storageWorks=false;$('saveStatus').textContent='浏览器记录无法读取；请导入你的备份';$('saveStatus').className='status-error';}
+function toast(s){$('toast').textContent=s;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4000);}
+function save(){data.meta.updatedAt=new Date().toISOString();try{localStorage.setItem(KEY,JSON.stringify(data));storageWorks=true;$('saveStatus').className='';$('saveStatus').textContent='已保存到当前浏览器';}catch(e){storageWorks=false;$('saveStatus').className='status-error';$('saveStatus').textContent='当前浏览器不能保存，请导出 JSON';}}
+function snapshot(){try{localStorage.setItem(KEY+'.backup',JSON.stringify(data));}catch(e){toast('浏览器不能保留副本，请先导出当前数据。');return false;}return true;}
+function change(fn){snapshot();fn();save();render();}
+function download(name,text,type){const url=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);}
+function exportData(value=data){download('personal-os-'+today()+'.json',JSON.stringify(value,null,2)+'\n','application/json');toast('已生成 JSON，请保存到你的 PersonalOS 文件夹。');}
+function modal(title,html){$('modalTitle').textContent=title;$('modalBody').innerHTML=html;$('modal').showModal();}
+function editor(title,body,submit){modal(title,'<form id="editor" class="form">'+body+'<p class="form-error" id="formError" role="alert"></p><div class="actions"><button type="button" class="btn" data-close>取消</button><button class="btn primary" type="submit">保存</button></div></form>');$('editor').onsubmit=e=>{e.preventDefault();try{submit(Object.fromEntries(new FormData(e.target)));$('modal').close();}catch(err){$('formError').textContent=err.message;}};}
+const input=(name,label,value='',type='text',extra='')=>'<label>'+label+'<input name="'+name+'" type="'+type+'" value="'+esc(value)+'" '+extra+'></label>',area=(name,label,value='')=>'<label>'+label+'<textarea name="'+name+'" maxlength="4000">'+esc(value)+'</textarea></label>',select=(name,label,map,value)=>'<label>'+label+'<select name="'+name+'">'+Object.entries(map).map(([k,v])=>'<option value="'+k+'" '+(k===value?'selected':'')+'>'+v+'</option>').join('')+'</select></label>';
+const optional=x=>x===''?null:Number(x),money=x=>Number(x).toLocaleString('zh-CN',{maximumFractionDigits:2}),isCurrent=t=>!t.due||t.due===day||(t.due<day&&t.status!=='done');
+function render(){
+ $('dayInput').value=day;$('viewTitle').textContent={today:'今天',schedule:'日程',records:'记录',decisions:'决策'}[view];$('profileFocus').textContent=data.profile.focus||'先安排几件重要的事，再记录实际发生了什么。';$('workspaceLabel').textContent=(data.meta.fictional?'虚构示例 · ':'')+(data.profile.name||'空白工作区')+(data.profile.role?' / '+data.profile.role:'');$('fictionalNote').hidden=!data.meta.fictional;
+ const tasks=data.tasks.filter(isCurrent).sort((a,b)=>({high:0,normal:1,low:2}[a.priority]-{high:0,normal:1,low:2}[b.priority])),records=data.records.filter(r=>r.date===day),done=tasks.filter(t=>t.status==='done').length,minutes=tasks.some(t=>t.plannedMinutes!==null)?tasks.reduce((n,t)=>n+(t.plannedMinutes??0),0):null,known=records.filter(r=>r.minutes!==null);
+ $('stats').innerHTML=[['已确认完成',done+' / '+tasks.length,'按任务状态统计'],['已填写的预计用时',minutes===null?'—':minutes+' 分钟','计划容量 '+data.settings.dailyMinutes+' 分钟 · 未填项另计'],['记录中的实际用时',known.length?known.reduce((n,r)=>n+r.minutes,0)+' 分钟':'—','未填写的分钟不计为零']].map(([a,b,c])=>'<div class="stat"><small>'+a+'</small><b>'+esc(b)+'</b><span class="meta">'+c+'</span></div>').join('');
+ const first=tasks.find(t=>!['done','paused'].includes(t.status));$('focusCard').innerHTML=first?'<span class="meta">现在先做</span><h2>'+esc(first.title)+'</h2><p class="next">'+esc(first.nextStep||'先写清这件事的下一步。')+'</p><p class="meta" style="margin-top:12px">'+(first.plannedMinutes===null?'尚未估计用时':'预计 '+first.plannedMinutes+' 分钟')+' · '+esc(statusNames[first.status])+'</p><div class="actions"><button class="btn" data-edit-task="'+esc(first.id)+'">查看与修改</button></div>':'<span class="meta">现在先做</span><h2>安排一件重要的事</h2><p class="next">把任务和下一步写下来。你可以先用虚构示例熟悉界面。</p><div class="actions"><button class="btn" data-new-task>新增任务</button><button class="btn quiet" data-example>使用示例</button></div>';
+ $('taskList').innerHTML=tasks.map(t=>'<article class="task"><div class="task-top"><div><h3>'+esc(t.title)+'</h3><small>'+esc(t.project||'未设项目')+' · '+esc(t.due||'未设日期')+'</small></div><span class="pill">'+priorityNames[t.priority]+'</span></div><p class="task-note">'+esc(t.nextStep||'下一步未填写')+'</p><p class="meta">预计 '+(t.plannedMinutes===null?'—':t.plannedMinutes+' 分钟')+' / 实际 '+(t.actualMinutes===null?'未记录':t.actualMinutes+' 分钟')+'</p><div class="task-controls"><select data-task-status="'+esc(t.id)+'" aria-label="'+esc(t.title)+'的状态">'+Object.entries(statusNames).map(([k,v])=>'<option value="'+k+'" '+(t.status===k?'selected':'')+'>'+v+'</option>').join('')+'</select><button class="text-btn" data-edit-task="'+esc(t.id)+'">修改</button></div></article>').join('')||'<p class="empty">这一天还没有任务。</p>';
+ const schedules=data.schedule.filter(s=>s.date===day).sort((a,b)=>a.start.localeCompare(b.start));const scheduleHTML=schedules.map(s=>'<div class="schedule-row"><span class="time">'+s.start+'–'+s.end+'</span><div><p class="row-title">'+esc(s.title)+'</p><p class="meta">'+esc(s.notes)+'</p></div><button class="text-btn" data-edit-schedule="'+esc(s.id)+'">修改</button></div>').join('')||'<p class="empty">这一天还没有安排。</p>';$('todaySchedule').innerHTML=scheduleHTML;$('scheduleList').innerHTML=scheduleHTML;
+ $('recordList').innerHTML=records.map(r=>'<article class="record-row"><span class="pill">'+kindNames[r.kind]+'</span><div><h3 class="row-title">'+esc(r.title)+'</h3><p class="meta">'+(r.minutes!==null?'实际 '+r.minutes+' 分钟':'用时未记录')+(r.amount!==null?' · ¥'+money(r.amount):'')+'</p><p class="task-note">'+esc(r.notes)+'</p></div><button class="text-btn" data-edit-record="'+esc(r.id)+'">修改</button></article>').join('')||'<p class="empty">这一天还没有记录。可以只写文字，数值留空。</p>';
+ $('decisionList').innerHTML=data.decisions.map(d=>'<article class="card decision"><div class="card-head"><h2>'+esc(d.title)+'</h2><span class="pill">'+(d.status==='confirmed'?'本人已确认':'等待本人决定')+'</span></div><p>'+esc(d.context)+'</p><div class="options">'+d.options.map(o=>'<div class="option '+(d.selectedId===o.id?'selected':'')+'"><h3>'+esc(o.label)+'</h3><p class="meta">好处：'+esc(o.benefit||'未填写')+'</p><p class="meta">代价：'+esc(o.cost||'未填写')+'</p>'+(d.status==='open'?'<button class="btn" style="margin-top:14px" data-confirm-decision="'+esc(d.id)+'" data-option="'+esc(o.id)+'">采用这个方案</button>':'')+'</div>').join('')+'</div>'+(d.status==='confirmed'?'<p>确认理由：'+esc(d.reason||'未填写')+'</p><p class="meta">确认时间：'+esc(d.confirmedAt)+'</p>':'')+'<div class="actions"><button class="text-btn" data-edit-decision="'+esc(d.id)+'">修改比较</button>'+(d.status==='confirmed'?'<button class="text-btn" data-reopen-decision="'+esc(d.id)+'">重新比较</button>':'')+'</div></article>').join('')||'<div class="card"><p class="empty">把需要权衡的选项放在一起。最后的选择由你确认。</p></div>';
+}
+function navigate(name,focus=false){if(!['today','schedule','records','decisions'].includes(name))return;view=name;document.querySelectorAll('[data-view]').forEach(b=>{const on=b.dataset.view===view;b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1;});for(const n of ['today','schedule','records','decisions'])$('view-'+n).hidden=n!==view;render();if(focus)$('tab-'+name).focus({preventScroll:true});}
+function taskForm(id){const t=data.tasks.find(x=>x.id===id)||{id:uid(),title:'',project:'',priority:'normal',plannedMinutes:null,actualMinutes:null,due:day,status:'planned',nextStep:'',notes:''};editor(id?'修改任务':'新增任务',input('title','任务',t.title,'text','required maxlength="160"')+input('project','所属项目（可留空）',t.project,'text','maxlength="160"')+'<div class="form-pair">'+select('priority','优先级',priorityNames,t.priority)+select('status','进度',statusNames,t.status)+'</div><div class="form-pair">'+input('plannedMinutes','预计分钟（可留空）',t.plannedMinutes??'','number','min="0" max="1440" step="0.1"')+input('actualMinutes','实际分钟（只填已报告的用时）',t.actualMinutes??'','number','min="0" max="1440" step="0.1"')+'</div>'+input('due','日期（可留空）',t.due,'date')+area('nextStep','下一步怎么开始',t.nextStep)+area('notes','进展或备注',t.notes),v=>{const row={...t,...v,title:v.title.trim(),plannedMinutes:optional(v.plannedMinutes),actualMinutes:optional(v.actualMinutes)};const next=copy(data),i=next.tasks.findIndex(x=>x.id===id);if(i>=0)next.tasks[i]=row;else next.tasks.push(row);validate(next);change(()=>data=next);});}
+function scheduleForm(id){const s=data.schedule.find(x=>x.id===id)||{id:uid(),date:day,start:'09:00',end:'09:30',title:'',notes:''};editor(id?'修改安排':'新增安排',input('title','安排',s.title,'text','required maxlength="160"')+input('date','日期',s.date,'date','required')+'<div class="form-pair">'+input('start','开始',s.start,'time','required')+input('end','结束',s.end,'time','required')+'</div>'+area('notes','备注',s.notes),v=>{const next=copy(data),row={...s,...v,title:v.title.trim()},i=next.schedule.findIndex(x=>x.id===id);if(i>=0)next.schedule[i]=row;else next.schedule.push(row);validate(next);change(()=>data=next);});}
+function recordForm(id){const r=data.records.find(x=>x.id===id)||{id:uid(),date:day,kind:'work',title:'',minutes:null,amount:null,notes:''};editor(id?'修改记录':'新增记录',input('title','记录内容',r.title,'text','required maxlength="160"')+'<div class="form-pair">'+input('date','日期',r.date,'date','required')+select('kind','类型',kindNames,r.kind)+'</div><div id="minutesField">'+input('minutes','实际分钟（没有报告就留空）',r.minutes??'','number','min="0" max="1440" step="0.1"')+'</div><div id="amountField">'+input('amount','金额（元）',r.amount??'','number','min="0" max="1000000000" step="0.01"')+'</div>'+area('notes','文字记录',r.notes),v=>{const financial=['expense','income'].includes(v.kind),row={...r,...v,title:v.title.trim(),minutes:financial?null:optional(v.minutes),amount:financial?optional(v.amount):null},next=copy(data),i=next.records.findIndex(x=>x.id===id);if(i>=0)next.records[i]=row;else next.records.push(row);validate(next);change(()=>data=next);});const toggle=()=>{const financial=['expense','income'].includes($('editor').elements.kind.value);$('minutesField').hidden=financial;$('amountField').hidden=!financial;};$('editor').elements.kind.onchange=toggle;toggle();}
+function decisionForm(id){const d=data.decisions.find(x=>x.id===id);if(d?.status==='confirmed')return toast('这项决定已确认；请先点击“重新比较”，原选择会保留在历史中。');const row=d||{id:uid(),title:'',context:'',options:[{id:uid(),label:'',benefit:'',cost:''},{id:uid(),label:'',benefit:'',cost:''}],status:'open',selectedId:null,confirmedAt:null,reviewAt:'',reason:'',history:[]};editor(d?'修改比较':'新增决策',input('title','需要决定的事',row.title,'text','required maxlength="160"')+area('context','背景与还缺的信息',row.context)+row.options.map((o,i)=>'<div class="card" style="padding:15px;margin:0">'+input('label'+i,'方案 '+(i+1),o.label,'text','required maxlength="160"')+area('benefit'+i,'好处',o.benefit)+area('cost'+i,'代价或风险',o.cost)+'</div>').join('')+input('reviewAt','再看一次的日期（可留空）',row.reviewAt,'date'),v=>{const next=copy(data),value={...row,title:v.title.trim(),context:v.context,reviewAt:v.reviewAt,options:row.options.map((o,i)=>({...o,label:v['label'+i].trim(),benefit:v['benefit'+i],cost:v['cost'+i]}))},i=next.decisions.findIndex(x=>x.id===id);if(i>=0)next.decisions[i]=value;else next.decisions.push(value);validate(next);change(()=>data=next);});}
+function confirmDecision(id,optionId){const d=data.decisions.find(x=>x.id===id),o=d?.options.find(x=>x.id===optionId);if(!o||d.status!=='open')return;if(d.history.length>=1000)return toast('请先导出较长的确认历史，再整理归档。');editor('确认采用这个方案','<h3>'+esc(o.label)+'</h3><p class="meta">'+esc(o.cost||'请核对这个方案的代价。')+'</p>'+area('reason','确认理由（可留空）')+'<p class="meta">提交后记录你的选择与确认时间。</p>',v=>change(()=>{d.status='confirmed';d.selectedId=o.id;d.confirmedAt=new Date().toISOString();d.reason=v.reason;d.history.push({selectedId:o.id,label:o.label,at:d.confirmedAt,reason:v.reason});}));}
+function profileForm(){editor('个人资料',input('name','你希望显示的名字',data.profile.name,'text','maxlength="80"')+input('role','身份或工作（可留空）',data.profile.role,'text','maxlength="160"')+area('focus','这段时间最重要的事',data.profile.focus)+area('notes','补充背景（可留空）',data.profile.notes)+input('dailyMinutes','每天可支配的计划分钟',data.settings.dailyMinutes,'number','min="0" max="1440" required')+'<details><summary>数据文件与备份</summary><p>AI 修改 data/personal-os.json 后，回到这里点击“导入”。需要 AI 读取网页中的新记录时，先“导出”，再把文件保存到该位置。网页不会自动写回文件。</p><div class="actions"><button type="button" class="btn" id="backupExport">导出上一次浏览器副本</button><button type="button" class="btn" data-example>使用虚构示例</button><button type="button" class="btn" id="newBlank">新建空白工作区</button></div></details>',v=>{if(!num(Number(v.dailyMinutes),1440))throw Error('时间范围需为 0–1440 分钟。');change(()=>{data.profile={name:v.name.trim(),role:v.role.trim(),focus:v.focus,notes:v.notes};data.settings.dailyMinutes=Number(v.dailyMinutes);});});$('backupExport').onclick=()=>{try{const raw=localStorage.getItem(KEY+'.backup');if(!raw)return toast('还没有上一次副本。');exportData(validate(JSON.parse(raw)));}catch(e){toast('副本无法读取，请导出当前数据。');}};$('newBlank').onclick=()=>offerImport(copy(BLANK));}
+function offerImport(next){let exported=false;validate(next);if($('modal').open)$('modal').close();modal('确认导入工作区','<p class="notice">将切换到这份数据：'+esc(next.profile.name||'空白资料')+(next.meta.fictional?'（虚构示例）':'')+'。当前浏览器数据会先保留一份副本。</p><ul class="checklist"><li>任务 '+next.tasks.length+' 项</li><li>日程 '+next.schedule.length+' 项</li><li>记录 '+next.records.length+' 条</li><li>决策 '+next.decisions.length+' 项</li></ul><div class="actions"><button class="btn" id="exportBeforeImport">先导出当前数据</button><button class="btn primary" id="confirmImport">确认导入</button></div>');$('exportBeforeImport').onclick=()=>{exportData();exported=true;};$('confirmImport').onclick=()=>{const hadData=data.tasks.length+data.records.length+data.schedule.length+data.decisions.length||data.profile.name;if(!snapshot()&&hadData&&!exported)return;data=copy(next);save();render();$('modal').close();toast('已导入当前浏览器；原文件不会被自动改写。');};}
+function icsExport(){const rows=data.schedule.filter(s=>s.date===day);if(!rows.length)return toast('这一天没有可导出的安排。');const text=x=>String(x).replace(/\\/g,'\\\\').replace(/\r\n|\r|\n/g,'\\n').replace(/;/g,'\\;').replace(/,/g,'\\,');const stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');let lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//ZAOZ//PersonalOS Starter 1.0//ZH','CALSCALE:GREGORIAN','X-WR-CALNAME:PersonalOS'];for(const s of rows)lines.push('BEGIN:VEVENT','UID:'+text(s.id)+'@personalos.local','DTSTAMP:'+stamp,'DTSTART:'+s.date.replaceAll('-','')+'T'+s.start.replace(':','')+'00','DTEND:'+s.date.replaceAll('-','')+'T'+s.end.replace(':','')+'00','SUMMARY:'+text(s.title),'DESCRIPTION:'+text(s.notes),'STATUS:TENTATIVE','BEGIN:VALARM','ACTION:DISPLAY','TRIGGER:-PT10M','DESCRIPTION:'+text(s.title),'END:VALARM','END:VEVENT');lines.push('END:VCALENDAR');const encoder=new TextEncoder();lines=lines.flatMap(line=>{const parts=[];let part='';for(const c of line){if(encoder.encode(part+c).length>73){parts.push(part);part=' '+c;}else part+=c;}parts.push(part);return parts;});download('personal-os-'+day+'.ics',lines.join('\r\n')+'\r\n','text/calendar;charset=utf-8');toast('已导出日历，请手动导入并核对本地时间与提醒设置。');}
+$('dayInput').value=day;$('dayInput').onchange=e=>{if(dateOK(e.target.value)){day=e.target.value;render();}};$('addTask').onclick=()=>taskForm();$('addSchedule').onclick=()=>scheduleForm();$('addRecord').onclick=$('quickRecord').onclick=()=>recordForm();$('addDecision').onclick=()=>decisionForm();$('profileButton').onclick=profileForm;$('exportButton').onclick=()=>exportData();$('calendarExport').onclick=icsExport;$('closeModal').onclick=()=>$('modal').close();$('importButton').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>2000000)throw Error('文件超过 2MB，请先拆分或检查。');offerImport(JSON.parse(await file.text()));}catch(err){toast('未导入：'+err.message);}e.target.value='';};
+document.addEventListener('change',e=>{const id=e.target.dataset.taskStatus;if(id&&Object.hasOwn(statusNames,e.target.value)){const t=data.tasks.find(x=>x.id===id);if(t)change(()=>t.status=e.target.value);}});
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.view)navigate(b.dataset.view);if(b.dataset.switch)navigate(b.dataset.switch);if(b.hasAttribute('data-close'))$('modal').close();if(b.hasAttribute('data-new-task'))taskForm();if(b.hasAttribute('data-example'))offerImport(copy(EXAMPLE));if(b.dataset.editTask)taskForm(b.dataset.editTask);if(b.dataset.editSchedule)scheduleForm(b.dataset.editSchedule);if(b.dataset.editRecord)recordForm(b.dataset.editRecord);if(b.dataset.editDecision)decisionForm(b.dataset.editDecision);if(b.dataset.confirmDecision)confirmDecision(b.dataset.confirmDecision,b.dataset.option);if(b.dataset.reopenDecision){const d=data.decisions.find(x=>x.id===b.dataset.reopenDecision);if(d)change(()=>{d.status='open';d.selectedId=null;d.confirmedAt=null;d.reason='';});}});
+const tabs=[...document.querySelectorAll('[data-view]')];tabs.forEach((b,i)=>b.onkeydown=e=>{let next;if(e.key==='ArrowRight')next=(i+1)%tabs.length;if(e.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;if(e.key==='Home')next=0;if(e.key==='End')next=tabs.length-1;if(next!==undefined){e.preventDefault();navigate(tabs[next].dataset.view,true);}});
+render();if(data.meta.updatedAt&&storageWorks)$('saveStatus').textContent='已恢复浏览器记录 · '+data.meta.updatedAt.slice(0,10);
+})();
+</script></body></html>
