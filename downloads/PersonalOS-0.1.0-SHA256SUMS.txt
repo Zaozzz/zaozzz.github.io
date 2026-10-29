@@ -1,0 +1,2 @@
+157636aac0db817ecaf0b4714947413c1b3ee8da8e32aeab7672508e542ff92b  PersonalOS-0.1.0-macOS-universal.dmg
+c9e05bdb7292a86b9fe208d731426ae01ca450ff0aeb14fd59e72dc731604bf4  PersonalOS-0.1.0-macOS-universal.zip
