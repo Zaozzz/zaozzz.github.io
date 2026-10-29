@@ -55657,7 +55657,7 @@ function createCampusWalk(api){
   const hill=mp(toWorld([777,750]));svg('ellipse',{cx:hill[0],cy:hill[1],rx:234*1.2*mapScale,ry:222*1.2*mapScale,fill:'#97b390'});
   const mapMarker=svg('g',{'data-position':'player'});svg('circle',{cx:0,cy:0,r:4.5,fill:'#fff',stroke:'#244737','stroke-width':1},mapMarker);svg('path',{d:'M 0,-8 L -3,-2 L 3,-2 Z',fill:'#244737'},mapMarker);
   let fast=false;
-  $('outdoor-speed').onclick=()=>{fast=!fast;$('outdoor-speed').classList.toggle('on',fast);$('outdoor-speed').setAttribute('aria-pressed',String(fast));canvas.focus();};
+  $('outdoor-speed').onclick=()=>{fast=!fast;$('outdoor-speed').classList.toggle('on',fast);$('outdoor-speed').setAttribute('aria-pressed',String(fast));canvas.focus({preventScroll:true});};
   $('outdoor-exit').onclick=()=>exit();
   hud.querySelectorAll('[data-walk-stop]').forEach(button=>button.onclick=()=>enter(button.dataset.walkStop));
   function enterBuilding(entrance){if(!entrance||!active)return false;returnEntrance=entrance;portals.lock(entrance,walkClock);clearInput();canvas.dataset.enteredBuilding=entrance.buildingId;if(api.onEnterBuilding){if(api.onEnterBuilding(entrance.buildingId,entrance)!==false)return true;returnEntrance=null;portals.reset();return false;}api.onInspectBuilding?.(entrance.buildingId);return false;}
@@ -55665,7 +55665,7 @@ function createCampusWalk(api){
   $('outdoor-inspect').onclick=inspect;
   function clearInput(){keys.clear();pointer=null;hud.querySelectorAll('.pressed').forEach(el=>el.classList.remove('pressed'));}
   hud.querySelectorAll('[data-walk-key]').forEach(button=>{
-    button.addEventListener('pointerdown',e=>{e.preventDefault();button.setPointerCapture(e.pointerId);keys.add(button.dataset.walkKey);tapStep(button.dataset.walkKey);button.classList.add('pressed');canvas.focus();});
+    button.addEventListener('pointerdown',e=>{e.preventDefault();button.setPointerCapture(e.pointerId);keys.add(button.dataset.walkKey);tapStep(button.dataset.walkKey);button.classList.add('pressed');canvas.focus({preventScroll:true});});
     const release=()=>{keys.delete(button.dataset.walkKey);button.classList.remove('pressed');};button.addEventListener('pointerup',release);button.addEventListener('pointercancel',release);button.addEventListener('lostpointercapture',release);
   });
   function modalOpen(){return !!document.querySelector('dialog[open]');}
@@ -55680,7 +55680,7 @@ function createCampusWalk(api){
   window.addEventListener('keyup',e=>{keys.delete(e.code);if(active&&allowed.has(e.code)){e.preventDefault();e.stopImmediatePropagation();}},true);
   window.addEventListener('blur',clearInput);
   document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInput();});
-  canvas.addEventListener('pointerdown',e=>{if(!active)return;e.preventDefault();e.stopImmediatePropagation();canvas.focus();pointer={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);},true);
+  canvas.addEventListener('pointerdown',e=>{if(!active)return;e.preventDefault();e.stopImmediatePropagation();canvas.focus({preventScroll:true});pointer={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);},true);
   canvas.addEventListener('pointermove',e=>{if(!active)return;e.stopImmediatePropagation();if(!pointer||pointer.id!==e.pointerId)return;const dx=e.clientX-pointer.x,dy=e.clientY-pointer.y;yaw+=dx*.0035;pitch=Math.max(-1.15,Math.min(1.15,pitch-dy*.003));pointer.x=e.clientX;pointer.y=e.clientY;},true);
   ['pointerup','pointercancel','lostpointercapture'].forEach(name=>canvas.addEventListener(name,e=>{if(!active)return;e.stopImmediatePropagation();if(pointer?.id===e.pointerId)pointer=null;},true));
   ['wheel','dblclick','contextmenu'].forEach(name=>canvas.addEventListener(name,e=>{if(active){e.preventDefault();e.stopImmediatePropagation();}},{capture:true,passive:false}));
@@ -55698,12 +55698,12 @@ function createCampusWalk(api){
     clearInput();suspended=false;returnEntrance=null;portals.reset();
     if(id==='main-gate'){setPose(navigation.spawn,navigation.target);$('outdoor-location').textContent='东门 · 绕校名石两侧步入校园';}
     else{const stop=stops[id]||stops.library,p=toWorld(stop.pixel),look=toWorld(stop.look);setPose([p[0],eyeHeight,p[1]],[look[0],eyeHeight,look[1]]);$('outdoor-location').textContent=stop.name+' · 自由步行';}
-    active=true;hud.hidden=false;stage.classList.add('outdoor-on');saveEnvironment();api.onEnter?.();resize();canvas.setAttribute('aria-label','校园地面漫游，W A S D 或方向键移动，拖动画面环顾，Shift 快走，Esc 返回沙盘');canvas.focus();refreshNearby();refreshMap();toast?.('已进入校园地面 · 按住 W 或 ↑ 向前走');
+    active=true;hud.hidden=false;stage.classList.add('outdoor-on');saveEnvironment();api.onEnter?.();resize();canvas.setAttribute('aria-label','校园地面漫游，W A S D 或方向键移动，拖动画面环顾，Shift 快走，Esc 返回沙盘');canvas.focus({preventScroll:true});refreshNearby();refreshMap();toast?.('已进入校园地面 · 按住 W 或 ↑ 向前走');
   }
   function hide(){active=false;hud.hidden=true;stage.classList.remove('outdoor-on');clearInput();restoreEnvironment();}
   function exit(){const was=active||suspended;hide();suspended=false;canvas.dataset.mode='campus';stage.dataset.mode='campus';canvas.setAttribute('aria-label','校园沙盘，方向键旋转，加减键缩放，Home 恢复全景');if(was)api.onExit?.();}
   function suspend(){if(!active)return;suspended=true;hide();}
-  function resume(){if(!suspended)return;suspended=false;if(returnEntrance){const e=returnEntrance,n=e.outward||e.direction;setPose(e.outside,[e.outside[0]+n[0]*10,eyeHeight,e.outside[2]+n[1]*10]);portals.lock(e,walkClock);$('outdoor-location').textContent=buildingName({id:e.buildingId})+' · 门外';returnEntrance=null;}active=true;hud.hidden=false;stage.classList.add('outdoor-on');clearInput();saveEnvironment();api.onEnter?.();resize();syncCamera();canvas.setAttribute('aria-label','校园地面漫游，W A S D 或方向键移动，拖动画面环顾，Shift 快走，Esc 返回沙盘');canvas.focus();refreshNearby();refreshMap();}
+  function resume(){if(!suspended)return;suspended=false;if(returnEntrance){const e=returnEntrance,n=e.outward||e.direction;setPose(e.outside,[e.outside[0]+n[0]*10,eyeHeight,e.outside[2]+n[1]*10]);portals.lock(e,walkClock);$('outdoor-location').textContent=buildingName({id:e.buildingId})+' · 门外';returnEntrance=null;}active=true;hud.hidden=false;stage.classList.add('outdoor-on');clearInput();saveEnvironment();api.onEnter?.();resize();syncCamera();canvas.setAttribute('aria-label','校园地面漫游，W A S D 或方向键移动，拖动画面环顾，Shift 快走，Esc 返回沙盘');canvas.focus({preventScroll:true});refreshNearby();refreshMap();}
   function buildingName(item){const id=item.buildingId||item.id,b=(data.buildings||[]).find(x=>x.id===id);return b?.displayName||b?.name||item.name||id;}
   function refreshNearby(){nearby=portals.nearest(camera.position.x,camera.position.z,18);$('outdoor-near').hidden=!nearby;canvas.dataset.nearbyEntrance=nearby?.buildingId||'';if(nearby){const close=portals.manual([camera.position.x,camera.position.z],walkClock)?.buildingId===nearby.buildingId;$('outdoor-inspect').disabled=!close;$('outdoor-building-name').textContent=close?'进入 '+buildingName(nearby):buildingName(nearby)+' · 入口 '+Math.ceil(nearby.distance)+' 米';$('outdoor-entry-hint').textContent=close?'向门前走，或按 E 进入一层':'靠近绿色门框与箭头';}}
   function enterAtEntrance(id){const e=portals.entrances.find(x=>x.buildingId===id);if(!e)return false;if(!active)enter('main-gate');clearInput();returnEntrance=null;portals.reset();setPose(e.approach||e.outside,[e.position[0],eyeHeight,e.position[2]]);$('outdoor-location').textContent=buildingName(e)+' · 门前';refreshNearby();refreshMap();return true;}
@@ -55787,7 +55787,7 @@ $('save-image').onclick=()=>{renderer.render(explorer&&explorer.active?explorer.
 const pointers=new Map();let gesture=null,dragged=0;
 function pointerState(){const a=[...pointers.values()];if(a.length>1)return {x:(a[0].x+a[1].x)/2,y:(a[0].y+a[1].y)/2,d:Math.hypot(a[1].x-a[0].x,a[1].y-a[0].y)};return a[0]?{...a[0],d:0}:null;}
 const canvas=renderer.domElement;
-canvas.addEventListener('pointerdown',e=>{canvas.focus();stopAuto();animation=null;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,button:e.button,shift:e.shiftKey});gesture=pointerState();dragged=0;canvas.setPointerCapture(e.pointerId);});
+canvas.addEventListener('pointerdown',e=>{canvas.focus({preventScroll:true});stopAuto();animation=null;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,button:e.button,shift:e.shiftKey});gesture=pointerState();dragged=0;canvas.setPointerCapture(e.pointerId);});
 function pan(dx,dy){const right=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,0);right.y=0;right.normalize();const forward=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,1);forward.y=0;forward.normalize();const k=viewHeight/stage.clientHeight;target.addScaledVector(right,-dx*k);target.addScaledVector(forward,dy*k);target.x=THREE.MathUtils.clamp(target.x,-2200,2200);target.z=THREE.MathUtils.clamp(target.z,-2300,2300);}
 canvas.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;const prior=pointers.get(e.pointerId);pointers.set(e.pointerId,{...prior,x:e.clientX,y:e.clientY});const g=pointerState();if(!gesture){gesture=g;return;}const dx=g.x-gesture.x,dy=g.y-gesture.y;dragged+=Math.abs(dx)+Math.abs(dy);if(pointers.size>1){if(gesture.d>0&&g.d>0)zoom(gesture.d/g.d);pan(dx,dy);}else if(prior.button===2||prior.button===1||prior.shift||isPlan){pan(dx,dy);}else{angle-=dx*.006;phi=Math.max(.06,Math.min(1.43,phi+dy*.005));}gesture=g;});
 function endPointer(e){if(e.type==='pointerup'&&dragged<5&&pointers.size===1&&explorer)explorer.pick(e);pointers.delete(e.pointerId);gesture=pointerState();}canvas.addEventListener('pointerup',endPointer);canvas.addEventListener('pointercancel',endPointer);canvas.addEventListener('contextmenu',e=>e.preventDefault());
