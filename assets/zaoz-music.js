@@ -6,6 +6,8 @@
   const catalog = [
     { id: '2804037354', key: 'live', zh: '高考结束后，一起去看场 Live 吧', en: "Let's go to a live concert after the Gaokao", created: '2019.05.18', category: { zh: '现场与乐队', en: 'Live & bands' } },
     { id: '2721877134', key: 'poetry', zh: '人间不值得，黄诗扶值得', en: "If life isn't worth it, Huang Shifu is.", created: '2019.03.23', category: { zh: '黄诗扶', en: 'Huang Shifu' } },
+    { id: '2846393337', key: 'love', zh: '喜欢是藏不住的，闭上眼睛也会流露', en: "Love can't be hidden — it speaks even when you close your eyes", created: '2019.06.16', category: { zh: '520 特别精选歌单', en: '520 selection' } },
+    { id: '2941089379', key: 'future', zh: '被写进某个人的未来，是极致的浪漫', en: "Being written into someone's future is the ultimate romance", created: '2019.08.17', category: { zh: '七夕特别歌单', en: 'Tanabata selection' } },
     { id: '2984639566', key: 'summer', zh: '2018 年的夏天，除了热，一切都好', en: "Summer '18: perfect in every way but the heat", created: '2019.09.14', category: { zh: '夏日旧歌', en: 'Summer memories' } }
   ];
   const words = {
@@ -14,13 +16,15 @@
   };
   const pick = selector => room.querySelector(selector);
   const buttons = [...room.querySelectorAll('[data-music-pick]')];
+  const selections = buttons.map(button => catalog.find(item => item.id === button.dataset.musicPick));
   const mount = pick('[data-music-player]');
   const cover = pick('[data-music-cover]');
   const record = pick('.music-record');
   record.prepend(mount);
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const open = pick('[data-music-open]');
-  let selected = catalog[0], frame = null, timer = null, phase = 'initial', swapAnimation = null, manuallyClosed = false;
+  const preview = pick('[data-music-preview]');
+  let selected = catalog[0], frame = null, timer = null, phase = 'initial', swapAnimation = null;
   const lang = () => document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
   const title = item => item[lang()];
   const href = item => 'https://music.163.com/#/playlist?id=' + item.id;
@@ -32,16 +36,19 @@
     pick('[data-music-title]').textContent = title(selected);
     pick('[data-music-category]').textContent = selected.category[locale];
     pick('[data-music-date]').textContent = w.created + ' ' + selected.created;
-    cover.alt = title(selected) + ' · ' + w.cover;
+    cover.alt = '';
     pick('[data-music-original]').href = href(selected);
     pick('[data-music-status]').textContent = w[phase];
     open.querySelector('[data-music-open-label]').textContent = frame ? w.close : (phase === 'failed' ? w.retry : w.open);
     open.setAttribute('aria-expanded', String(Boolean(frame)));
+    preview?.setAttribute('aria-expanded', String(Boolean(frame)));
+    preview?.setAttribute('aria-label', w.open + ' · ' + title(selected));
     buttons.forEach((button, i) => {
-      const item = catalog[i];
+      const item = selections[i];
       button.setAttribute('aria-pressed', String(item.id === selected.id));
       button.querySelector('[data-music-list-title]').textContent = title(item);
-      button.querySelector('[data-music-list-kind]').textContent = item.category[locale];
+      const plays = button.playlistSource?.querySelector('.level')?.textContent;
+      button.querySelector('[data-music-list-kind]').textContent = item.category[locale] + (plays ? ' · ' + plays.replace(/[\[\]]/g, '') : '');
       button.querySelector('img').alt = '';
       button.querySelector('img').setAttribute('aria-hidden', 'true');
     });
@@ -61,6 +68,7 @@
   function select(id) {
     const item = catalog.find(entry => entry.id === id || entry.key === id);
     if (!item || item === selected) return;
+    const wasOpen = Boolean(frame);
     stop('initial');
     selected = item;
     cover.src = '/assets/optimized/playlists/' + item.id + '.jpg';
@@ -70,8 +78,7 @@
     if (!reduced.matches && record.animate) {
       swapAnimation = record.animate([{ opacity: .22 }, { opacity: 1 }], { duration: 280, easing: 'ease-out' });
     }
-    manuallyClosed = false;
-    load(false);
+    if (wasOpen) load(false);
     room.dispatchEvent(new CustomEvent('zaoz:music-change', { bubbles: true, detail: { playlist: item.id } }));
   }
   function load(reveal = true) {
@@ -106,17 +113,18 @@
     room.dispatchEvent(new CustomEvent('zaoz:music-player', { bubbles: true, detail: { mounted: true, engaged: reveal !== false, playlist: selected.id } }));
   }
   buttons.forEach((button, i) => {
-    button.addEventListener('click', () => select(catalog[i].id));
+    button.addEventListener('click', () => select(selections[i].id));
     button.addEventListener('keydown', event => {
       let next;
       if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = (i + 1) % buttons.length;
       if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = (i - 1 + buttons.length) % buttons.length;
       if (event.key === 'Home') next = 0;
       if (event.key === 'End') next = buttons.length - 1;
-      if (next !== undefined) { event.preventDefault(); buttons[next].focus(); select(catalog[next].id); }
+      if (next !== undefined) { event.preventDefault(); buttons[next].focus(); select(selections[next].id); }
     });
   });
-  open.addEventListener('click', () => { manuallyClosed = Boolean(frame); load(); });
+  open.addEventListener('click', () => load());
+  preview?.addEventListener('click', () => load());
   // A visible, idle player should not pause a game before the visitor uses it.
   window.addEventListener('blur', () => setTimeout(() => {
     if (!frame || document.hidden) return;
@@ -138,8 +146,7 @@
   // never removes the player. It is removed only after the entire room leaves view.
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting && !frame && !manuallyClosed && !document.hidden) load(false);
-      else if (!entries[0].isIntersecting && frame) stop('away');
+      if (!entries[0].isIntersecting && frame) stop('away');
     }, { threshold: 0, rootMargin: '180px 0px' });
     observer.observe(room);
   }

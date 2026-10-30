@@ -1,4 +1,4 @@
-/* The supplied 160px covers remain at native size within paper record sleeves. */
+/* Shared turntable and playlist presentation for the homepage and ZAOZ. */
 .music-room {
   --music-ink:#034b61; --music-muted:#577581; --music-line:#034b612d; --music-copper:#a34d5c;
   position:relative; color:var(--music-ink); border-top:1px solid var(--music-line);
@@ -10,11 +10,21 @@
 .music-heading>p:last-child{color:var(--music-muted);font-size:14px;line-height:1.9;max-width:320px;margin:0;justify-self:end}
 .music-layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:90px;align-items:center;padding:0 0 44px}
 .music-record{min-width:0;padding:25px 0 0;position:relative}
-.music-sleeve{display:grid;place-items:center;width:min(240px,73%);position:relative;margin:0 0 31px 8px;aspect-ratio:1;z-index:0;padding:40px;background:#e3a6a1;border:1px solid #bc5f6a33;box-shadow:0 8px 30px #034b611c}
-.music-disc{position:absolute;z-index:-1;width:95%;height:95%;top:2.5%;left:33%;border-radius:50%;background:repeating-radial-gradient(circle at center,#10252b 0,#10252b 2px,#293a3e 2.5px,#10252b 3.5px);border:1px solid #034b6155;box-shadow:9px 10px 20px #034b6126;display:grid;place-items:center}
-.music-disc:before{content:"";display:block;width:29%;height:29%;border-radius:50%;border:1px solid #e3a6a177;background:#bc5f6a;box-shadow:0 0 0 6px #bc5f6a18}
-.music-disc:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#034b61;border:1px solid #f5d4cf88}
-.music-sleeve img{display:block;width:100%;height:auto;aspect-ratio:1;max-width:160px;max-height:160px;object-fit:cover;border:1px solid #a7777b}
+.music-turntable{display:block;position:relative;width:100%;max-width:380px;aspect-ratio:1.18;margin:0 0 28px;padding:0;border:1px solid #b5b8b0;border-radius:10px;background:linear-gradient(135deg,#eeede7,#ddded6 65%,#d0d3c9);box-shadow:inset 0 1px 1px #fff9,0 3px 0 #9b9f953d,0 16px 30px #10252b15;text-align:left;cursor:pointer;isolation:isolate;overflow:hidden}
+.music-turntable:after{content:"";position:absolute;inset:3px;border:1px solid #fff6;border-radius:7px;pointer-events:none}
+.music-platter{position:absolute;left:5.5%;top:7%;width:72%;aspect-ratio:1;border-radius:50%;padding:5px;background:linear-gradient(140deg,#f5f4ef,#8f958c 40%,#d9ded4 58%,#a0a69b);box-shadow:0 3px 7px #12252233}
+.music-vinyl{position:relative;display:block;width:100%;height:100%;border-radius:50%;background:repeating-radial-gradient(circle,#18201d 0 1px,#303731 1.4px 2px,#161e1a 2.6px 3.6px);box-shadow:inset 0 0 0 1px #080e0b;animation:music-revolve 24s linear infinite;animation-play-state:paused}
+.music-vinyl:before{content:"";position:absolute;inset:1%;border-radius:50%;background:conic-gradient(from 30deg,transparent,#ffffff15 12%,transparent 24% 50%,#ffffff1a 62%,transparent 76%);pointer-events:none}
+.music-vinyl img{position:absolute;left:34%;top:34%;width:32%;height:32%;object-fit:cover;border-radius:50%;border:3px solid #ddcbb5;box-shadow:0 0 0 1px #0e1912}
+.music-vinyl:after{content:"";position:absolute;left:calc(50% - 3px);top:calc(50% - 3px);width:6px;height:6px;border-radius:50%;background:#dcded6;box-shadow:0 0 0 1px #455342,1px 1px 3px #0005}
+.music-tonearm{position:absolute;right:2.5%;top:5%;width:24%;height:79%;transform-origin:73% 11%;transition:transform .9s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(2px 3px 2px #18251a33);pointer-events:none}
+.music-tonearm svg{width:100%;height:100%;overflow:visible;stroke:#acb2a6;stroke-width:5;stroke-linejoin:round;stroke-linecap:round}
+.music-tonearm circle{fill:#d0d4ca;stroke:#969e91;stroke-width:2}.music-tonearm .music-cartridge{fill:#303a31;stroke:#273126;stroke-width:2}
+.music-turntable .music-deck-brand{position:absolute;left:6.5%;bottom:6%;font-size:17px;line-height:1;color:#252c25;letter-spacing:-.07em}
+.music-deck-speed{position:absolute;right:7%;bottom:6.5%;font:9px/1 var(--font-mono,monospace);color:#596353;letter-spacing:.04em}
+.music-deck-light{position:absolute;right:23%;bottom:7%;width:4px;height:4px;border-radius:50%;background:#bb7258;box-shadow:0 0 0 3px #a35f4520}
+@media(hover:hover){.music-turntable:hover .music-vinyl{animation-play-state:running}.music-turntable:hover .music-tonearm{transform:rotate(9deg)}}
+@keyframes music-revolve{to{transform:rotate(360deg)}}
 .music-record-info{padding-left:8px;max-width:390px}
 .music-record-info .music-category{font:11px/1.6 var(--font-mono,monospace);color:var(--music-copper);margin-bottom:11px}
 .music-record-info h4{font:400 24px/1.55 var(--font-display,serif);color:var(--music-ink);letter-spacing:-.02em;margin:0 0 11px}
@@ -49,7 +59,6 @@
 .music-room button:focus-visible,.music-room a:focus-visible{outline:2px solid var(--music-copper);outline-offset:5px}
 @media(max-width:1050px){
   .music-layout{gap:52px;grid-template-columns:.85fr 1.15fr}
-  .music-sleeve{width:min(220px,70%);padding:30px}
   .music-pick{gap:13px;grid-template-columns:12px 48px minmax(0,1fr) 17px}
   .music-pick>img{width:48px;height:48px}
   .music-record-info h4{font-size:22px}
@@ -62,7 +71,7 @@
   .music-heading>p:last-child{font-size:13px;margin-top:13px;max-width:none}
   .music-layout{grid-template-columns:1fr;gap:33px;padding-bottom:27px}
   .music-record{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding-top:10px}
-  .music-sleeve{width:78%;padding:clamp(11px,2.2vw,20px);margin:0;justify-self:start}
+  .music-turntable{margin:0;max-width:none}
   .music-record-info{padding:0;max-width:none}
   .music-record-info h4{font-size:20px;line-height:1.6}
   .music-pick{grid-template-columns:12px 48px minmax(0,1fr) 16px;padding:15px 0}
@@ -72,7 +81,6 @@
 }
 @media(max-width:420px){
   .music-record{gap:26px;grid-template-columns:.85fr 1.15fr}
-  .music-sleeve{width:82%}
   .music-record-info h4{font-size:18px}
   .music-record-info .music-category{margin-bottom:8px}
   .music-pick{gap:11px;grid-template-columns:11px 42px minmax(0,1fr) 14px}
@@ -86,7 +94,9 @@
 
 /* Opening the player replaces the record introduction in the same space. */
 .music-room[data-music-state=loading] .music-record,.music-room[data-music-state=open] .music-record{display:block;padding-top:0}
-.music-room[data-music-state=loading] .music-sleeve,.music-room[data-music-state=open] .music-sleeve,.music-room[data-music-state=loading] .music-record-info,.music-room[data-music-state=open] .music-record-info{display:none}
+.music-room[data-music-state=loading] .music-turntable,.music-room[data-music-state=open] .music-turntable,.music-room[data-music-state=loading] .music-record-info,.music-room[data-music-state=open] .music-record-info{display:none}
 .music-record .music-player-shell{width:100%;max-width:440px;margin-inline:auto;border:0;background:transparent}
 .music-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:-1px}
 .music-room[data-music-phase=failed] .music-status{position:static;width:auto;height:auto;clip-path:none;margin:12px 0 0}
+
+@media(prefers-reduced-motion:reduce){.music-vinyl{animation:none}.music-tonearm{transition:none}}
