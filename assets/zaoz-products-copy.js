@@ -1,6 +1,8 @@
 /* Authored English and Chinese for ZAOZ. Product names remain unchanged. */
 (() => {
  const copy=window.ZAOZ_ZH;if(!copy)return;
+ Object.assign(copy.blocks,{"Playlists":"网易云音乐歌单"});
+ Object.assign(copy.text,{"Live After the Gaokao": "高考结束后，一起去看场 Live 吧", "Huang Shifu Is Worth It": "人间不值得，黄诗扶值得", "Love Can't Be Hidden": "喜欢是藏不住的，闭上眼睛也会流露", "Written into Your Future": "被写进某个人的未来，是极致的浪漫", "Summer 2018, Heat Aside": "2018 年的夏天，除了热，一切都好"});
  Object.assign(copy.text,{
   "ZAOZ is my independent brand for personal decision tools, small games, and music.":"ZAOZ 是我发起的独立品牌，做个人决策工具、小游戏，也分享喜欢的音乐。",
   "Read the idea behind ZAOZ":"展开品牌理念",
@@ -38,11 +40,11 @@
   'AURELIA':'琉光群岛',
   'Pocket Cosmos':'引力游乐场',
   'BUILDING':'自由建造',
-  'Plant trees, lay paths, change the weather, and save a postcard from your island.':'种树、铺路、换个天气，再存一张小岛明信片。',
+  'Plant trees, build paths, and save a postcard from your island.':'种树、铺路，再存一张小岛明信片。',
   'EXPLORATION':'群岛漫游',
-  'Walk, fly, and take photographs around the islands.':'在群岛间散步、飞行，也可以拍照。',
+  'Walk and fly around the islands.':'在群岛间散步、飞行。',
   'PHYSICS':'物理沙盒',
-  'Add a planet, change gravity, and try a different orbit.':'放入一颗星球，调整引力，试试不同的轨道。',
+  'Launch a planet and watch its orbit.':'发射星球，观察它的轨道。',
   'About ZAOZ':'关于 ZAOZ',
   'ZAOZ is an independent brand by Zaozzz. We make personal decision tools and small games, and share the music we love. Our personal AI work is still in development; the prototypes here can already be explored.':'ZAOZ 是 Zaozzz 发起的独立品牌。这里是正在做的工具、可游玩的作品，以及整理过的歌单。个人主动 AI 仍在开发，这里的产品原型可以先试一试。',
   'Project notes':'项目说明',

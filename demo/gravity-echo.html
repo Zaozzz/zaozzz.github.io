@@ -29,8 +29,9 @@ body[data-theme="night"] img.zaoz-demo-logo[data-zaoz-theme="personalos"]{filter
 @media(max-width:720px){img.zaoz-demo-logo[data-zaoz-placement="mobile"]{display:block!important;width:34px!important;height:28px!important;flex-basis:34px!important}}
 @media(max-width:420px){img.zaoz-demo-logo{width:34px!important;height:28px!important;flex-basis:34px!important}img.zaoz-demo-logo[data-zaoz-placement="campus"]{width:34px!important;height:12px!important}img.zaoz-demo-logo[data-zaoz-placement="gallery"]{width:96px!important;height:29px!important;flex-basis:96px!important}}
 </style>
+<link rel="stylesheet" href="/assets/demo-essential.css?v=1">
 </head>
-<body>
+<body data-demo-app="gravity-echo">
   <canvas id="cosmos" aria-label="引力回声游戏区域"></canvas>
   <div class="vignette" aria-hidden="true"></div>
   <header class="topbar">
@@ -81,7 +82,7 @@ body[data-theme="night"] img.zaoz-demo-logo[data-zaoz-theme="personalos"]{filter
     <div class="dialog-content"><p class="eyebrow">TIME IS ON YOUR SIDE</p><h2 id="pause-title">宇宙已暂停</h2><p class="dialog-caption">深呼吸，再回到事件视界。</p><button id="resume" class="primary-button">继续航行 <span>↗</span></button><button id="restart" class="text-button">重新开始</button><div class="pause-help">鼠标 / WASD 移动 · 自动射击<br>长按左键吸弹，松开反射<br>空格召唤回声 · 右键 / Shift 跃迁<br>Esc 暂停 · M 静音</div></div>
   </section>
   <section id="result" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="result-title">
-    <div class="dialog-content result-content"><p class="eyebrow" id="result-eyebrow">SIGNAL LOST, ECHO REMAINS</p><h2 id="result-title">回声，未完待续。</h2><p class="dialog-caption" id="result-caption">你经过的地方，宇宙记得。</p><div class="result-stats"><div><span>最终得分</span><strong id="final-score">0</strong></div><div><span>存活时间</span><strong id="final-time">00:00</strong></div><div><span>反射弹幕</span><strong id="final-reflect">0</strong></div></div><p id="result-tip" class="result-tip"></p><button id="again" class="primary-button">再闯一次 <span>↗</span></button></div>
+    <div class="dialog-content result-content"><p class="eyebrow" id="result-eyebrow">SIGNAL LOST, ECHO REMAINS</p><h2 id="result-title">本局结束</h2><p class="dialog-caption" id="result-caption">你经过的地方，宇宙记得。</p><div class="result-stats"><div><span>最终得分</span><strong id="final-score">0</strong></div><div><span>存活时间</span><strong id="final-time">00:00</strong></div><div><span>反射弹幕</span><strong id="final-reflect">0</strong></div></div><p id="result-tip" class="result-tip"></p><button id="again" class="primary-button">再闯一次 <span>↗</span></button></div>
   </section>
   <noscript>请开启 JavaScript 后进入引力场。</noscript>
   <script>
@@ -232,7 +233,7 @@ body[data-theme="night"] img.zaoz-demo-logo[data-zaoz-theme="personalos"]{filter
     ['hud', 'ability-bar', 'mobile-controls', 'pause-button'].forEach(id => show($(id), false));
     $('wave-banner').classList.remove('show'); $('toast').classList.remove('show');
     $('result-eyebrow').textContent = win ? 'YOU BECAME THE IMPOSSIBLE' : 'SIGNAL LOST, ECHO REMAINS';
-    $('result-title').textContent = win ? '你，让奇点熄灭了。' : '回声，未完待续。';
+    $('result-title').textContent = win ? '本局通关' : '本局结束';
     $('result-caption').textContent = win ? '光没能逃离的地方，你带着回声归来。' : '你经过的地方，宇宙记得。';
     $('final-score').textContent = score.toLocaleString('en-US'); $('final-time').textContent = timeText(time); $('final-reflect').textContent = String(reflected);
     $('result-tip').textContent = win ? `击破 ${kills} 个目标。下一次，试试带着完整护盾归来。` : reflected < 10 ? '试着长按吸住红色弹幕，再松开：反射伤害远高于普通射击。' : '弹幕密集时用引力井，陷入包围时跃迁。别忘了召唤回声。';
@@ -734,5 +735,6 @@ body[data-theme="night"] img.zaoz-demo-logo[data-zaoz-theme="personalos"]{filter
 
 </script>
 <script src="/assets/demo-typography.js?v=1"></script>
+<script defer src="/assets/demo-essential.js?v=1"></script>
 </body>
 </html>

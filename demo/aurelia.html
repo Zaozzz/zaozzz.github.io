@@ -42,8 +42,9 @@ body[data-theme="night"] img.zaoz-demo-logo[data-zaoz-theme="personalos"]{filter
 @media(max-width:720px){img.zaoz-demo-logo[data-zaoz-placement="mobile"]{display:block!important;width:34px!important;height:28px!important;flex-basis:34px!important}}
 @media(max-width:420px){img.zaoz-demo-logo{width:34px!important;height:28px!important;flex-basis:34px!important}img.zaoz-demo-logo[data-zaoz-placement="campus"]{width:34px!important;height:12px!important}img.zaoz-demo-logo[data-zaoz-placement="gallery"]{width:96px!important;height:29px!important;flex-basis:96px!important}}
 </style>
+<link rel="stylesheet" href="/assets/demo-essential.css?v=1">
 </head>
-<body>
+<body data-demo-app="aurelia">
 <canvas id="world" aria-label="琉光群岛三维游戏画面"></canvas><div class="grain"></div><div class="vignette"></div>
 <div id="loading"><span class="load-ring"></span><p>正在加载场景</p><small id="loadText">生成群岛与远山…</small></div>
 <div id="error" hidden><h2>需要 WebGL 支持</h2><p>请使用开启硬件加速的 Chrome 或 Edge 浏览器打开。</p><button onclick="location.reload()">重新尝试</button></div>
@@ -199,4 +200,5 @@ requestAnimationFrame(loop);
 })();
 </script>
 <script src="/assets/demo-typography.js?v=1"></script>
+<script defer src="/assets/demo-essential.js?v=1"></script>
 </body></html>

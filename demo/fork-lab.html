@@ -1664,7 +1664,29 @@ readPalette();resize();loadScene(&#x27;static&#x27;);
 })();
 &lt;/script&gt;
 
-&lt;/body&gt;
+&lt;style id=&quot;fork-essential&quot;&gt;
+#fork-lab :is(.fl-intro,.fl-eyebrow,.fl-conclusion,.fl-editor,.fl-footer&gt;span:first-child){display:none!important}
+#fork-lab .fl-header{height:48px;padding:0 16px}
+#fork-lab .fl-scenes{padding:10px 12px}
+#fork-lab .fl-scene{padding:7px 9px}
+#fork-lab .fl-main{grid-template-columns:minmax(0,1fr) 190px}
+#fork-lab .fl-world{height:clamp(260px,calc(100svh - 210px),620px)}
+#fork-lab .fl-futures{padding:10px}
+#fork-lab .fl-future{padding:8px}
+#fork-lab .fl-mini{height:35px}
+#fork-lab .fl-futures-heading{margin-bottom:6px}
+#fork-lab .fl-playback{padding:12px;gap:12px}
+#fork-lab .fl-footer{padding:8px 12px}
+@media(max-width:620px){
+ #fork-lab .fl-main{grid-template-columns:minmax(0,1fr)}
+ #fork-lab .fl-world{height:260px}
+ #fork-lab .fl-futures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ #fork-lab .fl-futures-heading{display:none}
+ #fork-lab .fl-future{margin:0}
+ #fork-lab .fl-live{display:none}
+ #fork-lab .fl-playback{flex-wrap:wrap}
+}
+&lt;/style&gt;&lt;/body&gt;
 &lt;/html&gt;
 "></iframe>
 <script src="/assets/demo-typography.js?v=1"></script>

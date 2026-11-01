@@ -4,11 +4,11 @@
   const room = document.querySelector('[data-music]');
   if (!room) return;
   const catalog = [
-    { id: '2804037354', key: 'live', zh: '高考结束后，一起去看场 Live 吧', en: "Let's go to a live concert after the Gaokao", created: '2019.05.18', category: { zh: '现场与乐队', en: 'Live & bands' } },
-    { id: '2721877134', key: 'poetry', zh: '人间不值得，黄诗扶值得', en: "If life isn't worth it, Huang Shifu is.", created: '2019.03.23', category: { zh: '黄诗扶', en: 'Huang Shifu' } },
-    { id: '2846393337', key: 'love', zh: '喜欢是藏不住的，闭上眼睛也会流露', en: "Love can't be hidden — it speaks even when you close your eyes", created: '2019.06.16', category: { zh: '520 特别精选歌单', en: '520 selection' } },
-    { id: '2941089379', key: 'future', zh: '被写进某个人的未来，是极致的浪漫', en: "Being written into someone's future is the ultimate romance", created: '2019.08.17', category: { zh: '七夕特别歌单', en: 'Tanabata selection' } },
-    { id: '2984639566', key: 'summer', zh: '2018 年的夏天，除了热，一切都好', en: "Summer '18: perfect in every way but the heat", created: '2019.09.14', category: { zh: '夏日旧歌', en: 'Summer memories' } }
+    { id: '2804037354', key: 'live', zh: '高考结束后，一起去看场 Live 吧', en: "Live After the Gaokao", created: '2019.05.18', category: { zh: '现场与乐队', en: 'Live & bands' } },
+    { id: '2721877134', key: 'poetry', zh: '人间不值得，黄诗扶值得', en: "Huang Shifu Is Worth It", created: '2019.03.23', category: { zh: '黄诗扶', en: 'Huang Shifu' } },
+    { id: '2846393337', key: 'love', zh: '喜欢是藏不住的，闭上眼睛也会流露', en: "Love Can't Be Hidden", created: '2019.06.16', category: { zh: '520 特别精选歌单', en: '520 selection' } },
+    { id: '2941089379', key: 'future', zh: '被写进某个人的未来，是极致的浪漫', en: "Written into Your Future", created: '2019.08.17', category: { zh: '七夕特别歌单', en: 'Tanabata selection' } },
+    { id: '2984639566', key: 'summer', zh: '2018 年的夏天，除了热，一切都好', en: "Summer 2018, Heat Aside", created: '2019.09.14', category: { zh: '夏日旧歌', en: 'Summer memories' } }
   ];
   const words = {
     zh: { heading: '听一会儿。', intro: '从我整理的歌单里，选了这三份。', eyebrow: '音乐', selection: '精选歌单', original: '在网易云打开', open: '打开播放器', close: '收起播放器', initial: '使用网易云官方播放器。打开后，点击播放即可。', loading: '正在打开网易云播放器…', loaded: '播放器已打开，请点击播放。', stopped: '播放器已收起。', away: '已停止。重新打开播放器即可听。', failed: '播放器暂未响应，可以重试或在网易云打开。', note: '部分曲目可能需要网易云登录或会员，播放范围由平台决定。', created: '创建于', cover: '歌单封面', frame: '网易云音乐歌单播放器', player: '官方播放器', retry: '重新打开播放器' },
@@ -34,6 +34,7 @@
     room.dataset.musicPhase = phase;
     room.querySelectorAll('[data-music-copy]').forEach(el => { el.textContent = w[el.dataset.musicCopy] || ''; });
     pick('[data-music-title]').textContent = title(selected);
+    pick('[data-music-title]').title = title(selected);
     pick('[data-music-category]').textContent = selected.category[locale];
     pick('[data-music-date]').textContent = w.created + ' ' + selected.created;
     cover.alt = '';
@@ -47,6 +48,7 @@
       const item = selections[i];
       button.setAttribute('aria-pressed', String(item.id === selected.id));
       button.querySelector('[data-music-list-title]').textContent = title(item);
+      button.querySelector('[data-music-list-title]').title = title(item);
       const plays = button.playlistSource?.querySelector('.level')?.textContent;
       button.querySelector('[data-music-list-kind]').textContent = item.category[locale] + (plays ? ' · ' + plays.replace(/[\[\]]/g, '') : '');
       button.querySelector('img').alt = '';

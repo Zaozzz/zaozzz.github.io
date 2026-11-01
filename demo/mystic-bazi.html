@@ -27,7 +27,8 @@ body[data-theme="night"] img.zaoz-demo-logo[data-zaoz-theme="personalos"]{filter
 @media(max-width:720px){img.zaoz-demo-logo[data-zaoz-placement="mobile"]{display:block!important;width:34px!important;height:28px!important;flex-basis:34px!important}}
 @media(max-width:420px){img.zaoz-demo-logo{width:34px!important;height:28px!important;flex-basis:34px!important}img.zaoz-demo-logo[data-zaoz-placement="campus"]{width:34px!important;height:12px!important}img.zaoz-demo-logo[data-zaoz-placement="gallery"]{width:96px!important;height:29px!important;flex-basis:96px!important}}
 </style>
-</head><body>
+<link rel="stylesheet" href="/assets/demo-essential.css?v=1">
+</head><body data-demo-app="mystic-bazi">
 <main id="workspace">
 <div class="workspace-grid">
 <aside class="profile-panel"><div class="section-cap"><h2>出生信息</h2><button class="text-btn" id="sample">载入示例</button></div><form id="profile-form" novalidate>
@@ -63405,4 +63406,5 @@ async function exportImage(){if(!LuoPan3D.capture){notify('当前浏览器无法
 window.XuanApp={readInput,calculate,sample,setTab,selectTrigram,renderHex,getResult:()=>result,getFortune:()=>C.annual(result,fortuneYear)};
 init();
 </script><script src="/assets/demo-typography.js?v=1"></script>
+<script defer src="/assets/demo-essential.js?v=1"></script>
 </body></html>

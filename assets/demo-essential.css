@@ -1,0 +1,115 @@
+/* Keep each demo's original interaction, with only its essential controls visible. */
+body[data-demo-app] .brand small,
+body[data-demo-app] .brand-en{display:none!important}
+
+/* Pocket Cosmos: the canvas, launch gesture, pause, reset and camera. */
+body[data-demo-app="pocket-cosmos"] :is(#panel,.top-actions,.stats,#events,.legend-note,.time-control,.dock-divider,#help-dialog){display:none!important}
+body[data-demo-app="pocket-cosmos"] .dock{max-width:calc(100% - 24px);width:max-content;flex-wrap:wrap;justify-content:center;gap:7px;padding:9px 12px;bottom:16px}
+body[data-demo-app="pocket-cosmos"] .top{pointer-events:none}
+
+/* A Little Island: build, undo, rotate, restart and export. */
+body[data-demo-app="wind-island"] :is(.intro,#seed-info,#panel,.stats,#settings,#load,#help,#help-dialog){display:none!important}
+body[data-demo-app="wind-island"] .dock{max-width:calc(100% - 20px);bottom:16px}
+body[data-demo-app="wind-island"] .top-actions{box-shadow:none}
+body[data-demo-app="wind-island"] :is(#new-island,#camera-home){font-size:11px;padding:8px}
+body[data-demo-app="wind-island"] #build-hint{bottom:102px}
+
+/* Game screens keep the game title and actual movement / ability controls. */
+body[data-demo-app="aurelia"] :is(.intro-line,.eyebrow,.intro-meta,#introBottom,.grain,.vignette,#quality,#tourStart,#time,#photo),
+body[data-demo-app="aurelia-v3"] :is(.intro-line,.eyebrow,.intro-meta,#introBottom,.grain,.vignette,#quality,#tourStart,#exploreStart,#time,#photo){display:none!important}
+body[data-demo-app="aurelia"] #intro h1,
+body[data-demo-app="aurelia-v3"] #intro h1{font-size:clamp(28px,5vw,54px);margin-bottom:24px}
+body[data-demo-app="gravity-echo"] :is(.intro-description,.session-note,.singularity-label,.eyebrow,.edition,.dialog-caption,.vignette){display:none!important}
+body[data-demo-app="gravity-echo"] .intro-copy h1{font-size:clamp(36px,7vw,76px)}
+
+/* Marble Orchestra: one instrument and transport controls. */
+body[data-demo-app="marble-orchestra"] :is(.heading,.sequence,.stage-name,.stage-top,footer,.top-actions,.mini-stats,#help-dialog){display:none!important}
+body[data-demo-app="marble-orchestra"] .layout{padding:12px;max-width:1300px}
+body[data-demo-app="marble-orchestra"] .workspace{grid-template-columns:minmax(0,1fr);gap:10px}
+body[data-demo-app="marble-orchestra"] .stage{height:calc(100svh - 166px);min-height:260px;max-height:720px}
+body[data-demo-app="marble-orchestra"] .side>.panel:not(:first-child),
+body[data-demo-app="marble-orchestra"] .side .panel-head,
+body[data-demo-app="marble-orchestra"] .side .field{display:none!important}
+body[data-demo-app="marble-orchestra"] .side>.panel{background:transparent;border:0;box-shadow:none}
+body[data-demo-app="marble-orchestra"] .side .panel-body{padding:0}
+body[data-demo-app="marble-orchestra"] .side .row{justify-content:center;margin:0}
+body[data-demo-app="marble-orchestra"] .start-card :is(h2,p){display:none!important}
+
+/* Embodied Studio: choose a task and run it in the viewport. */
+body[data-demo-app="embodied-studio"] :is(.rail,.bottom-grid,.stats,.view-status,.view-title,.axis,.eyebrow,.tag,.online,footer,#save-project,#load-project,.headline h1){display:none!important}
+body[data-demo-app="embodied-studio"] .layout{grid-template-columns:minmax(0,1fr)}
+body[data-demo-app="embodied-studio"] .workspace{padding:12px}
+body[data-demo-app="embodied-studio"] .headline{margin:0 0 10px;justify-content:flex-start}
+body[data-demo-app="embodied-studio"] .studio-grid{grid-template-columns:minmax(0,1fr) 205px;gap:12px}
+body[data-demo-app="embodied-studio"] .viewport{min-height:280px;height:calc(100svh - 138px);max-height:720px}
+body[data-demo-app="embodied-studio"] .side>.panel:not(:first-child),
+body[data-demo-app="embodied-studio"] .side :is(.model-spec,.panel-head,.field:has(#speed)){display:none!important}
+body[data-demo-app="embodied-studio"] .side .panel-body{padding:12px}
+body[data-demo-app="embodied-studio"] #task-hint{font-size:11px;line-height:1.6}
+
+/* Embodied Lab: three experiments; no notebook or presentation pages. */
+body[data-demo-app="embodied-lab"] :is(.aside-note,.nav-label,.heading,.callout,.metrics,.stage-footer,footer,.status,#help-top,.nav[data-view="records"],.nav[data-view="guide"]){display:none!important}
+body[data-demo-app="embodied-lab"] .shell{display:block;min-height:0}
+body[data-demo-app="embodied-lab"] .shell>aside{position:static;display:flex;flex-direction:row;gap:6px;width:100%;padding:10px 12px;border-right:0;border-bottom:1px solid var(--line)}
+body[data-demo-app="embodied-lab"] .nav{width:auto;margin:0;font-size:12px;padding:8px 12px}
+body[data-demo-app="embodied-lab"] .nav span{display:none}
+body[data-demo-app="embodied-lab"] main{padding:12px}
+body[data-demo-app="embodied-lab"] .workspace{grid-template-columns:minmax(0,1fr) 220px;gap:12px}
+body[data-demo-app="embodied-lab"] .stage canvas{width:min(100%,calc((100svh - 235px)*1.25));min-width:180px}
+body[data-demo-app="embodied-lab"] #view-nav .controls>.card:not(:first-child),
+body[data-demo-app="embodied-lab"] #view-arm .controls>.card:not(:first-child),
+body[data-demo-app="embodied-lab"] .controls .field:has(:is(#seed,#speed,#alpha,#gamma,#epsilon,#l1,#l2,#elbow)),
+body[data-demo-app="embodied-lab"] :is(#compare-planners,#policy-export){display:none!important}
+body[data-demo-app="embodied-lab"] .controls .card-head{display:none}
+body[data-demo-app="embodied-lab"] .card-body{padding:12px}
+
+/* Bead Studio: materials, bracelet, sequence and save / export. */
+body[data-demo-app="bead-studio"] :is(.workspace-heading,#inspector-panel,.stage-caption,#render-label,.design-stats,.recommendation,#studio-controls,.stage-bottom,.lib-bottom,#help-button,#mirror,#repeat,#assist,.heading-note,#color-filters,#material-filter){display:none!important}
+body[data-demo-app="bead-studio"] .workspace{padding:12px}
+body[data-demo-app="bead-studio"] .editor-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:12px}
+body[data-demo-app="bead-studio"] .canvas-panel{min-width:0}
+body[data-demo-app="bead-studio"] .stage{min-height:220px;height:calc(100svh - 260px);max-height:580px}
+body[data-demo-app="bead-studio"] .canvas-foot{padding:0;border:0}
+body[data-demo-app="bead-studio"] .mobile-tabs{display:none!important}
+
+/* Traditional chart: birth input, chart and elements. */
+body[data-demo-app="mystic-bazi"] :is(.symbol-panel,.workspace-heading,.unfold-row,.layer-controls,.layer-labels,.analysis-jump,.reading-box,#guide-button,#tab-luck,#tab-fortune,#tab-hex,.analysis-tabs [data-tab="luck"],.analysis-tabs [data-tab="fortune"],.analysis-tabs [data-tab="hex"]){display:none!important}
+body[data-demo-app="mystic-bazi"] .workspace-grid{grid-template-columns:250px minmax(0,1fr);gap:14px}
+body[data-demo-app="mystic-bazi"] .pillars-layout{grid-template-columns:minmax(0,1fr)}
+body[data-demo-app="mystic-bazi"] .cosmos-head{padding:12px}
+
+/* Campus: locations and the original model / walk controls. */
+body[data-demo-app="campus-tour"] .sidebar>:is(.eyebrow,h1,.intro,.divider,.section-title),
+body[data-demo-app="campus-tour"] :is(#view-desc,.stats,#download-model,.segmented,.scale-note,#buildings-open,#scene-photos,#save-image,.building-access,#building-picker-open,.outdoor-title strong){display:none!important}
+body[data-demo-app="campus-tour"] main{grid-template-columns:190px minmax(0,1fr)}
+body[data-demo-app="campus-tour"].ground-view main{grid-template-columns:minmax(0,1fr)}
+body[data-demo-app="campus-tour"] .sidebar{padding:14px}
+body[data-demo-app="campus-tour"] .sidebar-bottom{padding-top:10px}
+body[data-demo-app="campus-tour"] .view-title h2{font-size:16px}
+
+/* SeeWay: the passenger journey; hide extra presentation / system views. */
+body[data-demo-app="seeway"] :is(.topnav,.brand-cn,.experience-title,.handoff-strip,#scenarioSelect,[data-action="system"],[data-action="faults"]){display:none!important}
+body[data-demo-app="seeway"] .experience-bar{justify-content:flex-end;margin-bottom:12px}
+
+/* PersonalOS: retain working records, remove the additional showcase navigation. */
+body[data-demo-app="personalos"] :is(.sample-profile,.sidebar-label,.tabs [data-tab="support"],.tabs [data-tab="files"]){display:none!important}
+
+@media(max-width:760px){
+ body[data-demo-app="embodied-studio"] .studio-grid,
+ body[data-demo-app="embodied-lab"] .workspace{grid-template-columns:minmax(0,1fr)}
+ body[data-demo-app="embodied-studio"] .viewport{height:calc(100svh - 150px);min-height:240px}
+ body[data-demo-app="embodied-studio"] .side>.panel:first-child .panel-body{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+ body[data-demo-app="embodied-studio"] .side .field{flex:1 1 160px;margin:0}
+ body[data-demo-app="embodied-studio"] .side .row{margin:0;gap:6px}
+ body[data-demo-app="embodied-studio"] #task-hint{width:100%;margin:0}
+ body[data-demo-app="bead-studio"] .editor-layout{grid-template-columns:minmax(0,1fr)}
+ body[data-demo-app="bead-studio"] .library{order:1;width:100%;max-height:300px}
+ body[data-demo-app="bead-studio"] .center-area{order:0;width:100%}
+ body[data-demo-app="bead-studio"] .stage{height:260px}
+ body[data-demo-app="mystic-bazi"] .workspace-grid{display:flex;flex-direction:column}
+ body[data-demo-app="mystic-bazi"] .profile-panel{width:100%}
+ body[data-demo-app="campus-tour"] main{grid-template-columns:minmax(0,1fr)}
+ body[data-demo-app="campus-tour"] .sidebar{padding:10px;max-height:110px}
+ body[data-demo-app="wind-island"] .dock{flex-wrap:wrap;justify-content:center}
+ body[data-demo-app="wind-island"] #build-hint{display:none!important}
+}
