@@ -43,7 +43,7 @@ window.ZAOZ_ZH = {
     "Jun 2025 – Aug 2025 · Visiting Student": "2025 年 6 月—8 月 · 访问学生",
     "Medical image foreground/background preprocessing · Advisor:": "医学图像前景与背景预处理 · 导师：",
     "2 startups": "2 段创业经历",
-    "Jul 2025 – Present · Tech Lead": "2025 年 7 月至今 · 技术负责人",
+    "Jul 2025 – Present · Co-founder & Tech Lead": "2025 年 7 月至今 · 联合创始人兼技术负责人",
     "AI for art & design · National Gold, \"Chuangqingchun\" Competition": "AI 艺术与设计 · “创青春”大赛全国金奖",
     "Mar 2025 – Present · Tech Lead ·": "2025 年 3 月至今 · 技术负责人 ·",
     "Cultural heritage digitalization · 2nd & 3rd place, Tencent SSV AI+Oracle Challenge": "文化遗产数字化 · 腾讯 SSV AI+甲骨文大赛第二名、第三名",
