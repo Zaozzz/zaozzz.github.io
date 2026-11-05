@@ -218,7 +218,7 @@ window.ZAOZ_ZH = {
     "NetEase Playlists": "网易云音乐歌单",
     "Interactive Demos": "互动作品",
     "All Publications": "全部论文",
-    "One paper has been accepted by WIPAI '26, a workshop at ACM MM 2026.": "一篇论文被 <b><i>ACM MM 2026</i></b> 研讨会 <b><i><a href=\"https://dl.acm.org/doi/proceedings/10.1145/3841560\" target=\"_blank\" rel=\"noopener noreferrer\">WIPAI '26</a></i></b> 录用。",
+    "One paper has been accepted by WIPAI '26, a workshop at ACM MM 2026.": "一篇论文被 ACM MM 2026 研讨会 WIPAI '26 录用。",
     "Milestone: My Google Scholar citations reached 200.": "Google Scholar 引用量达到 200 次。",
     "Admitted to the Red Bird MPhil Program at HKUST(GZ).": "获香港科技大学（广州）红鸟硕士班录取。",
     "Introducing ZAOZ — My Independent Technology & Creative Brand.": "<b><a href=\"/zaoz/\">ZAOZ 正式亮相——我发起的独立科技与创意品牌。</a></b>",
