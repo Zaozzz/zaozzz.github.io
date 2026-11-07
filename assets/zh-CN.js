@@ -33,6 +33,8 @@ window.ZAOZ_ZH = {
     "High School · Physics, Chemistry, Biology": "高中 · 物理、化学、生物",
     "Sep 2020 – Jun 2023 · High School": "2020 年 9 月—2023 年 6 月 · 高中",
     "Physics, Chemistry, Biology": "物理、化学、生物",
+    "Sep 2020 – Jun 2023 · High School · Physics, Chemistry, Biology": "2020 年 9 月—2023 年 6 月 · 高中 · 物理、化学、生物",
+    "National High School with Distinctive Characteristics": "全国特色化高中",
     "The Hong Kong University of Science and Technology (Guangzhou)": "香港科技大学（广州）",
     "Shandong Jianzhu University": "山东建筑大学",
     "Sep 2027 · Red Bird MPhil Program (incoming)": "2027 年 9 月入学 · 红鸟硕士班（已录取）",
