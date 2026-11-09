@@ -225,6 +225,7 @@ window.ZAOZ_ZH = {
     "NetEase Playlists": "网易云音乐歌单",
     "Interactive Demos": "互动作品",
     "All Publications": "全部论文",
+    "Milestone: ICCV WeChat public account followers exceeded 500.": "ICCV 公众号粉丝突破 500。",
     "One paper has been accepted by WIPAI '26, a workshop at ACM MM 2026.": "一篇论文被 ACM MM 2026 研讨会 WIPAI '26 录用。",
     "Milestone: My Google Scholar citations reached 200.": "Google Scholar 引用量达到 200 次。",
     "Admitted to the Red Bird MPhil Program at HKUST(GZ).": "获香港科技大学（广州）红鸟硕士班录取。",
